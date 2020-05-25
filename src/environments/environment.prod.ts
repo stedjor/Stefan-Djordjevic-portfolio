@@ -1,7 +1,9 @@
+require('dotenv').config();
+
 export const environment = {
   production: true,  
   firebase: {
-    apiKey: 'AIzaSyCJbFhixBHP54kixLS3o44qnlMPhSrQD68',
+    apiKey: process.env.API_KEY,
     authDomain: 'portfolio-a2a27.firebaseapp.com',
     databaseURL: 'https://portfolio-a2a27.firebaseio.com',
     projectId: 'portfolio-a2a27',
