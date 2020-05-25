@@ -1,0 +1,241 @@
+@profile-color      : rgb(117, 117, 102);
+@profile-color-light: rgb(243, 243, 211);
+@profile-color-dark : rgb(54, 27, 0);
+
+.profile-container {
+    background   : linear-gradient(to right, rgb(20, 5, 0), @profile-color, rgb(20, 5, 0));
+    border-radius: 10px;
+    min-height   : 100%;
+    padding      : 30px 50px 0;
+    animation    : colorize 2.5s;
+
+    @keyframes colorize {
+        from {
+            filter        : grayscale(100%) blur(2px);
+            -webkit-filter: grayscale(100%) blur(2px);
+        }
+
+        to {
+            filter        : grayscale(0%) blur(0px);
+            -webkit-filter: grayscale(0%) blur(0px);
+        }
+    }
+
+    & .profile-card {
+        // background: linear-gradient(to right, rgb(25, 5, 0), @profile-color-light, rgb(25, 5, 0));
+        background: @profile-color-light;
+        color     : @profile-color-dark;
+        border    : 2px solid @profile-color-dark;
+
+        & .profile-header {
+            border-bottom: 1px solid @profile-color-dark;
+
+            & h2 {
+                text-shadow: 0 2px 5px @profile-color;
+            }
+        }
+
+        & h4 {
+            text-shadow: 0 2px 5px @profile-color-light;
+        }
+
+        & .profile-icon {
+            cursor    : pointer;
+            padding   : 5px;
+            font-size : 19px;
+            width     : 30px;
+            text-align: center;
+            position  : relative;
+
+
+            &:hover {
+                color: @profile-color;
+            }
+
+            & .button-icon {
+                position: relative;
+                z-index : 1;
+
+                &::before {
+                    content         : '';
+                    background-color: @profile-color;
+                    -webkit-filter  : blur(10px);
+                    filter          : blur(10px);
+                    position        : absolute;
+                    z-index         : 0;
+                    top             : 0;
+                    left            : 0;
+                    height          : 20px;
+                    width           : 15px;
+                }
+            }
+        }
+    }
+
+    & .image-box {
+        max-width: 180px;
+
+        & .profile-img {
+            width           : 180px;
+            height          : 180px;
+            object-fit      : contain;
+            border-radius   : 50%;
+            border          : 2px solid white;
+            background-color: rgb(218, 218, 218);
+            box-shadow      : 0 0px 10px @profile-color-dark;
+        }
+
+        & .btn-photo {
+            box-shadow      : 0 0px 10px @profile-color-dark;
+            border          : 2px solid @profile-color-light;
+            background-color: @profile-color-dark;
+            color           : @profile-color-light;
+            border-radius   : 50%;
+            cursor          : pointer;
+            position        : absolute;
+
+            &-delete {
+                top    : 0;
+                right  : 5px;
+                padding: 0px 7px;
+            }
+
+            &-return {
+                top    : 0;
+                left   : 6px;
+                padding: 0px 4px;
+            }
+
+            &:hover {
+                background-color: @profile-color-light;
+                border          : 2px solid @profile-color-dark;
+                color           : @profile-color-dark;
+            }
+
+            &-show {
+                display: block;
+            }
+        }
+
+        & .edit-file {
+            color        : @profile-color-dark;
+            border       : 1px solid @profile-color-dark;
+            border-radius: 5px;
+            padding      : 19px;
+
+            & .edit-profile-file-input {
+                cursor: pointer;
+            }
+
+            & .edit-profile-file-label {
+                color     : @profile-color-dark;
+                text-align: center;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 0 5px 2px @profile-color-dark;
+            }
+        }
+    }
+
+    & .info-box {
+        max-width : 250px;
+        text-align: center;
+
+        & .edit-username-input {
+            color : @profile-color-dark;
+            border: 1px solid @profile-color-dark;
+
+            &:focus {
+                box-shadow: 0 0 5px 2px @profile-color-dark;
+            }
+
+            &:hover {
+                box-shadow: 0 0 5px 2px @profile-color-dark;
+            }
+        }
+
+        & p {
+            color: @profile-color-dark;
+
+            & strong {
+                color: @profile-color;
+            }
+        }
+    }
+}
+
+// Responsive
+@media only screen and (max-width: 768px) {
+    .profile-container {
+        padding: 20px 10px 0;
+
+        & .profile-card {
+            & .profile-header {
+                padding: 5px 15px 0;
+
+                & h2 {
+                    font-size: 25px;
+                }
+            }
+
+            & .profile-icon {
+                padding  : 5px;
+                font-size: 15px;
+                width    : 30px;
+
+                & .button-icon {
+
+                    &::before {
+                        height: 20px;
+                        width : 15px;
+                    }
+                }
+            }
+        }
+
+        & .image-box {
+            max-width: 150px;
+
+            & .profile-img {
+                width : 150px;
+                height: 150px;
+            }
+            & .btn-photo {
+                &-delete {
+                    right  : -3px;
+                }
+                &-return {
+                    left   : -1px;
+                }
+            }
+
+            & .edit-file {
+                padding  : 15px;
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .profile-container {
+        & .profile-card {
+            & .profile-header {
+                & h2 {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        & .info-box {
+            & p {
+                font-size: 13px;
+            }
+        }
+    }
+}

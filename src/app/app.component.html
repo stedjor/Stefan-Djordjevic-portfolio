@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="main-content">
+                <div id="content">
+                    <div id="screen">
+                        <div class="main-scrollbar scrollbar scrollbar-primary" *ngIf="featureSelect === 'show'">
+                            <div class="force-overflow"></div>
+                            <router-outlet></router-outlet>
+                        </div>
+                        <div id="blank-screen" *ngIf="featureSelect === 'blank'"></div>
+                        <!-- Modal -->
+                        <div class="modal" *ngIf="showHideMenu" id="{{selectModal}}" tabindex="-1" role="dialog"
+                            aria-labelledby="modal-menu-Label" aria-hidden="true">
+                            <app-modals [modalSelect]="selectModal" [modalInfoUrl]="infoModalUrl"
+                                (modalClose)="closeModalOnClick($event)"></app-modals>
+                            <div class="modal-backdrop" (click)="clickOnBackdrop()"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="button-content">
+                    <div id="button-content-left">
+                        <!-- Button info -->
+                        <div id="btn-modal-info" class="btn-menu-modal">
+                            <button type="button" [hidden]="!showHideMenu" class="btn btn-menu" (click)="showInfo()"
+                                data-toggle="modal" data-target="#modal-menu">info
+                            </button>
+                        </div>
+                    </div>
+                    <div id="button-content-center">
+                        <div class="btn-center">
+                            <button type="button" [hidden]="!showHideMenu" id="btn-previous" class="btn btn-arrow"
+                                (click)="buttonPrevious()">
+                                <fa-icon [icon]="faChevronLeft" class="button-icon" [title]="'Previous'"></fa-icon>
+                            </button>
+                        </div>
+                        <!-- Button Turn On/Off -->
+                        <div class="btn-center">
+                            <button type="button" id="btn-turn" class="btn btn-red" (click)="buttonTurn('show')"
+                                [title]="turnOnOff ? 'Turn Off': 'Turn On'">
+                                <fa-icon [icon]="faPowerOff" class="button-icon"></fa-icon>
+                            </button>
+                            <div i18n="@@main-turn-on-tooltip" class="turn-on-tooltip" *ngIf="!turnOnOff">Just turn on</div>
+                        </div>
+                        <div class="btn-center">
+                            <button type="button" [hidden]="!showHideMenu" id="btn-next" class="btn btn-arrow"
+                                (click)="buttonNext()" [title]="'Next'">
+                                <fa-icon [icon]="faChevronRight" class="button-icon"></fa-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="button-content-right">
+                        <!-- Button menu -->
+                        <div id="btn-modal-menu" class="btn-menu-modal">
+                            <button i18n="@@main-menu-btn" type="button" [hidden]="!showHideMenu" class="btn btn-menu"
+                                (click)="showMenu()" data-toggle="modal" data-target="#modal-menu">menu
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="stand-content" class="row">
+                <div class="col-md-12">
+                    <div id="first-el"></div>
+                    <div id="second-el"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

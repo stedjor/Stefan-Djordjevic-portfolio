@@ -1,0 +1,61 @@
+<div *ngIf="permissionStatus !== 'denied'; else deniedLocation">
+  <!-- Venue Wrapper -->
+  <div id="venue-wrapper">
+    <div id="venue-scroll" class="scrollbar scrollbar-primary">
+      <div class="force-overflow"></div>
+      <app-venue *ngFor="let item of listItems" [item]="item" (venueOutput)="mainCLickOnCard($event)">
+      </app-venue>
+    </div>
+    <button id="btn-venue-arrow" class="btn" (click)="showHideCards()" [title]="cardsShowHide ? 'Show': 'Hide'">
+      <fa-icon [icon]="showHideCardsArrow" class="button-icon"></fa-icon>
+    </button>
+  </div>
+
+  <!-- Search Venues -->
+  <div id="search-content">
+    <button id="btn-search-arrow" class="btn" (click)="showHideSearch()" [title]="searchShowHide ? 'Show': 'Hide'">
+      <fa-icon [icon]="showHideSearchArrow" class="button-icon"></fa-icon>
+    </button>
+
+    <div id="search" class="input-group">
+      <div class="input-group-prepend">
+        <button class="btn btn-search" (click)="showVenues(searchInput.value)">
+          <fa-icon [icon]="faSearch" class="button-icon"></fa-icon>
+        </button>
+      </div>
+
+      <input id="search-input" type="text" class="form-control" list="venueList" #searchInput required
+        (keyup.enter)="showVenues(searchInput.value)">
+      <datalist id="venueList">
+        <option *ngFor="let option of venueOptions" [value]="option">
+      </datalist>
+    </div>
+  </div>
+
+  <!-- Here WeGo map -->
+  <div id="here-wego-map">
+    <div id="map-container" *ngFor="let loc of location">
+      <app-here-map #map appId="PFe6hV8Jk4JS3MIcxbdP" appCode="ev0aUksqnBMigwJ9HVeTpQ" [lat]="loc.lat" [lng]="loc.lng"
+        width="100%" height="100%"></app-here-map>
+    </div>
+  </div>
+</div>
+<ng-template #deniedLocation>
+  <div class="container fs-denied-location">
+    <div class="row">
+      <div i18n="@@fs-denied-location" class="col-md-9 col-sm-12 ml-auto mr-auto">
+        <h3 class="text-center">FourSquare app</h3><br>
+        <h5>
+          If you have accessed the aplication on your computer and when you are asked
+          to allow the application to find your location by clicking on the block,
+          you will not be able to acces the application. So please go to your browser settings and allow. <br>
+          The path is: <span>settings/privacy and security/site settings/location.</span> 
+        </h5><br>
+        <h5>
+          If you have accessed the application from your phone or tablet you need to turn on your 
+          location and you can continue to use it.
+        </h5>
+      </div>
+    </div>
+  </div>
+</ng-template>

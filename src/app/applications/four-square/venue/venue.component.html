@@ -1,0 +1,7 @@
+<div class="panel panel-default" (click)="venueClickOnCard(item)">
+    <div class="panel-body panel-card fs-card" id="{{ item.venue.id }}">
+        <h5>{{ item.venue.name }}</h5>
+        <p>{{ item.venue.location.address }}</p>
+        <p i18n="@@fs-venue-distance">Distance: {{ item.venue.location.distance }}m</p>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container ve-container">
+  <div class="col-lg-6 col-md-8 col-sm-12 ml-auto mr-auto">
+    <div class="card ve-card">
+      <div class="card-header ve-header">
+        <h3 i18n="@@ve-title">Thank You for Registering</h3>
+      </div>
+      <div class="card-body">
+        <div class="input-group" *ngIf="authService.userData as user">
+          <p i18n="@@ve-text-1" class="text-center">I am sent a confirmation email to <strong class="ve-link-btn">{{user.email}}</strong> .</p>
+          <p i18n="@@ve-text-2" class="text-center">Please check your email inbox and click on the link to verfiy your email address.</p>
+        </div>
+
+        <div class="formGroup mb-1">
+          <button i18n="@@ve-btn" type="button" class="btn ve-btn" (click)="authService.sendVerificationMail()">
+            Resend Verification Email
+          </button>
+        </div>
+
+        <div>
+          <span i18n="@@ve-text-3">Go back to?<button class="btn ve-link-btn" [routerLink]="['/login']">Log In</button></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

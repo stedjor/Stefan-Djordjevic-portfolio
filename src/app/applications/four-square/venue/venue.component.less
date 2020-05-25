@@ -1,0 +1,88 @@
+@fs-color      : rgb(255, 65, 117);
+@fs-color-dark : #393e47;
+@fs-color-light: rgb(101, 193, 194);
+
+.fs-card {
+  text-align      : center;
+  background-color: rgba(@fs-color-dark, 0.8);
+  padding         : 10px;
+  margin          : 10px 0;
+  border-radius   : 10px;
+  border          : 5px solid @fs-color-light;
+  font-family     : 'Roboto Slab', serif;
+  cursor          : pointer;
+
+  h5 {
+    color      : @fs-color-light;
+    text-shadow: 0px 0px 10px @fs-color;
+    font-size  : 23px;
+    font-weight: 700;
+  }
+
+  p {
+    margin     : 5px 0;
+    text-shadow: 0px 0px 10px @fs-color;
+    color      : rgb(255, 255, 255);
+  }
+
+  &:hover {
+    background-color: rgba(@fs-color-dark, 1);
+    border          : 5px solid darken(@fs-color-light, 20%);
+
+    h5 {
+      color      : darken(@fs-color-light, 20%);
+      text-shadow: 0px 0px 10px darken(@fs-color, 20%);
+    }
+
+    p {
+      text-shadow: 0px 0px 10px darken(@fs-color, 20%);
+    }
+  }
+}
+
+.fs-card-active {
+  border: 5px solid @fs-color;
+
+  h5 {
+    color      : @fs-color;
+    text-shadow: 0px 0px 10px white;
+  }
+
+  p {
+    text-shadow: 0px 0px 10px @fs-color-light;
+  }
+}
+
+// Responsive
+@media only screen and (max-width: 768px) {
+  .fs-card {
+    padding            : 7px;
+    margin             : 10px 0;
+    border-radius      : 5px;
+    // border          : 3px solid @fs-color;
+
+    h5 {
+      font-size: 20px;
+    }
+
+    p {
+      margin   : 5px 0;
+      font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .fs-card {
+    padding: 5px;
+    margin : 5px 0;
+
+    h5 {
+      font-size: 17px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+<div class="container contact-container">
+    <div class="row">
+        <div class="col-sm-4 col-md-5 ml-auto mr-auto">
+            <div class="contact-content-text" *ngIf="!isLoggedInAsAdmin">
+                <h2 i18n="@@contact-title">Contact</h2>
+                <div class="contact-text" *ngIf="!isLoggedIn">
+                    <h5 i18n="@@contact-text-1">You can contact me via Email, Facebook or LinkedIn.
+                        Or you can register and use the contact form to send messages,
+                        and a screen where you can see all the messages,
+                        ie. the whole conversation we had.
+                    </h5>
+                </div>
+                <div class="contact-text" *ngIf="isLoggedIn && !isLoggedInAsAdmin">
+                    <h5 i18n="@@contact-text-2">You can contact me via Email, Facebook or LinkedIn.
+                        Or you can use the contact form to send messages.
+                        And here is a screen where you can see all the messages,
+                        ie. the whole conversation we had.
+                    </h5>
+                </div>
+
+                <div class="d-flex justify-content-around contact-box-icons">
+                    <div class="contact-icons">
+                        <a href="https://www.facebook.com/stedjor88" target="_blank">
+                            <fa-icon class="normal" [icon]="facebook"></fa-icon>
+                        </a>
+                    </div>
+                    <div class="contact-icons">
+                        <a href="https://www.linkedin.com/in/stefan-đorđević7" target="_blank">
+                            <fa-icon class="normal" [icon]="linkedIn"></fa-icon>
+                        </a>
+                    </div>
+                    <div class="contact-icons">
+                        <a href="mailto:stedjor88@gmail.com">
+                            <fa-icon class="normal" [icon]="envelope"></fa-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Logged in as Admin -->
+            <div class="list-box scrollbar scrollbar-primary" *ngIf="isLoggedInAsAdmin">
+                <div class="list-group mb-1" *ngFor="let sender of sendersList">
+                    <a class="list-group-item list-group-item-action flex-column align-items-start  contact-list-item"
+                        (click)="showMessages(sender.id)" [ngClass]="{'item-active': sender.id === compareUserId}">
+                        <div class="w-100 d-flex justify-content-between">
+                            <div class="p-1">
+                                <img src="{{ (sender.photoURL !== null && sender.photoURL !== undefined  )? 
+                                    sender.photoURL: defaultPhoto }}" 
+                                alt="Photo of message sender">
+                            </div>
+                            <div class="p-1 text-left">
+                                <h6 class="mb-1">{{ sender.autor }}</h6>
+                            </div>
+                            <div class="p-1 text-right">
+                                <h6 class="mb-1">{{sender.messages.length}}</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="list-cancel" *ngIf="isLoggedInAsAdmin">
+                <button i18n="@@contact-cancel" class="cancel-btn" (click)="cancel()">Cancel</button>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-7" *ngIf="user !== null">
+            <div class="card contact-card">
+                <div class="card-body contact-card-body">
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <div class="message-box scrollbar scrollbar-primary"
+                                *ngIf="detailsOfMessages !== undefined && messages.length !== 0; else noMessage">
+                                <div *ngFor="let message of detailsOfMessages.messages; let i = index ">
+                                    <div class="card mb-2 message-card"
+                                        [ngClass]="{'message-card-color':  currentAutor === message.autor}"
+                                        title="{{ message.createdDate }}">
+                                        <div class="card-body message-card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="p-2">
+                                                    <img src="{{
+                                                        (message.photoURL !== null &&  message.photoURL !== undefined)?
+                                                        message.photoURL:
+                                                        defaultPhoto 
+                                                       }}" alt="Photo by the author of the message">
+                                                    <small class="card-title">{{ message.autor }}</small>
+                                                </div>
+                                                <div class="p-2 message-icon" *ngIf="currentAutor === message.autor">
+                                                    <fa-icon class="normal" [icon]="faTrashAlt"
+                                                        (click)="deleteMessage(i)"></fa-icon>
+                                                </div>
+                                            </div>
+                                            <div class="message-card-text">
+                                                <p class="card-text">{{ message.message }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ng-template #noMessage>
+                                <div class="message-box text-center">
+                                    <h6 i18n="@@contact-nomessage">There is no message</h6>
+                                </div>
+                            </ng-template>
+                        </div>
+                        <div class="col-md-12">
+                            <form [formGroup]="messagesForm">
+                                <div class="form-group">
+                                    <textarea class="form-control contact-input"
+                                        i18n-placeholder="write a message placeholder" placeholder="Write a message..."
+                                        formControlName="message" rows="3"></textarea>
+                                </div>
+                                <button i18n="@@contact-send-btn" type="button" class="btn btn-contact"
+                                    (click)="createMessage()" [disabled]="messagesForm.invalid">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

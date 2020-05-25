@@ -1,0 +1,397 @@
+<div class="container create-ad-container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 i18n="@@uc-create_ad-title" class="create-ad-tittle">Create Ad</h3>
+            <div class="card create-ad-card">
+                <div class="card-body create-ad-body">
+                    <form [formGroup]="carsForm">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h5 i18n="@@uc-create_ad-subtitle-1" class="create-ad-subtittle">Choose Image</h5>
+                                <div class="input-group" *ngIf="imagesArr.length !== 0; else noImg">
+                                    <div class="create-img">
+                                        <div class="image-create">
+                                            <img src="{{ imageURL }}" alt="Added image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <ng-template #noImg>
+                                    <div class="create-img">
+                                        <div class="image-create">
+                                            <img src="./assets/no-car.png" alt="No image added">
+                                        </div>
+                                    </div>
+                                </ng-template>
+
+                                <div class="input-group-sm mt-1 mb-1">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input create-ad-file-input" id="fileImg"
+                                            name="fileImg" (change)="uploadImage($event)" accept=".png,.jpg">
+                                        <label i18n="@@uc-create_ad-file-1" class="custom-file-label create-ad-file-lbl"
+                                            for="fileImg"
+                                            [ngClass]="{'create-ad-file-lbl-br': imagesArr.length !== 0}">Choose
+                                            file <fa-icon class="normal create-ad-fa-images" [icon]="faImages"></fa-icon>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="input-group list-of-imgs" *ngIf="imagesArr.length !== 0">
+                                    <ul class="list-inline list-imgs-scroll scrollbar scrollbar-primary">
+                                        <li class="list-inline-item" *ngFor="let imgUrl of imagesArr; index as i"
+                                            [ngClass]="{'list-img-active': imgUrl == imageURL}" (click)="showImg(imgUrl)">
+                                            <img src="{{ imgUrl }}" alt="Added picture in list">
+                                            <button class="btn btn-danger" (click)="deleteImage(imgUrl, i)">
+                                                <fa-icon class="normal" [icon]="faTimes"></fa-icon>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div formGroupName="car">
+                                    <h5 i18n="@@uc-create_ad-subtitle-2" class="create-ad-subtittle">Car Info</h5>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm create-ad-select-group  mb-2">
+                                                        <select class="custom-select create-ad-input create-ad-input-select"
+                                                            (change)="searchModel($event.target.value)"
+                                                            formControlName="brand"
+                                                            [attr.disabled]="customBrand? '' : null"
+                                                            [ngClass]="{'invalid-input': carsForm.get('car').get('brand').invalid && 
+                                                                            (carsForm.get('car').get('brand').dirty ||
+                                                                            carsForm.get('car').get('brand').touched)}">
+                                                            <option i18n="@@uc-create_ad-brand" selected>Brand...
+                                                            </option>
+                                                            <option *ngFor="let brand of carsInfo.brands">
+                                                                {{ brand.name }}
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                    <div class="create-ad-custom-brand ">
+                                                        <button (click)="showCustomBrand()" [disabled]="customBrand"
+                                                            i18n-title="@@uc-create_ad-custom-brand-btn_title"
+                                                            title="If the brand or model of your car is not on the list.">
+                                                            <fa-icon class="normal" [icon]="faArrowAltCircleDown">
+                                                            </fa-icon>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm create-ad-select-group  mb-2">
+                                                        <select
+                                                            class="custom-select create-ad-input create-ad-input-select"
+                                                            formControlName="model"
+                                                            [attr.disabled]="selectedModel == undefined || customBrand? '': null"
+                                                            [ngClass]="{'invalid-input': carsForm.get('car').get('model').invalid && 
+                                                                            (carsForm.get('car').get('model').dirty ||
+                                                                            carsForm.get('car').get('model').touched)}">
+                                                            <option i18n="@@uc-create_ad-model" selected>Model...
+                                                            </option>
+                                                            <option *ngFor="let model of selectedModel">{{ model }}
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal" [icon]="faCaretDown"
+                                                            [ngClass]="{'arrow-down': selectedModel !== undefined }">
+                                                        </fa-icon>
+                                                    </div>
+                                                    <div class="create-ad-car-mark">
+                                                        <button (click)="showCarMark()" [title]="carMarkTitle"
+                                                            [disabled]="selectedModel === undefined || customBrand">
+                                                            <fa-icon class="normal" [icon]="faArrowCircle">
+                                                            </fa-icon>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm mb-2">
+                                                        <input
+                                                            i18n-placeholder="Mark placeholder@@uc-create_ad-mark_placeh"
+                                                            i18n-title="@@uc-create_ad-mark_title"
+                                                            class="form-control create-ad-input"
+                                                            *ngIf="carMark && !customBrand" placeholder="Mark"
+                                                            type="text" formControlName="carMark" title="Enter Mark">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Custom Brand -->
+                                            <div class="row" *ngIf="customBrand">
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm create-ad-select-group  mb-2">
+                                                        <input class="form-control create-ad-input"
+                                                            i18n-placeholder="Brand placeholder@@uc-create_ad-custom-brand_placeh"
+                                                            i18n-title="@@uc-create_ad-custom-brand_title"
+                                                            placeholder="Brand" type="text" formControlName="brand"
+                                                            [ngClass]="{'invalid-input': carsForm.get('car').get('brand').invalid && 
+                                                           (carsForm.get('car').get('brand').dirty ||
+                                                           carsForm.get('car').get('brand').touched)}"
+                                                            title="Enter Brand">
+                                                    </div>
+                                                    <div class="create-ad-custom-brand ">
+                                                        <button (click)="showCustomBrand()">
+                                                            <fa-icon class="normal" [icon]="faArrowAltCircleUp">
+                                                            </fa-icon>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm create-ad-select-group  mb-2">
+                                                        <input class="form-control create-ad-input"
+                                                            i18n-placeholder="Model placeholder@@uc-create_ad-custom-model_placeh"
+                                                            i18n-title="@@uc-create_ad-custom-model_title" 
+                                                            [ngClass]="{'invalid-input': carsForm.get('car').get('model').invalid && 
+                                                                            (carsForm.get('car').get('model').dirty ||
+                                                                            carsForm.get('car').get('model').touched)}"
+                                                            placeholder="Model" type="text" formControlName="model"
+                                                            title="Enter Model">
+                                                    </div>
+                                                    <div class="create-ad-car-mark">
+                                                        <button (click)="showCarMark()" [title]="carMarkTitle"
+                                                            [disabled]="carsForm.get('car').get('model').invalid && 
+                                                            (carsForm.get('car').get('model').dirty ||
+                                                            carsForm.get('car').get('model').touched)">
+                                                            <fa-icon class="normal" [icon]="faArrowCircle">
+                                                            </fa-icon>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm mb-2">
+                                                        <input class="form-control create-ad-input" *ngIf="carMark"
+                                                            i18n-placeholder="Mark placeholder@@uc-create_ad-custom-mark_placeh"
+                                                            i18n-title="@@uc-create_ad-custom-mark_title"
+                                                            placeholder="Mark" type="text" formControlName="carMark"
+                                                            title="Enter Mark">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm create-ad-select-group  mb-2">
+                                                        <select
+                                                            class="custom-select create-ad-input create-ad-input-select"
+                                                            formControlName="age" [ngClass]="{'invalid-input': carsForm.get('car').get('age').invalid && 
+                                                                    (carsForm.get('car').get('age').dirty ||
+                                                                    carsForm.get('car').get('age').touched)}">
+                                                            <option i18n="@@uc-create_ad-age" selected>Age...</option>
+                                                            <option *ngFor="let year of carsInfo.years">{{ year }}
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm mb-2">
+                                                        <input class="form-control create-ad-input"
+                                                            i18n-placeholder="Price placeholder@@uc-create_ad-price_placeh"
+                                                            placeholder="Price (&euro;)" type="number"
+                                                            formControlName="price" [ngClass]="{'invalid-input': carsForm.get('car').get('price').invalid && 
+                                                                        (carsForm.get('car').get('price').dirty ||
+                                                                        carsForm.get('car').get('price').touched)}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm create-ad-select-group  mb-2">
+                                                        <select
+                                                            class="custom-select create-ad-input create-ad-input-select"
+                                                            formControlName="fuels" [ngClass]="{'invalid-input': carsForm.get('car').get('fuels').invalid && 
+                                                                    (carsForm.get('car').get('fuels').dirty ||
+                                                                    carsForm.get('car').get('fuels').touched)}">
+                                                            <option i18n="@@uc-create_ad-fuel" selected>Fuel...</option>
+                                                            <option *ngFor="let fuel of carsInfo.fuels">{{ fuel }}
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm create-ad-select-group  mb-2">
+                                                        <select
+                                                            class="custom-select create-ad-input create-ad-input-select"
+                                                            formControlName="colors" [ngClass]="{'invalid-input': carsForm.get('car').get('colors').invalid && 
+                                                                    (carsForm.get('car').get('colors').dirty ||
+                                                                    carsForm.get('car').get('colors').touched)}">
+                                                            <option i18n="@@uc-create_ad-color" selected>Color...
+                                                            </option>
+                                                            <option *ngFor="let color of carsInfo.colors">{{ color }}
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm mb-2">
+                                                        <input class="form-control create-ad-input"
+                                                            [placeholder]="'Kw/Ks'" type="number" formControlName="kwKs"
+                                                            title="Enter Kw" [ngClass]="{'invalid-input': carsForm.get('car').get('kwKs').invalid && 
+                                                                        (carsForm.get('car').get('kwKs').dirty ||
+                                                                        carsForm.get('car').get('kwKs').touched)}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm mb-2">
+                                                        <input class="form-control create-ad-input"
+                                                            i18n-placeholder="Mileage placeholder@@uc-create_ad-mileage_placeh"
+                                                            i18n-title="@@uc-create_ad-mileage_title"
+                                                            placeholder="Mileage (km)" type="number"
+                                                            formControlName="mileage" title="Enter mileage in km"
+                                                            [ngClass]="{'invalid-input': carsForm.get('car').get('mileage').invalid && 
+                                                                        (carsForm.get('car').get('mileage').dirty ||
+                                                                        carsForm.get('car').get('mileage').touched)}">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm create-ad-select-group  mb-2">
+                                                        <select
+                                                            class="custom-select create-ad-input create-ad-input-select"
+                                                            formControlName="doors" [ngClass]="{'invalid-input': carsForm.get('car').get('doors').invalid && 
+                                                                        (carsForm.get('car').get('doors').dirty ||
+                                                                        carsForm.get('car').get('doors').touched)}">
+                                                            <option i18n="@@uc-create_ad-doors" selected>Doors...
+                                                            </option>
+                                                            <option *ngFor="let door of carsInfo.doors">{{ door }}
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm mb-2">
+                                                        <input class="form-control create-ad-input"
+                                                            i18n-placeholder="Engine placeholder@@uc-create_ad-Engine_placeh"
+                                                            i18n-title="@@uc-create_ad-Engine_title"
+                                                            placeholder="Engine (cm&#179;)" type="number"
+                                                            formControlName="engine" title="Enter in cm&#179;"
+                                                            [ngClass]="{'invalid-input': carsForm.get('car').get('engine').invalid && 
+                                                                        (carsForm.get('car').get('engine').dirty ||
+                                                                        carsForm.get('car').get('engine').touched)}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm create-ad-select-group  mb-2">
+                                                        <select
+                                                            class="custom-select create-ad-input create-ad-input-select"
+                                                            formControlName="transmission"
+                                                            [ngClass]="{'invalid-input': carsForm.get('car').get('transmission').invalid && 
+                                                                        (carsForm.get('car').get('transmission').dirty ||
+                                                                        carsForm.get('car').get('transmission').touched)}">
+                                                            <option i18n="@@uc-create_ad-transmission" selected>
+                                                                Transmission...
+                                                            </option>
+                                                            <option *ngFor="let trans of carsInfo.transmission">
+                                                                {{ trans }}
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm create-ad-select-group  mb-2">
+                                                        <select
+                                                            class="custom-select create-ad-input create-ad-input-select"
+                                                            formControlName="seats" [ngClass]="{'invalid-input': carsForm.get('car').get('seats').invalid && 
+                                                                        (carsForm.get('car').get('seats').dirty ||
+                                                                        carsForm.get('car').get('seats').touched)}">
+                                                            <option i18n="@@uc-create_ad-seats" selected>Seats...
+                                                            </option>
+                                                            <option *ngFor="let seat of carsInfo.seats">{{ seat }} seats
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div formGroupName="saller">
+                                    <h5 i18n="@@uc-create_ad-subtitle-3" class="create-ad-subtittle">Saller Info</h5>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="input-group-sm create-ad-select-group  mb-2">
+                                                <select class="custom-select create-ad-input create-ad-input-select"
+                                                    (change)="searchModel($event.target.value)"
+                                                    formControlName="countries" [ngClass]="{'invalid-input': carsForm.get('saller').get('countries').invalid && 
+                                                                (carsForm.get('saller').get('countries').dirty ||
+                                                                carsForm.get('saller').get('countries').touched)}">
+                                                    <option i18n="@@uc-create_ad-country" selected>Country...</option>
+                                                    <option *ngFor="let country of carsInfo.countries">
+                                                        {{ country.name }}
+                                                    </option>
+                                                </select>
+                                                <fa-icon class="normal arrow-down" [icon]="faCaretDown"></fa-icon>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="input-group-sm mb-2">
+                                                <input class="form-control create-ad-input"
+                                                    i18n-placeholder="Town placeholder@@uc-create_ad-town_placeh"
+                                                    placeholder="Town" i18n-title="@@uc-create_ad-town_title"
+                                                    title="Enter Town" type="text" formControlName="town" [ngClass]="{'invalid-input': carsForm.get('saller').get('town').invalid && 
+                                                                (carsForm.get('saller').get('town').dirty ||
+                                                                carsForm.get('saller').get('town').touched)}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="input-group-sm mb-2">
+                                                <input class="form-control create-ad-input"
+                                                    i18n-placeholder="Phone placeholder@@uc-create_ad-phone_placeh"
+                                                    placeholder="Phone" i18n-title="@@uc-create_ad-phone_title"
+                                                    type="number" title="Enter phone" formControlName="phone" [ngClass]="{'invalid-input': carsForm.get('saller').get('phone').invalid && 
+                                                                (carsForm.get('saller').get('phone').dirty ||
+                                                                carsForm.get('saller').get('phone').touched)}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="input-group-sm mb-2">
+                                                <input class="form-control create-ad-input"
+                                                    i18n-placeholder="Address placeholder@@uc-create_ad-address_placeh"
+                                                    placeholder="Address" i18n-title="@@uc-create_ad-address_title"
+                                                    title="Enter address" type="text" formControlName="adress"
+                                                    [ngClass]="{'invalid-input': carsForm.get('saller').get('adress').invalid && 
+                                                                (carsForm.get('saller').get('adress').dirty ||
+                                                                carsForm.get('saller').get('adress').touched)}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="input-group-sm mb-2">
+                                                <input class="form-control create-ad-input"
+                                                    i18n-placeholder="Address number placeholder@@uc-create_ad-address-num_placeh"
+                                                    placeholder="Address Number" type="number"
+                                                    i18n-title="@@uc-create_ad-address-num_title"
+                                                    title="Enter address number" formControlName="adressNumber"
+                                                    [ngClass]="{'invalid-input': carsForm.get('saller').get('adressNumber').invalid && 
+                                                                (carsForm.get('saller').get('adressNumber').dirty ||
+                                                                carsForm.get('saller').get('adressNumber').touched)}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button i18n="@@uc-create_ad-createad-btn" class="btn btn-sm create-ad-btn float-right"
+                                    type="button" (click)="createCar()" [disabled]="carsForm.invalid">
+                                    <fa-icon class="normal" [icon]="faTools"></fa-icon>
+                                    Create Ad
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

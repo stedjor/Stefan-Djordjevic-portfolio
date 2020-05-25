@@ -1,0 +1,60 @@
+@uc-color-dark: rgb(20, 20, 20);
+@uc-color-gold: rgb(255, 215, 0);
+@uc-color-text: white;
+
+.uc-header {
+    background   : @uc-color-dark;
+    border-bottom: 2px solid @uc-color-gold;
+    padding: 0.3rem 1rem;
+
+    & .uc-brand {
+        color         : @uc-color-gold;
+        // text-shadow: 1px 1px @uc-color-gold;
+        font-size     : 15px;
+
+        & span {
+            font-size: 20px;
+            color    : @uc-color-text;
+        }
+
+        &:hover {
+            color: @uc-color-text;
+
+            & span {
+                color: @uc-color-gold;
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+            & {
+                font-size: 12px;
+
+                & span {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    & .uc-header-toggler {
+        color: @uc-color-text;
+    }
+
+    & a {
+        color: @uc-color-text;
+
+        &:hover {
+            color: @uc-color-gold;
+        }
+
+        @media only screen and (max-width: 320px) {
+            & {
+                font-size: 18px;
+            }
+        }
+
+        &.router-link-active{
+            color: @uc-color-gold;
+        }
+    }
+}

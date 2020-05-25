@@ -1,0 +1,73 @@
+<div class="container register-container">
+  <div class="col-lg-5 col-md-7 col-sm-12 ml-auto mr-auto">
+    <div class="card register-card">
+      <div class="card-header register-header">
+        <h2 i18n="@@register-title">Register</h2>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="registerForm">
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" 
+            i18n-title="@@register-e_mail-title" title="Enter your email"
+            i18n-placeholder="@@register-e_mail-placeh" placeholder="Email"
+              formControlName="email" #userEmail>
+          </div>
+
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" 
+            i18n-title="@@register-pass-title"
+              title="Enter password"
+            i18n-placeholder="@@register-pass-placeh"
+              placeholder="Password" formControlName="password">
+          </div>
+
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" 
+            i18n-title="@@register-cnf_pass-title"
+              title="Type the same password"
+            i18n-placeholder="@@register-cnf_pass-placeh"
+              placeholder="Confirm Password" formControlName="confirmPassword"
+              [ngClass]="{'input-error': registerForm.hasError('invalidPassword') && registerForm.get('confirmPassword').touched}">
+          </div>
+
+          <div class="input-group mb-1">
+            <small class="register-confirm-pass" [ngClass]="{'register-confirm-pass-error': registerForm.hasError('invalidPassword') && 
+            registerForm.get('confirmPassword').touched}"
+            i18n="@@register-not_same_pass"
+            >
+              Password is not same
+            </small>
+          </div>
+
+          <div class="input-group mb-1">
+            <button class="btn register-btn" i18n="@@register-btn" [disabled]="registerForm.invalid"
+              (click)="register()">Sign Up
+            </button>
+          </div>
+        </form>
+
+        <div class="input-group mb-1">
+          <span class="or"><span i18n="@@register-text-1" class="orInner">Or Log In with: </span></span>
+        </div>
+
+        <div class="d-flex justify-content-start mb-1">
+          <div class="p-2 provider-icons">
+            <a (click)="authService.googleLogin()" i18n-title="@@register-fa_google" title="Login with your google acount">
+              <fa-icon class="normal" [icon]="faGoogle"></fa-icon>
+            </a>
+          </div>
+          <!-- <div class="p-2 provider-icons">
+            <a (click)="authService.facebookLogin()">
+              <fa-icon class="normal" [icon]="faFacebookF"></fa-icon>
+            </a>
+          </div> -->
+        </div>
+
+        <div class="input-group">
+          <span i18n="@@register-text-2">Already have an account? <a class="redirect register-link-btn"
+              routerLink="/login">Log In</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

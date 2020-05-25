@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-sm uc-header">
+    <a class="navbar-brand uc-brand" [routerLink]="['car-ads']">
+        &#60;<fa-icon [icon]="faCar" class="button-icon" title="Edit Profile"></fa-icon>&#62;<span
+            i18n="@@uc-car_header-title">UsedCars</span>&#60;/<fa-icon [icon]="faCar" class="button-icon"
+            title="Edit Profile"></fa-icon>&#62;
+    </a>
+    <button class="navbar-toggler uc-header-toggler" type="button" (click)="dropdownShowHide()">
+        <fa-icon [icon]="faBars"></fa-icon>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a i18n="@@uc-car_header-li-1" class="nav-link" [routerLink]="['car-ads']"
+                    routerLinkActive="router-link-active" *ngIf="authService.isLoggedIn">Car Ads</a>
+            </li>
+            <li class="nav-item">
+                <a i18n="@@uc-car_header-li-2" class="nav-link" [routerLink]="['create-ad']"
+                    routerLinkActive="router-link-active" *ngIf="authService.isLoggedIn">
+                    Create Ad</a>
+            </li>
+        </ul>
+    </div>
+</nav>

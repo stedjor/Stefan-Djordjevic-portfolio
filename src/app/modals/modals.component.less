@@ -1,0 +1,735 @@
+@main-header-color    : rgb(68, 68, 68);
+@main-header-txt-color: rgb(170, 170, 170);
+@txt-shadow-color     : rgb(0, 250, 0);
+@main-color-white     : rgb(255, 255, 255);
+
+@home-background: rgb(0, 53, 0);
+@home-color     : rgb(0, 153, 0);
+
+@about-background: rgb(0, 0, 53);
+@about-color     : rgb(0, 0, 153);
+
+@app-background: rgb(53, 0, 0);
+@app-color     : rgb(153, 0, 0);
+
+@fs-color      : rgb(255, 65, 117);
+@fs-background : #393e47;
+@fs-color-light: rgb(101, 193, 194);
+
+@uc-background: rgb(20, 20, 20);
+@uc-color     : rgb(255, 215, 0);
+
+@contact-background: rgb(53, 0, 53);
+@contact-color     : rgb(153, 0, 153);
+
+
+@login-background : rgb(0, 43, 54);
+@login-color      : rgb(0, 160, 163);
+
+@register-background: rgb(49, 0, 0);
+@register-color     : rgb(163, 0, 0);
+
+@profile-background : rgb(54, 27, 0);
+@profile-color      : rgb(117, 117, 102);
+
+@fp-background : rgb(56, 51, 0);
+@fp-color      : rgb(255, 238, 0);
+
+@ve-background : rgb(41, 0, 80);
+@ve-color      : rgb(153, 0, 255);
+
+@error-background : rgb(53, 30, 0);
+@error-color      : rgb(225, 135, 0);
+
+& .modal-menu-dlg {
+    margin        : 0;
+    height        : 100%;
+    max-width     : 160px;
+    z-index       : 1050;
+    margin-left   : auto;
+    font-family   : serif;
+    letter-spacing: 0.9px;
+
+    & .modal-menu-content {
+        height          : 100%;
+        border          : none;
+        border-left     : 2px solid @main-header-txt-color;
+        background-color: @main-header-color;
+        border-radius   : 0 8px 8px 0px;
+
+        & .menu-lng-btn {
+            position: absolute;
+            height  : 25px;
+            width   : 25px;
+
+            &.menu-lng-btn-active {
+                & img {
+                    border: 2px solid black;
+                    filter: grayscale(0%);
+
+                    &:hover {
+                        filter: grayscale(5%);
+                    }
+                }
+            }
+
+            &.menu-lng-sr {
+                left: 10px;
+            }
+
+            &.menu-lng-en {
+                right: 10px;
+            }
+
+            & img {
+                height       : 100%;
+                width        : 100%;
+                border-radius: 50%;
+                border       : 2px solid @main-color-white;
+                box-shadow   : 0 0 10px 0px @txt-shadow-color;
+                filter       : grayscale(100%);
+
+                &:hover {
+                    border: 2px solid black;
+                    filter: grayscale(0%);
+                }
+            }
+        }
+
+        & ul {
+            height: 100%;
+
+            & li.menu-item {
+                &.active {
+                    & a {
+                        color: black;
+                    }
+                }
+
+                & .moda-menu-img {
+                    border          : 2px solid white;
+                    border-radius   : 50%;
+                    background-color: rgb(218, 218, 218);
+                    height          : 100px;
+                    min-height      : 100px;
+                    max-height      : 100px;
+                    width           : 100px;
+                    min-width       : 100px;
+                    max-width       : 100px;
+                    box-shadow      : 0px 0px 10px 0px @txt-shadow-color;
+                    cursor          : pointer;
+
+                    &:hover {
+                        border: 2px solid black;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                & a {
+                    color      : @main-header-txt-color;
+                    text-shadow: 0 0px 10px @txt-shadow-color;
+
+                    & .normal {
+                        position: relative;
+                        z-index : 1;
+
+                        &::before {
+                            content         : '';
+                            background-color: @txt-shadow-color;
+                            -webkit-filter  : blur(10px);
+                            filter          : blur(10px);
+                            position        : absolute;
+                            z-index         : 0;
+                            top             : 0;
+                            left            : 0;
+                            height          : 10px;
+                            width           : 10px;
+                        }
+                    }
+                }
+
+                & .dp-menu {
+                    background-color: @main-header-color;
+                    border          : none;
+                    border-top      : none;
+                    border-radius   : 0;
+                    margin-top      : 0;
+                    min-width       : 8rem;
+
+                    .dp-item {
+                        color           : @main-header-txt-color;
+                        background-color: transparent;
+                        padding         : .25rem 0 .25rem 1.5rem;
+
+                        &:hover {
+                            color: black;
+                        }
+
+                        &:focus {
+                            color: black;
+                        }
+
+                        &.router-link-active {
+                            color: black;
+                        }
+                    }
+                }
+
+                & a.nav-link:hover {
+                    color : black;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        & .scrollbar {
+            float        : left;
+            height       : 100%;
+            width        : 100%;
+            background   : transparent;
+            overflow-y   : auto;
+            border-radius: 10px;
+
+            &.scrollbar-primary::-webkit-scrollbar-track {
+                --webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.1);
+                background-color   : rgba(244, 244, 244, 0.1);
+                border-radius      : 10px;
+            }
+
+            &.scrollbar-primary::-webkit-scrollbar {
+                width                     : 12px;
+                background-color          : rgba(244, 244, 244, 0.1);
+                border-top-right-radius   : 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            &.scrollbar-primary::-webkit-scrollbar-thumb {
+                border-radius      : 10px;
+                --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+                background-image   : -webkit-gradient(linear, left top, right top, from(@main-color-white), to(@fs-background));
+                background-image   : -webkit-linear-gradient(left, @main-color-white 0%, @fs-background 100%);
+                background-image   : linear-gradient(to right, @main-color-white 0%, @fs-background 100%);
+            }
+        }
+    }
+}
+
+& .modal-info-dlg {
+    z-index: 1050;
+
+    & .modal-info-content {
+        position     : relative;
+        height       : 100%;
+        max-height   : 450px;
+        border       : none;
+        border-radius: 8px;
+        border       : 2px solid @main-header-txt-color;
+        color        : white;
+
+
+        & .modal-info-body {
+            padding: 25px 50px;
+
+            & h6 {
+                font-size: 17px;
+            }
+
+            & .modal-info-text-indent {
+                text-indent: 30px;
+            }
+
+            & .scrollbar-primary::-webkit-scrollbar-thumb {
+                background-image: -webkit-gradient(linear, left top, right top, from(@main-color-white), to(@fs-background));
+                background-image: -webkit-linear-gradient(left, @main-color-white 0%, @fs-background 100%);
+                background-image: linear-gradient(to right, @main-color-white 0%, @fs-background 100%);
+            }
+        }
+
+        & .close-info {
+            position: absolute;
+            top     : 0;
+            right   : 0;
+            cursor  : pointer;
+            z-index : 1000;
+            color   : @main-header-txt-color;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &-home {
+            background-color: @home-background;
+
+            & .close-info {
+
+                &:hover {
+                    color: @home-color;
+                }
+            }
+
+            & .scrollbar-primary::-webkit-scrollbar-thumb {
+                background-image: -webkit-gradient(linear, left top, right top, from(@main-color-white), to(@home-background));
+                background-image: -webkit-linear-gradient(left, @main-color-white 0%, @home-background 100%);
+                background-image: linear-gradient(to right, @main-color-white 0%, @home-background 100%);
+            }
+        }
+
+        &-about {
+            background-color: @about-background;
+
+            & .close-info {
+
+                &:hover {
+                    color: @about-color;
+                }
+            }
+
+            & .scrollbar-primary::-webkit-scrollbar-thumb {
+                background-image: -webkit-gradient(linear, left top, right top, from(@main-color-white), to(@about-background));
+                background-image: -webkit-linear-gradient(left, @main-color-white 0%, @about-background 100%);
+                background-image: linear-gradient(to right, @main-color-white 0%, @about-background 100%);
+            }
+        }
+
+        &-app {
+            background-color: @app-background;
+
+            & .close-info {
+
+                &:hover {
+                    color: @app-color;
+                }
+            }
+
+            & .scrollbar-primary::-webkit-scrollbar-thumb {
+                background-image: -webkit-gradient(linear, left top, right top, from(@main-color-white), to(@app-background));
+                background-image: -webkit-linear-gradient(left, @main-color-white 0%, @app-background 100%);
+                background-image: linear-gradient(to right, @main-color-white 0%, @app-background 100%);
+            }
+        }
+
+        &-fs {
+            background-color: @fs-background;
+            border-color    : @fs-color;
+
+            & h4, h5 {
+                color: @fs-color-light;
+            }
+
+            & .close-info {
+                right: 5px;
+
+                &:hover {
+                    color: @fs-color;
+                }
+            }
+
+            & .scrollbar-primary::-webkit-scrollbar-thumb {
+                background-image: -webkit-gradient(linear, left top, right top, from(@fs-color-light), to(@fs-background));
+                background-image: -webkit-linear-gradient(left, @fs-color-light 0%, @fs-background 100%);
+                background-image: linear-gradient(to right, @fs-color-light 0%, @fs-background 100%);
+            }
+        }
+
+        &-uc {
+            background-color: @uc-background;
+            border-color    : @uc-color;
+
+            & .close-info {
+                right: 10px;
+
+                &:hover {
+                    color: @uc-color;
+                }
+            }
+
+            & h5 {
+                color: @uc-color;
+            }
+
+            & .scrollbar-primary::-webkit-scrollbar-thumb {
+                background-image: -webkit-gradient(linear, left top, right top, from(@main-color-white), to(@uc-background));
+                background-image: -webkit-linear-gradient(left, @main-color-white 0%, @uc-background 100%);
+                background-image: linear-gradient(to right, @main-color-white 0%, @uc-background 100%);
+            }
+        }
+
+        &-contact {
+            background-color: @contact-background;
+
+            & .close-info {
+
+                &:hover {
+                    color: @contact-color;
+                }
+            }
+
+            & .scrollbar-primary::-webkit-scrollbar-thumb {
+                background-image: -webkit-gradient(linear, left top, right top, from(@main-color-white), to(@contact-background));
+                background-image: -webkit-linear-gradient(left, @main-color-white 0%, @contact-background 100%);
+                background-image: linear-gradient(to right, @main-color-white 0%, @contact-background 100%);
+            }
+        }
+
+        &-login {
+            background-color: @login-background;
+            border-color    : @login-color;
+
+            & .close-info {
+                &:hover {
+                    color: @login-color;
+                }
+            }
+
+            & .login-text {
+                color: @login-color;
+            }
+
+            & .loggin-btn {
+                background   : @login-color;
+                color        : @login-background;
+                font-weight  : bold;
+                border-radius: 3px;
+                font-size    : 13px;
+                padding      : 5px;
+            }
+
+            & .scrollbar-primary::-webkit-scrollbar-thumb {
+                background-image: -webkit-gradient(linear, left top, right top, from(@main-color-white), to(@login-background));
+                background-image: -webkit-linear-gradient(left, @main-color-white 0%, @login-background 100%);
+                background-image: linear-gradient(to right, @main-color-white 0%, @login-background 100%);
+            }
+        }
+
+        &-register {
+            background-color: @register-background;
+
+            & .close-info {
+
+                &:hover {
+                    color: @register-color;
+                }
+            }
+
+            & .scrollbar-primary::-webkit-scrollbar-thumb {
+                background-image: -webkit-gradient(linear, left top, right top, from(@main-color-white), to(@register-background));
+                background-image: -webkit-linear-gradient(left, @main-color-white 0%, @register-background 100%);
+                background-image: linear-gradient(to right, @main-color-white 0%, @register-background 100%);
+            }
+        }
+
+        &-profile {
+            background-color: @profile-background;
+            border-color    : @profile-color;
+
+            & .close-info {
+
+                &:hover {
+                    color: @profile-color;
+                }
+            }
+
+            & .profile-x {
+                background   : @profile-background;
+                border       : 1px solid @profile-color;
+                border-radius: 50%;
+                padding      : 2px 7px;
+            }
+
+            & .profile-camera {
+                background   : @profile-background;
+                border       : 1px solid @profile-color;
+                border-radius: 50%;
+                padding      : 2px 4px;
+            }
+
+            & .scrollbar-primary::-webkit-scrollbar-thumb {
+                background-image: -webkit-gradient(linear, left top, right top, from(@main-color-white), to(@profile-background));
+                background-image: -webkit-linear-gradient(left, @main-color-white 0%, @profile-background 100%);
+                background-image: linear-gradient(to right, @main-color-white 0%, @profile-background 100%);
+            }
+        }
+
+        &-fp {
+            background-color: @fp-background;
+            border-color    : @fp-color;
+
+            & .close-info {
+
+                &:hover {
+                    color: @fp-color;
+                }
+            }
+
+            & .fp-btn {
+                color        : @fp-background;
+                background   : @fp-color;
+                font-weight  : bold;
+                border-radius: 5px;
+                padding      : 2px 7px;
+            }
+
+            & .scrollbar-primary::-webkit-scrollbar-thumb {
+                background-image: -webkit-gradient(linear, left top, right top, from(@main-color-white), to(@fp-background));
+                background-image: -webkit-linear-gradient(left, @main-color-white 0%, @fp-background 100%);
+                background-image: linear-gradient(to right, @main-color-white 0%, @fp-background 100%);
+            }
+        }
+
+        &-ve {
+            background-color: @ve-background;
+            border-color    : @ve-color;
+
+            & .close-info {
+
+                &:hover {
+                    color: @ve-color;
+                }
+            }
+
+            & .scrollbar-primary::-webkit-scrollbar-thumb {
+                background-image: -webkit-gradient(linear, left top, right top, from(@main-color-white), to(@ve-background));
+                background-image: -webkit-linear-gradient(left, @main-color-white 0%, @ve-background 100%);
+                background-image: linear-gradient(to right, @main-color-white 0%, @ve-background 100%);
+            }
+        }
+
+        &-error {
+            background-color: @error-background;
+            border-color    : @error-color;
+
+            & .close-info {
+
+                &:hover {
+                    color: @error-color;
+                }
+            }
+
+            & .scrollbar-primary::-webkit-scrollbar-thumb {
+                background-image: -webkit-gradient(linear, left top, right top, from(@main-color-white), to(@error-background));
+                background-image: -webkit-linear-gradient(left, @main-color-white 0%, @error-background 100%);
+                background-image: linear-gradient(to right, @main-color-white 0%, @error-background 100%);
+            }
+        }
+    }
+
+    & .scrollbar {
+        float        : left;
+        height       : 100%;
+        width        : 100%;
+        background   : transparent;
+        overflow-y   : auto;
+        border-radius: 10px;
+
+        &.scrollbar-primary::-webkit-scrollbar-track {
+            --webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.1);
+            background-color   : rgba(244, 244, 244, 0.1);
+            border-radius      : 10px;
+        }
+
+        &.scrollbar-primary::-webkit-scrollbar {
+            width                     : 12px;
+            background-color          : rgba(244, 244, 244, 0.1);
+            border-top-right-radius   : 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        &.scrollbar-primary::-webkit-scrollbar-thumb {
+            border-radius      : 10px;
+            --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+// Responsive
+@media only screen and (max-width: 768px) {
+
+    // Menu
+    & .modal-menu-dlg {
+        max-width: 150px;
+
+        & .modal-menu-content {
+            & ul {
+                & li.menu-item {
+                    & .moda-menu-img {
+                        height: 80px;
+                        width : 80px;
+                    }
+
+                    & a {
+                        font-size: 14px;
+
+                        & .normal {
+                            &::before {
+                                height: 10px;
+                                width : 10px;
+                            }
+                        }
+                    }
+
+                    & .dp-menu {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // Info
+    & .modal-info-dlg {
+        & .modal-info-content {
+            max-height: 350px;
+
+            & .modal-info-body {
+                padding: 15px 30px;
+
+                & h4 {
+                    font-size: 20px;
+                }
+
+                & h5 {
+                    font-size: 18px;
+                }
+
+                & h6,
+                & li {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        & .scrollbar {
+            &.scrollbar-primary::-webkit-scrollbar {
+                width: 7px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    & .modal-info-dlg {
+        & .modal-info-content {
+            max-height: 400px;
+
+            & .modal-info-body {
+                padding: 10px 20px;
+
+                & h4 {
+                    font-size: 18px;
+                }
+
+                & h5 {
+                    font-size: 16px;
+                }
+
+                & h6,
+                & li {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    // Menu
+    & .modal-menu-dlg {
+        max-width: 150px;
+
+        & .modal-menu-content {
+            & ul {
+                & li.menu-item {
+                    & .moda-menu-img {
+                        height: 75px;
+                        width : 75px;
+                    }
+
+                    & a {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Info
+    & .modal-info-dlg {
+        & .modal-info-content {
+            max-height: 400px;
+
+            & .modal-info-body {
+                padding: 5px 15px;
+
+                & h4 {
+                    font-size: 17px;
+                }
+
+                & h5 {
+                    font-size: 15px;
+                }
+
+                & h6,
+                & li {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        & .scrollbar {
+            &.scrollbar-primary::-webkit-scrollbar {
+                width: 5px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 640),
+screen and (max-height: 360px) {
+    & .modal-menu-dlg {
+        & .modal-menu-content {
+            & .scrollbar {
+                &.scrollbar-primary::-webkit-scrollbar {
+                    width: 5px;
+                }
+            }
+        }
+    }
+
+    // Info
+    & .modal-info-dlg {
+        margin: 0.05rem auto;
+
+        & .modal-info-content {
+            max-height: 252px;
+
+            & .modal-info-body {
+                padding: 5px 15px;
+
+                & h4 {
+                    font-size: 17px;
+                }
+
+                & h5 {
+                    font-size: 15px;
+                }
+
+                & h6,
+                & li {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        & .scrollbar {
+            &.scrollbar-primary::-webkit-scrollbar {
+                width: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+<div class="container login-container">
+  <div class="col-lg-5 col-md-7 col-sm-12 ml-auto mr-auto">
+    <div class="card login-card">
+      <div class="card-header login-header">
+        <h2 i18n="@@login-title">Log In</h2>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" 
+            i18n-title="@@login-e_mail-title" title="Enter your email address"
+            i18n-placeholder="@@login-e_mail-placeh"
+              placeholder="Email Address" name="email" [(ngModel)]="user.email" required>
+          </div>
+
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" 
+            i18n-title="@@login-pass-title" title="Enter password"
+            i18n-placeholder="@@login-pass-placeh" placeholder="Password"
+              name="password" [(ngModel)]="user.password" required>
+          </div>
+
+          <div class="input-group mb-3">
+            <button i18n="@@login-btn" type="submit" class="btn login-btn">Log In</button>
+          </div>
+        </form>
+        <div class="input-group mb-1">
+          <span class="or"><span class="orInner" i18n="@@login-text-1">Or Login with: </span></span>
+        </div>
+
+        <div class="d-flex justify-content-start mb-1">
+          <div class="p-2 provider-icons">
+            <a (click)="authService.googleLogin()" i18n-title="@@login-fa_google" title="Login with your google acount">
+              <fa-icon class="normal" [icon]="faGoogle"></fa-icon>
+            </a>
+          </div>
+          <!-- <div class="p-2 provider-icons">
+            <a (click)="authService.facebookLogin()">
+              <fa-icon class="normal" [icon]="faFacebookF"></fa-icon>
+            </a>
+          </div> -->
+        </div>
+
+        <div class="input-group mb-3">
+          <a i18n="@@login-link-1" routerLink="/forgot-password" class="login-link-btn">Forgot Password?</a>
+        </div>
+
+        <div class="input-group">
+          <span i18n="@@login-text-2">Don't have an account? <a class="redirect login-link-btn"
+              routerLink="/register">Register</a></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

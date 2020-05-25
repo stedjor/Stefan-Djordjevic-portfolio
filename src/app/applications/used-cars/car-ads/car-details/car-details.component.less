@@ -1,0 +1,533 @@
+@uc-color      : rgb(27, 27, 27);
+@uc-color-dark : rgb(20, 20, 20);
+@uc-color-light: rgb(77, 77, 77);
+@uc-color-gold : rgb(255, 215, 0);
+@uc-color-text : rgb(255, 255, 255);
+
+
+& .details-card {
+    background: @uc-color-dark;
+    animation : colorize 2.5s;
+
+    @keyframes colorize {
+        from {
+            filter        : grayscale(100%) blur(2px);
+            -webkit-filter: grayscale(100%) blur(2px);
+        }
+
+        to {
+            filter        : grayscale(0%) blur(0px);
+            -webkit-filter: grayscale(0%) blur(0px);
+        }
+    }
+
+    & .details-header {
+        padding      : 0 15px;
+        border-bottom: 1px solid @uc-color-gold;
+
+        & .details-icon {
+            cursor: pointer;
+            color : @uc-color-text;
+
+            & .normal {
+                font-size: 15px;
+
+                &:hover {
+                    color    : @uc-color-gold;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    & .details-card-body {
+        background   : @uc-color;
+        border       : 1px solid @uc-color-dark;
+        border-radius: 5px;
+
+        & .details-title {
+            color      : @uc-color-text;
+            font-weight: bold;
+        }
+
+        & .details-subtitle {
+            color: @uc-color-gold;
+        }
+
+        & small {
+            color: @uc-color-light;
+        }
+
+        & .image-content {
+            position     : relative;
+            border       : 2px solid @uc-color-gold;
+            border-radius: 5px;
+            padding      : 5px;
+            width        : 100%;
+            height       : 100%;
+
+            & .price-box {
+                position                 : absolute;
+                top                      : 0;
+                right                    : 0;
+                z-index                  : 10;
+                background-color         : @uc-color-dark;
+                border-bottom-left-radius: 5px;
+                color                    : @uc-color-text;
+                padding                  : 5px;
+                border-bottom            : 2px solid @uc-color-gold;
+                border-left              : 2px solid @uc-color-gold;
+            }
+
+            & .image-box {
+                position        : relative;
+                border-radius   : 5px;
+                background-color: @uc-color-light;
+                text-align      : center;
+                min-height      : 350px;
+                display         : table;
+                width           : 100%;
+
+                & .image-box-inner {
+                    vertical-align: middle;
+                    display       : table-cell;
+
+                    & .image-details {
+                        width          : 100%;
+                        object-fit     : contain;
+                        object-position: center;
+                        max-height: 350px;
+                    }
+                }
+
+
+                & .btn-images {
+                    position        : absolute;
+                    width           : 20%;
+                    height          : 100%;
+                    z-index         : 9;
+                    top             : 0;
+                    background-color: rgba(27, 27, 27, 0.3);
+                    cursor          : pointer;
+
+                    &:hover {
+                        background-color: rgba(255, 215, 0, 0.5);
+                    }
+
+                    &.btn-prev {
+                        left: 0;
+                    }
+
+                    &.btn-next {
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        & .list-of-imgs {
+            width        : auto;
+            height       : 105px;
+            max-width    : 580px;
+            border       : 2px solid @uc-color-gold;
+            border-radius: 5px;
+            padding      : 5px;
+            position     : relative;
+
+            & li {
+                position      : relative;
+                border        : 2px solid @uc-color-light;
+                border-radius : 2px;
+                background    : @uc-color;
+                height        : 100%;
+                vertical-align: middle;
+                text-align    : center;
+                margin        : 0;
+                opacity       : 0.5;
+                margin-right  : 5px;
+                writing-mode  : vertical-lr;
+                cursor        : pointer;
+
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.list-img-active {
+                    border : 2px solid @uc-color-gold;
+                    opacity: 1;
+
+                    &:hover {
+                        border-color: darken(@uc-color-gold, 10%);
+                        opacity     : 0.9;
+                    }
+                }
+
+                &:hover {
+                    border-color: darken(@uc-color-gold, 10%);
+                    opacity     : 0.7;
+                }
+
+                & img {
+                    max-width: 80px;
+                    height   : auto;
+                }
+
+                & button {
+                    position     : absolute;
+                    right        : 0;
+                    padding      : 0px 5px;
+                    border-radius: 0px;
+                }
+            }
+
+            & .list-imgs-scroll {
+                background    : transparent;
+                width         : 98%;
+                height        : 93%;
+                padding       : 0;
+                padding-bottom: 3px;
+                position      : absolute;
+            }
+        }
+
+        & .details-info {
+            & p {
+                color: @uc-color-text;
+
+                & strong {
+                    color: @uc-color-light;
+                }
+            }
+        }
+    }
+}
+
+// SCROLLBAR
+& .scrollbar {
+    overflow   : auto;
+    white-space: nowrap;
+    padding    : 5px;
+
+    &.scrollbar-primary::-webkit-scrollbar-track {
+        --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color   : rgba(244, 244, 244, 0.3);
+        border-radius      : 10px;
+        cursor             : grabbing;
+    }
+
+    &.scrollbar-primary::-webkit-scrollbar {
+        height          : 5px;
+        width           : 10px;
+        background-color: rgba(244, 244, 244, 0.3);
+
+        @media only screen and (max-width: 375px) {
+            & {
+                width: 5px;
+            }
+        }
+    }
+
+    &.scrollbar-primary::-webkit-scrollbar-thumb {
+        border-radius      : 10px;
+        border             : 1px solid @uc-color-dark;
+        --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-image   : -webkit-gradient(linear, left top, right top, to(@uc-color-gold));
+        background-image   : -webkit-linear-gradient(left, @uc-color-gold 100%);
+        background-image   : linear-gradient(to right, @uc-color-gold 100%);
+    }
+}
+
+& .comment-collapse-card {
+    border    : none;
+    background: @uc-color;
+
+    & .comment-btn {
+        width     : 100%;
+        height    : 100%;
+        text-align: left;
+        padding   : 10px 30px;
+        position  : relative;
+
+        color        : @uc-color-text;
+        background   : @uc-color-dark;
+        border       : none;
+        border-bottom: 1px solid @uc-color-gold;
+
+        &:hover {
+            color        : @uc-color-gold;
+            border-bottom: 1px solid @uc-color-text;
+
+            & .comment-badge {
+                background: @uc-color-text;
+                color     : @uc-color-dark;
+            }
+        }
+
+        & .comment-badge {
+            position     : absolute;
+            right        : 30px;
+            padding      : 0 5px;
+            background   : @uc-color-gold;
+            color        : @uc-color-dark;
+            border-radius: 50%;
+            font-size    : 12px;
+        }
+    }
+
+    & .comment-card-body {
+        border: 1px solid @uc-color-dark;
+
+        & .comment-box {
+            padding      : 5px;
+            border       : 1px solid @uc-color-gold;
+            border-radius: 5px;
+
+            &-scroll {
+                width           : 100%;
+                height          : 100%;
+                min-height      : 380px;
+                max-height      : 380px;
+                padding         : 5px;
+                border-radius   : 5px;
+                background-color: @uc-color-light;
+            }
+
+            &-no {
+                min-height: 40px;
+                max-height: 40px;
+                color     : @uc-color-light;
+
+                & h6 {
+                    margin: 4px 0;
+                }
+            }
+
+            & .message-card {
+                background: @uc-color;
+                border    : 1px solid @uc-color-gold;
+                color     : @uc-color-text;
+                width     : 70%;
+
+                & small {
+                    color: @uc-color-gold;
+                }
+
+                &-color {
+                    background : @uc-color-gold;
+                    margin-left: auto;
+                    color      : @uc-color-dark;
+                    border     : 1px solid @uc-color-dark;
+
+                    & small {
+                        color: @uc-color-light;
+                    }
+
+                    & .message-icon {
+
+                        & .normal {
+                            color : @uc-color-light;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: @uc-color;
+                            }
+
+                        }
+                    }
+                }
+
+                &-body {
+                    padding: 10px;
+
+                    & img {
+                        height       : 30px;
+                        width        : auto;
+                        border-radius: 15px;
+                        border       : 1px solid @uc-color;
+                        background   : @uc-color-text;
+                        margin-right : 10px;
+                    }
+
+
+
+                    & .message-card-text {
+                        padding    : 5px 10px;
+                        font-size  : 15px;
+                        white-space: normal;
+                        text-align : start;
+                    }
+                }
+
+                @media only screen and (max-width: 768px) {
+                    & {
+                        width: 95%;
+
+                        & small {
+                            font-size: 10px;
+                        }
+
+                        &-color {
+
+                            & small {
+                                font-size: 10px;
+                            }
+
+                            & .message-icon {
+
+                                & .normal {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+
+                        &-body {
+                            padding: 0 5px;
+
+                            & img {
+                                height      : 20px;
+                                margin-right: 5px;
+                            }
+
+                            & .message-card-text {
+                                padding  : 5px 5px;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & .comment-area {
+            background: @uc-color-light;
+            color     : @uc-color-text;
+            border    : 1px solid @uc-color-gold;
+
+            &::placeholder {
+                color: @uc-color-dark;
+            }
+
+            &:focus {
+                box-shadow: 0 0 5px 2px @uc-color-gold;
+            }
+
+            @media only screen and (max-width: 768px) {
+                & {
+                    font-size: 10px;
+                }
+            }
+
+            @media only screen and (max-width: 425px) {
+                & {
+                    font-size: 8px;
+                }
+            }
+        }
+
+        & .comment-post-btn {
+            border-top-right-radius   : 5px;
+            border-bottom-right-radius: 5px;
+            background                : @uc-color-gold;
+            color                     : @uc-color-dark;
+            border                    : none;
+
+            &:hover {
+                background: darken(@uc-color-gold, 10%);
+            }
+
+            &:disabled {
+                background: darken(@uc-color-gold, 10%);
+                cursor    : not-allowed;
+            }
+        }
+    }
+
+}
+
+// Responsive
+@media only screen and (max-width: 768px) {
+    & .list-imgs-scroll {
+        width: 98%;
+    }
+
+    & .details-info {
+        & h4 {
+            font-size: 18px;
+        }
+
+        & p {
+            color    : @uc-color-text;
+            font-size: 13px;
+
+            & strong {
+                color: @uc-color-light;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    & .comment-card-body {
+        padding: 10px;
+
+        & .comment-box {
+
+            & .message-card {
+                width: 95%;
+
+                & small {
+                    font-size: 8px;
+                }
+
+                &-color {
+
+                    & small {
+                        font-size: 8px;
+                    }
+
+                    & .message-icon {
+
+                        & .normal {
+                            font-size: 10px;
+                        }
+                    }
+                }
+
+                &-body {
+                    padding: 0 5px;
+
+                    & img {
+                        height      : 15px;
+                        margin-right: 5px;
+                    }
+
+                    & .message-card-text {
+                        padding  : 5px 5px;
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    & .list-imgs-scroll {
+        width: 98%;
+    }
+
+    & .scrollbar-primary::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    & .details-card-body {
+        padding: 15px;
+    }
+
+    & .list-imgs-scroll {
+        width: 98%;
+    }
+}

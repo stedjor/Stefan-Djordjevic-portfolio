@@ -1,0 +1,89 @@
+@error-color      : rgb(53, 30, 0);
+@error-color-light: rgb(225, 135, 0);
+
+& .error-container {
+    // background   : linear-gradient(to right, darken(@error-color, 2%) , @error-color-light , darken(@error-color, 2%) );
+    background   : radial-gradient(@error-color-light, darken(@error-color, 2%));
+    border-radius: 10px;
+    min-height   : 100%;
+    color        : #ffffff;
+    text-shadow  : 0 2px 10px @error-color-light;
+    padding      : 20% 50px;
+    font-weight  : bold;
+    text-indent  : 30px;
+
+    & h1 {
+        font-weight: bold;
+        color      : @error-color;
+    }
+
+    & h3 {
+        color: @error-color;
+        color: white;
+
+        & a {
+            color: @error-color;
+
+            &:hover {
+                color: lighten(@error-color, 20%);
+            }
+        }
+    }
+}
+
+// Responsive
+@media only screen and (max-width: 1024px) {
+    & .error-container {
+        padding-top: 20px;
+
+        & h2 {
+            font-size: 25px;
+        }
+
+        & h5 {
+            font-size: 18px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    & .error-container {
+        padding: 10px 15px 0;
+
+        & h2 {
+            font-size: 22px;
+        }
+
+        & h5 {
+            font-size: 17px;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    & .error-container {
+        padding: 10px 15px 0;
+
+        & h2 {
+            font-size: 20px;
+        }
+
+        & h5 {
+            font-size: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    & .error-container {
+        padding: 5px 15px 0;
+
+        & h2 {
+            font-size: 18px;
+        }
+
+        & h5 {
+            font-size: 13px;
+        }
+    }
+}

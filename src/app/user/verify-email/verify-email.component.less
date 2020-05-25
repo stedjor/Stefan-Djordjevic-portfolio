@@ -1,0 +1,112 @@
+@ve-color      : rgb(103, 0, 163);
+@ve-color-light: rgb(153, 0, 255);
+@ve-color-dark : rgb(41, 0, 80);
+
+.ve-container {
+    background   : linear-gradient(to right, rgb(20, 0, 40), @ve-color, rgb(20, 0, 40));
+    border-radius: 10px;
+    min-height   : 100%;
+    padding      : 30px 50px 0;
+    animation    : colorize 2.5s;
+
+    @keyframes colorize {
+        from {
+            filter        : grayscale(100%) blur(2px);
+            -webkit-filter: grayscale(100%) blur(2px);
+        }
+
+        to {
+            filter        : grayscale(0%) blur(0px);
+            -webkit-filter: grayscale(0%) blur(0px);
+        }
+    }
+
+    & .ve-card {
+        background: @ve-color-dark;
+        color     : white;
+        border    : 2px solid @ve-color-light;
+
+        & .ve-header {
+            border-bottom: 1px solid @ve-color-light;
+
+            & h3 {
+                text-shadow: 0 2px 5px @ve-color-light;
+            }
+        }
+
+        & h4 {
+            text-shadow: 0 5px 5px @ve-color-dark;
+        }
+
+        & input {
+            border: 2px solid @ve-color-light;
+            color : @ve-color-dark;
+
+            &:focus {
+                border    : 2px solid @ve-color;
+                box-shadow: 0 0 10px 2px @ve-color;
+            }
+        }
+
+        & .ve-btn {
+            background : @ve-color-light;
+            color      : @ve-color-dark;
+            font-weight: bold;
+
+            &:hover {
+                background: @ve-color;
+            }
+        }
+
+        & .ve-link-btn {
+            color: @ve-color-light;
+            padding-top: 2px;
+
+            &:hover {
+                color: @ve-color;
+            }
+        }
+    }
+}
+
+// Responsive
+@media only screen and (max-width: 768px) {
+    .ve-container {
+        padding: 20px 10px 0;
+
+        & .ve-card {
+            & .ve-header {
+                padding: 7px 15px;
+
+                & h3 {
+                    font-size    : 25px;
+                    margin-bottom: 0;
+                }
+            }
+
+            & input {
+                font-size: 15px;
+            }
+
+            & .ve-btn {
+                font-size: 15px;
+            }
+
+            & .ve-link-btn {
+                padding: 0px 10px 4px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .ve-container {
+        & .ve-card {
+            & .ve-header {
+                & h3 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

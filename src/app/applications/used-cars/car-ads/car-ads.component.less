@@ -1,0 +1,785 @@
+@uc-color      : rgb(27, 27, 27);
+@uc-color-dark : rgb(20, 20, 20);
+@uc-color-light: rgb(69, 69, 69);
+@uc-color-gold : rgb(255, 215, 0);
+@uc-color-text : rgb(255, 255, 255);
+
+.routerActive {
+  border: 2px solid @uc-color-gold;
+}
+
+// Cars 
+& .uc-list-card {
+  background: @uc-color-dark;
+  color     : @uc-color-text;
+
+  & .uc-list-button {
+    width        : 100%;
+    height       : 100%;
+    text-align   : left;
+    padding      : 10px;
+    position     : relative;
+    border-bottom: 1px solid @uc-color-gold;
+
+    &:hover {
+      color        : @uc-color-gold;
+      border-bottom: 1px solid @uc-color-text;
+
+      & .uc-list-badge {
+        background: @uc-color-text;
+        color     : @uc-color-dark;
+      }
+    }
+
+    & .uc-list-badge {
+      position     : absolute;
+      right        : 15px;
+      padding      : 0 5px;
+      background   : @uc-color-gold;
+      color        : @uc-color-dark;
+      border-radius: 50%;
+      font-size    : 12px;
+    }
+  }
+
+  & .uc-list-item {
+    background: @uc-color;
+    margin-top: 2px;
+
+    &:hover {
+      background: @uc-color-light;
+    }
+
+    &.routerActive {
+      border    : 2px solid @uc-color-gold;
+      background: @uc-color-light;
+
+      & .uc-list-img {
+        border: 1px solid @uc-color-gold;
+      }
+    }
+
+    & .uc-li-content {
+      padding: 6px;
+
+      & .uc-list-img {
+        height       : 40px;
+        border-radius: 2px;
+        border       : 1px solid @uc-color-dark;
+      }
+
+      & .uc-list-brand {
+        font-size    : 12px;
+        color        : @uc-color-gold;
+        margin-bottom: 0;
+      }
+
+      & .uc-list-date {
+        font-size    : 10px;
+        margin-bottom: 0;
+        color        : @uc-color-text;
+        text-align   : right;
+      }
+    }
+
+  }
+
+  & .list-scrollbar-your,
+  .list-scrollbar-all {
+    max-height: 135px;
+
+    &-filtered {
+      max-height: 500px !important;
+    }
+  }
+
+  & .uc-no-filtered-ads {
+    text-align: center;
+    padding   : 40px 0;
+
+    & p {
+      margin-bottom: 0;
+      color        : @uc-color-light;
+    }
+  }
+
+  & .uc-show-more-less {
+    font-size : 10px;
+    color     : @uc-color-light;
+    text-align: center;
+    cursor    : pointer;
+
+    &:hover {
+      color: lighten(@uc-color-light, 30%);
+    }
+  }
+}
+
+// Scrollbar
+& .scrollbar {
+  overflow   : auto;
+  white-space: nowrap;
+  cursor     : grabbing;
+
+  &.scrollbar-primary::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  &.scrollbar-primary::-webkit-scrollbar {
+    height: 5px;
+    width : 7px;
+  }
+
+  &.scrollbar-primary::-webkit-scrollbar-thumb {
+    border-radius      : 10px;
+    border             : 1px solid @uc-color-dark;
+    --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-image   : -webkit-gradient(linear, left top, right top, to(@uc-color-gold));
+    background-image   : -webkit-linear-gradient(left, @uc-color-gold 100%);
+    background-image   : linear-gradient(to right, @uc-color-gold 100%);
+  }
+}
+
+.uc-details {
+  min-height: 67vh;
+  position  : relative;
+
+  & .uc-no-details {
+    height: 100%;
+
+    & .uc-no-details-item {
+      position  : absolute;
+      top       : 15vh;
+      text-align: center;
+
+      & .uc-car-img {
+        position : relative;
+        color    : @uc-color-light;
+        font-size: 100px;
+      }
+
+      & h3 {
+        position  : relative;
+        color     : @uc-color-light;
+        margin-top: -25px;
+      }
+    }
+  }
+}
+
+// Filter Box
+& .filter-box {
+  & .filter-btn {
+    border    : 1px solid @uc-color-gold;
+    color     : @uc-color-text;
+    background: @uc-color-dark;
+
+    &:focus {
+      box-shadow: 0 0 5px 2px @uc-color-gold;
+      background: @uc-color-light;
+    }
+
+    &:hover {
+      background: @uc-color-light;
+    }
+  }
+
+  & .filter-clear-btn {
+    border    : 1px solid @uc-color-dark;
+    background: @uc-color-gold;
+
+    &:focus {
+      box-shadow: 0 0 5px 2px @uc-color-dark;
+    }
+
+    &:hover {
+      background: darken(@uc-color-gold, 30%);
+      color     : @uc-color-text;
+    }
+  }
+
+  & .sort-input-group {
+
+    & .sort-select {
+      border          : 1px solid @uc-color-gold;
+      background-color: @uc-color-dark;
+      color           : @uc-color-text;
+      cursor          : pointer;
+
+      &:focus {
+        box-shadow: 0 0 3px 1px @uc-color-gold;
+      }
+
+      &:hover {
+        background-color: @uc-color-light;
+      }
+
+      & option {
+        &:hover {
+          background-color: red;
+        }
+      }
+
+      & option:hover,
+      & option:focus,
+      & option:active {
+        background-color: @uc-color-dark  !important;
+        /* for IE */
+        color           : @uc-color-gold  !important;
+      }
+
+      & option:checked {
+        background-color: @uc-color-gold  !important;
+        /* for IE */
+        color           : @uc-color-dark  !important;
+      }
+    }
+
+    & .sort-append {
+      border                    : 1px solid @uc-color-gold;
+      border-top-right-radius   : 4px;
+      border-bottom-right-radius: 4px;
+
+      & label {
+        background: @uc-color-gold;
+        color     : @uc-color-dark;
+        border    : 1px solid @uc-color-gold;
+        padding   : 5px 5px;
+        cursor    : pointer;
+
+        &:hover {
+          background: darken(@uc-color-gold, 30%);
+          border    : 1px solid darken(@uc-color-gold, 30%);
+        }
+      }
+    }
+  }
+}
+
+& .filter-item {
+  position        : relative;
+  background-color: @uc-color-light;
+  color           : @uc-color-dark;
+  border          : 1px solid @uc-color-dark;
+  border-radius   : 3px;
+  padding         : 2px 7px;
+  font-size       : 15px;
+  cursor          : pointer;
+
+  &:hover {
+    & .filter-delete {
+      display: block;
+    }
+  }
+
+  & p {
+    margin: 0;
+  }
+
+  & .filter-delete {
+    display         : none;
+    font-size       : 10px;
+    box-shadow      : 0 0px 10px red;
+    border          : 1px solid @uc-color-light;
+    background-color: red;
+    color           : @uc-color-light;
+    border-radius   : 50%;
+    padding         : 0px 4px;
+    cursor          : pointer;
+    position        : absolute;
+    top             : -7px;
+    right           : -7px;
+
+    &:hover {
+      background-color: @uc-color-light;
+      border          : 1px solid red;
+      color           : red;
+    }
+  }
+}
+
+// Filter Modal
+#filter-modal {
+  position: absolute;
+
+  & .filter-modal-dialog {
+    z-index  : 100;
+    top      : -15px;
+    max-width: 580px;
+
+
+    & .filter-scrollbar {
+      max-height: 545px;
+    }
+
+    & .filter-modal-content {
+      border       : 2px solid @uc-color;
+      border-radius: 7px;
+
+      & .filter-modal-header {
+        background   : @uc-color-dark;
+        border-bottom: 2px solid @uc-color-gold;
+        color        : @uc-color-text;
+        padding      : 10px 15px;
+
+        & .filter-close {
+          color      : @uc-color-gold;
+          opacity    : 1;
+          text-shadow: none;
+
+          &:hover {
+            color      : @uc-color-text;
+            text-shadow: 0 0 3px @uc-color-text;
+          }
+        }
+      }
+
+      & .filter-modal-body {
+        background: @uc-color;
+
+        & .filter-subtitle {
+          color: @uc-color-gold;
+        }
+
+        & .filter-lbl {
+          margin: 0;
+          color : @uc-color-text;
+        }
+
+        & .filter-input {
+          border    : 1px solid @uc-color-gold;
+          background: @uc-color-dark;
+          color     : @uc-color-text;
+          position  : relative;
+          cursor    : text;
+
+          &:focus {
+            box-shadow: 0 0 5px 1px @uc-color-gold;
+          }
+
+          &::placeholder {
+            color: @uc-color-text;
+          }
+
+          &:hover {
+            border-color: @uc-color-text;
+            color       : @uc-color-gold;
+            background  : @uc-color;
+
+            &::placeholder {
+              color: @uc-color-gold;
+            }
+          }
+        }
+
+        & .filter-input-select {
+          cursor: pointer;
+        }
+
+        & .filter-select-group {
+          position: relative;
+
+          & .normal {
+            position: absolute;
+            top     : 3px;
+            right   : 10px;
+            color   : @uc-color-light;
+          }
+
+          & .arrow-down {
+            position: absolute;
+            top     : 3px;
+            right   : 10px;
+            color   : @uc-color-gold;
+          }
+
+          & .filter-input {
+
+            &:disabled {
+              color           : @uc-color-light;
+              background-color: @uc-color;
+              border-color    : @uc-color-light;
+              cursor          : not-allowed;
+            }
+          }
+        }
+
+        & .filter-custom-brand {
+          position: absolute;
+          right   : -11px;
+          top     : 22px;
+          z-index : 1000;
+
+          @media only screen and (max-width: 425px) {
+            & {
+              right: -2px;
+              top: 18px;
+            }
+          }
+
+          & button {
+            background: none;
+            border    : none;
+            color     : @uc-color-gold;
+            padding   : 4px;
+            cursor    : pointer;
+
+            @media only screen and (max-width: 425px) {
+              & {
+                padding: 4px 0;
+              }
+            }
+
+            &:hover {
+              color: darken(@uc-color-gold, 20%);
+            }
+
+            &:disabled {
+              color : @uc-color-light;
+              cursor: not-allowed;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+
+      & .filter-modal-footer {
+        background: @uc-color-dark;
+        border-top: 2px solid @uc-color-gold;
+        color     : @uc-color-text;
+        padding   : 10px 15px;
+
+        & .filter-btn {
+          background: @uc-color-gold;
+          color     : @uc-color-dark;
+          border    : none;
+
+          & .normal {
+            color: @uc-color-light;
+          }
+
+          &:hover {
+            background: darken(@uc-color-gold, 10%);
+          }
+        }
+
+        & .cancel-filter-btn {
+          color  : @uc-color-light;
+          padding: 2px 0;
+
+          &:hover {
+            color: @uc-color-text;
+          }
+        }
+      }
+    }
+  }
+
+  & .modal-backdrop {
+    position     : absolute;
+    opacity      : 0.9;
+    width        : 100%;
+    height       : 100%;
+    border-radius: 10px;
+    z-index      : 99;
+  }
+}
+
+// Responsive
+@media only screen and (max-width: 768px) {
+
+  // Cars 
+  & .uc-list-card {
+
+    & .uc-list-button {
+      padding: 5px;
+
+      & .uc-list-badge {
+        font-size: 10px;
+        top      : 10px;
+      }
+    }
+
+    & .uc-list-item {
+      & .uc-li-content {
+        padding: 5px;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          padding: 1px;
+        }
+
+        &:nth-child(3) {
+          padding-right: 5px;
+        }
+
+        & .uc-list-img {
+          height: 25px;
+        }
+
+        & .uc-list-brand {
+          font-size: 10px;
+        }
+
+        & .uc-list-date {
+          font-size: 7px;
+        }
+      }
+    }
+
+    & .scrollbar {
+      max-height: 180px;
+
+      &.scrollbar-primary::-webkit-scrollbar {
+        height: 5px;
+        width : 5px;
+      }
+    }
+  }
+
+  .uc-details {
+    min-height: 65vh;
+
+    & .uc-no-details {
+      height: 100%;
+
+      & .uc-no-details-item {
+        position  : absolute;
+        top       : 15vh;
+        text-align: center;
+
+        & .uc-car-img {
+          position : relative;
+          color    : @uc-color-light;
+          font-size: 90px;
+        }
+
+        & h3 {
+          position  : relative;
+          color     : @uc-color-light;
+          font-size : 20px;
+          margin-top: -25px;
+        }
+      }
+    }
+  }
+
+  // Filter Box
+  & .filter-item {
+    font-size: 10px;
+
+    & .filter-delete {
+      font-size : 5px;
+      box-shadow: 0 0px 10px red;
+      padding   : 0px 3px;
+      top       : -4px;
+      right     : -4px;
+    }
+  }
+
+  // Filter Modal
+  #filter-modal {
+    & .filter-modal-dialog {
+      top: 0px;
+
+      & .filter-scrollbar {
+        max-height: 400px;
+      }
+
+      & .filter-modal-content {
+
+        & .filter-modal-header {
+          padding: 5px 15px;
+        }
+
+        & .filter-modal-body {
+          padding: 5px 15px;
+
+          & .filter-lbl {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+
+  // Cars 
+  & .uc-list-card {
+    & .uc-list-button {
+      padding: 10px;
+
+      & .uc-list-badge {
+        font-size: 12px;
+        padding  : 0 6.5px;
+      }
+    }
+
+    & .uc-list-item {
+      & .uc-li-content {
+        padding: 6px;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          padding: 6px;
+        }
+
+        &:nth-child(3) {
+          padding-right: 6px;
+        }
+
+        & .uc-list-img {
+          height: 40px;
+        }
+
+        & .uc-list-brand {
+          font-size: 13px;
+        }
+
+        & .uc-list-date {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .uc-details {
+    min-height: 45vh;
+
+    & .uc-no-details {
+      height: 100%;
+
+      & .uc-no-details-item {
+        position  : absolute;
+        top       : 5vh;
+        text-align: center;
+
+        & .uc-car-img {
+          position : relative;
+          color    : @uc-color-light;
+          font-size: 80px;
+        }
+
+        & h3 {
+          position  : relative;
+          color     : @uc-color-light;
+          font-size : 20px;
+          margin-top: -25px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+
+  .uc-details {
+    min-height: 45vh;
+
+    & .uc-no-details {
+      height: 100%;
+
+      & .uc-no-details-item {
+        position  : absolute;
+        top       : 5vh;
+        text-align: center;
+
+        & .uc-car-img {
+          position : relative;
+          color    : @uc-color-light;
+          font-size: 80px;
+        }
+
+        & h3 {
+          position  : relative;
+          color     : @uc-color-light;
+          font-size : 17px;
+          margin-top: -25px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+  // Cars 
+  & .uc-list-card {
+
+    & .uc-list-button {
+      padding: 5px;
+
+      & .uc-list-badge {
+        font-size: 10px;
+        top      : 10px;
+      }
+    }
+
+    & .uc-list-item {
+      & .uc-li-content {
+        padding: 5px;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          padding: 1px;
+        }
+
+        &:nth-child(3) {
+          padding-right: 5px;
+        }
+
+        & .uc-list-img {
+          height: 30px;
+        }
+
+        & .uc-list-brand {
+          font-size: 10px;
+        }
+
+        & .uc-list-date {
+          font-size: 7px;
+        }
+      }
+    }
+
+    & .scrollbar {
+      max-height: 180px;
+
+      &.scrollbar-primary::-webkit-scrollbar {
+        height: 5px;
+        width : 5px;
+      }
+    }
+  }
+
+  & .uc-details {
+    min-height: 45vh;
+
+
+    & .uc-no-details {
+      & .uc-no-details-item {
+        position  : absolute;
+        top       : 5vh;
+        text-align: center;
+
+        & .uc-car-img {
+          position : relative;
+          color    : @uc-color-light;
+          font-size: 70px;
+        }
+
+        & h3 {
+          position  : relative;
+          color     : @uc-color-light;
+          font-size : 14px;
+          margin-top: -25px;
+        }
+      }
+    }
+  }
+}

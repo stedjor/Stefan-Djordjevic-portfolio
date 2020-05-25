@@ -1,0 +1,554 @@
+@main-color: rgb(0, 150, 0);
+
+// Main content //
+#main-content {
+  padding       : 20px 20px 40px;
+  max-width     : 1000px;
+  height        : 90vh;
+  margin        : 10px auto 0;
+  position      : relative;
+  border-radius : 15px;
+  background    : radial-gradient(rgb(255, 255, 255), rgb(0, 0, 0));
+  border        : 2px outset rgb(128, 128, 128);
+  font-family   : 'Forum', cursive;
+  letter-spacing: 0.9px;
+
+  &::after {
+    content   : "";
+    position  : absolute;
+    width     : 70%;
+    bottom    : 0;
+    left      : 14%;
+    box-shadow: 0px 35px 20px 3px black;
+    z-index   : -1;
+  }
+
+  & #content {
+    padding      : 0;
+    border       : 2px inset rgb(128, 128, 128);
+    border-radius: 10px;
+    position     : relative;
+    height       : 100%;
+    width        : 100%;
+
+    & #screen {
+      display : block;
+      height  : 2px;
+      width   : 0;
+      top     : 50%;
+      bottom  : 50%;
+      left    : 50%;
+      right   : 50%;
+      position: absolute;
+
+      & .scrollbar {
+        float        : left;
+        height       : 100%;
+        width        : 100%;
+        background   : transparent;
+        overflow-y   : auto;
+        border-radius: 10px;
+
+        &.scrollbar-primary::-webkit-scrollbar-track {
+          --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+          background-color   : rgba(244, 244, 244, 0.3);
+          border-radius      : 10px;
+        }
+
+        &.scrollbar-primary::-webkit-scrollbar {
+          width                     : 12px;
+          background-color          : rgba(244, 244, 244, 0.3);
+          border-top-right-radius   : 10px;
+          border-bottom-right-radius: 10px;
+
+          @media only screen and (max-width: 425px) {
+            width: 7px;
+          }
+        }
+
+        &.scrollbar-primary::-webkit-scrollbar-thumb {
+          border-radius      : 10px;
+          --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+          background-image   : -webkit-gradient(linear, left top, right top, from(#eeeeee), to(@main-color));
+          background-image   : -webkit-linear-gradient(left, #eeeeee 0%, @main-color 100%);
+          background-image   : linear-gradient(to right, #eeeeee 0%, @main-color 100%);
+        }
+      }
+
+      & #blank-screen {
+        width                 : 100%;
+        height                : 100%;
+        position              : absolute;
+        top                   : 0;
+        left                  : 0;
+        z-index               : 1000;
+        // background-color   : transparent;
+        background-color      : white;
+        border-radius         : 5px;
+      }
+    }
+  }
+
+  & #button-content {
+    padding                : 5px;
+    width                  : 100%;
+    height                 : 100%;
+    position               : relative;
+    max-height             : 40px;
+    display                : -ms-flexbox;
+    display                : -webkit-flex;
+    display                : flex;
+    -webkit-flex-direction : row;
+    -ms-flex-direction     : row;
+    flex-direction         : row;
+    -webkit-flex-wrap      : nowrap;
+    -ms-flex-wrap          : nowrap;
+    flex-wrap              : nowrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack          : justify;
+    justify-content        : space-between;
+    -webkit-align-content  : stretch;
+    -ms-flex-line-pack     : stretch;
+    align-content          : stretch;
+    -webkit-align-items    : flex-start;
+    -ms-flex-align         : start;
+    align-items            : flex-start;
+
+    &-left {
+      -webkit-order      : 0;
+      -ms-flex-order     : 0;
+      order              : 0;
+      -webkit-flex       : 0 1 auto;
+      -ms-flex           : 0 1 auto;
+      flex               : 0 1 auto;
+      -webkit-align-self : auto;
+      -ms-flex-item-align: auto;
+      align-self         : auto;
+      padding-right      : 10px;
+    }
+
+    &-center {
+      -webkit-order      : 0;
+      -ms-flex-order     : 0;
+      order              : 0;
+      -webkit-flex       : 0 1 auto;
+      -ms-flex           : 0 1 auto;
+      flex               : 0 1 auto;
+      -webkit-align-self : auto;
+      -ms-flex-item-align: auto;
+      align-self         : auto;
+
+      display                : -ms-flexbox;
+      display                : -webkit-flex;
+      display                : flex;
+      -webkit-flex-direction : row;
+      -ms-flex-direction     : row;
+      flex-direction         : row;
+      -webkit-flex-wrap      : nowrap;
+      -ms-flex-wrap          : nowrap;
+      flex-wrap              : nowrap;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack          : justify;
+      justify-content        : space-between;
+      -webkit-align-content  : stretch;
+      -ms-flex-line-pack     : stretch;
+      align-content          : stretch;
+      -webkit-align-items    : flex-start;
+      -ms-flex-align         : start;
+      align-items            : flex-start;
+
+      // Button Turn On/Off
+      & .btn-center {
+        position: relative;
+
+        & #btn-turn {
+          padding      : 0px 4px;
+          border-radius: 14px;
+          margin       : 0 15px;
+          position     : relative;
+
+          & .button-icon {
+            font-size: 15px;
+            color    : white;
+          }
+        }
+
+        & .turn-on-tooltip {
+          position        : absolute;
+          top             : 0;
+          right           : 60px;
+          white-space     : nowrap;
+          padding         : 0 5px;
+          background      : transparent;
+          // border       : 2px solid rgb(124, 0, 0);
+          font-size       : 18px;
+          font-weight     : bold;
+          color           : rgb(124, 0, 0);
+          border-radius   : 3px 3px 3px 0;
+          text-align      : center;
+          display         : block;
+          animation       : tooltip-pulse 1s infinite;
+
+          @media only screen and (max-width: 425px) {
+            & {
+              right           : 48px;
+            }
+          }
+
+          &::after {
+            content      : '';
+            position     : absolute;
+            width        : 0;
+            height       : 0;
+            border-left  : 10px solid #7c0000;
+            border-top   : 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            right        : -14px;
+            bottom       : 7px;
+            animation    : after-pulse 1s infinite;
+
+            @keyframes after-pulse {
+              0% {
+                border-left: 15px solid rgba(124, 0, 0, 0.9);
+              }
+
+              100% {
+                border-left: 15px solid rgba(124, 0, 0, 0.4);
+              }
+            }
+          }
+
+          @keyframes tooltip-pulse {
+            0% {
+              // box-shadow  : 0 0 0 0px rgba(124, 0, 0, 0.2);
+              // border-color: rgba(124, 0, 0, 1);
+              color: rgba(124, 0, 0, 1);
+              text-shadow: 0px 0px 0 rgba(225, 0, 0, 1);
+            }
+
+            100% {
+              // box-shadow  : 0 0 0 5px rgba(124, 0, 0, 0);
+              // border-color: rgba(124, 0, 0, 0.4);
+              color: rgba(124, 0, 0, 0.4);
+              text-shadow: 0px 0px 0 rgba(225, 0, 0, 0.4);
+            }
+          }
+        }
+
+        & .btn-arrow {
+          padding: 0;
+
+          &:focus {
+            box-shadow: none;
+          }
+
+          & .button-icon {
+            position: relative;
+            z-index : 1;
+
+            &:hover {
+              &::after {
+                content         : '';
+                background-color: @main-color;
+                -webkit-filter  : blur(10px);
+                filter          : blur(10px);
+                position        : absolute;
+                z-index         : 0;
+                top             : 0;
+                left            : 16px;
+                height          : 20px;
+                width           : 10px;
+              }
+            }
+          }
+
+          &:disabled {
+            & .button-icon:hover {
+              color: #aaa;
+
+            }
+          }
+
+          & .button-icon {
+            font-size: 18px;
+            color    : #aaa;
+            padding  : 0 15px;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+
+        & .btn-red {
+          background: radial-gradient(rgb(124, 0, 0), rgb(250, 0, 0));
+          box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, .25);
+          border    : 1px inset rgb(255, 0, 0);
+
+          &:hover {
+            background: radial-gradient(rgb(255, 0, 0), rgb(107, 1, 1));
+            border    : 1px outset rgb(255, 0, 0);
+          }
+        }
+
+        & .btn-green {
+          background: radial-gradient(rgb(0, 80, 11), rgb(0, 250, 0));
+          box-shadow: 0 0 0 0.2rem rgba(0, 250, 0, .25);
+          border    : 1px inset rgb(0, 250, 0);
+
+          &:hover {
+            background: radial-gradient(rgb(0, 250, 0), rgb(0, 80, 11));
+            border    : 1px outset rgb(0, 250, 0);
+          }
+        }
+      }
+    }
+
+    &-right {
+      -webkit-order      : 0;
+      -ms-flex-order     : 0;
+      order              : 0;
+      -webkit-flex       : 0 1 auto;
+      -ms-flex           : 0 1 auto;
+      flex               : 0 1 auto;
+      -webkit-align-self : auto;
+      -ms-flex-item-align: auto;
+      align-self         : auto;
+    }
+
+    // Button menu
+    & .btn-menu-modal {
+      cursor: pointer;
+
+      & .btn-menu {
+        padding    : 0 5px;
+        width      : 53px;
+        color      : rgb(136, 136, 136);
+        text-shadow: 0 0 10px rgb(0, 250, 0);
+        font-family: serif;
+
+        &:focus {
+          box-shadow: 0 0 5px 1px rgb(0, 250, 0);
+        }
+
+        &:hover {
+          box-shadow: 0 0 5px 0px rgb(0, 250, 0);
+        }
+
+        &:disabled {
+          border     : none;
+          text-shadow: 0 0 10px rgb(136, 136, 136);
+
+          &:hover {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+// Stand content //
+#stand-content {
+  height   : 40px;
+  max-width: 400px;
+  margin   : 0 auto;
+  position : relative;
+
+  & #first-el {
+    background  : linear-gradient(rgb(0, 0, 0), rgb(62, 62, 62) 200%);
+    height      : 30px;
+    width       : 80%;
+    margin      : 0 auto;
+    position    : relative;
+    border-left : 2px outset rgb(92, 92, 92);
+    border-right: 2px outset rgb(92, 92, 92);
+
+    &::after {
+      content       : 'Stefan Đorđević';
+      position      : absolute;
+      right         : -100%;
+      bottom        : -5px;
+      color         : #777777;
+      text-shadow   : 1px 1px 1px black;
+      font-size     : 22px;
+      font-family   : 'Great Vibes';
+      font-style    : italic;
+      letter-spacing: 2px;
+    }
+  }
+
+  & #second-el {
+    background   : radial-gradient(rgb(92, 92, 92), rgb(0, 0, 0));
+    height       : 10px;
+    width        : 100%;
+    position     : relative;
+    bottom       : 0;
+    border       : 2px outset rgb(92, 92, 92);
+    border-radius: 5px;
+  }
+}
+
+// Modal menu
+#modal-menu {
+  position: absolute;
+
+  & .modal-backdrop {
+    position     : absolute;
+    opacity      : 0.8;
+    width        : 100%;
+    height       : 100%;
+    border-radius: 5px;
+  }
+}
+
+// Modal info
+#modal-info {
+  position: absolute;
+
+  & .modal-backdrop {
+    position     : absolute;
+    opacity      : 0.8;
+    width        : 100%;
+    height       : 100%;
+    border-radius: 5px;
+  }
+}
+
+// Responsive
+@media only screen and (max-width: 768px) {
+  #stand-content {
+    & #first-el {
+      &::after {
+        right : -70%;
+        bottom: -3px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  #main-content {
+    padding: 15px 15px 30px;
+
+    &::after {
+      content   : "";
+      position  : absolute;
+      width     : 70%;
+      bottom    : 0;
+      left      : 14%;
+      box-shadow: 0px 35px 20px 3px black;
+      z-index   : -1;
+    }
+
+
+    & #button-content {
+      padding   : 1px;
+      max-height: 30px;
+
+      &-left {
+        padding-right: 10px;
+      }
+
+      &-center {
+
+        // Button Turn On/Off
+        & .btn-center {
+
+          & #btn-turn {
+            padding: 0px 6px;
+            margin : 0 0px;
+
+            & .button-icon {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      // Button menu
+      & .btn-menu-modal {
+        cursor: pointer;
+
+        & .btn-menu {
+          padding: 0 2px;
+        }
+      }
+    }
+  }
+
+  #stand-content {
+    max-width: 350px;
+
+    & #first-el {
+      width: 72%;
+
+      &::after {
+        right : -38%;
+        bottom: -3px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #stand-content {
+    max-width: 300px;
+
+    & #first-el {
+      width: 67%;
+
+      &::after {
+        right : -48%;
+        bottom: -3px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #stand-content {
+    max-width: 250px;
+
+    & #first-el {
+      width: 57%;
+
+      &::after {
+        right : -70%;
+        bottom: -3px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640) , screen and (max-height: 360px) {
+  #stand-content {
+    max-width: 350px;
+
+    & #first-el {
+      width: 57%;
+
+      &::after {
+        right : -88%;
+        bottom: -3px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 528) , screen and (max-height: 320px) {
+  #stand-content {
+    max-width: 250px;
+
+    & #first-el {
+      width: 57%;
+
+      &::after {
+        right : -70%;
+        bottom: -3px;
+      }
+    }
+  }
+}

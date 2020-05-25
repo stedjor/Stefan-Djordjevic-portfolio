@@ -1,0 +1,134 @@
+@login-color      : rgb(0, 160, 163);
+@login-color-light: rgb(64, 224, 208);
+@login-color-dark : rgb(0, 43, 54);
+
+.login-container {
+    background   : linear-gradient(to right, rgb(0, 16, 20), @login-color, rgb(0, 16, 20));
+    border-radius: 10px;
+    min-height   : 100%;
+    padding      : 30px 20px 10px;
+    animation    : colorize 2.5s;
+
+    @keyframes colorize {
+        from {
+            filter        : grayscale(100%) blur(2px);
+            -webkit-filter: grayscale(100%) blur(2px);
+        }
+
+        to {
+            filter        : grayscale(0%) blur(0px);
+            -webkit-filter: grayscale(0%) blur(0px);
+        }
+    }
+
+    & .login-card {
+        background: @login-color-dark;
+        color     : white;
+        border    : 2px solid @login-color-light;
+
+        & .login-header {
+            border-bottom: 1px solid @login-color-light;
+
+            & h2 {
+                text-shadow: 0 2px 5px @login-color-light;
+            }
+        }
+
+        & input {
+            border: 2px solid @login-color-light;
+            color : @login-color-dark;
+
+            &:focus {
+                border    : 2px solid @login-color;
+                box-shadow: 0 0 10px 2px @login-color;
+            }
+        }
+
+        & .login-btn {
+            background : @login-color-light;
+            color      : @login-color-dark;
+            font-weight: bold;
+
+            &:hover {
+                background: @login-color;
+            }
+        }
+
+        & .provider-icons {
+            width         : 60px;
+            text-align    : center;
+            vertical-align: middle;
+            cursor        : pointer;
+
+            & a {
+                color: white;
+
+                & .normal {
+                    font-size: 20px;
+                    padding  : 10px;
+
+                    &:nth-child(1) {
+                        & .normal {
+
+                            padding: 10px 15px;
+                        }
+                    }
+
+                    &:hover {
+                        border       : 1px solid @login-color-light;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                & a>.normal {
+                    padding: 10px 15px;
+                }
+            }
+        }
+
+        & .login-link-btn {
+            color: @login-color-light;
+
+            &:hover {
+                color: @login-color;
+            }
+        }
+    }
+}
+
+// Responsive
+@media only screen and (max-width: 768px) {
+    .login-container {
+        padding: 20px 10px 0;
+
+        & .login-card {
+            & .login-header {
+                padding: 7px 15px;
+
+                & h2 {
+                    font-size    : 25px;
+                    margin-bottom: 0;
+                }
+            }
+
+            & input {
+                font-size: 15px;
+            }
+
+            & .login-btn {
+                font-size: 15px;
+            }
+
+            & .provider-icons {
+                & a {
+                    & .normal {
+                        font-size: 15px;
+                        padding  : 5px;
+                    }
+                }
+            }
+        }
+    }
+}

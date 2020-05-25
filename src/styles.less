@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background: linear-gradient(to right, rgb(0, 20, 0), rgb(0, 53, 0), rgb(0, 20, 0));
+}
+
+// HERE WEGO map //
+@fs-color      : rgb(255, 65, 117);
+@fs-color-dark : #393e47;
+@fs-color-light: rgb(101, 193, 194);
+
+.H_ib {
+    fill: @fs-color;
+
+
+    & .H_ib_body {
+        background   : @fs-color-dark;
+        text-align   : center;
+        font-size    : 14px;
+        bottom       : 2.09em;
+        border       : 3px solid @fs-color;
+        color        : rgb(101, 193, 194);
+        border-radius: 5px;
+        margin-right : -20px;
+    }
+
+    & .H_ib_close {
+        fill: @fs-color-light;
+        color        : @fs-color-light;
+    }
+
+    & .H_ib_tail {
+        bottom: 0.3em;
+        fill  : @fs-color;
+    }
+}
+
+canvas {
+    width        : 100% !important;
+    height       : 100% !important;
+    border-radius: 5px;
+}
+
+// .green-marker-bubble {
+//     fill       : @fs-color-light;
+//     position   : absolute;
+//     left       : .91em;
+//     background : @fs-color-light;
+//     color      : rgb(255, 255, 255);
+//     font-size  : 2em;
+//     line-height: 1em;
+//     left       : -100%;
+
+//     & .bubble-body {
+//         background: @fs-color-light;
+//         text-align: center;
+//         font-size : 14px;
+//         bottom    : 2.09em;
+//         border    : 2px solid @fs-color-light;
+//         color     : rgb(255, 255, 255);
+//     }
+
+//     .bubble-tail {
+//         bottom: 0.3em;
+//     }
+// }

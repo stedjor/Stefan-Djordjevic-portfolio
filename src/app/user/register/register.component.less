@@ -1,0 +1,164 @@
+@register-color      : rgb(163, 0, 0);
+@register-color-light: rgb(255, 0, 55);
+@register-color-dark : rgb(49, 0, 0);
+
+.register-container {
+    background   : linear-gradient(to right, rgb(20, 0, 0), @register-color, rgb(20, 0, 0));
+    border-radius: 10px;
+    min-height   : 100%;
+    padding      : 30px 20px 0;
+    animation    : colorize 2.5s;
+
+    @keyframes colorize {
+        from {
+            filter        : grayscale(100%) blur(2px);
+            -webkit-filter: grayscale(100%) blur(2px);
+        }
+
+        to {
+            filter        : grayscale(0%) blur(0px);
+            -webkit-filter: grayscale(0%) blur(0px);
+        }
+    }
+
+    & .register-card {
+        background      : @register-color-dark;
+        color           : white;
+        border          : 2px solid @register-color-light;
+
+        & .register-header {
+            border-bottom: 1px solid @register-color-light;
+
+            & h2 {
+                text-shadow: 0 2px 5px @register-color-light;
+            }
+        }
+
+        & h4 {
+            text-shadow: 0 5px 5px @register-color-dark;
+        }
+
+        & input {
+            border: 2px solid @register-color-light;
+            color : @register-color;
+
+            &:focus {
+                border    : 2px solid @register-color;
+                box-shadow: 0 0 10px 2px @register-color;
+            }
+
+            &.input-error{
+                border    : 2px solid orange;
+                box-shadow: 0 0 10px 2px orange;
+            }
+        }
+
+        & .register-confirm-pass{
+            display: none;
+            &-error{
+                display: block;
+                color: orange;
+            }
+        }
+
+        & .register-btn {
+            background : @register-color-light;
+            color      : @register-color-dark;
+            font-weight: bold;
+
+            &:hover {
+                background: @register-color;
+            }
+
+            &:disabled{
+                background-color: darken(@register-color-light, 20%);
+                cursor: not-allowed;
+            }
+        }
+
+        & .provider-icons {
+            width         : 60px;
+            text-align    : center;
+            vertical-align: middle;
+            cursor        : pointer;
+
+            & a {
+                color: white;
+
+                & .normal {
+                    font-size: 20px;
+                    padding  : 10px;
+
+                    &:nth-child(1) {
+                        & .normal {
+
+                            padding: 10px 15px;
+                        }
+                    }
+
+                    &:hover {
+                        border       : 1px solid @register-color-light;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                & a>.normal {
+
+                    padding: 10px 15px;
+                }
+            }
+
+            &:nth-child(3) {
+                & a>.normal {
+
+                    padding: 10px 12px;
+                }
+            }
+        }
+
+        & .register-link-btn {
+            color: @register-color-light;
+
+            &:hover {
+                color: @register-color;
+            }
+        }
+    }
+}
+
+// Responsive
+@media only screen and (max-width: 768px) {
+    .register-container {
+        padding: 20px 10px 0;
+
+        & .register-card {
+            & .register-header {
+                padding: 7px 15px;
+
+                & h2 {
+                    font-size    : 25px;
+                    margin-bottom: 0;
+                }
+            }
+
+            & input {
+                font-size: 15px;
+            }
+
+            & .register-btn {
+                font-size: 15px;
+            }
+
+            & .provider-icons {
+                & a {
+                    & .normal {
+                        font-size: 15px;
+                        padding  : 5px;
+                    }
+                }
+            }
+        }
+    }
+}

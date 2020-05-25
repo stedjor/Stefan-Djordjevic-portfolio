@@ -1,0 +1,369 @@
+<div class="container edit-ad-container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 i18n="@@uc-edit_ad-title" class="edit-ad-tittle">Edit Ad</h3>
+            <div class="card edit-ad-card">
+                <div class="card-body edit-ad-body">
+                    <form [formGroup]="carsForm">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h5 i18n="@@uc-edit_ad-subtitle-1" class="edit-ad-subtittle">Choose Image</h5>
+                                <div class="input-group" *ngIf="imagesArr.length !== 0; else noImg">
+                                    <div class="edit-img">
+                                        <div class="image-edit">
+                                            <img src="{{ imageURL }}" alt="Added image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <ng-template #noImg>
+                                    <div class="edit-img">
+                                        <div class="image-edit">
+                                            <img src="./assets/no-car.png" alt="no added image">
+                                        </div>
+                                    </div>
+                                </ng-template>
+
+                                <div class="input-group-sm mt-1 mb-1">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input edit-ad-file-input" id="fileImg"
+                                            name="fileImg" (change)="uploadImage($event)" accept=".png,.jpg">
+                                        <label i18n="@@uc-edit_ad-file" class="custom-file-label edit-ad-file-lbl"
+                                            for="fileImg"
+                                            [ngClass]="{'choose-file-lbl-br': imagesArr.length !== 0}">Choose
+                                            file <fa-icon class="normal edit-ad-fa-images" [icon]="faImages"></fa-icon>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="input-group list-of-imgs"
+                                    *ngIf="imagesArr.length !== 0 && imagesArr !== undefined">
+                                    <ul class="list-inline list-imgs-scroll scrollbar scrollbar-primary">
+                                        <li class="list-inline-item" *ngFor="let imgUrl of imagesArr; index as i"
+                                            [ngClass]="{'list-img-active': imgUrl == imageURL}" (click)="showImg(imgUrl)">
+                                            <img src="{{ imgUrl }}" alt="Added image in list" >
+                                            <button class="btn btn-danger" (click)="deleteImage(imgUrl, i)">
+                                                <fa-icon class="normal" [icon]="faTimes"></fa-icon>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div formGroupName="car">
+                                    <h5 i18n="@@uc-edit_ad-subtitle-2" class="edit-ad-subtittle">Car Info</h5>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm edit-ad-select-group mb-2">
+                                                        <select class="custom-select edit-ad-input edit-ad-input-select"
+                                                            (change)="searchModel($event.target.value)"
+                                                            formControlName="brand"
+                                                            [attr.disabled]="customBrand? '' : null"
+                                                            [ngClass]="{'invalid-input': carsForm.get('car').get('brand').invalid && 
+                                                                            (carsForm.get('car').get('brand').dirty ||
+                                                                            carsForm.get('car').get('brand').touched)}">
+                                                            <option i18n="@@uc-edit_ad-brand" selected disabled>Brand...
+                                                            </option>
+                                                            <option *ngFor="let brand of carsInfo.brands">
+                                                                {{ brand.name }}
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                    <div class="edit-ad-custom-brand ">
+                                                        <button (click)="showCustomBrand()" [disabled]="customBrand"
+                                                            i18n-title="@@uc-edit_ad-custom-brand-btn_title"
+                                                            title="If the brand or model of your car is not on the list.">
+                                                            <fa-icon class="normal" [icon]="faArrowAltCircleDown">
+                                                            </fa-icon>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm edit-ad-select-group mb-2">
+                                                        <select
+                                                            class="custom-select edit-ad-input edit-ad-input-select"
+                                                            [attr.disabled]="selectedModel == undefined || customBrand? '': null"
+                                                            [ngClass]="{'invalid-input': carsForm.get('car').get('model').invalid && 
+                                                                            (carsForm.get('car').get('model').dirty ||
+                                                                            carsForm.get('car').get('model').touched)}"
+                                                            title="Model" formControlName="model">
+                                                            <option disabled selected>
+                                                                Model...</option>
+                                                            <option [selected]="selectedModelValue"
+                                                                [value]="selectedModelValue" hidden>
+                                                                {{selectedModelValue}}</option>
+                                                            <option *ngFor="let model of selectedModel">{{ model }}
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                    <div class="edit-ad-car-mark">
+                                                        <button (click)="showCarMark()" [disabled]="customBrand"
+                                                            [title]="carMarkTitle">
+                                                            <fa-icon class="normal" [icon]="faArrowCircle">
+                                                            </fa-icon>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm mb-2">
+                                                        <input class="form-control edit-ad-input"
+                                                            i18n-placeholder="Mark placeholder@@uc-edit_ad-mark_placeh"
+                                                            i18n-title="@@uc-edit_ad-mark_title"
+                                                            *ngIf="carMarkShowen && !customBrand" placeholder="Mark"
+                                                            type="text" formControlName="carMark" title="Enter Mark">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Custom Brand -->
+                                            <div class="row" *ngIf="customBrand">
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm edit-ad-select-group  mb-2">
+                                                        <input class="form-control edit-ad-input"
+                                                            i18n-placeholder="Brand placeholder@@uc-edit_ad-custom-brand_placeh"
+                                                            i18n-title="@@uc-edit_ad-custom-brand_title"
+                                                            placeholder="Brand" type="text" formControlName="brand"
+                                                            [ngClass]="{'invalid-input': carsForm.get('car').get('brand').invalid && 
+                                                           (carsForm.get('car').get('brand').dirty ||
+                                                           carsForm.get('car').get('brand').touched)}"
+                                                            title="Enter Brand">
+                                                    </div>
+                                                    <div class="edit-ad-custom-brand ">
+                                                        <button (click)="showCustomBrand()">
+                                                            <fa-icon class="normal" [icon]="faArrowAltCircleUp">
+                                                            </fa-icon>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm edit-ad-select-group  mb-2">
+                                                        <input class="form-control edit-ad-input"
+                                                            i18n-placeholder="Model placeholder@@uc-edit_ad-custom-model_placeh"
+                                                            i18n-title="@@uc-edit_ad-custom-model_title" [ngClass]="{'invalid-input': carsForm.get('car').get('model').invalid && 
+                                                                            (carsForm.get('car').get('model').dirty ||
+                                                                            carsForm.get('car').get('model').touched)}"
+                                                            placeholder="Model" type="text" formControlName="model"
+                                                            title="Enter Model">
+                                                    </div>
+                                                    <div class="edit-ad-car-mark">
+                                                        <button (click)="showCarMark()" [title]="carMarkTitle"
+                                                            [disabled]="carsForm.get('car').get('model').invalid && 
+                                                            (carsForm.get('car').get('model').dirty ||
+                                                            carsForm.get('car').get('model').touched)">
+                                                            <fa-icon class="normal" [icon]="faArrowCircle">
+                                                            </fa-icon>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm mb-2">
+                                                        <input class="form-control edit-ad-input edit-ad-input-select" *ngIf="carMarkShowen"
+                                                            i18n-placeholder="Mark placeholder@@uc-edit_ad-custom-mark_placeh"
+                                                            i18n-title="@@uc-edit_ad-custom-mark_title"
+                                                            placeholder="Mark" type="text" formControlName="carMark"
+                                                            title="Enter Mark">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm edit-ad-select-group mb-2">
+                                                        <select class="custom-select edit-ad-input edit-ad-input-select"
+                                                            formControlName="age">
+                                                            <option i18n="@@uc-edit_ad-age" selected disabled>Age...
+                                                            </option>
+                                                            <option *ngFor="let year of carsInfo.years">{{ year }}
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm mb-2">
+                                                        <input class="form-control edit-ad-input"
+                                                            i18n-placeholder="Price placeholder@@uc-edit_ad-price_placeh"
+                                                            placeholder="Price (&euro;)" type="number"
+                                                            formControlName="price">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm edit-ad-select-group mb-2">
+                                                        <select class="custom-select edit-ad-input edit-ad-input-select"
+                                                            formControlName="fuels">
+                                                            <option i18n="@@uc-edit_ad-fuel" selected disabled>Fuel...
+                                                            </option>
+                                                            <option *ngFor="let fuel of carsInfo.fuels">{{ fuel }}
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm edit-ad-select-group mb-2">
+                                                        <select class="custom-select edit-ad-input edit-ad-input-select"
+                                                            formControlName="colors">
+                                                            <option i18n="@@uc-edit_ad-color" selected disabled>Color...
+                                                            </option>
+                                                            <option *ngFor="let color of carsInfo.colors">{{ color }}
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm mb-2">
+                                                        <input class="form-control edit-ad-input"
+                                                            [placeholder]="'Kw/Ks'" type="number" formControlName="kwKs"
+                                                            title="Enter Kw">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm mb-2">
+                                                        <input class="form-control edit-ad-input"
+                                                            i18n-placeholder="Mileage placeholder@@uc-edit_ad-mileage_placeh"
+                                                            i18n-title="@@uc-edit_ad-mileage_title"
+                                                            placeholder="Mileage (km)" type="number"
+                                                            formControlName="mileage" title="Enter mileage in km">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm edit-ad-select-group mb-2">
+                                                        <select class="custom-select edit-ad-input edit-ad-input-select"
+                                                            formControlName="doors">
+                                                            <option i18n="@@uc-edit_ad-doors" selected disabled>Doors...
+                                                            </option>
+                                                            <option *ngFor="let door of carsInfo.doors">{{ door }}
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm mb-2">
+                                                        <input class="form-control edit-ad-input"
+                                                            i18n-placeholder="Engine placeholder@@uc-edit_ad-Engine_placeh"
+                                                            i18n-title="@@uc-edit_ad-Engine_title"
+                                                            placeholder="Engine (cm&#179;)" type="number"
+                                                            formControlName="engine" title="Enter in cm&#179;">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm edit-ad-select-group mb-2">
+                                                        <select class="custom-select edit-ad-input edit-ad-input-select"
+                                                            formControlName="transmission">
+                                                            <option i18n="@@uc-edit_ad-transmission" selected disabled>
+                                                                Transmission...
+                                                            </option>
+                                                            <option *ngFor="let trans of carsInfo.transmission">
+                                                                {{ trans }}
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="input-group-sm edit-ad-select-group mb-2">
+                                                        <select class="custom-select edit-ad-input edit-ad-input-select"
+                                                            formControlName="seats">
+                                                            <option i18n="@@uc-edit_ad-seats" selected disabled>Seats...
+                                                            </option>
+                                                            <option *ngFor="let seat of carsInfo.seats">{{ seat }} seats
+                                                            </option>
+                                                        </select>
+                                                        <fa-icon class="normal arrow-down" [icon]="faCaretDown">
+                                                        </fa-icon>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div formGroupName="saller">
+                                    <h5 i18n="@@uc-edit_ad-subtitle-3" class="edit-ad-subtittle">Saller Info</h5>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="input-group-sm edit-ad-select-group mb-2">
+                                                <select class="custom-select edit-ad-input edit-ad-input-select" formControlName="countries">
+                                                    <option i18n="@@uc-edit_ad-country" selected disabled>Country...
+                                                    </option>
+                                                    <option [selected]="selectedCountryValue"
+                                                        [value]="selectedCountryValue" hidden>{{selectedCountryValue}}
+                                                    </option>
+                                                    <option *ngFor="let country of carsInfo.countries">
+                                                        {{ country.name }}
+                                                    </option>
+                                                </select>
+                                                <fa-icon class="normal arrow-down" [icon]="faCaretDown"></fa-icon>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="input-group-sm mb-2">
+                                                <input class="form-control edit-ad-input"
+                                                    i18n-placeholder="Town placeholder@@uc-edit_ad-town_placeh"
+                                                    placeholder="Town" i18n-title="@@uc-edit_ad-town_title"
+                                                    title="Enter Town" type="text" formControlName="town">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="input-group-sm mb-2">
+                                                <input class="form-control edit-ad-input"
+                                                    i18n-placeholder="Phone placeholder@@uc-edit_ad-phone_placeh"
+                                                    placeholder="Phone" i18n-title="@@uc-edit_ad-phone_title"
+                                                    type="number" title="Enter phone" formControlName="phone">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="input-group-sm mb-2">
+                                                <input class="form-control edit-ad-input"
+                                                    i18n-placeholder="Address placeholder@@uc-edit_ad-address_placeh"
+                                                    placeholder="Address" i18n-title="@@uc-edit_ad-address_title"
+                                                    title="Enter address" type="text" formControlName="adress">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="input-group-sm mb-2">
+                                                <input class="form-control edit-ad-input"
+                                                    i18n-placeholder="Address number placeholder@@uc-edit_ad-address-num_placeh"
+                                                    placeholder="Address Number" type="number"
+                                                    i18n-title="@@uc-edit_ad-address-num_title"
+                                                    title="Enter address number" formControlName="adressNumber">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="ml-auto col-md-5 d-flex justify-content-end">
+                                        <button i18n="@@uc-edit_ad-cancel"
+                                            class="btn btn-sm btn-link cancel-edit-ad-btn"
+                                            (click)="cancelEditing()">Cancel</button>
+                                        <button i18n="@@uc-edit_ad-save" class="btn btn-sm edit-ad-btn float-right"
+                                            type="button" (click)="updateCars()">
+                                            <fa-icon class="normal" [icon]="faSave"></fa-icon>
+                                            Save
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

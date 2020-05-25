@@ -1,0 +1,97 @@
+<div class="container profile-container">
+  <div class="col-lg-5 col-md-7 col-sm-12 ml-auto mr-auto">
+    <!-- Profile -->
+    <div class="card profile-card" *ngIf="!editProfile">
+      <div class="card-header profile-header">
+        <div class="d-flex justify-content-between">
+          <div class="p-2">
+            <h2 i18n="@@profile-title-1">User Profile</h2>
+          </div>
+          <div class="p-2" (click)="editMode()">
+            <div class="profile-icon">
+              <fa-icon [icon]="userEditIcon" class="button-icon" 
+              i18n-title="@@profile-edit-profile"
+               title="Edit Profile"></fa-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div *ngIf="userData as user">
+          <div class="image-box ml-auto mr-auto">
+            <div class="input-group mb-3">
+              <img class="profile-img" src="{{imageURL}}" alt="Profile image of user">
+            </div>
+          </div>
+          <div class="info-box ml-auto mr-auto mb-3">
+            <h4><strong>{{(userData.displayName) ? userData.displayName : 'User'}}</strong></h4>
+            <p i18n="@@profile-email-p">Email: <strong>{{userData.email}}</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Profile -->
+    <div class="card profile-card" *ngIf="editProfile">
+      <div class="card-header profile-header">
+        <div class="d-flex justify-content-between">
+          <div class="p-2">
+            <h2 i18n="@@profile-title-2">Edit Profile</h2>
+          </div>
+          <div class="p-2">
+            <div class=" d-flex justify-content-between">
+              <div class="profile-icon p-2" (click)="cancelEditMode()">
+                <fa-icon [icon]="editCancelIcon" class="button-icon" 
+                i18n-title="@@profile-edit-cancel"
+                title="Cancel"></fa-icon>
+              </div>
+              <div class="profile-icon p-2" (click)="updateUser()">
+                <fa-icon [icon]="saveEditIcon" class="button-icon" 
+                i18n-title="@@profile-edit-save"
+                title="Save"></fa-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div *ngIf="authService.userData as user">
+          <div class="image-box m-auto">
+            <div class="input-group mb-3">
+              <a class="btn-photo btn-photo-return" *ngIf="user.photoURL !== null" (click)="returnProviderPhoto()"
+              i18n-title="@@profile-return_photo"
+              title="Return photo from provider (google, facebook)">
+                <fa-icon [icon]="faCamera" class="button-icon"></fa-icon>
+              </a>
+              <img class="profile-img" src="{{ imageURL? imageURL : defaultProfileIcon }}"
+              alt="Profile image of user">
+              <a class="btn-photo btn-photo-delete" *ngIf="imageURL !== null && imageURL !== undefined && imageURL !== defaultProfileIcon" (click)="deletePhoto()">
+                <fa-icon [icon]="editCancelIcon" class="button-icon" 
+                i18n-title="@@profile-delete_photo"
+                title="Delete Photo"></fa-icon>
+              </a>
+            </div>
+            <div class="input-group mb-3">
+              <div class="custom-file edit-file">
+                <input type="file" class="custom-file-input edit-profile-file-input" id="fileImg" name="fileImg"
+                  (change)="uploadImage($event)" accept=".png,.jpg">
+                <label i18n="@@profile-file" class="custom-file-label edit-profile-file-label" for="fileImg">Choose
+                  file</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-box ml-auto mr-auto">
+            <div class="input-group mb-2">
+              <input type="text" class="form-control edit-username-input" [(ngModel)]="username"
+
+                i18n-placeholder="@@profile-username-placeh" placeholder="username">
+            </div>
+            <p i18n="@@profile-email-p">Email: <strong>{{userData.email}}</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
