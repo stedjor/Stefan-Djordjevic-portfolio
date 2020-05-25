@@ -2,6 +2,7 @@
 
 # boilerplate files
 /src/environments
+/.firebase
 
 # compiled output
 /dist
