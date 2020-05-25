@@ -17,8 +17,8 @@ declare let $: any;
   styleUrls: ['./four-square.component.less']
 })
 export class FourSquareComponent implements OnInit {
-  @ViewChild(HereMapComponent, { static: false }) heroeMap: HereMapComponent;
-  @ViewChild(VenueComponent, { static: false }) venueCard: VenueComponent;
+  @ViewChild(HereMapComponent) heroeMap: HereMapComponent;
+  @ViewChild(VenueComponent) venueCard: VenueComponent;
   dataItems = [];
   listItems = [];
   location = [];
