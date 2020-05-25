@@ -1,5 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# boilerplate files
+/src/environments
+
 # compiled output
 /dist
 /tmp
@@ -45,5 +48,3 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# boilerplate files
-/src/environments/
