@@ -82,7 +82,7 @@ export class CreateAdComponent implements OnInit {
     this.usedCars = this.adsSevice.getCars();
   }
 
-  uploadImage(event) {
+  uploadImage(event: any) {
     const user = JSON.parse(localStorage.getItem('user'));
     const file = event.target.files[0];
     let imgAfsId = this.carsForm.get('imgAfsId').value; // Folder Id in firebase storage

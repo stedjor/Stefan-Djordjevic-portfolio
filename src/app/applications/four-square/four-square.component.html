@@ -3,7 +3,7 @@
   <div id="venue-wrapper">
     <div id="venue-scroll" class="scrollbar scrollbar-primary">
       <div class="force-overflow"></div>
-      <app-venue *ngFor="let item of listItems" [item]="item" (venueOutput)="mainCLickOnCard($event)">
+      <app-venue *ngFor="let item of listItems" [item]="item" (venueOutput)="clickOnCard($event)">
       </app-venue>
     </div>
     <button id="btn-venue-arrow" class="btn" (click)="showHideCards()" [title]="cardsShowHide ? 'Show': 'Hide'">

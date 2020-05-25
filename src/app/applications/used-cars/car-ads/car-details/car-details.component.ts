@@ -24,21 +24,20 @@ declare var $: any;
 export class CarDetailsComponent implements OnInit {
   detailsOfCar: Cars;
   defaultPhoto = './assets/deafult-profile-icon.png';
-  currentUser;
+  currentUser: any;
   index = 0;
   currentUserId: string;
   currentAutor: string;
   currentAutorEmail: string;
   urlId: string;
   ks = 1.3596216173;
-  imageURL;
-  sendImagesUrl;
-  compareImgURL;
-  carDate;
+  imageURL: string;
+  sendImagesUrl: any;
+  carDate: any;
   isCollapsed = false;
   commentForm: FormGroup;
   comments = [];
-  commentDate;
+  commentDate: any;
   // Font Awesome
   faTrashAlt = faTrashAlt;
   faEdit = faEdit;
@@ -113,7 +112,7 @@ export class CarDetailsComponent implements OnInit {
     this.imageURL = this.detailsOfCar.images[this.index];
   }
 
-  showImg(url) {
+  showImg(url: string) {
     this.imageURL = url;
     this.index = this.detailsOfCar.images.indexOf(this.imageURL);
   }
@@ -134,7 +133,7 @@ export class CarDetailsComponent implements OnInit {
     });
   }
 
-  deleteComment(index) {
+  deleteComment(index: number) {
     const confirmDelete = window.confirm('Do you realy want to delete this message?');
     if (confirmDelete) {
       this.comments.splice(index, 1);

@@ -29,11 +29,11 @@ export class ContactComponent implements OnInit {
   detailsOfMessages: any;
   defaultPhoto = './assets/deafult-profile-icon.png';
   photoUrl: string;
-  userData;
-  user;
+  userData: any;
+  user: any;
   userId: string;
   currentAutor: string;
-  compareUserId;
+  compareUserId: string;
   senders: Observable<Messages>;
   sendersList = [];
   isLoggedIn: boolean;
@@ -128,7 +128,7 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  deleteMessage(index) {
+  deleteMessage(index: number) {
     const confirmDelete = window.confirm('Do you realy want to delete this message?');
     if (confirmDelete) {
       this.messages.splice(index, 1);

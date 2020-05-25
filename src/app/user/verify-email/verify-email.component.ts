@@ -12,5 +12,4 @@ export class VerifyEmailComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

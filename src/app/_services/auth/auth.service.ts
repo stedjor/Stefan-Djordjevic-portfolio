@@ -156,8 +156,8 @@ export class AuthService {
     return userRef.update(userData);
   }
 
-  sendVerificationMail() {
-    return this.afAuth.auth.currentUser.sendEmailVerification()
+  async sendVerificationMail() {
+    return await this.afAuth.auth.currentUser.sendEmailVerification()
       .then(() => {
         this.router.navigate(['verify-email']);
       });

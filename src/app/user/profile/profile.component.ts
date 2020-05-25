@@ -15,9 +15,9 @@ import {
   styleUrls: ['./profile.component.less']
 })
 export class ProfileComponent implements OnInit {
-  user;
+  user: any;
   userData: User;
-  updatedUser;
+  updatedUser: any;
   defaultProfileIcon = './assets/deafult-profile-icon.png';
   editProfile = false;
   changePhoto = false;
@@ -46,7 +46,7 @@ export class ProfileComponent implements OnInit {
     }, 100);
   }
 
-  getUser(id) {
+  getUser(id: string) {
     this.authService.getUserData(id)
       .subscribe(dataUser => {
         this.userData = dataUser;
@@ -72,7 +72,7 @@ export class ProfileComponent implements OnInit {
     this.editProfile = false;
   }
 
-  uploadImage(event) {
+  uploadImage(event: any) {
     const user = JSON.parse(localStorage.getItem('user'));
     const file = event.target.files[0];
     const fileName = file.name;

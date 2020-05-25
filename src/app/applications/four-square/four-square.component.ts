@@ -89,7 +89,7 @@ export class FourSquareComponent implements OnInit {
     }
   }
 
-  mainCLickOnCard($event: any) {
+  clickOnCard($event: any) {
     const element = $event;
     $(`.panel-card`).removeClass('fs-card-active');
     $(`#${element.venue.id}`).addClass('fs-card-active');

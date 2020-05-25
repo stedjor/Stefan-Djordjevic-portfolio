@@ -75,7 +75,7 @@ export class EditAdComponent implements OnInit {
     this.carsForm = this.adsSevice.createCarForm();
   }
 
-  editCarForm(usedForm) {
+  editCarForm(usedForm: any) {
     this.carsForm.patchValue({
       autor: usedForm.autor,
       autorId: usedForm.autorId,
@@ -111,7 +111,7 @@ export class EditAdComponent implements OnInit {
     this.checkIfCustomBrand(usedForm.car.brand, usedForm.car.model, usedForm.car.carMark);
   }
 
-  checkIfCustomBrand(cBrand, cModel, cMark) {
+  checkIfCustomBrand(cBrand: string, cModel: string, cMark: string) {
     if (this.selectedBrand.length !== 0) {
       this.selectedBrand.map(mBrand => {
         if (mBrand.name === cBrand) {
@@ -181,7 +181,7 @@ export class EditAdComponent implements OnInit {
     this.customBrand = !this.customBrand;
   }
 
-  uploadImage(event) {
+  uploadImage(event: any) {
     const user = JSON.parse(localStorage.getItem('user'));
     let imgAfsId = this.carsForm.get('imgAfsId').value; // Folder Id in firebase storage
     const file = event.target.files[0];
