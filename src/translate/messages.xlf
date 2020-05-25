@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en" datatype="plaintext" original="ng2.template">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="main-turn-on-tooltip" datatype="html">
         <source>Just turn on</source>
@@ -444,6 +444,8 @@
                         Or you can register and use the contact form to send messages,
                         and a screen where you can see all the messages,
                         ie. the whole conversation we had.
+                        Clicking on that cat takes you to my GitHub profile where you can see the whole
+                        code for this presentation, as well as other projects that I will post.
                     </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.component.html</context>
@@ -452,34 +454,36 @@
       </trans-unit>
       <trans-unit id="contact-text-2" datatype="html">
         <source>You can contact me via Email, Facebook or LinkedIn.
-                        Or you can use the contact form to send messages.
-                        And here is a screen where you can see all the messages,
-                        ie. the whole conversation we had.
-                    </source>
+            Or you can use the contact form to send messages.
+            And here is a screen where you can see all the messages,
+            ie. the whole conversation we had.
+            Clicking on that cat takes you to my GitHub profile where you can see the whole
+            code for this presentation, as well as other projects that I will post.
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.component.html</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact-cancel" datatype="html">
         <source>Cancel</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.component.html</context>
-          <context context-type="linenumber">61</context>
+          <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact-nomessage" datatype="html">
         <source>There is no message</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.component.html</context>
-          <context context-type="linenumber">99</context>
+          <context context-type="linenumber">108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="b5d7a9fd9d0a341decdc8b1a89d4f551d09cf2f6" datatype="html">
         <source>Write a message...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.component.html</context>
-          <context context-type="linenumber">107</context>
+          <context context-type="linenumber">116</context>
         </context-group>
         <note priority="1" from="description">write a message placeholder</note>
       </trans-unit>
@@ -487,7 +491,7 @@
         <source>Send</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.component.html</context>
-          <context context-type="linenumber">111</context>
+          <context context-type="linenumber">120</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about-title" datatype="html">
@@ -560,18 +564,18 @@
       </trans-unit>
       <trans-unit id="fs-denied-location" datatype="html">
         <source>
-          <x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/>FourSquare app<x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
-          <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>
-            If you have accessed the aplication on your computer and when you are asked
-            to allow the application to find your location by clicking on the block,
-            you will not be able to acces the application. So please go to your browser settings and allow. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
-            The path is: <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>settings/privacy and security/site settings/location.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> 
-          <x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
-          <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>
-            If you have accessed the application from your phone or tablet you need to turn on your 
-            location and you can continue to use it.
-          <x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-        </source>
+        <x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/>FourSquare app<x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>
+          If you have accessed the aplication on your computer and when you are asked
+          to allow the application to find your location by clicking on the block,
+          you will not be able to acces the application. So please go to your browser settings and allow. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          The path is: <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>settings/privacy and security/site settings/location.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> 
+        <x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>
+          If you have accessed the application from your phone or tablet you need to turn on your 
+          location and you can continue to use it.
+        <x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
+      </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/four-square/four-square.component.html</context>
           <context context-type="linenumber">46</context>
@@ -633,9 +637,12 @@
       </trans-unit>
       <trans-unit id="home-text-4" datatype="html">
         <source>More informations about this project
-                    you can read when you click on
-                    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> button.
-                </source>
+            you can read when you click on
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> button. You can see the whole
+            code when you click on this cat <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>
+                <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
+            <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
           <context context-type="linenumber">38</context>

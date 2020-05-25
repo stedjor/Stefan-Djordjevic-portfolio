@@ -717,11 +717,15 @@
             Or you can register and use the contact form to send messages,
             and a screen where you can see all the messages,
             ie. the whole conversation we had.
+            Clicking on that cat takes you to my GitHub profile where you can see the whole
+            code for this presentation, as well as other projects that I will post.
         </source>
         <target>You can contact me via Email, Facebook or LinkedIn.
             Or you can register and use the contact form to send messages,
             and a screen where you can see all the messages,
             ie. the whole conversation we had.
+            Clicking on that cat takes you to my GitHub profile where you can see the whole
+            code for this presentation, as well as other projects that I will post.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.component.html</context>
@@ -733,11 +737,15 @@
             Or you can use the contact form to send messages.
             And here is a screen where you can see all the messages,
             ie. the whole conversation we had.
+            Clicking on that cat takes you to my GitHub profile where you can see the whole
+            code for this presentation, as well as other projects that I will post.
         </source>
         <target>You can contact me via Email, Facebook or LinkedIn.
             Or you can use the contact form to send messages.
             And here is a screen where you can see all the messages,
             ie. the whole conversation we had.
+            Clicking on that cat takes you to my GitHub profile where you can see the whole
+            code for this presentation, as well as other projects that I will post.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.component.html</context>
@@ -998,11 +1006,17 @@
       <trans-unit id="home-text-4" datatype="html">
         <source>More informations about this project
             you can read when you click on
-            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> button.
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> button. You can see the whole
+            code when you click on this cat <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>
+                <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
+            <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
         </source>
         <target>More informations about this project
             you can read when you click on
-            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> button.
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> button. You can see the whole
+            code when you click on this cat <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>
+                <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
+            <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>

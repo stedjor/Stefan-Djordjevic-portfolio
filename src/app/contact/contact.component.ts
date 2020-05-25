@@ -11,7 +11,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
-  faLinkedin
+  faLinkedin,
+  faGithub
 } from '@fortawesome/free-brands-svg-icons';
 import { Messages } from '../_services/messages/messages';
 
@@ -42,6 +43,7 @@ export class ContactComponent implements OnInit {
   envelope = faEnvelope;
   facebook = faFacebook;
   linkedIn = faLinkedin;
+  faGithub = faGithub;
   play = faPlay;
   faTrashAlt = faTrashAlt;
 

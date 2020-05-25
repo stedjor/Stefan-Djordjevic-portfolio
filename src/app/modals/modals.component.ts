@@ -93,6 +93,7 @@ export class ModalsComponent implements OnInit {
     $('.dp-menu').hide('fast');
   }
 
+  // Dropdown show or hide when it's responsive
   dpResponsiveShowHide() {
     const x = document.getElementById('navbarSupportedContent');
     if (x.style.display === 'block') {

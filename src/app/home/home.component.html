@@ -1,6 +1,6 @@
 <div class="container home-container">
     <div class="row">
-        <div class="col-md-9 text-center ml-auto mr-auto">
+        <div class="col-md-10 text-center ml-auto mr-auto">
             <h2 i18n="@@home-title">Welcome to my Web presentation</h2>
             <div class="home-content">
                 <h5 i18n="@@home-text-1">My name is Stefan Đorđević and I am
@@ -12,7 +12,7 @@
                 <h5 i18n="@@home-text-2">Here You can find out more informations
                     about me on channel <a [routerLink]="['/about']" class="home-app-span">About</a>,
                     use some applications that I made on chanel
-                    <a [routerLink]="['/applications']" routerLinkActive="router-link-active"
+                    <a [routerLink]="['/applications']"
                         class="home-app-span">Applications</a>
                     and You can contact me via
                     form, social networks or email on
@@ -37,7 +37,11 @@
                 </h5>
                 <h5 i18n="@@home-text-4">More informations about this project
                     you can read when you click on
-                    <span class="home-btn-span">info</span> button.
+                    <span class="home-btn-span">info</span> button. You can see the whole
+                    code when you click on this cat <a class="home-github" 
+                    href="https://github.com/stedjor/Stefan-Djordjevic-portfolio">
+                        <fa-icon class="normal" [icon]="faGithub"></fa-icon>
+                    </a>.
                 </h5>
             </div>
         </div>
