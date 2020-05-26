@@ -48,6 +48,7 @@ export class CreateAdComponent implements OnInit {
   faArrowAltCircleDown = faArrowAltCircleDown;
   faArrowAltCircleUp = faArrowAltCircleUp;
   faImages = faImages;
+  colorred = 'red';
 
   constructor(
     private adsSevice: AdsService,

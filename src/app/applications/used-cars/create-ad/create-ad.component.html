@@ -220,7 +220,7 @@
                                                                     carsForm.get('car').get('colors').touched)}">
                                                             <option i18n="@@uc-create_ad-color" selected>Color...
                                                             </option>
-                                                            <option *ngFor="let color of carsInfo.colors">{{ color }}
+                                                            <option *ngFor="let color of carsInfo.colors" [ngStyle]="{'color': color.color}">{{ color.txt }}
                                                             </option>
                                                         </select>
                                                         <fa-icon class="normal arrow-down" [icon]="faCaretDown">

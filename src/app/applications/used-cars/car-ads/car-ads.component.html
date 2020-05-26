@@ -1,6 +1,6 @@
 <div class="container mt-2">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 pr-1">
             <div class="d-flex justify-content-between flex-wrap mb-2 filter-box">
                 <!-- Filter -->
                 <button type="button" class="btn btn-sm filter-btn mb-1" data-toggle="modal" data-target="#filterModal"
@@ -164,7 +164,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-8  uc-details">
+        <div class="col-md-8 pl-1 uc-details">
             <router-outlet *ngIf="showDetails; else noDetails"></router-outlet>
             <ng-template #noDetails>
                 <div class="d-flex justify-content-center uc-no-details">
