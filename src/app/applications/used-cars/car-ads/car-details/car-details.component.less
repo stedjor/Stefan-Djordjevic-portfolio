@@ -7,7 +7,7 @@
 
 & .details-card {
     background: @uc-color-dark;
-    animation : colorize 2.5s;
+    animation    : colorize 1.75s;
 
     @keyframes colorize {
         from {
@@ -87,6 +87,11 @@
                 min-height      : 350px;
                 display         : table;
                 width           : 100%;
+                @media only screen and (max-width: 425px) {
+                    & {
+                        min-height      : auto;
+                    }
+                }
 
                 & .image-box-inner {
                     vertical-align: middle;
@@ -468,6 +473,9 @@
 }
 
 @media only screen and (max-width: 425px) {
+    .image-box {
+        min-height      : auto;
+    }
     & .comment-card-body {
         padding: 10px;
 

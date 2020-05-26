@@ -1,6 +1,6 @@
 <div class="container mt-2">
     <div class="row">
-        <div class="col-md-4 pr-1">
+        <div class="col-md-4 pl-2 pr-1">
             <div class="d-flex justify-content-between flex-wrap mb-2 filter-box">
                 <!-- Filter -->
                 <button type="button" class="btn btn-sm filter-btn mb-1" data-toggle="modal" data-target="#filterModal"
@@ -15,7 +15,7 @@
                 <!-- Sort -->
                 <div class="input-group input-group-sm w-auto sort-input-group mb-1">
                     <select i18n-title="@@uc-car_ads-sort-title" title="Sort by..."
-                     class="custom-select h-auto sort-select" id="inputGroupSelect02" [(ngModel)]="selectedOpt"
+                        class="custom-select h-auto sort-select" id="inputGroupSelect02" [(ngModel)]="selectedOpt"
                         (change)="chooseSort($event.target.value)">
                         <option i18n="@@uc-car_ads-sortby" disabled selected>Sort By...</option>
                         <option *ngFor="let sort of sortBy">{{ sort }}</option>
@@ -47,7 +47,7 @@
                         </a>
                     </div>
                     <div id="collapseYourAds" class="collapse show">
-                        <div class="list-scrollbar-your scrollbar scrollbar-primary">
+                        <div class="list-scrollbar-your scrollbar scrollbar-primary" *ngIf="usedYourCars.length > 0; else noUsedYourCars">
                             <div class="list-group" *ngFor="let car of usedYourCars">
                                 <a class="list-group-item list-group-item-action uc-list-item p-0"
                                     (click)="onClick(car.id)" routerLink="{{car.id}}" routerLinkActive="routerActive">
@@ -70,7 +70,12 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="uc-show-more-less" (click)="showMoreLess('your')">
+                        <ng-template #noUsedYourCars>
+                            <div class="uc-no-ads uc-no-ads-your">
+                                <p i18n="@@uc-no-ads-your">You have not created any ads.</p>
+                            </div>
+                        </ng-template>
+                        <div class="uc-show-more-less" (click)="showMoreLess('your')" *ngIf="usedYourCars.length >= 7">
                             <a *ngIf="!moreLessYour" i18n="@@uc-car_ads-your-more">Show More</a>
                             <a *ngIf="moreLessYour" i18n="@@uc-car_ads-your-less">Show Less</a>
                         </div>
@@ -88,13 +93,14 @@
                         </a>
                     </div>
                     <div id="collapseAllAds" class="collapse show">
-                        <div class="list-scrollbar-all scrollbar scrollbar-primary">
+                        <div class="list-scrollbar-all scrollbar scrollbar-primary" *ngIf="usedAllCars.length > 0; else noUsedAllCars">
                             <div class="list-group" *ngFor="let car of usedAllCars">
                                 <a class="list-group-item list-group-item-action uc-list-item p-0"
                                     (click)="onClick(car.id)" routerLink="{{car.id}}" routerLinkActive="routerActive">
                                     <div class="w-100 d-flex justify-content-between">
                                         <div class="uc-li-content">
-                                            <img class="uc-list-img" src="{{ car.images[0] }}" alt="First image of car" height="50px">
+                                            <img class="uc-list-img" src="{{ car.images[0] }}" alt="First image of car"
+                                                height="50px">
                                         </div>
                                         <div class="uc-li-content">
                                             <strong class="uc-list-brand">{{ car.car.brand }},
@@ -110,7 +116,12 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="uc-show-more-less" (click)="showMoreLess('all')">
+                        <ng-template #noUsedAllCars>
+                            <div class="uc-no-ads uc-no-ads-all">
+                                <p i18n="@@uc-no-ads-all">No ads were created.</p>
+                            </div>
+                        </ng-template>
+                        <div class="uc-show-more-less" (click)="showMoreLess('all')" *ngIf="usedAllCars.length >= 7">
                             <a *ngIf="!moreLessAll" i18n="@@uc-car_ads-all-more">Show More</a>
                             <a *ngIf="moreLessAll" i18n="@@uc-car_ads-all-less">Show Less</a>
                         </div>
@@ -155,16 +166,20 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="uc-show-more-less" (click)="showMoreLess('filtered')" *ngIf="filteredCars.length >= 7">
+                            <a *ngIf="!moreLessFilter" i18n="@@uc-car_ads-filtered-more">Show More</a>
+                            <a *ngIf="moreLessFilter" i18n="@@uc-car_ads-filtered-less">Show Less</a>
+                        </div>
                         <ng-template #noFilteredAds>
-                            <div class="uc-no-filtered-ads">
-                                <p>No ads with these criteria were found.</p>
+                            <div class="uc-no-ads uc-no-ads-filtered">
+                                <p i18n="@@uc-no-ads-filtered">No ads with these criteria were found.</p>
                             </div>
                         </ng-template>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-8 pl-1 uc-details">
+        <div class="col-md-8 pl-1 pr-2 uc-details">
             <router-outlet *ngIf="showDetails; else noDetails"></router-outlet>
             <ng-template #noDetails>
                 <div class="d-flex justify-content-center uc-no-details">
@@ -221,15 +236,16 @@
                                             <div class="col-md-6">
                                                 <p class="filter-lbl">Model</p>
                                                 <div class="input-group-sm mb-1 filter-select-group">
-                                                    <select class="custom-select filter-input filter-input-select" formControlName="model"
-                                                    [attr.disabled]="selectedModel == undefined || customBrand? '': null">
+                                                    <select class="custom-select filter-input filter-input-select"
+                                                        formControlName="model"
+                                                        [attr.disabled]="selectedModel == undefined || customBrand? '': null">
                                                         <option selected disabled>Model...</option>
                                                         <option *ngFor="let model of selectedModel">{{ model }}</option>
                                                     </select>
                                                     <fa-icon class="normal arrow-down" [icon]="faCaretDown"></fa-icon>
                                                 </div>
                                                 <div class="filter-custom-brand">
-                                                    <button (click)="showCustomBrand()" 
+                                                    <button (click)="showCustomBrand()"
                                                         i18n-title="@@uc-filter-custom-brand-btn_title"
                                                         title="If the brand or model of your car is not on the list.">
                                                         <fa-icon class="normal" [icon]="faArrowCircle">
@@ -268,7 +284,8 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="input-group-sm mb-1 filter-select-group">
-                                                    <select class="custom-select filter-input filter-input-select" formControlName="fromAge"
+                                                    <select class="custom-select filter-input filter-input-select"
+                                                        formControlName="fromAge"
                                                         (change)="chooseAge($event.target.value)">
                                                         <option i18n="@@uc-car_ads-from" selected disabled>From...
                                                         </option>
@@ -280,7 +297,8 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="input-group-sm mb-1 filter-select-group">
-                                                    <select class="custom-select filter-input filter-input-select" formControlName="toAge"
+                                                    <select class="custom-select filter-input filter-input-select"
+                                                        formControlName="toAge"
                                                         [attr.disabled]="newYears == undefined? '': null">
                                                         <option i18n="@@uc-car_ads-to" selected disabled>...To</option>
                                                         <option *ngFor="let year of newYears">{{ year }}
@@ -319,7 +337,8 @@
                                     <div class="col-md-3">
                                         <p i18n="@@uc-car_ads-fuel" class="filter-lbl">Fuel</p>
                                         <div class="input-group-sm mb-1 filter-select-group">
-                                            <select class="custom-select filter-input filter-input-select" formControlName="fuels">
+                                            <select class="custom-select filter-input filter-input-select"
+                                                formControlName="fuels">
                                                 <option i18n="@@uc-car_ads-fuel-1" selected disabled>Fuel...</option>
                                                 <option *ngFor="let fuel of carsInfo.fuels">{{ fuel }}</option>
                                             </select>
@@ -330,7 +349,8 @@
                                     <div class="col-md-3">
                                         <p i18n="@@uc-car_ads-transmission" class="filter-lbl">Transmission</p>
                                         <div class="input-group-sm mb-1 filter-select-group">
-                                            <select class="custom-select filter-input filter-input-select" formControlName="transmission">
+                                            <select class="custom-select filter-input filter-input-select"
+                                                formControlName="transmission">
                                                 <option i18n="@@uc-car_ads-transmission" selected disabled>
                                                     Transmission...</option>
                                                 <option *ngFor="let trans of carsInfo.transmission">{{ trans }}</option>
@@ -342,9 +362,10 @@
                                     <div class="col-md-3">
                                         <p i18n="@@uc-car_ads-color" class="filter-lbl">Color</p>
                                         <div class="input-group-sm mb-1 filter-select-group">
-                                            <select class="custom-select filter-input filter-input-select" formControlName="colors">
+                                            <select class="custom-select filter-input filter-input-select"
+                                                formControlName="colors">
                                                 <option i18n="@@uc-car_ads-color" selected disabled>Color...</option>
-                                                <option *ngFor="let color of carsInfo.colors">{{ color }}</option>
+                                                <option *ngFor="let color of carsInfo.colors" [ngStyle]="{'color': color.color}">{{ color.txt }}</option>
                                             </select>
                                             <fa-icon class="normal arrow-down" [icon]="faCaretDown"></fa-icon>
                                         </div>

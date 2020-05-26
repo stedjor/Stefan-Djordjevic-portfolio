@@ -212,7 +212,7 @@
                                                             formControlName="colors">
                                                             <option i18n="@@uc-edit_ad-color" selected disabled>Color...
                                                             </option>
-                                                            <option *ngFor="let color of carsInfo.colors">{{ color }}
+                                                            <option *ngFor="let color of carsInfo.colors" [ngStyle]="{'color': color.color}">{{ color.txt }}
                                                             </option>
                                                         </select>
                                                         <fa-icon class="normal arrow-down" [icon]="faCaretDown">

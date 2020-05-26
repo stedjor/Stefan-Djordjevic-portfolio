@@ -372,7 +372,7 @@
                     <x id="START_TAG_FA-ICON_3" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>.
                 <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
                 <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    If you are logged in with your provider (Google, Facebook)
+                    If you are logged in with your provider (Google)
                     you can return your photo clicking on
                     <x id="START_TAG_FA-ICON_4" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>,
                 <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
@@ -454,12 +454,12 @@
       </trans-unit>
       <trans-unit id="contact-text-2" datatype="html">
         <source>You can contact me via Email, Facebook or LinkedIn.
-            Or you can use the contact form to send messages.
-            And here is a screen where you can see all the messages,
-            ie. the whole conversation we had.
-            Clicking on that cat takes you to my GitHub profile where you can see the whole
-            code for this presentation, as well as other projects that I will post.
-        </source>
+                        Or you can use the contact form to send messages.
+                        And here is a screen where you can see all the messages,
+                        ie. the whole conversation we had.
+                        Clicking on that cat takes you to my GitHub profile where you can see the whole
+                        code for this presentation, as well as other projects that I will post.
+                    </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.component.html</context>
           <context context-type="linenumber">16</context>
@@ -592,7 +592,7 @@
         <source>My name is Stefan Đorđević and I am
                     Front end web developer.
                     This project was made as presentation
-                    of knowlage that I own and as a project
+                    of knowledge that I own and as a project
                     for my CV.
                 </source>
         <context-group purpose="location">
@@ -608,7 +608,7 @@
                     and You can contact me via
                     form, social networks or email on
                     chanel <x id="START_LINK_2" ctype="x-a" equiv-text="&lt;a&gt;"/>Contact<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
-                    Some applications requere
+                    Some applications require
                     login, so if you want to try them out,
                     register and enjoy. Registration is free.
                 </source>
@@ -637,12 +637,12 @@
       </trans-unit>
       <trans-unit id="home-text-4" datatype="html">
         <source>More informations about this project
-            you can read when you click on
-            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> button. You can see the whole
-            code when you click on this cat <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>
-                <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
-            <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
-        </source>
+                    you can read when you click on
+                    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> button. You can see the whole
+                    code when you click on this cat <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>
+                        <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
+                    <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
+                </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
           <context context-type="linenumber">38</context>
@@ -695,7 +695,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="profile-return_photo" datatype="html">
-        <source>Return photo from provider (google, facebook)</source>
+        <source>Return photo from provider (google)</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
           <context context-type="linenumber">64</context>
@@ -1001,18 +1001,25 @@
           <context context-type="linenumber">62</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="uc-no-ads-your" datatype="html">
+        <source>You have not created any ads.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="uc-car_ads-your-more" datatype="html">
         <source>Show More</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-your-less" datatype="html">
         <source>Show Less</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">75</context>
+          <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-allads" datatype="html">
@@ -1022,28 +1029,35 @@
                         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">85</context>
+          <context context-type="linenumber">90</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-all-created" datatype="html">
         <source>Created: </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">102</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-no-ads-all" datatype="html">
+        <source>No ads were created.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">121</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-all-more" datatype="html">
         <source>Show More</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">114</context>
+          <context context-type="linenumber">125</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-all-less" datatype="html">
         <source>Show Less</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">115</context>
+          <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-filteredads" datatype="html">
@@ -1053,7 +1067,7 @@
                         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">126</context>
+          <context context-type="linenumber">137</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-filtered-created" datatype="html">
@@ -1061,7 +1075,28 @@
                                                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">145</context>
+          <context context-type="linenumber">156</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-filtered-more" datatype="html">
+        <source>Show More</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-filtered-less" datatype="html">
+        <source>Show Less</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">171</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-no-ads-filtered" datatype="html">
+        <source>No ads with these criteria were found.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">175</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-nodetails-text" datatype="html">
@@ -1071,21 +1106,21 @@
                         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">173</context>
+          <context context-type="linenumber">188</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-carinfo" datatype="html">
         <source>Car Info</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">201</context>
+          <context context-type="linenumber">216</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-brand" datatype="html">
         <source>Brand</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">207</context>
+          <context context-type="linenumber">222</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-brand-1" datatype="html">
@@ -1093,42 +1128,42 @@
                                                         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">213</context>
+          <context context-type="linenumber">228</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-filter-custom-brand-btn_title" datatype="html">
         <source>If the brand or model of your car is not on the list.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">234</context>
+          <context context-type="linenumber">250</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-filter-brand" datatype="html">
         <source>Brand</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">246</context>
+          <context context-type="linenumber">262</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-filter-custom-brand_title" datatype="html">
         <source>Enter Brand</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">250</context>
+          <context context-type="linenumber">266</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-filter-custom-model_title" datatype="html">
         <source>Enter Model</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">258</context>
+          <context context-type="linenumber">274</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-age" datatype="html">
         <source>Age</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">267</context>
+          <context context-type="linenumber">283</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-from" datatype="html">
@@ -1136,28 +1171,28 @@
                                                         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">273</context>
+          <context context-type="linenumber">290</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-to" datatype="html">
         <source>...To</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">285</context>
+          <context context-type="linenumber">303</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-Price" datatype="html">
         <source>Price</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">297</context>
+          <context context-type="linenumber">315</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1d71b3fd8d6923ff0fe406d25784b01a0b369f57" datatype="html">
         <source>From...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">302</context>
+          <context context-type="linenumber">320</context>
         </context-group>
         <note priority="1" from="description">From placeholder</note>
       </trans-unit>
@@ -1165,7 +1200,7 @@
         <source>...To</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">309</context>
+          <context context-type="linenumber">327</context>
         </context-group>
         <note priority="1" from="description">To placeholder</note>
       </trans-unit>
@@ -1173,43 +1208,43 @@
         <source>Fuel</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">320</context>
+          <context context-type="linenumber">338</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-fuel-1" datatype="html">
         <source>Fuel...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">323</context>
+          <context context-type="linenumber">342</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-transmission" datatype="html">
         <source>Transmission</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">331</context>
+          <context context-type="linenumber">350</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">334</context>
+          <context context-type="linenumber">354</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-color" datatype="html">
         <source>Color</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">343</context>
+          <context context-type="linenumber">363</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">346</context>
+          <context context-type="linenumber">367</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-sallerinfo" datatype="html">
         <source>Saller Info</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">358</context>
+          <context context-type="linenumber">379</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-country" datatype="html">
@@ -1217,21 +1252,21 @@
                                                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">365</context>
+          <context context-type="linenumber">386</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-town" datatype="html">
         <source>Town</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">375</context>
+          <context context-type="linenumber">396</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-reset" datatype="html">
         <source>Reset</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">388</context>
+          <context context-type="linenumber">409</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-save" datatype="html">
@@ -1240,7 +1275,7 @@
                     </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">390</context>
+          <context context-type="linenumber">411</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-title" datatype="html">

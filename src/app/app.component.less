@@ -191,7 +191,7 @@
 
           @media only screen and (max-width: 425px) {
             & {
-              right           : 48px;
+              right: 48px;
             }
           }
 
@@ -220,16 +220,12 @@
 
           @keyframes tooltip-pulse {
             0% {
-              // box-shadow  : 0 0 0 0px rgba(124, 0, 0, 0.2);
-              // border-color: rgba(124, 0, 0, 1);
-              color: rgba(124, 0, 0, 1);
+              color      : rgba(124, 0, 0, 1);
               text-shadow: 0px 0px 0 rgba(225, 0, 0, 1);
             }
 
             100% {
-              // box-shadow  : 0 0 0 5px rgba(124, 0, 0, 0);
-              // border-color: rgba(124, 0, 0, 0.4);
-              color: rgba(124, 0, 0, 0.4);
+              color      : rgba(124, 0, 0, 0.4);
               text-shadow: 0px 0px 0 rgba(225, 0, 0, 0.4);
             }
           }
@@ -366,17 +362,20 @@
     border-left : 2px outset rgb(92, 92, 92);
     border-right: 2px outset rgb(92, 92, 92);
 
-    &::after {
-      content       : 'Stefan Đorđević';
+    & #signature {
       position      : absolute;
       right         : -100%;
-      bottom        : -5px;
-      color         : #777777;
+      bottom        : -7px;
+      color         : rgb(170, 170, 170);
       text-shadow   : 1px 1px 1px black;
-      font-size     : 22px;
+      font-size     : 25px;
       font-family   : 'Great Vibes';
       font-style    : italic;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
+      text-decoration: none;
+      &:hover{
+        color: rgb(255, 255, 255);
+      }
     }
   }
 
@@ -421,7 +420,7 @@
 @media only screen and (max-width: 768px) {
   #stand-content {
     & #first-el {
-      &::after {
+      & #signature {
         right : -70%;
         bottom: -3px;
       }
@@ -485,9 +484,11 @@
     & #first-el {
       width: 72%;
 
-      &::after {
+      & #signature {
         right : -38%;
         bottom: -3px;
+        font-size: 22px;
+        letter-spacing: 2px;
       }
     }
   }
@@ -500,7 +501,7 @@
     & #first-el {
       width: 67%;
 
-      &::after {
+      & #signature {
         right : -48%;
         bottom: -3px;
       }
@@ -515,7 +516,7 @@
     & #first-el {
       width: 57%;
 
-      &::after {
+      & #signature {
         right : -70%;
         bottom: -3px;
       }
@@ -523,14 +524,15 @@
   }
 }
 
-@media screen and (max-width: 640) , screen and (max-height: 360px) {
+@media screen and (max-width: 640),
+screen and (max-height: 360px) {
   #stand-content {
     max-width: 350px;
 
     & #first-el {
       width: 57%;
 
-      &::after {
+      & #signature {
         right : -88%;
         bottom: -3px;
       }
@@ -538,14 +540,15 @@
   }
 }
 
-@media screen and (max-width: 528) , screen and (max-height: 320px) {
+@media screen and (max-width: 528),
+screen and (max-height: 320px) {
   #stand-content {
     max-width: 250px;
 
     & #first-el {
       width: 57%;
 
-      &::after {
+      & #signature {
         right : -70%;
         bottom: -3px;
       }

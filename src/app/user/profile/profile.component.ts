@@ -6,7 +6,8 @@ import {
   faUserEdit,
   faTimes,
   faCheck,
-  faCamera
+  faCamera,
+  faUndoAlt
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -31,6 +32,7 @@ export class ProfileComponent implements OnInit {
   editCancelIcon = faTimes;
   saveEditIcon = faCheck;
   faCamera = faCamera;
+  faUndoAlt = faUndoAlt;
 
   constructor(
     public authService: AuthService,

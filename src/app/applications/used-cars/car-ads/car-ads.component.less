@@ -84,12 +84,30 @@
 
   }
 
-  & .list-scrollbar-your,
-  .list-scrollbar-all {
-    max-height: 135px;
+  & .list-scrollbar {
+    &-your,
+    &-all {
+      max-height: 135px;
+    }
 
     &-filtered {
-      max-height: 500px !important;
+      max-height: 280px;
+    }
+  }
+
+  & .uc-no-ads{
+    text-align: center;
+
+    &-your, &-all {
+      padding   : 15px 0;
+    }
+    &-filtered {
+      padding   : 40px 0;
+    }
+
+    & p {
+      margin-bottom: 0;
+      color        : @uc-color-light;
     }
   }
 
@@ -413,7 +431,7 @@
           @media only screen and (max-width: 425px) {
             & {
               right: -2px;
-              top: 18px;
+              top  : 18px;
             }
           }
 

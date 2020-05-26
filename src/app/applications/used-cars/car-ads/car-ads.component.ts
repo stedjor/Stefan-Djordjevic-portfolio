@@ -46,9 +46,9 @@ export class CarAdsComponent implements OnInit {
   filterForm: FormGroup;
   filters: string[];
   filteredCars = [];
-  fAge: any; 
+  fAge: any;
   tAge: any;
-  fPrice: any; 
+  fPrice: any;
   tPrice: any;
   selectedOpt: string;
   sortArrow = true;
@@ -57,6 +57,7 @@ export class CarAdsComponent implements OnInit {
   isCollapsedFilteredAds = false;
   moreLessYour = false;
   moreLessAll = false;
+  moreLessFilter = false;
   customBrand = false;
   // Font Awesome
   faLongArrowAltUp = faSortAmountUpAlt;
@@ -336,35 +337,30 @@ export class CarAdsComponent implements OnInit {
 
   showMoreLess(el: string) {
     if (el === 'your') {
-      if (this.usedYourCars.length > 7) {
-        this.moreLessYour = !this.moreLessYour;
-        if (this.moreLessYour) {
-          $(`.list-scrollbar-${el}`).animate({
-            maxHeight: '500px',
-            height: '400px'
-          }, 1000);
-        } else {
-          $(`.list-scrollbar-${el}`).animate({
-            maxHeight: '135px',
-            height: 'auto'
-          }, 1000);
-        }
-      }
+      this.moreLessYour = !this.moreLessYour;
+      this.moreLessButton(el, this.usedYourCars, this.moreLessYour, '500px', '135px', '400px');
+    } else if (el === 'all') {
+      this.moreLessAll = !this.moreLessAll;
+      this.moreLessButton(el, this.usedAllCars, this.moreLessAll, '500px', '135px', '400px');
+    } else if (el === 'filtered') {
+      this.moreLessFilter = !this.moreLessFilter;
+      this.moreLessButton(el, this.filteredCars, this.moreLessFilter, '500px', '280px', '400px');
     }
-    if (el === 'all') {
-      if (this.usedAllCars.length > 7) {
-        this.moreLessAll = !this.moreLessAll;
-        if (this.moreLessAll) {
-          $(`.list-scrollbar-${el}`).animate({
-            maxHeight: '500px',
-            height: '400px'
-          }, 1000);
-        } else {
-          $(`.list-scrollbar-${el}`).animate({
-            maxHeight: '135px',
-            height: 'auto'
-          }, 1000);
-        }
+  }
+
+  moreLessButton(el, arr, moreless, mxHeight, minHeight, heighT) {
+    console.log(el, arr, moreless, mxHeight, minHeight, heighT)
+    if (arr.length >= 7) {
+      if (moreless) {
+        $(`.list-scrollbar-${el}`).animate({
+          maxHeight: `${mxHeight}`,
+          height: `${heighT}`
+        }, 1000);
+      } else {
+        $(`.list-scrollbar-${el}`).animate({
+          maxHeight: `${minHeight}`,
+          height: 'auto'
+        }, 1000);
       }
     }
   }

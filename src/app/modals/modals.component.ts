@@ -14,6 +14,7 @@ import {
   faTimes,
   faCheck,
   faCamera,
+  faUndoAlt,
   faEdit,
   faTrashAlt
 } from '@fortawesome/free-solid-svg-icons';
@@ -60,6 +61,7 @@ export class ModalsComponent implements OnInit {
   faLinkedinIn = faLinkedinIn;
   faEdit = faEdit;
   faTrashAlt = faTrashAlt;
+  faUndoAlt = faUndoAlt;
 
   constructor(public authService: AuthService, public router: Router) {
     const user = JSON.parse(localStorage.getItem('user'));

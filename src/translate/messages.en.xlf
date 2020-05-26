@@ -175,14 +175,14 @@
             <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Informations about me<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 On this chanel you can find informations about me,
-                my education, jobs I have worked and the knowlage I have.
+                my education, jobs I have worked and the knowledge I have.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
         </source>
         <target>
             <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Informations about me<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 On this chanel you can find informations about me,
-                my education, jobs I have worked and the knowlage I have.
+                my education, jobs I have worked and the knowledge I have.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
         </target>
         <context-group purpose="location">
@@ -583,7 +583,7 @@
                 <x id="START_TAG_FA-ICON_3" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    If you are logged in with your provider (Google, Facebook)
+                    If you are logged in with your provider (Google)
                     you can return your photo clicking on 
                     <x id="START_TAG_FA-ICON_4" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>,
                 <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
@@ -614,12 +614,12 @@
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 When you finish and you sure with changes click on button
                 <x id="START_TAG_FA-ICON_2" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>,
-                or if you don&apos;t want to edit clicko on
+                or if you don&apos;t want to edit click on
                 <x id="START_TAG_FA-ICON_3" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                Ako ste prijavljeni sa svojim provajderom (Google, Facebook),
-                možete vratiti vašu fotografiju klikom na 
+                If you are logged in with your provider (Google)
+                    you can return your photo clicking on 
                 <x id="START_TAG_FA-ICON_4" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>,
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
         </target>
@@ -929,13 +929,13 @@
         <source>My name is Stefan Đorđević and I am
             Front end web developer.
             This project was made as presentation
-            of knowlage that I own and as a project
+            of knowledge that I own and as a project
             for my CV.
         </source>
         <target>My name is Stefan Đorđević and I am
             Front end web developer.
             This project was made as presentation
-            of knowlage that I own and as a project
+            of knowledge that I own and as a project
             for my CV.
         </target>
         <context-group purpose="location">
@@ -951,7 +951,7 @@
             and You can contact me via
             form, social networks or email on
             chanel <x id="START_LINK_2" ctype="x-a" equiv-text="&lt;a&gt;"/>Contact<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
-            Some applications requere
+            Some applications require
             login, so if you want to try them out,
             register and enjoy. Registration is free.
         </source>
@@ -962,7 +962,7 @@
             and You can contact me via
             form, social networks or email on
             chanel <x id="START_LINK_2" ctype="x-a" equiv-text="&lt;a&gt;"/>Contact<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
-            Some applications requere
+            Some applications require
             login, so if you want to try them out,
             register and enjoy. Registration is free.
         </target>
@@ -1076,8 +1076,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="profile-return_photo" datatype="html">
-        <source>Return photo from provider (google, facebook)</source>
-        <target>Return photo from provider (google, facebook)</target>
+        <source>Return photo from provider (google)</source>
+        <target>Return photo from provider (google)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
           <context context-type="linenumber">64</context>
@@ -1416,6 +1416,14 @@
           <context context-type="linenumber">62</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="uc-no-ads-your" datatype="html">
+        <source>You have not created any ads.</source>
+        <target>You have not created any ads.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="uc-car_ads-your-more" datatype="html">
         <source>Show More</source>
         <target>Show More</target>
@@ -1454,6 +1462,14 @@
           <context context-type="linenumber">102</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="uc-no-ads-all" datatype="html">
+        <source>No ads were created.</source>
+        <target>No ads were created.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="uc-car_ads-all-more" datatype="html">
         <source>Show More</source>
         <target>Show More</target>
@@ -1490,6 +1506,30 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
           <context context-type="linenumber">145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-filtered-more" datatype="html">
+        <source>Show More</source>
+        <target>Show More</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-filtered-less" datatype="html">
+        <source>Show Less</source>
+        <target>Show Less</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">171</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-no-ads-filtered" datatype="html">
+        <source>No ads with these criteria were found.</source>
+        <target>No ads with these criteria were found.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">175</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-nodetails-text" datatype="html">
