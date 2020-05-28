@@ -1,5 +1,6 @@
 import { FsServicesService } from '../../../_services/fs/fs-services.service';
 import { Component, OnInit, ViewChild, ElementRef, Input, AfterViewInit, Output, EventEmitter } from '@angular/core';
+import { FsKeysService } from 'src/app/_services/fs/fs-keys/fs-keys.service';
 
 declare let H: any;
 declare let $: any;
@@ -11,20 +12,25 @@ declare let $: any;
 export class HereMapComponent implements OnInit, AfterViewInit {
     @ViewChild('map', { static: true }) public mapElement: ElementRef;
     @Output() public hereOutput = new EventEmitter<any>();
-    @Input() public appId: any;
-    @Input() public appCode: any;
     @Input() public lat: any;
     @Input() public lng: any;
     @Input() public width: any;
     @Input() public height: any;
-
+    appId: any;
+    appCode: any;
     ui: any;
     platform: any;
     listGroups = [];
     map: any;
     router: any;
 
-    public constructor(private fsServices: FsServicesService) { }
+    constructor(
+        private fsServices: FsServicesService,
+        private fsKeys: FsKeysService
+    ) {
+        this.appId = this.fsKeys.keys.appId;
+        this.appCode = this.fsKeys.keys.appCode;
+    }
 
     ngOnInit() {
         this.fsServices.getLocation();

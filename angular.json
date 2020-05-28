@@ -4,12 +4,6 @@
   "newProjectRoot": "projects",
   "projects": {
     "portfolio": {
-      "i18n": {
-        "locales": {
-          "en": "src/translate/messages.en.xlf",
-          "sr": "src/translate/messages.sr.xlf"
-        }
-      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -71,19 +65,23 @@
               ]
             },
             "en": {
-            "localize": [
-              "en"
-            ],
-              "outputPath": "dist/portfolio",
-              "i18nMissingTranslation": "error"
-},
+              "aot": true,
+              "outputPath": "dist/portfolio/en/",
+              "i18nFile": "src/translate/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "i18nMissingTranslation": "error",
+              "baseHref": "/en/"
+            },
             "sr": {
-            "localize": [
-              "sr"
-            ],
-              "outputPath": "dist/portfolio",
-              "i18nMissingTranslation": "error"
-}
+              "aot": true,
+              "outputPath": "dist/portfolio/sr/",
+              "i18nFile": "src/translate/messages.sr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "sr",
+              "i18nMissingTranslation": "error",
+              "baseHref": "/sr/"
+            }
           }
         },
         "serve": {

@@ -1,27 +1,22 @@
 # Portfolio Stefan Djordjevic
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+Web address for this project is https://portfolio-a2a27.web.app.
 
-## Development server
+## About this web presentation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Presentation was made as presentation of knowledge that I own.
+This is an Angular project with some additional technologies.
+In it you can see more detailed information about the project itself,
+information about me, two applications I made within the presetation as well
+as a contact page with a form where you can leave a message.
+The First application was created using the Api from the FourSquare application to display
+information from its database, and the second was create as a simulation application for 
+advertising and selling used cars. Firebase was used for the backend.
+The Contact form is also linked to Firebase.
+You can try it at the address above
 
-## Code scaffolding
+### Technologies used to create this presentation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+-Html5,
+-Css3 (Less, Bootstrap),
+-JavaScript (TypeScript, JQuery, Angular 8)

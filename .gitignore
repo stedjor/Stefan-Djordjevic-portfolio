@@ -3,6 +3,7 @@
 # boilerplate files
 /src/environments
 /.firebase
+/src/app/_services/fs/fs-keys
 
 # compiled output
 /dist

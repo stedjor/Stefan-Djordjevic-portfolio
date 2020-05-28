@@ -35,8 +35,8 @@
   <!-- Here WeGo map -->
   <div id="here-wego-map">
     <div id="map-container" *ngFor="let loc of location">
-      <app-here-map #map appId="PFe6hV8Jk4JS3MIcxbdP" appCode="ev0aUksqnBMigwJ9HVeTpQ" [lat]="loc.lat" [lng]="loc.lng"
-        width="100%" height="100%"></app-here-map>
+      <app-here-map #map  [lat]="loc.lat" [lng]="loc.lng" width="100%"
+        height="100%"></app-here-map>
     </div>
   </div>
 </div>
@@ -49,10 +49,10 @@
           If you have accessed the aplication on your computer and when you are asked
           to allow the application to find your location by clicking on the block,
           you will not be able to acces the application. So please go to your browser settings and allow. <br>
-          The path is: <span>settings/privacy and security/site settings/location.</span> 
+          The path is: <span>settings/privacy and security/site settings/location.</span>
         </h5><br>
         <h5>
-          If you have accessed the application from your phone or tablet you need to turn on your 
+          If you have accessed the application from your phone or tablet you need to turn on your
           location and you can continue to use it.
         </h5>
       </div>

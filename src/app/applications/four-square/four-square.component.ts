@@ -9,6 +9,7 @@ import {
   faChevronDown,
   faSearch
 } from '@fortawesome/free-solid-svg-icons';
+import { FsKeysService } from 'src/app/_services/fs/fs-keys/fs-keys.service';
 
 declare let $: any;
 @Component({
@@ -26,16 +27,18 @@ export class FourSquareComponent implements OnInit {
   cardsShowHide = false;
   searchShowHide = false;
   permissionStatus = '';
+  fsAppId = '';
+  fsAppCode = '';
   // FontAwesome Icons
   showHideCardsArrow = faChevronLeft;
   showHideSearchArrow = faChevronUp;
   faSearch = faSearch;
 
-  constructor(private mainService: FsServicesService) { }
+  constructor(private fsService: FsServicesService) { }
 
   showVenues(target: string) {
     if (target !== '' && target !== undefined) {
-      this.mainService.getInfomation(target)
+      this.fsService.getInfomation(target)
         .subscribe((data: any) => {
           try {
             this.listItems = [];
