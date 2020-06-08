@@ -89,7 +89,7 @@
                                                             [ngClass]="{'invalid-input': carsForm.get('car').get('model').invalid && 
                                                                             (carsForm.get('car').get('model').dirty ||
                                                                             carsForm.get('car').get('model').touched)}">
-                                                            <option i18n="@@uc-create_ad-model" selected>Model...
+                                                            <option i18n="@@uc-create_ad-model" selected hidden>Model...
                                                             </option>
                                                             <option *ngFor="let model of selectedModel">{{ model }}
                                                             </option>

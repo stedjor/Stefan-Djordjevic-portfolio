@@ -17,8 +17,9 @@
                     <select i18n-title="@@uc-car_ads-sort-title" title="Sort by..."
                         class="custom-select h-auto sort-select" id="inputGroupSelect02" [(ngModel)]="selectedOpt"
                         (change)="chooseSort($event.target.value)">
-                        <option i18n="@@uc-car_ads-sortby" disabled selected>Sort By...</option>
-                        <option *ngFor="let sort of sortBy">{{ sort }}</option>
+                        <option i18n="@@uc-car_ads-sortby" disabled>Sort By...</option>
+                        <option>price</option>
+                        <option>age</option>
                     </select>
                     <div class="input-group-append sort-append" (click)="sortCars()">
                         <label class="input-group-text" for="inputGroupSelect02">
@@ -239,7 +240,7 @@
                                                     <select class="custom-select filter-input filter-input-select"
                                                         formControlName="model"
                                                         [attr.disabled]="selectedModel == undefined || customBrand? '': null">
-                                                        <option selected disabled>Model...</option>
+                                                        <option selected hidden>Model...</option>
                                                         <option *ngFor="let model of selectedModel">{{ model }}</option>
                                                     </select>
                                                     <fa-icon class="normal arrow-down" [icon]="faCaretDown"></fa-icon>
@@ -287,7 +288,7 @@
                                                     <select class="custom-select filter-input filter-input-select"
                                                         formControlName="fromAge"
                                                         (change)="chooseAge($event.target.value)">
-                                                        <option i18n="@@uc-car_ads-from" selected disabled>From...
+                                                        <option i18n="@@uc-car_ads-from" selected hidden>From...
                                                         </option>
                                                         <option *ngFor="let year of carsInfo.years">{{ year }}
                                                         </option>
@@ -300,7 +301,7 @@
                                                     <select class="custom-select filter-input filter-input-select"
                                                         formControlName="toAge"
                                                         [attr.disabled]="newYears == undefined? '': null">
-                                                        <option i18n="@@uc-car_ads-to" selected disabled>...To</option>
+                                                        <option i18n="@@uc-car_ads-to" selected hidden>...To</option>
                                                         <option *ngFor="let year of newYears">{{ year }}
                                                         </option>
                                                     </select>

@@ -39,8 +39,9 @@
                                     *ngIf="imagesArr.length !== 0 && imagesArr !== undefined">
                                     <ul class="list-inline list-imgs-scroll scrollbar scrollbar-primary">
                                         <li class="list-inline-item" *ngFor="let imgUrl of imagesArr; index as i"
-                                            [ngClass]="{'list-img-active': imgUrl == imageURL}" (click)="showImg(imgUrl)">
-                                            <img src="{{ imgUrl }}" alt="Added image in list" >
+                                            [ngClass]="{'list-img-active': imgUrl == imageURL}"
+                                            (click)="showImg(imgUrl)">
+                                            <img src="{{ imgUrl }}" alt="Added image in list">
                                             <button class="btn btn-danger" (click)="deleteImage(imgUrl, i)">
                                                 <fa-icon class="normal" [icon]="faTimes"></fa-icon>
                                             </button>
@@ -83,14 +84,13 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="input-group-sm edit-ad-select-group mb-2">
-                                                        <select
-                                                            class="custom-select edit-ad-input edit-ad-input-select"
+                                                        <select class="custom-select edit-ad-input edit-ad-input-select"
                                                             [attr.disabled]="selectedModel == undefined || customBrand? '': null"
                                                             [ngClass]="{'invalid-input': carsForm.get('car').get('model').invalid && 
                                                                             (carsForm.get('car').get('model').dirty ||
                                                                             carsForm.get('car').get('model').touched)}"
                                                             title="Model" formControlName="model">
-                                                            <option disabled selected>
+                                                            <option hidden selected>
                                                                 Model...</option>
                                                             <option [selected]="selectedModelValue"
                                                                 [value]="selectedModelValue" hidden>
@@ -161,7 +161,8 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="input-group-sm mb-2">
-                                                        <input class="form-control edit-ad-input edit-ad-input-select" *ngIf="carMarkShowen"
+                                                        <input class="form-control edit-ad-input edit-ad-input-select"
+                                                            *ngIf="carMarkShowen"
                                                             i18n-placeholder="Mark placeholder@@uc-edit_ad-custom-mark_placeh"
                                                             i18n-title="@@uc-edit_ad-custom-mark_title"
                                                             placeholder="Mark" type="text" formControlName="carMark"
@@ -212,7 +213,8 @@
                                                             formControlName="colors">
                                                             <option i18n="@@uc-edit_ad-color" selected disabled>Color...
                                                             </option>
-                                                            <option *ngFor="let color of carsInfo.colors" [ngStyle]="{'color': color.color}">{{ color.txt }}
+                                                            <option *ngFor="let color of carsInfo.colors"
+                                                                [ngStyle]="{'color': color.color}">{{ color.txt }}
                                                             </option>
                                                         </select>
                                                         <fa-icon class="normal arrow-down" [icon]="faCaretDown">
@@ -298,7 +300,8 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="input-group-sm edit-ad-select-group mb-2">
-                                                <select class="custom-select edit-ad-input edit-ad-input-select" formControlName="countries">
+                                                <select class="custom-select edit-ad-input edit-ad-input-select"
+                                                    formControlName="countries">
                                                     <option i18n="@@uc-edit_ad-country" selected disabled>Country...
                                                     </option>
                                                     <option [selected]="selectedCountryValue"

@@ -9,7 +9,7 @@ option:hover {
 }
 
 & .create-ad-container {
-    animation    : colorize 1.75s;
+    animation: colorize 1.75s;
 
     @keyframes colorize {
         from {
@@ -26,6 +26,13 @@ option:hover {
     & .create-ad-tittle {
         color : @create-ad-text;
         margin: 5px 30px;
+
+        @media only screen and (max-width: 320px) {
+            & {
+                margin-top: 10px;
+                font-size: 19px;
+            }
+        }
     }
 
     & .create-ad-card {
@@ -38,6 +45,18 @@ option:hover {
 
             & .create-ad-subtittle {
                 color: @create-ad-gold;
+
+                @media only screen and (max-width: 375px) {
+                    & {
+                        font-size: 17px;
+                    }
+                }
+
+                @media only screen and (max-width: 320px) {
+                    & {
+                        font-size: 13px;
+                    }
+                }
             }
 
             & .create-img {
@@ -59,15 +78,17 @@ option:hover {
                         max-height: 180px;
                     }
                 }
-                & .image-create{
+
+                & .image-create {
                     display       : table-cell;
                     vertical-align: middle;
+
                     & img {
-                        height      : auto;
-                        width       : auto;
-                        max-width   : 100%;
-                        max-height  : 195px;
-                        position    : relative;
+                        height    : auto;
+                        width     : auto;
+                        max-width : 100%;
+                        max-height: 195px;
+                        position  : relative;
                     }
                 }
             }
@@ -157,7 +178,7 @@ option:hover {
 
                 @media only screen and (max-width: 425px) {
                     & {
-                        right   : -7px;
+                        right: -7px;
                     }
                 }
             }
@@ -192,7 +213,7 @@ option:hover {
 
                 @media only screen and (max-width: 425px) {
                     & {
-                        right   : -7px;
+                        right: -7px;
                     }
                 }
             }
@@ -347,9 +368,9 @@ option:hover {
 
             // Create Ad Button
             & .create-ad-btn {
-                background                : @create-ad-gold;
-                color                     : @create-ad-dark;
-                border                    : none;
+                background: @create-ad-gold;
+                color     : @create-ad-dark;
+                border    : none;
 
                 &:hover {
                     background: darken(@create-ad-gold, 10%);

@@ -18,8 +18,9 @@ export class RegisterComponent implements OnInit {
   faLinkedinIn = faLinkedinIn;
   registerForm: FormGroup;
 
-  constructor(public authService: AuthService,
-              public fb: FormBuilder
+  constructor(
+    public authService: AuthService,
+    public fb: FormBuilder
   ) { }
 
   ngOnInit() {

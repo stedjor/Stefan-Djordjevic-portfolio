@@ -210,10 +210,37 @@
       }
     }
   }
+
+  & .fs-denied-location{
+    & h5 {
+      font-size: 17px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  & .fs-denied-location{
+    & h3 {
+      font-size: 20px;
+    }
+
+    & h5 {
+      font-size: 13px;
+    }
+  }
 }
 
 @media only screen and (max-width: 320px) {
   & #venue-wrapper {
     max-width: 91%;
+  }
+  & .fs-denied-location{
+    & h3 {
+      font-size: 16px;
+    }
+
+    & h5 {
+      font-size: 11px;
+    }
   }
 }
