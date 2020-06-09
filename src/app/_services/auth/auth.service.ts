@@ -71,7 +71,6 @@ export class AuthService {
         this.ngZone.run(() => {
           this.router.navigate(['profile']);
         });
-        console.log(result.user)
         this.setUserData(result.user);
       }).catch((error) => {
         console.log(error);

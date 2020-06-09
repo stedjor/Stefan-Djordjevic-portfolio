@@ -85,6 +85,7 @@
   }
 
   & .list-scrollbar {
+
     &-your,
     &-all {
       max-height: 135px;
@@ -95,14 +96,16 @@
     }
   }
 
-  & .uc-no-ads{
+  & .uc-no-ads {
     text-align: center;
 
-    &-your, &-all {
-      padding   : 15px 0;
+    &-your,
+    &-all {
+      padding: 15px 0;
     }
+
     &-filtered {
-      padding   : 40px 0;
+      padding: 40px 0;
     }
 
     & p {
@@ -656,7 +659,8 @@
         }
 
         & .uc-list-brand {
-          font-size: 13px;
+          font-size  : 13px;
+          white-space: normal;
         }
 
         & .uc-list-date {
@@ -696,6 +700,18 @@
 
 @media only screen and (max-width: 375px) {
 
+  // Cars 
+  & .uc-list-card {
+    & .uc-list-item {
+      & .uc-li-content {
+        & .uc-list-brand {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  // Car Details
   .uc-details {
     min-height: 45vh;
 

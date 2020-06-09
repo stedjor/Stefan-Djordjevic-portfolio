@@ -31,7 +31,6 @@ declare var $: any;
   styleUrls: ['./car-ads.component.less']
 })
 export class CarAdsComponent implements OnInit {
-  sortBy = ['price', 'age'];
   defaultPhoto = './assets/no-car.png';
   usedCars: Observable<Cars[]>;
   usedCarsList = [];
@@ -40,6 +39,7 @@ export class CarAdsComponent implements OnInit {
   autorId: string;
   carsInfo = this.ci.carsInfo;
   showDetails = false;
+  carId: string;
   selectedBrand: any;
   selectedModel: string[];
   newYears: number[];
@@ -50,7 +50,7 @@ export class CarAdsComponent implements OnInit {
   tAge: any;
   fPrice: any;
   tPrice: any;
-  selectedOpt: string;
+  selectedOpt: string = 'Sort By...';
   sortArrow = true;
   isCollapsedYourAds = false;
   isCollapsedAllAds = false;
@@ -113,8 +113,11 @@ export class CarAdsComponent implements OnInit {
   }
 
   onClick(id: string) {
-    this.showDetails = true;
-    this.adsService.getCarData(id);
+    this.carId === id ? this.showDetails = !this.showDetails : this.showDetails = true;
+    if (this.showDetails) {
+      this.carId = id;
+      this.adsService.getCarData(id);
+    }
   }
 
   openFilterModal() {
@@ -348,8 +351,7 @@ export class CarAdsComponent implements OnInit {
     }
   }
 
-  moreLessButton(el, arr, moreless, mxHeight, minHeight, heighT) {
-    console.log(el, arr, moreless, mxHeight, minHeight, heighT)
+  moreLessButton(el: string, arr: string | any[], moreless: boolean, mxHeight: string, minHeight: string, heighT: string) {
     if (arr.length >= 7) {
       if (moreless) {
         $(`.list-scrollbar-${el}`).animate({

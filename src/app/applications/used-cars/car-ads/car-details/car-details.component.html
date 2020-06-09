@@ -138,7 +138,11 @@
                                                                     defaultPhoto 
                                                                 }}" alt="photo by the author of the comment">
                                                                     <small
-                                                                        class="card-title">{{ comment.autor }}</small>
+                                                                        class="card-title">{{ 
+                                                                            comment.autor !== null?
+                                                                            comment.autor:
+                                                                            comment.autorEmail
+                                                                        }}</small>
                                                                 </div>
                                                                 <div class="message-icon"
                                                                     *ngIf="currentAutor === comment.autor">
