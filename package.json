@@ -12,7 +12,8 @@
     "e2e": "ng e2e",
     "int:extract": "ng xi18n --output-path src/translate",
     "extract-i18n": "ng xi18n portfolio --i18n-format xlf --output-path src/translate --i18n-locale sr && ng run portfolio:xliffmerge",
-    "start-en": "ng serve --configuration=en"
+    "start-en": "ng serve --configuration=en",
+    "start-sr": "ng serve --configuration=sr"
   },
   "private": true,
   "dependencies": {

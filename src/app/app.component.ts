@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   infoModalUrl: string;
   showHideMenu = false;
   urlLocation: string;
+  tooltipValue: string;
   // font awesome icons
   faPowerOff = faPowerOff;
   faChevronLeft = faChevronLeft;
@@ -46,6 +47,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.metaTag.addTags(this.metaTags);
     this.urlLocation = location.toString();
+    setTimeout(()=> {
+      this.tooltipValue = $('.turn-on-tooltip').text();
+      console.log(this.tooltipValue)
+    }, 100)
   }
 
   buttonTurn(feature: string) {

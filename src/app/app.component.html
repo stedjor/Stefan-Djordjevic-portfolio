@@ -42,7 +42,7 @@
                                 <fa-icon [icon]="faPowerOff" class="button-icon"></fa-icon>
                             </button>
                             <div i18n="@@main-turn-on-tooltip" class="turn-on-tooltip" *ngIf="!turnOnOff"
-                            [ngClass]="urlLocation.includes('sr')? 'turn-on-tooltip-sr': 'turn-on-tooltip-en'"
+                            [ngClass]="tooltipValue !== 'Just turn on'? 'turn-on-tooltip-sr': 'turn-on-tooltip-en'"
                             >Just turn on</div>
                         </div>
                         <div class="btn-center">
