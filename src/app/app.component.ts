@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
   modalInfoOpened = false;
   infoModalUrl: string;
   showHideMenu = false;
+  urlLocation: string;
   // font awesome icons
   faPowerOff = faPowerOff;
   faChevronLeft = faChevronLeft;
@@ -44,6 +45,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.metaTag.addTags(this.metaTags);
+    this.urlLocation = location.toString();
   }
 
   buttonTurn(feature: string) {

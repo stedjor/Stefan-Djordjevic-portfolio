@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {
   faCircle,
   faCaretUp,
-  faPlay
+  faPlay,
+  faDownload
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -14,6 +15,7 @@ export class AboutComponent implements OnInit {
   faCircle = faCircle;
   faCaretUp = faCaretUp;
   faPlay = faPlay;
+  faDownload = faDownload;
 
   constructor() { }
 

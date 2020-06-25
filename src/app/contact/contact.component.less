@@ -1,15 +1,15 @@
 @main-contact-color : #cccccc;
-@main-color: rgb(138, 138, 138);
+@main-color         : rgb(138, 138, 138);
 
-@contact-color : rgb(53, 0, 53);
+@contact-color      : rgb(53, 0, 53);
 @contact-color-light: rgb(100, 0, 100);
-@contact-color-dark: rgb(20, 0, 20);
+@contact-color-dark : rgb(20, 0, 20);
 
 
 
 .contact-container {
     // background   : linear-gradient(to right, @contact-color-dark, rgb(53, 0, 53), @contact-color-dark);
-    background: radial-gradient( @contact-color, @contact-color-dark);
+    background   : radial-gradient(@contact-color, @contact-color-dark);
     border-radius: 10px;
     min-height   : 100%;
     padding-top  : 10px;
@@ -38,10 +38,11 @@
 
         }
 
-        & h2 {
+        & h1 {
             text-align : center;
             color      : white;
             text-shadow: 0 2px 5px @contact-color-light;
+            font-size  : 32px;
         }
 
         & .contact-text {
@@ -132,8 +133,8 @@
 
     // List Of Users
     & .list-box {
-        min-height             : 450px;
-        max-height             : 450px;
+        min-height             : 440px;
+        max-height             : 440px;
         border                 : 1px solid lightgray;
         border-top-left-radius : 5px;
         border-top-right-radius: 5px;
@@ -204,8 +205,8 @@
         background: linear-gradient(to right, rgb(104, 104, 104), rgb(204, 204, 204), rgb(104, 104, 104));
 
         & .message-box {
-            min-height      : 280px;
-            max-height      : 280px;
+            min-height      : 270px;
+            max-height      : 270px;
             border          : 1px solid @contact-color;
             border-radius   : 5px;
             padding         : 5px;

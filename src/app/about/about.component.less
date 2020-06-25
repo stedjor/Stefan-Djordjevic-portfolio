@@ -1,10 +1,10 @@
 @about-color      : rgb(0, 0, 53);
 @about-color-light: rgb(0, 0, 225);
-@about-color-dark: rgb(0, 0, 20);
+@about-color-dark : rgb(0, 0, 20);
 
 & .about-container {
     // background   : linear-gradient(to right, @about-color-dark, @about-color, @about-color-dark);
-    background: radial-gradient( @about-color, @about-color-dark);
+    background   : radial-gradient(@about-color, @about-color-dark);
     border-radius: 10px;
     min-height   : 100%;
     color        : #ffffff;
@@ -24,8 +24,9 @@
         }
     }
 
-    & h2 {
+    & h1 {
         text-align: center;
+        font-size : 32px;
     }
 
     & #about-photo {

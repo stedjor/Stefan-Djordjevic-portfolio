@@ -17,8 +17,8 @@
                             [ngClass]="{'menu-lng-btn-active': urlLocation.includes('sr')}">
                             <img src="./assets/flags/serbia-flag-round.png" alt="Serbian flag">
                         </a>
-                        <a class="menu-lng-btn menu-lng-en" href="/en/"
-                            [ngClass]="{'menu-lng-btn-active': urlLocation.includes('en')}">
+                        <a class="menu-lng-btn menu-lng-en" href="/"
+                            [ngClass]="{'menu-lng-btn-active': !urlLocation.includes('sr')}">
                             <img src="./assets/flags/united-kingdom-flag-round.png" alt="United kingdom flag">
                         </a>
                     </div>
@@ -119,6 +119,7 @@
                 <h6 class="text-justify modal-info-text-indent">
                     On this chanel you can find informations about me,
                     my education, jobs I have worked and the knowlage I have.
+                    You can also download my CV in serbian and english.
                 </h6>
             </div>
         </div>

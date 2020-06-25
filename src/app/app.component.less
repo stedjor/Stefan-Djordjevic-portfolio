@@ -174,49 +174,17 @@
         }
 
         & .turn-on-tooltip {
-          position        : absolute;
-          top             : 0;
-          right           : 60px;
-          white-space     : nowrap;
-          padding         : 0 5px;
-          background      : transparent;
-          // border       : 2px solid rgb(124, 0, 0);
-          font-size       : 18px;
-          font-weight     : bold;
-          color           : rgb(124, 0, 0);
-          border-radius   : 3px 3px 3px 0;
-          text-align      : center;
-          display         : block;
-          animation       : tooltip-pulse 1s infinite;
-
-          @media only screen and (max-width: 425px) {
-            & {
-              right: 48px;
-            }
-          }
-
-          &::after {
-            content      : '';
-            position     : absolute;
-            width        : 0;
-            height       : 0;
-            border-left  : 10px solid #7c0000;
-            border-top   : 5px solid transparent;
-            border-bottom: 5px solid transparent;
-            right        : -14px;
-            bottom       : 7px;
-            animation    : after-pulse 1s infinite;
-
-            @keyframes after-pulse {
-              0% {
-                border-left: 15px solid rgba(124, 0, 0, 0.9);
-              }
-
-              100% {
-                border-left: 15px solid rgba(124, 0, 0, 0.4);
-              }
-            }
-          }
+          position     : absolute;
+          white-space  : nowrap;
+          padding      : 0;
+          background   : transparent;
+          font-size    : 25px;
+          font-weight  : bold;
+          color        : rgb(124, 0, 0);
+          border-radius: 3px 3px 3px 0;
+          text-align   : center;
+          display      : block;
+          animation    : tooltip-pulse 1s infinite;
 
           @keyframes tooltip-pulse {
             0% {
@@ -229,7 +197,76 @@
               text-shadow: 0px 0px 0 rgba(225, 0, 0, 0.4);
             }
           }
+
+          &.turn-on-tooltip-sr {
+            top          : -60px;
+            right        : -60px;
+
+            @media only screen and (max-width: 425px) {
+              & {
+                right: -70px;
+              }
+            }
+
+            &::after {
+              content     : '';
+              position    : absolute;
+              width       : 100%;
+              height      : 0;
+              border-left : 85px solid transparent;
+              border-right: 85px solid transparent;
+              border-top  : 10px solid #7c0000;
+              right       : 0;
+              bottom      : -8px;
+              animation   : after-pulse 1s infinite;
+
+              @keyframes after-pulse {
+                0% {
+                  border-top: 10px solid rgba(124, 0, 0, 0.9);
+                }
+
+                100% {
+                  border-top: 10px solid rgba(124, 0, 0, 0.4);
+                }
+              }
+            }
+          }
+
+          &.turn-on-tooltip-en {
+            top          : -60px;
+            right        : -38px;
+
+            @media only screen and (max-width: 425px) {
+              & {
+                right: -50px;
+              }
+            }
+
+            &::after {
+              content     : '';
+              position    : absolute;
+              width       : 100%;
+              height      : 0;
+              border-left : 65px solid transparent;
+              border-right: 65px solid transparent;
+              border-top  : 10px solid #7c0000;
+              right       : 0;
+              bottom      : -8px;
+              animation   : after-pulse 1s infinite;
+
+              @keyframes after-pulse {
+                0% {
+                  border-top: 10px solid rgba(124, 0, 0, 0.9);
+                }
+
+                100% {
+                  border-top: 10px solid rgba(124, 0, 0, 0.4);
+                }
+              }
+            }
+          }
         }
+
 
         & .btn-arrow {
           padding: 0;
@@ -363,17 +400,18 @@
     border-right: 2px outset rgb(92, 92, 92);
 
     & #signature {
-      position      : absolute;
-      right         : -100%;
-      bottom        : -7px;
-      color         : rgb(170, 170, 170);
-      text-shadow   : 1px 1px 1px black;
-      font-size     : 25px;
-      font-family   : 'Great Vibes';
-      font-style    : italic;
-      letter-spacing: 3px;
+      position       : absolute;
+      right          : -100%;
+      bottom         : -7px;
+      color          : rgb(170, 170, 170);
+      text-shadow    : 1px 1px 1px black;
+      font-size      : 25px;
+      font-family    : 'Great Vibes';
+      font-style     : italic;
+      letter-spacing : 3px;
       text-decoration: none;
-      &:hover{
+
+      &:hover {
         color: rgb(255, 255, 255);
       }
     }
@@ -485,9 +523,9 @@
       width: 72%;
 
       & #signature {
-        right : -38%;
-        bottom: -3px;
-        font-size: 22px;
+        right         : -38%;
+        bottom        : -3px;
+        font-size     : 22px;
         letter-spacing: 2px;
       }
     }

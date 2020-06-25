@@ -167,6 +167,7 @@
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 On this chanel you can find informations about me,
                 my education, jobs I have worked and the knowledge I have.
+                You can also download my CV in Serbian and English.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
         </source>
         <target>
@@ -174,6 +175,7 @@
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 Na ovom kanalu možete pronaći informacije o meni, mom obrazovanju, poslovima na kojima sam radio i
                 znanje koje posedujem.
+                Takođe možete preuzeti moj CV na Srpskom i Engleskom jeziku.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
         </target>
         <context-group purpose="location">
@@ -803,6 +805,12 @@
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Because I can&apos;t speak about projects that I worked, I decide to made this
                 presentation.
             <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
+            <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>By clicking on 
+                <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Sr <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 
+                you can download my CV in serbian, and by clicking on 
+                <x id="START_LINK_1" ctype="x-a" equiv-text="&lt;a&gt;"/>En <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 
+                you can download CV in english.
+            <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
         </source>
         <target>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>
@@ -823,6 +831,12 @@
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>
                 Kako ne mogu govoriti o projektima na kojima sam radio, odlučio sam da napravim ovu prezentaciju.
             <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
+            <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Klikom na 
+                    <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Sr <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 
+                    možete preuzeti moj CV na srpskom jeziku, a klikom na 
+                    <x id="START_LINK_1" ctype="x-a" equiv-text="&lt;a&gt;"/>En <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 
+                    možete preuzeti CV na engleskom jeziku.
+                <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.component.html</context>
@@ -844,7 +858,7 @@
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Bootstrap,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>JavaScript (ES6, TypeScript, JQuery, Ajax, Angular),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Firebase<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-            <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>GitHub<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
+            <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Git (GitHub, GitLab, Bitbucket)<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
         </source>
         <target>Veštine:
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Html5,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
@@ -852,7 +866,7 @@
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Bootstrap,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>JavaScript (ES6, TypeScript, JQuery, Ajax, Angular),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Firebase<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-            <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>GitHub<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
+            <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Git (GitHub, GitLab, Bitbucket)<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.component.html</context>

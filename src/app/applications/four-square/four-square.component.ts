@@ -82,7 +82,6 @@ export class FourSquareComponent implements OnInit {
     const lat = position.coords.latitude;
     const lng = position.coords.longitude;
     this.location = [{ lat, lng }];
-    console.log(this.location)
   }
 
   ngOnInit() {

@@ -1,13 +1,13 @@
 @app-color      : rgb(53, 0, 0);
 @app-color-light: rgb(255, 0, 0);
-@app-color-dark: rgb(20, 0, 0);
+@app-color-dark : rgb(20, 0, 0);
 
 @uc-color      : rgb(20, 20, 20);
 @uc-color-gold : rgb(255, 215, 0);
 
 & .app-container {
     // background   : linear-gradient(to right, @app-color-dark, @app-color, @app-color-dark);
-    background: radial-gradient( @app-color, @app-color-dark);
+    background   : radial-gradient(@app-color, @app-color-dark);
     border-radius: 10px;
     min-height   : 100%;
     padding      : 30px;
@@ -25,10 +25,11 @@
         }
     }
 
-    & h2 {
+    & h1 {
         color        : #ffffff;
         text-shadow  : 0 2px 10px @app-color-light;
         margin-bottom: 50px;
+        font-size    : 32px;
 
         @media only screen and (max-width: 768px) {
             & {

@@ -71,7 +71,6 @@ export class CarDetailsComponent implements OnInit {
   getCars(id: string) {
     this.adsService.getCarData(id).subscribe(car => {
       this.detailsOfCar = car;
-      console.log(this.detailsOfCar)
 
       this.sendImagesUrl = this.detailsOfCar.images;
       if (this.detailsOfCar.comments !== null) {

@@ -1,6 +1,6 @@
 # Portfolio Stefan Djordjevic
 
-Web address for this project is https://portfolio-a2a27.web.app.
+Web address for this project is https://stefan-djordjevic.rs.
 
 ## About this web presentation
 
