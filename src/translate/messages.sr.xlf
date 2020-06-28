@@ -248,7 +248,7 @@
         <target>
             <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>FourSquare aplikacija<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                Ideju za ovu aplikaciju sam se dobio kada sam se prijavio za posao u Quantox kompaniji.
+                Ideju za ovu aplikaciju sam dobio kada sam se prijavio za posao u Quantox kompaniji.
                 Dobio sam zadatak da napravim aplikaciju koja će koristiti FourSquare Api i Goggle mapu.
                 Za taj zadatak sam koristio JavaScript, JQuery i Ajax alate.
                 Pošto imam iskustvo rada u Angular Framework-u u kompaniji, odlučio sam da je napravim u njemu koristeći i
@@ -297,12 +297,14 @@
                 In this app we have two pages: Car Ads and Create Ad.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
             <x id="START_HEADING_LEVEL5_1" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Instructions for Car Ads page:<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-            <x id="START_HEADING_LEVEL6_2" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>On the left side are listings of ads. If you made an ad, you will have two lists, one with
                         your ads and one with all others. There is also a filter button for filtering
                         ads and Sort By... for sorting ads.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                    <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Clicking on one ad will open a tab with details about that ad on the right.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
+                    <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>
+                    Clicking on one ad will open a tab with details about that ad on the right if you have accesed the app on a larger screen or
+                    if you are on your mobile phone at the bottom.
+                    <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>If you clicked on your ad, the top right of the tab will show two buttons for
                         editing and deleting the ad.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>That card contains pictures, information and a section where you can read and
@@ -333,7 +335,8 @@
                     sa svim ostalim oglasima. Takođe postoje i dugme za filtriranje i sortiranje oglasa.
                     <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>
-                    Klikom na jedan oglas otvoriće se kartica sa detaljima o tom oglasu na desnoj strani.
+                    Klikom na jedan oglas otvoriće se kartica sa detaljima o tom oglasu na desnoj strani ako pristupate aplikaciji na većem
+                    ekranu ili ako ste na vašem mobilnom telefonu na donjoj strani.
                     <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>
                     Ako ste kliknuli na vaš oglas, u gornjem desnom uglu kartice će se prikazati dva dugmeta za izmenu i uklanjanje oglasa.

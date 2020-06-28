@@ -162,7 +162,7 @@
         <source>
                 <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>FourSquare app<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
                 <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    I got the idea for this app when I applied for a job at a company,
+                    I got the idea for this app when I applied for a job at a Quantox company,
                     I was tasked with setting up an application that would use FourSquare api and google maps.
                     for this task I used JavaScript, JQuery and Ajax tools.
                     since I worked in Angular framework in kompany Quantox I decided to create
@@ -206,7 +206,6 @@
                     In this app we have two pages: Car Ads and Create Ad.
                 <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
                 <x id="START_HEADING_LEVEL5_1" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Instructions for Car Ads page:<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-                <x id="START_HEADING_LEVEL6_2" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                     <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol&gt;"/>
                         <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>On the left side are listings of ads. If you made an ad, you will have two lists, one with
                             your ads and one with all others. There is also a filter button for filtering

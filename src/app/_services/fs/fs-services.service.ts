@@ -1,3 +1,4 @@
+import { FsKeysService } from 'src/app/_services/fs/fs-keys/fs-keys.service';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -5,15 +6,15 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class FsServicesService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private fsKeys: FsKeysService) { }
   lat = 0;
   lng = 0;
-  url1 = 'https://api.foursquare.com/v2/venues/explore?ll=';
-  url2 = '&client_id=E5KM5VAZBFI2VEUVWLVFJF0AHO1LJWYFOC155AN14TSPTUW1';
-  url3 = '&client_secret=QBAHUNPEMG2EDOWZTKX3H4VNTUYEC4EIJ0UXIKB20M5HQHZG&v=20130619&query=';
+  urlPart1 = 'https://api.foursquare.com/v2/venues/explore?ll=';
+  urlPart2 = `&client_id=${this.fsKeys.client.client_id}`;
+  urlPart3 = `&client_secret=${this.fsKeys.client.clieant_secret}&query=`;
 
   getInfomation(target: string) {
-    return this.http.get(`${this.url1 + this.lat},${this.lng + this.url2 + this.url3 + target}`);
+    return this.http.get(`${this.urlPart1 + this.lat},${this.lng + this.urlPart2 + this.urlPart3 + target}`);
   }
 
   getLocation() {
