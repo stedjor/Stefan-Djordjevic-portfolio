@@ -15,7 +15,6 @@ export class AuthService {
   userDocument: AngularFirestoreDocument<any>;
   userData: any;
   userStatus: string;
-  user: any;
 
   constructor(
     public afAuth: AngularFireAuth,
@@ -35,9 +34,6 @@ export class AuthService {
       }
     });
     this.usersCollection = this.afs.collection('users');
-    setTimeout(() => {
-      this.user = JSON.parse(localStorage.getItem('user'));
-    }, 100);
   }
 
   // Register user with email and password

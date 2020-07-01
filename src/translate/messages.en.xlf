@@ -134,10 +134,10 @@
       </trans-unit>
       <trans-unit id="modal_info-home" datatype="html">
         <source>
-            <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Informations about project<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
+            <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Information about project<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                The whole project was written in Angular Framework version 8 with some additional
-                tools. I tried to use many different possiblities that Angular provides.<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
+                Whole project was written in Angular Framework version 8 with some extra
+                tools. I tried to use many different possibilities that Angular provides.<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 For the layout I used Bootstrap framework and Less preprocessor and for the
                 animations I used JQuery framework. You are probably wondering why I didn&apos;t
@@ -150,10 +150,10 @@
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
         </source>
         <target>
-            <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Informations about project<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
+            <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Information about project<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                The whole project was written in Angular Framework version 8 with some additional
-                tools. I tried to use many different possiblities that Angular provides.<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
+                Whole project was written in Angular Framework version 8 with some extra
+                tools. I tried to use many different possibilities that Angular provides.<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 For the layout I used Bootstrap framework and Less preprocessor and for the
                 animations I used JQuery framework. You are probably wondering why I didn&apos;t
@@ -172,19 +172,19 @@
       </trans-unit>
       <trans-unit id="modal_info-about" datatype="html">
         <source>
-            <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Informations about me<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
+            <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Information about me<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                On this chanel you can find informations about me,
+                On this channel you can find  about me,
                 my education, jobs I have worked and the knowledge I have.
-                You can also download my CV in serbian and english.
+                You can also download my CV in Serbian and English.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
         </source>
         <target>
-            <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Informations about me<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
+            <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Information about me<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                On this chanel you can find informations about me,
+                On this channel you can find information about me,
                 my education, jobs I have worked and the knowledge I have.
-                You can also download my CV in serbian and english.
+                You can also download my CV in Serbian and English.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
         </target>
         <context-group purpose="location">
@@ -194,7 +194,7 @@
       </trans-unit>
       <trans-unit id="modal_info-app" datatype="html">
         <source>
-            <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Chanel with apps<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
+            <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Channel with apps<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 This channel contains the apps i made for this presentation.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
@@ -208,7 +208,7 @@
             <x id="CLOSE_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;/ul&gt;"/>
         </source>
         <target>
-            <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Chanel with apps<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
+            <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Channel with apps<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 This channel contains the apps i made for this presentation.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
@@ -231,7 +231,7 @@
             <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>FourSquare app<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 I got the idea for this app when I applied for a job at a Quantox company,
-                I was tasked with setting up an application that would use FourSquare api and google maps.
+                I was tasked with setting up an application that would use FourSquare API and google maps.
                 for this task I used JavaScript, JQuery and Ajax tools.
                 Since I have experience working in Angular framework in kompany I decided to create
                 one in it using another Here WeGo map.
@@ -241,7 +241,7 @@
                 <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>You need to click the allow button for the app to find your location on the map,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Then, in the upper right corner, you should enter the term places you want to find in
-                        search, for example a restaurant, caffee, shop, etc and press enter.
+                        search, for example a restaurant, coffee, shop, etc and press enter.
                     <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>On the left side you will see list of cards of all places near you up to two kilometers
                         away,
@@ -258,7 +258,7 @@
             <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>FourSquare app<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 I got the idea for this app when I applied for a job at a company,
-                I was tasked with setting up an application that would use FourSquare api and google maps.
+                I was tasked with setting up an application that would use FourSquare API and google maps.
                 for this task I used JavaScript, JQuery and Ajax tools.
                 Since I have experience working in Angular framework in kompany I decided to create
                 one in it using another Here WeGo map.
@@ -268,7 +268,7 @@
                 <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>You need to click the allow button for the app to find your location on the map,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Then, in the upper right corner, you should enter the term places you want to find in
-                        search, for example a restaurant, caffee, shop, etc and press enter.
+                        search, for example a restaurant, coffee, shop, etc and press enter.
                     <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>On the left side you will see list of cards of all places near you up to two kilometers
                         away,
@@ -306,7 +306,7 @@
                         your ads and one with all others. There is also a filter button for filtering
                         ads and Sort By... for sorting ads.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>
-                    Clicking on one ad will open a tab with details about that ad on the right if you have accesed the app on a larger screen or
+                    Clicking on one ad will open a tab with details about that ad on the right if you have accessed the app on a larger screen or
                     if you are on your mobile phone at the bottom.
                     <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>If you clicked on your ad, the top right of the tab will show two buttons for
@@ -366,15 +366,15 @@
                 <x id="START_HEADING_LEVEL5_1" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Instructions for Create Ad page:<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
                 <x id="START_HEADING_LEVEL6_1" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                     <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>While creating your ad you can add pictures, car informations and
-                            informations about yourself.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>If your model has an additional mark, click on the arrow to the right of
+                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>While creating your ad you can add pictures, car information and
+                            information about yourself.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
+                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>If your model has an extra mark, click on the arrow to the right of
                             the place for Model (the arrow points to the right) and a place will open
                             where you can enter the mark of your car.
                         <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                         <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Also If Brand or Model of your car is not on the list, click on the arrow
                             between the Brand and the place for Model (the arrow points down)
-                            and two new places will open where you can enter the Brand and Model arbitarily.
+                            and two new places will open where you can enter the Brand and Model arbitrarily.
                         <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                         <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>All fields are required.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     <x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol&gt;"/>
@@ -389,15 +389,15 @@
             <x id="START_HEADING_LEVEL5_1" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Instructions for Create Ad page:<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
             <x id="START_HEADING_LEVEL6_1" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol&gt;"/>
-                    <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>While creating your ad you can add pictures, car informations and
-                        informations about yourself.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                    <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>If your model has an additional mark, click on the arrow to the right of
+                    <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>While creating your ad you can add pictures, car information and
+                        information about yourself.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
+                    <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>If your model has an extra mark, click on the arrow to the right of
                         the place for Model (the arrow points to the right) and a place will open
                         where you can enter the mark of your car.
                     <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Also If Brand or Model of your car is not on the list, click on the arrow
                         between the Brand and the place for Model (the arrow points down)
-                        and two new places will open where you can enter the Brand and Model arbitarily.
+                        and two new places will open where you can enter the Brand and Model arbitrarily.
                     <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>All fields are required.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                 <x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol&gt;"/>
@@ -414,7 +414,7 @@
             <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Edit Ad<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 In Edit Ad page you can add, change or delete images of your car and
-                change informations about your car and yourself.
+                change information about your car and yourself.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
         </source>
         <target>
@@ -422,7 +422,7 @@
             <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Edit Ad<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 In Edit Ad page you can add, change or delete images of your car and
-                change informations about your car and yourself.
+                change information about your car and yourself.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
         </target>
         <context-group purpose="location">
@@ -479,36 +479,36 @@
       <trans-unit id="modal_info-login" datatype="html">
         <source>
             <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>How to log in?<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-            <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you have acount<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
+            <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you have account<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                Just enter email and password to theirs filds and click on
-                <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Log In<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> or you can log in with your google acount by
+                Just enter email and password to theirs fields and click on
+                <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Log In<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> or you can log in with your google account by
                 clicking on <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 If you forgot password click on <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/>Forgot Password<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and follow the
                 instructions.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you haven&apos;t acount<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
+            <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you haven&apos;t account<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                Just click on <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/>Register<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and folow instructions.
+                Just click on <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/>Register<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and follow instructions.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
         </source>
         <target>
             <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>How to log in?<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-            <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you have acount<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
+            <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you have account<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                Just enter email and password to theirs filds and click on
-                <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Log In<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> or you can log in with your google acount by
+                Just enter email and password to theirs fields and click on
+                <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Log In<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> or you can log in with your google account by
                 clicking on <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 If you forgot password click on <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/>Forgot Password<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and follow the
                 instructions.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you haven&apos;t acount<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
+            <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you haven&apos;t account<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                Just click on <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/>Register<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and folow instructions.
+                Just click on <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/>Register<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and follow instructions.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
         </target>
         <context-group purpose="location">
@@ -521,34 +521,34 @@
             <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>How to register?<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
             
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                Just enter email and password to theirs filds and click on
-                Log In button or you can log in with your google acount by
+                Just enter email and password to theirs fields and click on
+                Log In button or you can log in with your google account by
                 clicking on G button.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 If you forgot password click on Forgot Password and follow the
                 instructions.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you haven&apos;t acount<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
+            <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you haven&apos;t account<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                Just click on Register and folow instructions.
+                Just click on Register and follow instructions.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
         </source>
         <target>
             <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>How to register?<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
             
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                Just enter email and password to theirs filds and click on
-                Log In button or you can log in with your google acount by
+                Just enter email and password to theirs fields and click on
+                Log In button or you can log in with your google account by
                 clicking on G button.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                 If you forgot password click on Forgot Password and follow the
                 instructions.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you haven&apos;t acount<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
+            <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you haven&apos;t account<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
             <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                Just click on Register and folow instructions.
+                Just click on Register and follow instructions.
             <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
         </target>
         <context-group purpose="location">
@@ -720,15 +720,15 @@
         <source>You can contact me via Email, Facebook or LinkedIn.
             Or you can register and use the contact form to send messages,
             and a screen where you can see all the messages,
-            ie. the whole conversation we had.
-            Clicking on that cat takes you to my GitHub profile where you can see the whole
+            ie. whole conversation we had.
+            Clicking on that cat takes you to my GitHub profile where you can see whole
             code for this presentation, as well as other projects that I will post.
         </source>
         <target>You can contact me via Email, Facebook or LinkedIn.
             Or you can register and use the contact form to send messages,
             and a screen where you can see all the messages,
-            ie. the whole conversation we had.
-            Clicking on that cat takes you to my GitHub profile where you can see the whole
+            ie. whole conversation we had.
+            Clicking on that cat takes you to my GitHub profile where you can see whole
             code for this presentation, as well as other projects that I will post.
         </target>
         <context-group purpose="location">
@@ -740,15 +740,15 @@
         <source>You can contact me via Email, Facebook or LinkedIn.
             Or you can use the contact form to send messages.
             And here is a screen where you can see all the messages,
-            ie. the whole conversation we had.
-            Clicking on that cat takes you to my GitHub profile where you can see the whole
+            ie. whole conversation we had.
+            Clicking on that cat takes you to my GitHub profile where you can see whole
             code for this presentation, as well as other projects that I will post.
         </source>
         <target>You can contact me via Email, Facebook or LinkedIn.
             Or you can use the contact form to send messages.
             And here is a screen where you can see all the messages,
-            ie. the whole conversation we had.
-            Clicking on that cat takes you to my GitHub profile where you can see the whole
+            ie. whole conversation we had.
+            Clicking on that cat takes you to my GitHub profile where you can see whole
             code for this presentation, as well as other projects that I will post.
         </target>
         <context-group purpose="location">
@@ -790,8 +790,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="about-title" datatype="html">
-        <source>Informations about me</source>
-        <target>Informations about me</target>
+        <source>Information about me</source>
+        <target>Information about me</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.component.html</context>
           <context context-type="linenumber">4</context>
@@ -816,9 +816,9 @@
             <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>By clicking on 
                 <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Sr <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 
-                you can download my CV in serbian, and by clicking on 
+                you can download my CV in Serbian, and by clicking on 
                 <x id="START_LINK_1" ctype="x-a" equiv-text="&lt;a&gt;"/>En <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 
-                you can download CV in english.
+                you can download CV in English.
             <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
         </source>
         <target>
@@ -839,9 +839,9 @@
             <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>By clicking on 
                 <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Sr <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 
-                you can download my CV in serbian, and by clicking on 
+                you can download my CV in Serbian, and by clicking on 
                 <x id="START_LINK_1" ctype="x-a" equiv-text="&lt;a&gt;"/>En <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 
-                you can download CV in english.
+                you can download CV in English.
             <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
         </target>
         <context-group purpose="location">
@@ -960,25 +960,25 @@
         </context-group>
       </trans-unit>
       <trans-unit id="home-text-2" datatype="html">
-        <source>Here You can find out more informations
+        <source>Here You can find out more information
             about me on channel <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>About<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>,
-            use some applications that I made on chanel
+            use some applications that I made on channel
             <x id="START_LINK_1" ctype="x-a" equiv-text="&lt;a&gt;"/>Applications<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
             and You can contact me via
             form, social networks or email on
-            chanel <x id="START_LINK_2" ctype="x-a" equiv-text="&lt;a&gt;"/>Contact<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
-            Some applications require
+            channel <x id="START_LINK_2" ctype="x-a" equiv-text="&lt;a&gt;"/>Contact<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
+            Some applications need
             login, so if you want to try them out,
             register and enjoy. Registration is free.
         </source>
-        <target>Here You can find out more informations
+        <target>Here You can find out more information
             about me on channel <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>About<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>,
-            use some applications that I made on chanel
+            use some applications that I made on channel
             <x id="START_LINK_1" ctype="x-a" equiv-text="&lt;a&gt;"/>Applications<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
             and You can contact me via
             form, social networks or email on
-            chanel <x id="START_LINK_2" ctype="x-a" equiv-text="&lt;a&gt;"/>Contact<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
-            Some applications require
+            channel <x id="START_LINK_2" ctype="x-a" equiv-text="&lt;a&gt;"/>Contact<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
+            Some applications need
             login, so if you want to try them out,
             register and enjoy. Registration is free.
         </target>
@@ -991,28 +991,28 @@
         <source>On this presentation u can see two buttons
             <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and
             <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>menu<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> on
-            botom of the screen. By clicking on button
+            bottom of the screen. By clicking on button
             <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> you can read
-            informations about chanel you are on,
+            information about channel you are on,
             by clicking on button
             <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>menu<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> 
             you can change language and see
-            list of all chanels and you can navigate
+            list of all channels and you can navigate
             to them. Also You can go to next or previous
-            chanel by clicking on arrows on bottom.
+            channel by clicking on arrows on bottom.
         </source>
         <target>On this presentation u can see two buttons
             <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and
             <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>menu<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> on
-            botom of the screen. By clicking on button
+            bottom of the screen. By clicking on button
             <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> you can read
-            informations about chanel you are on,
+            information about channel you are on,
             by clicking on button
             <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>menu<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> 
             you can change language and see
-            list of all chanels and you can navigate
+            list of all channels and you can navigate
             to them. Also You can go to next or previous
-            chanel by clicking on arrows on bottom.
+            channel by clicking on arrows on bottom.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
@@ -1020,16 +1020,16 @@
         </context-group>
       </trans-unit>
       <trans-unit id="home-text-4" datatype="html">
-        <source>More informations about this project
+        <source>More information about this project
             you can read when you click on
-            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> button. You can see the whole
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> button. You can see whole
             code when you click on this cat <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>
                 <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
             <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
         </source>
-        <target>More informations about this project
+        <target>More information about this project
             you can read when you click on
-            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> button. You can see the whole
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> button. You can see whole
             code when you click on this cat <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>
                 <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
             <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
@@ -1179,8 +1179,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="login-fa_google" datatype="html">
-        <source>Login with your google acount</source>
-        <target>Login with your google acount</target>
+        <source>Login with your google account</source>
+        <target>Login with your google account</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/user/login/login.component.html</context>
           <context context-type="linenumber">33</context>
@@ -1283,8 +1283,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="register-fa_google" datatype="html">
-        <source>Login with your google acount</source>
-        <target>Login with your google acount</target>
+        <source>Login with your google account</source>
+        <target>Login with your google account</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/user/register/register.component.html</context>
           <context context-type="linenumber">55</context>

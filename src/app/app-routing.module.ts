@@ -43,13 +43,13 @@ const routes: Routes = [
         children: [
           { path: '', redirectTo: 'car-ads', pathMatch: 'full' },
           {
-            path: 'car-ads', component: CarAdsComponent, canActivate: [AuthGuard],
+            path: 'car-ads', component: CarAdsComponent,
             children: [
-              { path: ':id', component: CarDetailsComponent, canActivate: [AuthGuard] },
+              { path: ':id', component: CarDetailsComponent},
             ]
           },
-          { path: 'create-ad', component: CreateAdComponent, canActivate: [AuthGuard], canDeactivate: [CanDeactivateGuard] },
-          { path: 'edit-ad/:id', component: EditAdComponent, canActivate: [AuthGuard], canDeactivate: [CanDeactivateGuard] },
+          { path: 'create-ad', component: CreateAdComponent, canDeactivate: [CanDeactivateGuard] },
+          { path: 'edit-ad/:id', component: EditAdComponent, canDeactivate: [CanDeactivateGuard] },
         ]
       },
     ]

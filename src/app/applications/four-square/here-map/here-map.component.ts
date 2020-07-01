@@ -87,7 +87,7 @@ export class HereMapComponent implements OnInit, AfterViewInit {
         );
     }
 
-    venueInformations(data: any) {
+    venueInformation(data: any) {
         const group = new H.map.Group();
         this.listGroups.push(group);
         this.listGroups.map(m => this.venueMarker(data, m));

@@ -5,7 +5,7 @@ Web address for this project is https://stefan-djordjevic.rs.
 ## About this web presentation
 
 Presentation was made as presentation of knowledge that I own.
-This is an Angular project with some additional technologies.
+This is an Angular project with some extra technologies.
 In it you can see more detailed information about the project itself,
 information about me, two applications I made within the presetation as well
 as a contact page with a form where you can leave a message.

@@ -50,7 +50,7 @@ export class FourSquareComponent implements OnInit {
               }
             });
             this.listItems.sort((a, b) => a.venue.location.distance - b.venue.location.distance);
-            this.listItems.map(el => this.heroeMap.venueInformations(el));
+            this.listItems.map(el => this.heroeMap.venueInformation(el));
             this.venueOptions.forEach(() => {
               if (!this.venueOptions.includes(target)) {
                 this.venueOptions.push(target);
