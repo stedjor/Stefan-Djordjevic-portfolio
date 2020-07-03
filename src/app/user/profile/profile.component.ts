@@ -45,14 +45,18 @@ export class ProfileComponent implements OnInit {
       if (this.user !== null) {
         this.getUser(this.user.uid);
       }
-    }, 100);
+    }, 1000);
   }
 
   getUser(id: string) {
     this.authService.getUserData(id)
       .subscribe(dataUser => {
         this.userData = dataUser;
-        this.username = this.userData.displayName;
+        if (this.userData.displayName !== undefined && this.userData.displayName !== null) {
+          this.username = this.userData.displayName;
+        } else {
+          this.username = 'User';
+        }
         if (this.userData.photoURL !== null) {
           this.imageURL = this.userData.photoURL;
         } else if (this.userData.photoURL === null) {
