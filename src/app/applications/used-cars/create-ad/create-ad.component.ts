@@ -60,7 +60,7 @@ export class CreateAdComponent implements OnInit {
 
   ngOnInit() {
     this.createCarForm();
-    this.getCars(); 
+    this.getCars();
     if (window.innerWidth <= 425) {
       this.faArrowCircle = faArrowAltCircleDown;
     }

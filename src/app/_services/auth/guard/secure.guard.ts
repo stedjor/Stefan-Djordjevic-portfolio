@@ -18,7 +18,7 @@ export class SecureGuard implements CanActivate {
         this.router.navigate(['/profile']);
         return true;
       }
-    }, 100)
+    }, 1000);
     return true;
   }
 }

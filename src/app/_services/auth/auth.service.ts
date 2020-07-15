@@ -15,6 +15,7 @@ export class AuthService {
   userDocument: AngularFirestoreDocument<any>;
   userData: any;
   userStatus: string;
+  userEmailVerify = false;
 
   constructor(
     public afAuth: AngularFireAuth,
@@ -28,6 +29,7 @@ export class AuthService {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
         JSON.parse(localStorage.getItem('user'));
+        this.userEmailVerify = user.emailVerified;
       } else {
         localStorage.setItem('user', null);
         JSON.parse(localStorage.getItem('user'));
@@ -41,7 +43,6 @@ export class AuthService {
     return await this.afAuth.auth.createUserWithEmailAndPassword(registerObj.email, registerObj.password)
       .then((result) => {
         this.sendVerificationMail();
-        this.setUserData(result.user);
       }).catch((error) => {
         window.alert(error.message);
       });
@@ -50,15 +51,20 @@ export class AuthService {
   // Login with email and password
   async login(email: string, password: string) {
     return await this.afAuth.auth.signInWithEmailAndPassword(email, password)
-      .then(() => {
-        this.ngZone.run(() => {
-          this.router.navigate(['profile']);
-        });
+      .then((result) => {
+        if (result.user.emailVerified !== true) {
+          this.sendVerificationMail();
+        } else {
+          this.ngZone.run(() => {
+            this.router.navigate(['profile']);
+          });
+          this.userEmailVerify = result.user.emailVerified;
+          this.setUserData(result.user);
+        }
       }).catch((error) => {
         window.alert(error.message);
       });
   }
-
 
   // Login with provider: google, facebook
   async providerLogin(provider) {
@@ -93,7 +99,7 @@ export class AuthService {
 
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user'));
-    return (user !== null && user.emailVerified !== false) ? true : false;
+    return (user !== null && (user.emailVerified !== false || this.userEmailVerify !== false)) ? true : false;
   }
 
   // get isLoggedInAsAdmin(): boolean {

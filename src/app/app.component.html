@@ -17,6 +17,14 @@
                             <div class="modal-backdrop" (click)="clickOnBackdrop()"></div>
                         </div>
                     </div>
+
+                    <div id="no-screen" *ngIf="featureSelect === 'blank'">
+                        <div class="circle big-circle">
+                            <div class="circle small-circle">
+                                <p class="screen-counter">{{ counterScreen }}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="button-content">
@@ -42,8 +50,7 @@
                                 <fa-icon [icon]="faPowerOff" class="button-icon"></fa-icon>
                             </button>
                             <div i18n="@@main-turn-on-tooltip" class="turn-on-tooltip" *ngIf="!turnOnOff"
-                            [ngClass]="tooltipValue !== 'Just turn on'? 'turn-on-tooltip-sr': 'turn-on-tooltip-en'"
-                            >Just turn on</div>
+                                [ngClass]="tooltipValue !== 'Skip'? 'turn-on-tooltip-sr': 'turn-on-tooltip-en'">Skip</div>
                         </div>
                         <div class="btn-center">
                             <button type="button" [hidden]="!showHideMenu" id="btn-next" class="btn btn-arrow"
@@ -65,7 +72,7 @@
             <div id="stand-content" class="row">
                 <div class="col-md-12">
                     <div id="first-el">
-                        <a id="signature" [routerLink]="['/home']">Stefan Đorđević</a>
+                        <a id="signature" [routerLink]="['/home']">{{ signature }}</a>
                     </div>
                     <div id="second-el"></div>
                 </div>

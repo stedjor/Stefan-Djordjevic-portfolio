@@ -87,6 +87,61 @@
         border-radius         : 5px;
       }
     }
+
+    & #no-screen {
+      &:before {
+        content         : '';
+        position        : absolute;
+        top             : 50%;
+        left            : 0;
+        width           : 100%;
+        height          : 2px;
+        background-color: rgb(128, 128, 128);
+        z-index         : 0;
+      }
+
+      &::after {
+        content         : '';
+        position        : absolute;
+        top             : 0;
+        left            : 50%;
+        width           : 2px;
+        height          : 100%;
+        background-color: rgb(128, 128, 128);
+        z-index         : 0;
+      }
+
+      & .circle {
+        border       : 2px solid white;
+        border-radius: 50%;
+        position     : absolute;
+        top          : 50%;
+        left         : 50%;
+        transform    : translate(-50%, -50%);
+        z-index      : 1;
+
+        &.big-circle {
+          width : 300px;
+          height: 300px;
+        }
+
+        &.small-circle {
+          width : 250px;
+          height: 250px;
+
+          & .screen-counter {
+            margin     : 0;
+            position   : absolute;
+            top        : -10%;
+            left       : 28%;
+            font-size  : 200px;
+            font-family: Arial, Helvetica, sans-serif;
+            z-index    : 1000;
+            color      : rgb(130, 130, 130);
+          }
+        }
+      }
+    }
   }
 
   & #button-content {
@@ -124,7 +179,7 @@
       -webkit-align-self : auto;
       -ms-flex-item-align: auto;
       align-self         : auto;
-      padding-right      : 10px;
+      padding-right      : 0;
     }
 
     &-center {
@@ -184,6 +239,7 @@
           border-radius: 3px 3px 3px 0;
           text-align   : center;
           display      : block;
+          z-index      : 1000;
           animation    : tooltip-pulse 1s infinite;
 
           @keyframes tooltip-pulse {
@@ -199,12 +255,12 @@
           }
 
           &.turn-on-tooltip-sr {
-            top          : -60px;
-            right        : -60px;
+            top  : -60px;
+            right: -20px;
 
             @media only screen and (max-width: 425px) {
               & {
-                right: -70px;
+                right: -33px;
               }
             }
 
@@ -213,8 +269,8 @@
               position    : absolute;
               width       : 100%;
               height      : 0;
-              border-left : 85px solid transparent;
-              border-right: 85px solid transparent;
+              border-left : 45px solid transparent;
+              border-right: 45px solid transparent;
               border-top  : 10px solid #7c0000;
               right       : 0;
               bottom      : -8px;
@@ -233,8 +289,8 @@
           }
 
           &.turn-on-tooltip-en {
-            top          : -60px;
-            right        : -38px;
+            top  : -60px;
+            right: 0px;
 
             @media only screen and (max-width: 425px) {
               & {
@@ -247,8 +303,8 @@
               position    : absolute;
               width       : 100%;
               height      : 0;
-              border-left : 65px solid transparent;
-              border-right: 65px solid transparent;
+              border-left : 25px solid transparent;
+              border-right: 25px solid transparent;
               border-top  : 10px solid #7c0000;
               right       : 0;
               bottom      : -8px;
@@ -480,14 +536,31 @@
       z-index   : -1;
     }
 
+    & #content {
+      & #no-screen {
+        & .circle {
+          &.big-circle {
+            width : 200px;
+            height: 200px;
+          }
+
+          &.small-circle {
+            width : 150px;
+            height: 150px;
+
+            & .screen-counter {
+              top      : -13%;
+              left     : 28%;
+              font-size: 125px;
+            }
+          }
+        }
+      }
+    }
 
     & #button-content {
       padding   : 1px;
       max-height: 30px;
-
-      &-left {
-        padding-right: 10px;
-      }
 
       &-center {
 
@@ -523,7 +596,7 @@
       width: 72%;
 
       & #signature {
-        right         : -38%;
+        right         : -30%;
         bottom        : -3px;
         font-size     : 22px;
         letter-spacing: 2px;
@@ -540,7 +613,7 @@
       width: 67%;
 
       & #signature {
-        right : -48%;
+        right : -35%;
         bottom: -3px;
       }
     }
@@ -555,7 +628,7 @@
       width: 57%;
 
       & #signature {
-        right : -70%;
+        right : -55%;
         bottom: -3px;
       }
     }
@@ -564,6 +637,30 @@
 
 @media screen and (max-width: 640),
 screen and (max-height: 360px) {
+  #main-content {
+    & #content {
+      & #no-screen {
+        & .circle {
+          &.big-circle {
+            width : 200px;
+            height: 200px;
+          }
+
+          &.small-circle {
+            width : 150px;
+            height: 150px;
+
+            & .screen-counter {
+              top      : -13%;
+              left     : 28%;
+              font-size: 125px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   #stand-content {
     max-width: 350px;
 
@@ -571,7 +668,7 @@ screen and (max-height: 360px) {
       width: 57%;
 
       & #signature {
-        right : -88%;
+        right : -50%;
         bottom: -3px;
       }
     }

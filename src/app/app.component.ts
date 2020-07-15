@@ -23,6 +23,8 @@ export class AppComponent implements OnInit {
   showHideMenu = false;
   urlLocation: string;
   tooltipValue: string;
+  signature = 'Stefan Đorđević';
+  counterScreen = 5;
   // font awesome icons
   faPowerOff = faPowerOff;
   faChevronLeft = faChevronLeft;
@@ -40,33 +42,56 @@ export class AppComponent implements OnInit {
   metaTags = [
     { name: 'keywords', content: `Angular, Firebase, Firestore, FourSquare, HERE WeGo, UsedCar, web, presentation, Frontend, Front-end, developer, programer, prezentacija, projekat, Stefan, Djordjevic, Đorđević` },
     { name: 'description', content: 'Web presentation by Stefan Djordjevic' }
-  ]
+  ];
 
   constructor(public router: Router, private metaTag: Meta) { }
 
   ngOnInit() {
     this.metaTag.addTags(this.metaTags);
     this.urlLocation = location.toString();
-    setTimeout(()=> {
+    this.signatureResponsive();
+    setTimeout(() => {
       this.tooltipValue = $('.turn-on-tooltip').text();
-      console.log(this.tooltipValue)
-    }, 100)
+    }, 100);
+    this.noScreenAnimation()
+  }
+
+  noScreenAnimation() {
+    if (this.featureSelect === 'blank') {
+      setInterval(() => {
+        if (this.counterScreen > 0) {
+          this.counterScreen--;
+          if (this.counterScreen === 0) {
+            this.buttonTurnOn('show');
+          }
+        }
+      }, 1000)
+    } 
   }
 
   buttonTurn(feature: string) {
     if ($('#btn-turn').hasClass('btn-red') && !this.turnOnOff) {
-      $('#btn-turn').removeClass('btn-red');
-      $('#btn-turn').addClass('btn-green');
-      this.turnOnEffect();
-      setTimeout(() => {
-        this.featureSelect = feature;
-      }, 400);
+      this.buttonTurnOn(feature);
     } else {
-      $('#btn-turn').removeClass('btn-green');
-      $('#btn-turn').addClass('btn-red');
-      this.featureSelect = 'blank';
-      this.turnOffEffect();
+      this.buttonTurnOff('blank');
     }
+  }
+
+  buttonTurnOn(feature: string) {
+    $('#btn-turn').removeClass('btn-red');
+    $('#btn-turn').addClass('btn-green');
+    this.turnOnEffect();
+    setTimeout(() => {
+      this.featureSelect = feature;
+    }, 400);
+  }
+
+  buttonTurnOff(feature: string) {
+    $('#btn-turn').removeClass('btn-green');
+    $('#btn-turn').addClass('btn-red');
+    this.turnOffEffect();
+    this.featureSelect = feature;
+    this.counterScreen = 5;
   }
 
   turnOnEffect() {
@@ -205,5 +230,11 @@ export class AppComponent implements OnInit {
     $('.modal').animate({
       opacity: 1
     }, 'slow');
+  }
+
+  signatureResponsive() {
+    if ($(window).width() <= 425) {
+      this.signature = 'SĐ';
+    }
   }
 }

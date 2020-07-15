@@ -70,12 +70,13 @@ export class FourSquareComponent implements OnInit {
         alert('Oops! This browser does not support HTML Geolocation.');
       } else {
         this.showPosition(position);
-        this.permissionStatus = 'granted'
+        this.permissionStatus = 'granted';
       }
     }, (error) => {
-      if (error.code == error.PERMISSION_DENIED)
+      if (error.code === error.PERMISSION_DENIED) {
         this.permissionStatus = 'denied';
-    })
+      }
+    });
   }
 
   showPosition(position: any) {

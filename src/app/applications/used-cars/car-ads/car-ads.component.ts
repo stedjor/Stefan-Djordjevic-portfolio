@@ -50,7 +50,7 @@ export class CarAdsComponent implements OnInit {
   tAge: any;
   fPrice: any;
   tPrice: any;
-  selectedOpt: string = 'Sort By...';
+  selectedOpt = 'Sort By...';
   sortArrow = true;
   isCollapsedYourAds = false;
   isCollapsedAllAds = false;
