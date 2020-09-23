@@ -202,7 +202,7 @@
             <x id="START_HEADING_LEVEL6_1" ctype="x-h6" equiv-text="&lt;h6&gt;"/>React app:<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
             <x id="START_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;ul&gt;"/>
                 <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>
-                    RecordsOfIdeas (ROI) app does not need log in,
+                    Records Of Idea (ROI) app does not need log in,
                     when you click on it a new tab will open and you can try it out.
                 <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="CLOSE_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;/ul&gt;"/>
@@ -224,7 +224,7 @@
             <x id="START_HEADING_LEVEL6_1" ctype="x-h6" equiv-text="&lt;h6&gt;"/>React aplikacije:<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
             <x id="START_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;ul&gt;"/>
                 <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>
-                    RecordsOfIdeas (ROI) aplikacija ne zahteva da se ulogujete,
+                    Records Of Idea (ROI) aplikacija ne zahteva da se ulogujete,
                     kada kliknete na nju otvoriće se nova kartica i možete je isprobati.
                 <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="CLOSE_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;/ul&gt;"/>
@@ -727,7 +727,7 @@
                 <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
             <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
         </source>
-        <target>Ceo kod ovih aplikacija možete videt na mom GitHub-u
+        <target>Ceo kod ovih aplikacija možete videti na mom GitHub-u
             <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>
                 <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
             <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
@@ -892,7 +892,7 @@
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Html5,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Css3 (Scss, Less),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Bootstrap,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-            <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>JavaScript (ES6, TypeScript, JQuery, Ajax, Angular),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
+            <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>JavaScript (ES6, TypeScript, JQuery, Ajax, Angular, React),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Firebase<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Git (GitHub, GitLab, Bitbucket)<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
         </source>
@@ -900,7 +900,7 @@
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Html5,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Css3 (Scss, Less),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Bootstrap,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-            <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>JavaScript (ES6, TypeScript, JQuery, Ajax, Angular),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
+            <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>JavaScript (ES6, TypeScript, JQuery, Ajax, Angular, React),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Firebase<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Git (GitHub, GitLab, Bitbucket)<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
         </target>

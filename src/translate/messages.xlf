@@ -156,7 +156,7 @@
                 <x id="START_HEADING_LEVEL6_1" ctype="x-h6" equiv-text="&lt;h6&gt;"/>React app:<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
                 <x id="START_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;ul&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>
-                        RecordsOfIdeas (ROI) app does not need log in,
+                        Records Of Idea (ROI) app does not need log in,
                         when you click on it a new tab will open and you can try it out.
                     <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                 <x id="CLOSE_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;/ul&gt;"/>
