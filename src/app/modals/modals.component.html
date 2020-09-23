@@ -5,11 +5,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item menu-item">
                     <div class="text-center">
-                        <img [routerLink]="['/profile']" (click)="closeMenu()" src="{{ 
-                            profilePhoto !== undefined?
-                            profilePhoto:
-                            defaultProfileIcon
-                         }}" class="card-img-top moda-menu-img" width="30%" alt="User photo">
+                        <img [routerLink]="['/profile']" (click)="closeMenu()" src="{{ profilePhoto }}" class="card-img-top moda-menu-img" width="30%" alt="User photo">
                         <a class="menu-lng-btn menu-lng-sr" href="/sr/"
                             [ngClass]="{'menu-lng-btn-active': urlLocation.includes('sr')}">
                             <img src="./assets/flags/serbia-flag-round.png" alt="Serbian flag">
@@ -46,6 +42,11 @@
                             [routerLink]="['/applications/used-cars']" (click)="dropdownHide(); closeMenu()">
                             <fa-icon class="normal" [icon]="faCar"></fa-icon>
                             UsedCars
+                        </a>
+                        <a class="dropdown-item dp-item" routerLinkActive="router-link-active" target="_blank"
+                            href="https://records-of-ideas.web.app/list-ideas">
+                            <fa-icon class="normal" [icon]="faLightbulb"></fa-icon>
+                            ROI
                         </a>
                     </div>
                 </li>
@@ -131,12 +132,21 @@
                 <h6 class="text-left modal-info-text-indent">
                     This channel has the apps I made for this presentation.
                 </h6>
+                <h6>Angular apps:</h6>
                 <ul>
                     <li class="text-left">
                         FourSqure app does not need to log in.
                     </li>
                     <li class="text-left">
                         UsedCars app needs to be logged in.
+                    </li>
+                </ul>
+
+                <h6>React app:</h6>
+                <ul>
+                    <li class="text-left">
+                        RecordsOfIdeas (ROI) app does not need log in,
+                        when you click on it a new tab will open and you can try it out.
                     </li>
                 </ul>
 

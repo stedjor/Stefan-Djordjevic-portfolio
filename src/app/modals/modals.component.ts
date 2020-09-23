@@ -24,6 +24,9 @@ import {
   faFacebookF,
   faLinkedinIn
 } from '@fortawesome/free-brands-svg-icons';
+import {
+  faLightbulb
+} from '@fortawesome/free-regular-svg-icons';
 
 declare const $: any;
 
@@ -38,9 +41,9 @@ export class ModalsComponent implements OnInit {
   @Input() modalInfoUrl: string;
   modalInfoUsedCars: string;
   openedModal: boolean;
-  defaultProfileIcon = '../../assets/deafult-profile-icon.png';
+  defaultProfileIcon
   detailsOfUser: any;
-  profilePhoto: string;
+  profilePhoto: string = './assets/deafult-profile-icon.png';
   urlLocation: string;
   // Font Awesome
   faUser = faUser;
@@ -62,11 +65,12 @@ export class ModalsComponent implements OnInit {
   faEdit = faEdit;
   faTrashAlt = faTrashAlt;
   faUndoAlt = faUndoAlt;
+  faLightbulb = faLightbulb;
 
   constructor(public authService: AuthService, public router: Router) {
     const user = JSON.parse(localStorage.getItem('user'));
     if (user !== null) {
-      this.getUsers(user.uid);
+      this.getUser(user.uid);
     }
   }
 
@@ -78,12 +82,15 @@ export class ModalsComponent implements OnInit {
       }
     });
     this.urlLocation = location.toString();
+
   }
 
-  getUsers(id: string) {
+  getUser(id: string) {
     this.authService.getUserData(id).subscribe(user => {
       this.detailsOfUser = user;
-      this.profilePhoto = this.detailsOfUser.photoURL;
+      (this.detailsOfUser.photoURL !== null) ?
+        this.profilePhoto = this.detailsOfUser.photoURL :
+        this.profilePhoto = './assets/deafult-profile-icon.png';
     });
   }
 

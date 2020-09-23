@@ -6,7 +6,7 @@
         <source>Skip</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="main-menu-btn" datatype="html">
@@ -14,7 +14,7 @@
                             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-home" datatype="html">
@@ -23,7 +23,7 @@
                     </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-about" datatype="html">
@@ -32,7 +32,7 @@
                     </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-app" datatype="html">
@@ -42,7 +42,7 @@
                     </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-fs" datatype="html">
@@ -52,7 +52,7 @@
                         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-uc" datatype="html">
@@ -62,7 +62,7 @@
                         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">50</context>
+          <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-contact" datatype="html">
@@ -71,7 +71,7 @@
                     </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-profile" datatype="html">
@@ -80,7 +80,7 @@
                     </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-logout" datatype="html">
@@ -89,7 +89,7 @@
                     </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">68</context>
+          <context context-type="linenumber">69</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-login" datatype="html">
@@ -98,7 +98,7 @@
                         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">75</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-home" datatype="html">
@@ -120,7 +120,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">93</context>
+          <context context-type="linenumber">94</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-about" datatype="html">
@@ -129,20 +129,21 @@
                 <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                     On this channel you can find information about me,
                     my education, jobs I have worked and the knowledge I have.
-                    You can also download my CV in serbian and english.
+                    You can also download my CV in Serbian and English.
                 <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">117</context>
+          <context context-type="linenumber">118</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-app" datatype="html">
         <source>
                 <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Channel with apps<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
                 <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    This channel contains the apps i made for this presentation.
+                    This channel has the apps I made for this presentation.
                 <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
+                <x id="START_HEADING_LEVEL6_1" ctype="x-h6" equiv-text="&lt;h6&gt;"/>Angular apps:<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
                 <x id="START_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;ul&gt;"/>
                     <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>
                         FourSqure app does not need to log in.
@@ -152,10 +153,18 @@
                     <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                 <x id="CLOSE_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;/ul&gt;"/>
 
+                <x id="START_HEADING_LEVEL6_1" ctype="x-h6" equiv-text="&lt;h6&gt;"/>React app:<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
+                <x id="START_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;ul&gt;"/>
+                    <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>
+                        RecordsOfIdeas (ROI) app does not need log in,
+                        when you click on it a new tab will open and you can try it out.
+                    <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
+                <x id="CLOSE_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;/ul&gt;"/>
+
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">133</context>
+          <context context-type="linenumber">134</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-fs" datatype="html">
@@ -165,7 +174,7 @@
                     I got the idea for this app when I applied for a job at a Quantox company,
                     I was tasked with setting up an application that would use FourSquare API and google maps.
                     for this task I used JavaScript, JQuery and Ajax tools.
-                    since I worked in Angular framework in kompany Quantox I decided to create
+                    since I worked in Angular framework in company Quantox I decided to create
                     one in it using another Here WeGo map.
                 <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
                 <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Instructions:<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
@@ -188,7 +197,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">157</context>
+          <context context-type="linenumber">167</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-uc" datatype="html">
@@ -206,16 +215,19 @@
                     In this app we have two pages: Car Ads and Create Ad.
                 <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
                 <x id="START_HEADING_LEVEL5_1" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Instructions for Car Ads page:<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
+                <x id="START_HEADING_LEVEL6_1" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
                     <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol&gt;"/>
                         <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>On the left side are listings of ads. If you made an ad, you will have two lists, one with
                             your ads and one with all others. There is also a filter button for filtering
                             ads and Sort By... for sorting ads.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Clicking on one ad will open a tab with details about that ad on the right.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
+                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Clicking on one ad will open a tab with details about that ad on the right
+                            if you have accessed the app on a larger screen or
+                            if you are on your mobile phone at the bottom.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                         <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>If you clicked on your ad, the top right of the tab will show two buttons for
                             editing and deleting the ad.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                         <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>That card contains pictures, information and a section where you can read and
                             write a comment.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>If you click on <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/> 
+                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>If you click on <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
                             (Edit) a new page will open with all your information that you can change.
                         <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     <x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol&gt;"/>
@@ -223,7 +235,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">193</context>
+          <context context-type="linenumber">203</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-uc-createad" datatype="html">
@@ -252,7 +264,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">231</context>
+          <context context-type="linenumber">243</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-uc-edit" datatype="html">
@@ -266,7 +278,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">262</context>
+          <context context-type="linenumber">274</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-contact" datatype="html">
@@ -292,7 +304,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">278</context>
+          <context context-type="linenumber">290</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-login" datatype="html">
@@ -315,7 +327,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">308</context>
+          <context context-type="linenumber">320</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-tegister" datatype="html">
@@ -338,7 +350,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">333</context>
+          <context context-type="linenumber">345</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-profile" datatype="html">
@@ -379,7 +391,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">358</context>
+          <context context-type="linenumber">370</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-fp" datatype="html">
@@ -396,7 +408,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">401</context>
+          <context context-type="linenumber">413</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-ve" datatype="html">
@@ -409,20 +421,20 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">420</context>
+          <context context-type="linenumber">432</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-error" datatype="html">
         <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Error<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    The page you were looking for is currently down or does not exist, 
-                    so please return to home page.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            </source>
+            <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Error<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
+            <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
+                The page you were looking for is currently down or does not exist,
+                so please return to home page.
+            <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">435</context>
+          <context context-type="linenumber">447</context>
         </context-group>
       </trans-unit>
       <trans-unit id="app-title" datatype="html">
@@ -430,6 +442,17 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/applications.component.html</context>
           <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="app-subtitle" datatype="html">
+        <source>You can see whole code of these applications on my GitHub
+            <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>
+                <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
+            <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/applications.component.html</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact-title" datatype="html">
@@ -520,9 +543,9 @@
                 <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                 <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>By clicking on 
                     <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Sr <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 
-                    you can download my CV in serbian, and by clicking on 
+                    you can download my CV in Serbian, and by clicking on 
                     <x id="START_LINK_1" ctype="x-a" equiv-text="&lt;a&gt;"/>En <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 
-                    you can download CV in english.
+                    you can download CV in English.
                 <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
             </source>
         <context-group purpose="location">
@@ -542,7 +565,7 @@
                         <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Html5,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                         <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Css3 (Scss, Less),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                         <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Bootstrap,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>JavaScript (ES6, TypeScript, JQuery, Ajax, Angular),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
+                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>JavaScript (ES6, TypeScript, JQuery, Ajax, Angular, ReactJs),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                         <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Firebase<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                         <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Git (GitHub, GitLab, Bitbucket)<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
                     </source>

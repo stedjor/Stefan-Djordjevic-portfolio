@@ -86,7 +86,9 @@ export class CarAdsComponent implements OnInit {
     this.showCars();
     this.width425();
     const user = JSON.parse(localStorage.getItem('user'));
-    this.autorId = user.uid;
+    if(user !== null) {
+      this.autorId = user.uid;
+    }
     this.sortArrow = false;
   }
 

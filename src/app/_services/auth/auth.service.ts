@@ -59,7 +59,7 @@ export class AuthService {
             this.router.navigate(['profile']);
           });
           this.userEmailVerify = result.user.emailVerified;
-          this.setUserData(result.user);
+          this.getSetUser(result.user)
         }
       }).catch((error) => {
         window.alert(error.message);
@@ -73,7 +73,7 @@ export class AuthService {
         this.ngZone.run(() => {
           this.router.navigate(['profile']);
         });
-        this.setUserData(result.user);
+        this.getSetUser(result.user)
       }).catch((error) => {
         console.log(error);
       });
@@ -125,6 +125,21 @@ export class AuthService {
     });
   }
 
+  // Get user, if not exist set user data
+  getSetUser(user) {
+    this.afs.collection(`users`, ref => ref.where('uid', "==", user.uid))
+      .snapshotChanges().subscribe(res => {
+        if (res.length <= 0) {
+          this.setUserData(user);
+          console.log('do not found')
+        }
+      });
+  }
+
+  getUser(id: string) {
+    return this.afs.doc(`users/${id}`);
+  }
+
   getUsers() {
     return this.usersCollection.snapshotChanges().pipe(map(action => {
       return action.map(res => {
@@ -140,9 +155,7 @@ export class AuthService {
     return this.userDocument.valueChanges();
   }
 
-  getUser(id: string) {
-    return this.afs.doc(`users/${id}`);
-  }
+  
 
   updateUserData(user) {
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);

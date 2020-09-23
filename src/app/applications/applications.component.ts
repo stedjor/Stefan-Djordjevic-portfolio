@@ -1,5 +1,13 @@
 import { AppCard } from './app-cards.model';
 import { Component, OnInit } from '@angular/core';
+import {
+  faReact,
+  faAngular,
+  faGithub
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  faLightbulb
+} from '@fortawesome/free-regular-svg-icons';
 
 declare const $: any;
 
@@ -9,13 +17,22 @@ declare const $: any;
   styleUrls: ['./applications.component.less']
 })
 export class ApplicationsComponent implements OnInit {
+  faReact = faReact;
+  faAngular = faAngular;
+  faGithub = faGithub;
+  faLightbulb = faLightbulb;
+
   appCards: AppCard[] = [
-    new AppCard('FourSquare', 'four-square', './assets/fs-icons/fs-here-img.png'),
-    new AppCard('UsedCars', 'used-cars', './assets/UsedCars-brand.png'),
+    new AppCard('FourSquare', 'four-square', './assets/app-images/fs-here-img.png'),
+    new AppCard('UsedCars', 'used-cars', './assets/app-images/UsedCars-brand.png')
   ];
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
+  }
+
+  openNewTab(path) {
+    window.open(path, "_blank")
   }
 }

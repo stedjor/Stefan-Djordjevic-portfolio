@@ -1,19 +1,39 @@
 <div class="container app-container">
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1 i18n="@@app-title">Applications</h1>
+            <h1 i18n="@@app-title" class="app-title">Applications</h1>
         </div>
     </div>
     <div class="row d-flex justify-content-center align-items-center">
-        <div class="col col-lg-3 col-md-4 col-sm-5 col-xs-6" id="rotatediv" *ngFor="let item of appCards">
+        <div class="col col-lg-3 col-md-4 " id="rotatediv" *ngFor="let item of appCards">
             <div class="card text-center app-card" [routerLink]="[item.routerLink]">
                 <div class="card-body app-card-body" [ngClass]="{'uc-card-body': item.name === 'UsedCars'}">
                     <img class="app-img" src="{{ item.imagePath }}" alt="Application {{item.name}}">
                 </div>
                 <div class="card-footer app-card-footer">
+                    <fa-icon class="normal icon-angular" [icon]="faAngular"></fa-icon>
                     <p>{{ item.name }}</p>
                 </div>
             </div>
+        </div>
+        <div class="col col-lg-3 col-md-4" id="rotatediv">
+            <div class="card text-center app-card" (click)="openNewTab('https://records-of-ideas.web.app/list-ideas')">
+                <div class="card-body app-card-body roi-card-body">
+                    <img class="app-img" src="./assets/app-images/roi.png" alt="Application RecordsOfIdeas">
+                </div>
+                <div class="card-footer app-card-footer">
+                    <fa-icon class="normal icon-react" [icon]="faReact"></fa-icon>
+                    <p>ROI</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center m-auto">
+            <h4 i18n="@@app-subtitle" class="app-subtitle">You can see whole code of these applications on my GitHub
+                <a class="app-github" target="_blank" href="https://github.com/stedjor/Stefan-Djordjevic-portfolio">
+                    <fa-icon class="normal" [icon]="faGithub"></fa-icon></a>.
+            </h4>
         </div>
     </div>
 </div>
