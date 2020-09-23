@@ -721,6 +721,32 @@
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
+
+      <trans-unit id="app_angular-icon-title" datatype="html">
+        <source>App made in Angular.</source>
+        <target>Aplikacija napravljena u Angular-u.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/applications.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="app_react-icon-title" datatype="html">
+        <source>App made in React.</source>
+        <target>Aplikacija napravljena u React-u.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/applications.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="app_new-tab-icon-title" datatype="html">
+        <source>Open app in new tab.</source>
+        <target>Otvorite aplikaciju na novoj stranici.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/applications.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+
       <trans-unit id="app-subtitle" datatype="html">
         <source>You can see whole code of these applications on my GitHub
             <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>

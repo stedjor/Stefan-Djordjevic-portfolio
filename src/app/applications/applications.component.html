@@ -11,7 +11,7 @@
                     <img class="app-img" src="{{ item.imagePath }}" alt="Application {{item.name}}">
                 </div>
                 <div class="card-footer app-card-footer">
-                    <fa-icon class="normal icon-angular" [icon]="faAngular"></fa-icon>
+                    <fa-icon i18n-title="@@app_angular-icon-title" class="normal icon-framework icon-angular" [icon]="faAngular"  title="App made in Angular."></fa-icon>
                     <p>{{ item.name }}</p>
                 </div>
             </div>
@@ -22,8 +22,9 @@
                     <img class="app-img" src="./assets/app-images/roi.png" alt="Application Records Of Idea">
                 </div>
                 <div class="card-footer app-card-footer">
-                    <fa-icon class="normal icon-react" [icon]="faReact"></fa-icon>
+                    <fa-icon i18n-title="@@app_react-icon-title" class="normal icon-framework icon-react" [icon]="faReact" title="App made in React."></fa-icon>
                     <p>ROI</p>
+                    <fa-icon i18n-title="@@app_new-tab-icon-title" class="normal icon-new-tab" [icon]="faExternalLinkAlt" title="Open app in new tab."></fa-icon>
                 </div>
             </div>
         </div>

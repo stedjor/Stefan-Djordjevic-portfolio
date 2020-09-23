@@ -8,6 +8,9 @@ import {
 import {
   faLightbulb
 } from '@fortawesome/free-regular-svg-icons';
+import {
+  faExternalLinkAlt
+} from '@fortawesome/free-solid-svg-icons';
 
 declare const $: any;
 
@@ -21,6 +24,7 @@ export class ApplicationsComponent implements OnInit {
   faAngular = faAngular;
   faGithub = faGithub;
   faLightbulb = faLightbulb;
+  faExternalLinkAlt = faExternalLinkAlt;
 
   appCards: AppCard[] = [
     new AppCard('FourSquare', 'four-square', './assets/app-images/fs-here-img.png'),

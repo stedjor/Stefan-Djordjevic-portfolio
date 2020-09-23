@@ -124,19 +124,43 @@
             position   : relative;
             // display : inline-flex;
 
-            & fa-icon.normal {
+            & fa-icon.icon-framework {
                 position     : absolute;
+                top          : 0;
                 left         : 0;
-                padding      : 0 5px;
+                padding      : 5px;
                 margin       : 0 10px;
                 border-radius: 15px;
                 font-size    : 17px;
 
                 &.icon-angular {
                     color: red;
+
+                    &:hover {
+                        color: lighten(red, 10%);
+                    }
                 }
 
                 &.icon-react {
+                    color: rgb(21, 170, 191, 20%);
+
+                    &:hover {
+                        color: lighten(rgb(21, 170, 191), 10%);
+                    }
+                }
+            }
+
+            & fa-icon.icon-new-tab {
+                position     : absolute;
+                top          : 0;
+                right        : 0;
+                padding      : 5px;
+                margin       : 0 5px;
+                border-radius: 15px;
+                font-size    : 17px;
+                color        : white;
+
+                &:hover {
                     color: rgb(21, 170, 191);
                 }
             }
