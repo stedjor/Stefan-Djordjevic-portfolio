@@ -24,9 +24,14 @@
         }
     }
 
-    & h1 {
+    & #about-title {
         text-align: center;
-        font-size : 32px;
+        font-size : 0;
+    }
+
+    & #about-subtitle {
+        text-align: center;
+        font-size : 0;
     }
 
     & #about-photo {
@@ -37,13 +42,21 @@
         border             : 5px solid white;
         height             : 100%;
         width              : 100%;
-        max-height         : 350px;
-        min-height         : 350px;
-        max-width          : 263px;
-        min-width          : 263px;
+        max-height         : 0;
+        min-height         : 0;
+        max-width          : 0;
+        min-width          : 0;
         border-radius      : 5px;
         box-shadow         : 0 0 10px 0px @about-color-light;
         margin             : 15px auto;
+        opacity            : 0;
+    }
+
+    & h6#about-skills-title,
+    h6#about-languages-title {
+        font-size   : 0;
+        padding-left: 40px;
+        font-style  : italic;
     }
 
     & ul {
@@ -51,6 +64,23 @@
 
         & li {
             list-style-type: circle;
+            display        : none;
+        }
+    }
+
+    & .btn-about-skip {
+        position       : absolute;
+        right          : 30px;
+        bottom         : 30px;
+        color          : @about-color-light;
+        text-shadow    : 0px 0px 10px rgba(225, 225, 225, 1);
+        font-size      : 20px;
+        letter-spacing : 1px;
+        text-decoration: none;
+
+        &:hover {
+            color      : white;
+            text-shadow: 0px 0px 10px @about-color-light;
         }
     }
 }
@@ -69,6 +99,12 @@
             padding-inline-start: 30px;
         }
 
+        & .btn-about-skip {
+            right         : 15px;
+            bottom        : 15px;
+            font-size     : 18px;
+            letter-spacing: 1px;
+        }
     }
 }
 
@@ -76,12 +112,6 @@
     & .about-container {
         padding: 10px 15px 0;
 
-        & #about-photo {
-            max-height: 320px;
-            min-height: 320px;
-            max-width : 233px;
-            min-width : 233px;
-        }
 
         & ul {
             padding-inline-start: 20px;
@@ -112,7 +142,7 @@
         padding: 10px 15px 0;
 
         & h1 {
-            font-size : 20px;
+            font-size: 20px;
         }
 
         & h2 {
@@ -125,6 +155,11 @@
 
         & ul {
             font-size: 15px;
+        }
+
+        & .btn-about-skip {
+            right : 0px;
+            bottom: 0px;
         }
     }
 }
@@ -141,11 +176,5 @@
             font-size: 13px;
         }
 
-        & #about-photo {
-            max-height: 300px;
-            min-height: 300px;
-            max-width : 213px;
-            min-width : 213px;
-        }
     }
 }

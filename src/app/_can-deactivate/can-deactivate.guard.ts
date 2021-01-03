@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { CanDeactivate, RouterStateSnapshot, ActivatedRouteSnapshot } from '@angular/router';
-import { ComponentCanDeactivate } from './component-can-deactivate';
+import { ComponentCanDeactivateDirective } from './component-can-deactivate';
 
 @Injectable()
-export class CanDeactivateGuard implements CanDeactivate<ComponentCanDeactivate> {
+export class CanDeactivateGuard implements CanDeactivate<ComponentCanDeactivateDirective> {
   canDeactivate(
-    component: ComponentCanDeactivate,
+    component: ComponentCanDeactivateDirective,
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ) {

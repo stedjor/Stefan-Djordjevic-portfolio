@@ -1,8 +1,8 @@
 <div class="container about-container">
     <div class="row">
         <div class="col-md-7">
-            <h1 i18n="@@about-title">Information about me</h1>
-            <ul i18n="@@about-text">
+            <h1 i18n="@@about-title" id="about-title">Information about me</h1>
+            <ul i18n="@@about-text" id="about-text">
                 <li>I graduated from the Technical College of Applied Studies in Kragujevac,
                     the course of Informatics, gaining the qualification
                     Bachelor of Science in Informatics (Appl.).</li>
@@ -18,15 +18,17 @@
                 <li>Because I can't speak about projects that I worked, I decide to made this
                     presentation.
                 </li>
-                <li>By clicking on 
-                    <a href="./assets/cv-files/CV-Stefan Djordjevic-Sr.pdf" download>Sr <fa-icon class="normal" [icon]="faDownload"></fa-icon></a> 
-                    you can download my CV in Serbian, and by clicking on 
-                    <a href="./assets/cv-files/CV-Stefan Djordjevic-En.pdf" download>En <fa-icon class="normal" [icon]="faDownload"></fa-icon></a> 
+                <li>By clicking on
+                    <a href="./assets/cv-files/CV-Stefan Djordjevic-Sr.pdf" download>Sr <fa-icon class="normal"
+                            [icon]="faDownload"></fa-icon></a>
+                    you can download my CV in Serbian, and by clicking on
+                    <a href="./assets/cv-files/CV-Stefan Djordjevic-En.pdf" download>En <fa-icon class="normal"
+                            [icon]="faDownload"></fa-icon></a>
                     you can download CV in English.
                 </li>
             </ul>
         </div>
-        <div class="col-md-5 text-center">
+        <div class="col-md-5 text-center mt-2 mb-2">
             <div id="about-photo"></div>
         </div>
     </div>
@@ -34,10 +36,11 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-7">
-                    <h5 i18n="@@about-subtitle" class="text-center">Knowledge I possess</h5>
+                    <h5 i18n="@@about-subtitle" id="about-subtitle">Knowledge I possess</h5>
                 </div>
                 <div class="col-md-7">
-                    <ul i18n="@@about-skils">Skils:
+                    <h6 id="about-skills-title">Skills:</h6>
+                    <ul i18n="@@about-skils" id="about-skills">
                         <li>Html5,</li>
                         <li>Css3 (Scss, Less),</li>
                         <li>Bootstrap,</li>
@@ -47,7 +50,8 @@
                     </ul>
                 </div>
                 <div class="col-md-5">
-                    <ul i18n="@@about-languages">Languages:
+                    <h6 id="about-languages-title">Languages:</h6>
+                    <ul i18n="@@about-languages" id="about-languages">
                         <li>Serbian</li>
                         <li>English</li>
                     </ul>
@@ -55,4 +59,8 @@
             </div>
         </div>
     </div>
+    <button class="btn btn-link btn-about-skip" (click)="endAboutAnimations()" title="Skip Animation"
+        *ngIf="showAnimation">
+        <fa-icon class="normal" [icon]="faStepForward"></fa-icon>
+    </button>
 </div>

@@ -110,7 +110,7 @@ export class ContactComponent implements OnInit {
           sender.messages.length !== 0 &&
           sender.id !== this.userId) {
             this.sendersList.push(sender);
-            console.log(this.sendersList)
+            console.log(this.sendersList);
           }
       });
     });

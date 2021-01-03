@@ -57,7 +57,7 @@ export class CarDetailsComponent implements OnInit {
 
   ngOnInit() {
     const user = JSON.parse(localStorage.getItem('user'));
-    this.getUser(user.uid);
+    this.getUser(user?.uid);
     this.commentForm = this.fb.group({
       autor: '',
       autorEmail: '',

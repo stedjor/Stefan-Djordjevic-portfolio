@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 // Components
 import { AppComponent } from './app.component';
@@ -32,8 +32,11 @@ import { OrderModule } from 'ngx-order-pipe';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 // Firebase
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import {
+  AngularFirestoreModule,
+  FirestoreSettingsToken,
+} from '@angular/fire/firestore';
+import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 // Services
@@ -73,6 +76,7 @@ import { ErrorComponent } from './error/error.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    FormBuilder,
     ReactiveFormsModule,
     CommonModule,
     HttpClientModule,
@@ -82,7 +86,7 @@ import { ErrorComponent } from './error/error.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
   ],
   providers: [
     { provide: FirestoreSettingsToken, useValue: {} },
@@ -94,6 +98,6 @@ import { ErrorComponent } from './error/error.component';
     FsServicesService,
     CanDeactivateGuard
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

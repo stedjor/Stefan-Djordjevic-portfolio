@@ -41,9 +41,9 @@ export class ModalsComponent implements OnInit {
   @Input() modalInfoUrl: string;
   modalInfoUsedCars: string;
   openedModal: boolean;
-  defaultProfileIcon
+  defaultProfileIcon;
   detailsOfUser: any;
-  profilePhoto: string = './assets/deafult-profile-icon.png';
+  profilePhoto = './assets/deafult-profile-icon.png';
   urlLocation: string;
   // Font Awesome
   faUser = faUser;

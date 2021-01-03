@@ -37,6 +37,6 @@ export class ApplicationsComponent implements OnInit {
   }
 
   openNewTab(path) {
-    window.open(path, "_blank")
+    window.open(path, '_blank');
   }
 }

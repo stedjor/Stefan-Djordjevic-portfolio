@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {
   faPowerOff,
   faChevronLeft,
-  faChevronRight
+  faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 import { Meta } from '@angular/platform-browser';
@@ -11,9 +11,10 @@ declare const $: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  styleUrls: ['./app.component.less'],
 })
 export class AppComponent implements OnInit {
+  title = 'Stefan Đorđević';
   featureSelect = 'blank';
   turnOnOff = false;
   selectModal: string;
@@ -36,15 +37,19 @@ export class AppComponent implements OnInit {
     { text: 'Aplications', rLink: '/applications' },
     { text: 'FourSquare', rLink: '/applications/four-square' },
     { text: 'UsedCars', rLink: '/applications/used-cars/car-ads' },
-    { text: 'Contact', rLink: '/contact' }
+    { text: 'Contact', rLink: '/contact' },
   ];
 
   metaTags = [
-    { name: 'keywords', content: `Angular, Firebase, Firestore, FourSquare, HERE WeGo, UsedCar, web, presentation, Frontend, Front-end, developer, programer, prezentacija, projekat, Stefan, Djordjevic, Đorđević` },
-    { name: 'description', content: 'Web presentation by Stefan Djordjevic' }
+    {
+      name: 'keywords',
+      content: `Angular, Firebase, Firestore, FourSquare, HERE WeGo, UsedCar, web,
+      presentation, Frontend, Front-end, developer, programer, prezentacija, projekat, Stefan, Djordjevic, Đorđević`,
+    },
+    { name: 'description', content: 'Web presentation by Stefan Djordjevic' },
   ];
 
-  constructor(public router: Router, private metaTag: Meta) { }
+  constructor(public router: Router, private metaTag: Meta) {}
 
   ngOnInit() {
     this.metaTag.addTags(this.metaTags);
@@ -53,7 +58,7 @@ export class AppComponent implements OnInit {
     setTimeout(() => {
       this.tooltipValue = $('.turn-on-tooltip').text();
     }, 100);
-    this.noScreenAnimation()
+    this.noScreenAnimation();
   }
 
   noScreenAnimation() {
@@ -65,8 +70,8 @@ export class AppComponent implements OnInit {
             this.buttonTurnOn('show');
           }
         }
-      }, 1000)
-    } 
+      }, 1000);
+    }
   }
 
   buttonTurn(feature: string) {
@@ -95,38 +100,54 @@ export class AppComponent implements OnInit {
   }
 
   turnOnEffect() {
-    $('#screen').animate({
-      width: '100%',
-      left: '0',
-      right: '0',
-    }, 'fast').animate({
-      height: '100%',
-      top: '0',
-      bottom: '0',
-    }, 'fast');
+    $('#screen')
+      .animate(
+        {
+          width: '100%',
+          left: '0',
+          right: '0',
+        },
+        'fast'
+      )
+      .animate(
+        {
+          height: '100%',
+          top: '0',
+          bottom: '0',
+        },
+        'fast'
+      );
 
     this.turnOnOff = true;
     this.showHideMenu = true;
   }
 
   turnOffEffect() {
-    $('#screen').animate({
-      height: '2px',
-      top: '50%',
-      bottom: '50%',
-      'z-index': '1000'
-    }, 'fast').animate({
-      width: '0',
-      left: '50%',
-      right: '50%',
-    }, 'fast');
+    $('#screen')
+      .animate(
+        {
+          height: '2px',
+          top: '50%',
+          bottom: '50%',
+          'z-index': '1000',
+        },
+        'fast'
+      )
+      .animate(
+        {
+          width: '0',
+          left: '50%',
+          right: '50%',
+        },
+        'fast'
+      );
 
     this.turnOnOff = false;
     this.showHideMenu = false;
   }
 
   buttonPrevious() {
-    const findObj = this.routLink.find(f => f.rLink === this.router.url);
+    const findObj = this.routLink.find((f) => f.rLink === this.router.url);
     let indxObj = this.routLink.indexOf(findObj);
     if (indxObj === -1) {
       indxObj = 4;
@@ -141,7 +162,7 @@ export class AppComponent implements OnInit {
   }
 
   buttonNext() {
-    const findObj = this.routLink.find(f => f.rLink === this.router.url);
+    const findObj = this.routLink.find((f) => f.rLink === this.router.url);
     let indxObj = this.routLink.indexOf(findObj);
     if (indxObj === -1) {
       indxObj = 4;
@@ -227,9 +248,12 @@ export class AppComponent implements OnInit {
   }
 
   modalAnimate() {
-    $('.modal').animate({
-      opacity: 1
-    }, 'slow');
+    $('.modal').animate(
+      {
+        opacity: 1,
+      },
+      'slow'
+    );
   }
 
   signatureResponsive() {

@@ -16,7 +16,7 @@ import {
   faSave,
   faCar,
   faArrowAltCircleLeft,
-  faArrowAltCircleUp
+  faArrowAltCircleUp,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faArrowAltCircleRight,
@@ -28,7 +28,7 @@ declare var $: any;
 @Component({
   selector: 'app-car-ads',
   templateUrl: './car-ads.component.html',
-  styleUrls: ['./car-ads.component.less']
+  styleUrls: ['./car-ads.component.less'],
 })
 export class CarAdsComponent implements OnInit {
   defaultPhoto = './assets/no-car.png';
@@ -76,7 +76,7 @@ export class CarAdsComponent implements OnInit {
     private adsService: AdsService,
     private ci: CarsInfoService,
     private route: Router
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.showDetails = false;
@@ -86,7 +86,7 @@ export class CarAdsComponent implements OnInit {
     this.showCars();
     this.width425();
     const user = JSON.parse(localStorage.getItem('user'));
-    if(user !== null) {
+    if (user !== null) {
       this.autorId = user.uid;
     }
     this.sortArrow = false;
@@ -104,18 +104,22 @@ export class CarAdsComponent implements OnInit {
   }
 
   showCars() {
-    this.usedCars.subscribe(data => {
+    this.usedCars.subscribe((data) => {
       this.usedYourCars = [];
       this.usedAllCars = [];
-      data.map(car => {
+      data.map((car) => {
         this.usedCarsList.push(car);
-        car.autorId === this.autorId ? this.usedYourCars.push(car) : this.usedAllCars.push(car);
+        car.autorId === this.autorId
+          ? this.usedYourCars.push(car)
+          : this.usedAllCars.push(car);
       });
     });
   }
 
   onClick(id: string) {
-    this.carId === id ? this.showDetails = !this.showDetails : this.showDetails = true;
+    this.carId === id
+      ? (this.showDetails = !this.showDetails)
+      : (this.showDetails = true);
     if (this.showDetails) {
       this.carId = id;
       this.adsService.getCarData(id);
@@ -164,10 +168,10 @@ export class CarAdsComponent implements OnInit {
   }
 
   searchModel(key: string) {
-    this.selectedBrand = this.carsInfo.brands.filter(f => {
+    this.selectedBrand = this.carsInfo.brands.filter((f) => {
       return f.name === key;
     });
-    this.selectedBrand.map(m => this.selectedModel = m.models);
+    this.selectedBrand.map((m) => (this.selectedModel = m.models));
   }
 
   chooseAge(key: string) {
@@ -231,11 +235,12 @@ export class CarAdsComponent implements OnInit {
       strAge = `${this.fAge}-${this.tAge} years`;
       strPrice = `${this.fPrice}-${this.tPrice} €`;
 
-      if (fForm[key] !== '' &&
+      if (
+        fForm[key] !== '' &&
         fForm[key] !== null &&
         key !== 'fromAge' &&
         key !== 'fromPrice' &&
-        (!this.filters.includes(fForm[key]))
+        !this.filters.includes(fForm[key])
       ) {
         if (key === 'fromAge' || key === 'toAge') {
           fForm[key] = strAge;
@@ -258,14 +263,14 @@ export class CarAdsComponent implements OnInit {
   }
 
   filteringCars() {
-    this.filteredCars = this.usedCarsList.filter(item => {
+    this.filteredCars = this.usedCarsList.filter((item) => {
       const cars = Object.values(item.car);
       const sallers = Object.values(item.saller);
-      return this.filters.every(f => {
+      return this.filters.every((f) => {
         if (f.includes('years')) {
           for (let i = this.fAge; i <= this.tAge; i++) {
             if (i == item.car.age) {
-              return f = i;
+              return (f = i);
             }
           }
         }
@@ -284,11 +289,11 @@ export class CarAdsComponent implements OnInit {
           }
           for (let j = minPrice; j <= maxPrice; j++) {
             if (j === item.car.price) {
-              return f = j;
+              return (f = j);
             }
           }
         }
-        return (cars.includes(f) || sallers.includes(f)) ? true : false;
+        return cars.includes(f) || sallers.includes(f) ? true : false;
       });
     });
   }
@@ -333,9 +338,9 @@ export class CarAdsComponent implements OnInit {
       const x = a.car[prop];
       const y = b.car[prop];
       if (order === 'desc') {
-        return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+        return x > y ? -1 : x < y ? 1 : 0;
       } else {
-        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+        return x < y ? -1 : x > y ? 1 : 0;
       }
     });
   }
@@ -343,28 +348,62 @@ export class CarAdsComponent implements OnInit {
   showMoreLess(el: string) {
     if (el === 'your') {
       this.moreLessYour = !this.moreLessYour;
-      this.moreLessButton(el, this.usedYourCars, this.moreLessYour, '500px', '135px', '400px');
+      this.moreLessButton(
+        el,
+        this.usedYourCars,
+        this.moreLessYour,
+        '500px',
+        '135px',
+        '400px'
+      );
     } else if (el === 'all') {
       this.moreLessAll = !this.moreLessAll;
-      this.moreLessButton(el, this.usedAllCars, this.moreLessAll, '500px', '135px', '400px');
+      this.moreLessButton(
+        el,
+        this.usedAllCars,
+        this.moreLessAll,
+        '500px',
+        '135px',
+        '400px'
+      );
     } else if (el === 'filtered') {
       this.moreLessFilter = !this.moreLessFilter;
-      this.moreLessButton(el, this.filteredCars, this.moreLessFilter, '500px', '280px', '400px');
+      this.moreLessButton(
+        el,
+        this.filteredCars,
+        this.moreLessFilter,
+        '500px',
+        '280px',
+        '400px'
+      );
     }
   }
 
-  moreLessButton(el: string, arr: string | any[], moreless: boolean, mxHeight: string, minHeight: string, heighT: string) {
+  moreLessButton(
+    el: string,
+    arr: string | any[],
+    moreless: boolean,
+    mxHeight: string,
+    minHeight: string,
+    heighT: string
+  ) {
     if (arr.length >= 7) {
       if (moreless) {
-        $(`.list-scrollbar-${el}`).animate({
-          maxHeight: `${mxHeight}`,
-          height: `${heighT}`
-        }, 1000);
+        $(`.list-scrollbar-${el}`).animate(
+          {
+            maxHeight: `${mxHeight}`,
+            height: `${heighT}`,
+          },
+          1000
+        );
       } else {
-        $(`.list-scrollbar-${el}`).animate({
-          maxHeight: `${minHeight}`,
-          height: 'auto'
-        }, 1000);
+        $(`.list-scrollbar-${el}`).animate(
+          {
+            maxHeight: `${minHeight}`,
+            height: 'auto',
+          },
+          1000
+        );
       }
     }
   }

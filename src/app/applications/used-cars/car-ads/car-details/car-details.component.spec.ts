@@ -1,6 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CarDetailsComponent } from './car-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { AngularFireAuth } from '@angular/fire/auth';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AngularFireStorage } from '@angular/fire/storage';
+import {
+  AngularFirestore,
+  AngularFirestoreModule,
+} from '@angular/fire/firestore';
+import { environment } from '../../../../../environments/environment.prod';
+import { AngularFireModule } from '@angular/fire';
 
 describe('CarDetailsComponent', () => {
   let component: CarDetailsComponent;
@@ -8,7 +19,17 @@ describe('CarDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CarDetailsComponent ]
+      imports: [
+        ReactiveFormsModule,
+        RouterTestingModule,
+        AngularFireModule.initializeApp(environment.firebase),
+      ],
+      declarations: [ CarDetailsComponent ],
+      providers: [
+        AngularFireAuth,
+        AngularFireStorage,
+        { provide: AngularFirestore, depends: AngularFirestoreModule },
+      ],
     })
     .compileComponents();
   }));
