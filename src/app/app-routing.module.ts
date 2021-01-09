@@ -27,10 +27,27 @@ import { ForgotPasswordComponent } from './user/forgot-password/forgot-password.
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent, canActivate: [SecureGuard] },
-  { path: 'register', component: RegisterComponent, canActivate: [SecureGuard] },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard], canDeactivate: [CanDeactivateGuard] },
-  { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureGuard] },
-  { path: 'verify-email', component: VerifyEmailComponent, canActivate: [SecureGuard] },
+  {
+    path: 'register',
+    component: RegisterComponent,
+    canActivate: [SecureGuard],
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate: [AuthGuard],
+    canDeactivate: [CanDeactivateGuard],
+  },
+  {
+    path: 'forgot-password',
+    component: ForgotPasswordComponent,
+    canActivate: [SecureGuard],
+  },
+  {
+    path: 'verify-email',
+    component: VerifyEmailComponent,
+    canActivate: [SecureGuard],
+  },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   {
@@ -39,27 +56,37 @@ const routes: Routes = [
       { path: '', component: ApplicationsComponent },
       { path: 'four-square', component: FourSquareComponent },
       {
-        path: 'used-cars', component: UsedCarsComponent, canActivate: [AuthGuard],
+        path: 'used-cars',
+        component: UsedCarsComponent,
         children: [
           { path: '', redirectTo: 'car-ads', pathMatch: 'full' },
           {
-            path: 'car-ads', component: CarAdsComponent,
-            children: [
-              { path: ':id', component: CarDetailsComponent},
-            ]
+            path: 'car-ads',
+            component: CarAdsComponent,
+            children: [{ path: ':id', component: CarDetailsComponent }],
           },
-          { path: 'create-ad', component: CreateAdComponent, canDeactivate: [CanDeactivateGuard] },
-          { path: 'edit-ad/:id', component: EditAdComponent, canDeactivate: [CanDeactivateGuard] },
-        ]
+          {
+            path: 'create-ad',
+            component: CreateAdComponent,
+            canActivate: [AuthGuard],
+            canDeactivate: [CanDeactivateGuard],
+          },
+          {
+            path: 'edit-ad/:id',
+            component: EditAdComponent,
+            canActivate: [AuthGuard],
+            canDeactivate: [CanDeactivateGuard],
+          },
+        ],
       },
-    ]
+    ],
   },
   { path: 'contact', component: ContactComponent },
-  { path: '**', component: ErrorComponent }
+  { path: '**', component: ErrorComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

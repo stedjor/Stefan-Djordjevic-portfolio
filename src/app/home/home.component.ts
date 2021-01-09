@@ -38,7 +38,6 @@ export class HomeComponent implements OnInit {
     setTimeout(() => {
       window.scrollTo(0, document.body.scrollHeight);
     }, 600000);
-    console.log(document.body.scrollHeight, hcHeight);
     if (parseInt(hcHeight) > 440) {
       console.log('jeste', parseInt(hcHeight));
     }

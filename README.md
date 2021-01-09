@@ -19,4 +19,4 @@ You can try it at the address above
 
 -Html5,
 -Css3 (Less, Bootstrap),
--JavaScript (TypeScript, JQuery, Angular 8)
+-JavaScript (TypeScript, JQuery, Angular)

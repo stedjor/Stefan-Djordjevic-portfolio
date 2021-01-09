@@ -1,7 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+  <file source-language="sr" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="main-menu-btn" datatype="html">
+        <source>menu </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">66,67</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="main-turn-on-tooltip" datatype="html">
         <source>Skip</source>
         <context-group purpose="location">
@@ -9,432 +16,209 @@
           <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="main-menu-btn" datatype="html">
-        <source>menu
-                            </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">66</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="modal_menu-home" datatype="html">
-        <source>
-                        <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/> Home
-                    </source>
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faHome&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon> "/> Home </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">21,22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-about" datatype="html">
-        <source>
-                        <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/> About
-                    </source>
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faAddressCard&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon> "/> About </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">26,27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-app" datatype="html">
-        <source>
-                        <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
-                        Applications
-                    </source>
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faLaptopCode&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>
+                        "/> Applications </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">32,34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-fs" datatype="html">
-        <source>
-                            <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
-                            FourSquare
-                        </source>
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faFoursquare&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>
+                            "/> FourSquare </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">38,40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-uc" datatype="html">
-        <source>
-                            <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
-                            UsedCars
-                        </source>
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faCar&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>
+                            "/> UsedCars </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">43,45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-contact" datatype="html">
-        <source>
-                        <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/> Contact
-                    </source>
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faComments&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon> "/> Contact </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">55,56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-profile" datatype="html">
-        <source>
-                        <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/> Profile
-                    </source>
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faUser&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon> "/> Profile </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">60</context>
+          <context context-type="linenumber">61,62</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-logout" datatype="html">
-        <source>
-                        <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/> Logout
-                    </source>
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faSignOutAlt&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon> "/> Logout </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">65</context>
+          <context context-type="linenumber">66,67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_menu-login" datatype="html">
-        <source>
-                            <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/> Login
-                        </source>
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faSignInAlt&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon> "/> Login </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">72,73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-home" datatype="html">
-        <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Information about project<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    Whole project was written in Angular Framework version 8 with some extra
-                    tools. I tried to use many different possibilities that Angular provides.<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    For the layout I used Bootstrap framework and Less preprocessor and for the
-                    animations I used JQuery framework. You are probably wondering why I didn&apos;t
-                    use Angular Material and Angular Animations, I was guided by fact that &quot;the
-                    fastest / shortest way is the one you know&quot;, namely I don&apos;t have much experience but I
-                    will do my best to perfect it.<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    Since I don&apos;t know the backend programming languages so well, I decided to use
-                    the Firebase database and connect it to Angular.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            </source>
+        <source><x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4 class=&quot;text-center p-2&quot;>"/>Information about project<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> Whole project was written in Angular Framework with some extra tools. I tried to use many different possibilities that Angular provides.<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> For the layout I used Bootstrap framework and Less preprocessor and for the animations I used JQuery framework.<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> Since I don't know the backend programming languages so well, I decided to use the Firebase database and connect it to Angular. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">90</context>
+          <context context-type="linenumber">91,104</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-about" datatype="html">
-        <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Information about me<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    On this channel you can find information about me,
-                    my education, jobs I have worked and the knowledge I have.
-                    You can also download my CV in Serbian and English.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            </source>
+        <source><x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4 class=&quot;text-center p-2&quot;>"/>Information about me<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> On this channel you can find information about me, my education, jobs I have worked and the knowledge I have. You can also download my CV in Serbian and English. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">114</context>
+          <context context-type="linenumber">115,120</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-app" datatype="html">
-        <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Channel with apps<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    This channel has the apps I made for this presentation.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL6_1" ctype="x-h6" equiv-text="&lt;h6&gt;"/>Angular apps:<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;ul&gt;"/>
-                    <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>
-                        FourSqure app does not need to log in.
-                    <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                    <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>
-                        UsedCars app needs to be logged in.
-                    <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                <x id="CLOSE_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;/ul&gt;"/>
-
-                <x id="START_HEADING_LEVEL6_1" ctype="x-h6" equiv-text="&lt;h6&gt;"/>React app:<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;ul&gt;"/>
-                    <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>
-                        Records Of Idea (ROI) app does not need log in,
-                        when you click on it a new tab will open and you can try it out.
-                    <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                <x id="CLOSE_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;/ul&gt;"/>
-
-            </source>
+        <source><x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4 class=&quot;text-center p-2&quot;>"/>Channel with apps<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> This channel has the apps I made for this presentation. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL6_1" equiv-text="&lt;h6>"/>Angular apps:<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;ul>
+                    "/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li class=&quot;text-left&quot;>
+                        "/> FourSqure app does not need to log in. <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li class=&quot;text-left&quot;>
+                        "/> UsedCars app needs to be logged in. <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="CLOSE_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;/ul>"/><x id="START_HEADING_LEVEL6_1" equiv-text="&lt;h6>"/>React app:<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;ul>
+                    "/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li class=&quot;text-left&quot;>
+                        "/> Records Of Idea (ROI) app does not need log in, when you click on it a new tab will open and you can try it out. <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="CLOSE_UNORDERED_LIST" ctype="x-ul" equiv-text="&lt;/ul>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">130</context>
+          <context context-type="linenumber">131,151</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-fs" datatype="html">
-        <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>FourSquare app<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    I got the idea for this app when I applied for a job at a Quantox company,
-                    I was tasked with setting up an application that would use FourSquare API and google maps.
-                    for this task I used JavaScript, JQuery and Ajax tools.
-                    since I worked in Angular framework in company Quantox I decided to create
-                    one in it using another Here WeGo map.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Instructions:<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-                <x id="START_HEADING_LEVEL6_1" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>You need to click the allow button for the app to find your location on the map,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Then, in the upper right corner, you should enter the term places you want to find in
-                            search, for example a restaurant, coffee, shop, etc and press enter.
-                        <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>On the left side you will see list of cards of all places near you up to two kilometers
-                            away,
-                            and the map will show markers of all places,
-                        <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Clicking on a card in the map will show a marker of that,
-                            also clicking on the marker card will place that spot,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>You can see the address and distance from your location on the card.
-                        <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                    <x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol&gt;"/>
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            </source>
+        <source><x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4 class=&quot;text-center p-2&quot;>"/>FourSquare app<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> I got the idea for this app when I applied for a job at a Quantox company, I was tasked with setting up an application that would use FourSquare API and google maps. for this task I used JavaScript, JQuery and Ajax tools. since I worked in Angular framework in company Quantox I decided to create one in it using another Here WeGo map. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5 class=&quot;text-left p-1&quot;>"/>Instructions:<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/><x id="START_HEADING_LEVEL6_1" equiv-text="&lt;h6 class=&quot;text-left&quot;>
+                    "/><x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol>
+                        "/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>You need to click the allow button for the app to find your location on the map,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Then, in the upper right corner, you should enter the term places you want to find in search, for example a restaurant, coffee, shop, etc and press enter. <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>On the left side you will see list of cards of all places near you up to two kilometers away, and the map will show markers of all places, <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Clicking on a card in the map will show a marker of that, also clicking on the marker card will place that spot,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>You can see the address and distance from your location on the card. <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol>"/><x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">163</context>
+          <context context-type="linenumber">164,188</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-uc" datatype="html">
-        <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>UsedCars App<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Car Ads<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    This application was made only for presentation,
-                    all information is fabricated. If you want to try it feel free
-                    to use arbitrary information. It is an advertising application for
-                    used car sales. You can preview and create ads in it, you can only
-                    modify or delete your ads. You can also leave a comment on each ad.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL6_1" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    In this app we have two pages: Car Ads and Create Ad.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL5_1" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Instructions for Car Ads page:<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-                <x id="START_HEADING_LEVEL6_1" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>On the left side are listings of ads. If you made an ad, you will have two lists, one with
-                            your ads and one with all others. There is also a filter button for filtering
-                            ads and Sort By... for sorting ads.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Clicking on one ad will open a tab with details about that ad on the right
-                            if you have accessed the app on a larger screen or
-                            if you are on your mobile phone at the bottom.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>If you clicked on your ad, the top right of the tab will show two buttons for
-                            editing and deleting the ad.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>That card contains pictures, information and a section where you can read and
-                            write a comment.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>If you click on <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
-                            (Edit) a new page will open with all your information that you can change.
-                        <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                    <x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol&gt;"/>
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            </source>
+        <source><x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4 class=&quot;text-center p-1&quot;>"/>UsedCars App<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4>"/><x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5 class=&quot;text-center p-1&quot;>"/>Car Ads<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> This application was made only for presentation, all information is fabricated. If you want to try it feel free to use arbitrary information. It is an advertising application for used car sales. You can preview all ads, but you must login to create ads. When you login you can edit and delete your ads if you wish, and you can also leave a comment on your own or another ad. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL6_1" equiv-text="&lt;h6 class=&quot;text-left&quot;>
+                    "/> In this app we have two pages: Car Ads and Create Ad. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL5_1" equiv-text="&lt;h5 class=&quot;text-left p-1&quot;>"/>Instructions for Car Ads page:<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/><x id="START_HEADING_LEVEL6_1" equiv-text="&lt;h6 class=&quot;text-left&quot;>
+                    "/><x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol>
+                        "/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>On the left side are listings of ads. If you made an ad, you will have two lists, one with your ads and one with all others. There is also a filter button for filtering ads and Sort By... for sorting ads.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Clicking on one ad will open a tab with details about that ad on the right if you have accessed the app on a larger screen or if you are on your mobile phone at the bottom.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>If you clicked on your ad, the top right of the tab will show two buttons for editing and deleting the ad.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>That card contains pictures, information and a section where you can read and write a comment.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>If you click on <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faEdit&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>
+                            "/> (Edit) a new page will open with all your information that you can change. <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol>"/><x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">199</context>
+          <context context-type="linenumber">200,231</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-uc-createad" datatype="html">
-        <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>UsedCars App<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Create Ad<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    I have created a few items in the Create Ad page for information to fill,
-                    there may be more, but this is enough for presentation.<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL5_1" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Instructions for Create Ad page:<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-                <x id="START_HEADING_LEVEL6_1" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>While creating your ad you can add pictures, car information and
-                            information about yourself.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>If your model has an extra mark, click on the arrow to the right of
-                            the place for Model (the arrow points to the right) and a place will open
-                            where you can enter the mark of your car.
-                        <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Also If Brand or Model of your car is not on the list, click on the arrow
-                            between the Brand and the place for Model (the arrow points down)
-                            and two new places will open where you can enter the Brand and Model arbitrarily.
-                        <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>All fields are required.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                    <x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol&gt;"/>
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            </source>
+        <source><x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4 class=&quot;text-center p-1&quot;>"/>UsedCars App<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4>"/><x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5 class=&quot;text-center p-1&quot;>"/>Create Ad<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> I have created a few items in the Create Ad page for information to fill, there may be more, but this is enough for presentation.<x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL5_1" equiv-text="&lt;h5 class=&quot;text-left p-1&quot;>"/>Instructions for Create Ad page:<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/><x id="START_HEADING_LEVEL6_1" equiv-text="&lt;h6 class=&quot;text-left&quot;>
+                    "/><x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol>
+                        "/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>While creating your ad you can add pictures, car information and information about yourself.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>If your model has an extra mark, click on the arrow to the right of the place for Model (the arrow points to the right) and a place will open where you can enter the mark of your car. <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Also If Brand or Model of your car is not on the list, click on the arrow between the Brand and the place for Model (the arrow points down) and two new places will open where you can enter the Brand and Model arbitrarily. <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>All fields are required.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol>"/><x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">239</context>
+          <context context-type="linenumber">242,262</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-uc-edit" datatype="html">
-        <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>UsedCars App<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Edit Ad<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    In Edit Ad page you can add, change or delete images of your car and
-                    change information about your car and yourself.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            </source>
+        <source><x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4 class=&quot;text-center p-1&quot;>"/>UsedCars App<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4>"/><x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5 class=&quot;text-center p-1&quot;>"/>Edit Ad<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> In Edit Ad page you can add, change or delete images of your car and change information about your car and yourself. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">270</context>
+          <context context-type="linenumber">273,278</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-contact" datatype="html">
-        <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>How can you contact me?<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Not Logged in<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    If you are not logged in you can only contact me via
-                    Email, Facebook or LinkedIn.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Logged in<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    If you are logged in you can also contact me via the form,
-                    where you will enter a message in the field and click on Send.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    Above the field is a screen where you can see your messages and my responses to your messages.
-                    And only you and I can see that conversation.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    As an admin I log in with the admin account and reply to your message.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            </source>
+        <source><x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4 class=&quot;text-center p-1&quot;>"/>How can you contact me?<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4>"/><x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5 class=&quot;text-center p-1&quot;>"/>Not Logged in<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> If you are not logged in you can only contact me via Email, Facebook or LinkedIn. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5 class=&quot;text-center p-1&quot;>"/>Logged in<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> If you are logged in you can also contact me via the form, where you will enter a message in the field and click on Send. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> Above the field is a screen where you can see your messages and my responses to your messages. And only you and I can see that conversation. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> As an admin I log in with the admin account and reply to your message. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">286</context>
+          <context context-type="linenumber">289,306</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-login" datatype="html">
-        <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>How to log in?<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you have account<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    Just enter email and password to theirs fields and click on
-                    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Log In<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> or you can log in with your google account by
-                    clicking on <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    If you forgot password click on <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/>Forgot Password<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and follow the
-                    instructions.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you haven&apos;t account<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    Just click on <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/>Register<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and follow instructions.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            </source>
+        <source><x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4 class=&quot;text-center p-1&quot;>"/>How to log in?<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4>"/><x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5 class=&quot;text-center p-1&quot;>"/>If you have account<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> Just enter email and password to theirs fields and click on <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;loggin-btn&quot;>"/>Log In<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span> "/> or you can log in with your google account by clicking on <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faGoogle&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>"/>. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> If you forgot password click on <x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span class=&quot;login-text&quot;>"/>Forgot Password<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span> "/> and follow the instructions. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5 class=&quot;text-center p-1&quot;>"/>If you haven't account<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> Just click on <x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span class=&quot;login-text&quot;>"/>Register<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span> "/> and follow instructions. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">316</context>
+          <context context-type="linenumber">319,333</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="modal_info-tegister" datatype="html">
-        <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>How to register?<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    Just enter email and password to theirs fields and click on
-                    Log In button or you can log in with your google account by
-                    clicking on G button.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    If you forgot password click on Forgot Password and follow the
-                    instructions.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>If you haven&apos;t account<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    Just click on Register and follow instructions.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            </source>
+      <trans-unit id="modal_info-register" datatype="html">
+        <source><x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4 class=&quot;text-center p-1&quot;>"/>How to register?<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> Enter your email and password and confirm your password in their fields, then click Register or you can log in with your Google Account. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5 class=&quot;text-center p-1&quot;>"/>If you have account<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> Just click on Login and follow instructions. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">341</context>
+          <context context-type="linenumber">344,358</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-profile" datatype="html">
-        <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Your Profile<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>User Profile<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    Here you can see your profile picture, username and email.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    If you haven&apos;t picture or username you can set by clicking on
-                    <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>,
-                    or if you have you can change.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>Edit Profile<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    On Choose file (Browse)
-                    field you can select pictures from your device.
-                    On button <x id="START_TAG_FA-ICON_1" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
-                    near the picture you can delete picture.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    On field username you can set your
-                    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>username<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, or if was setted
-                    you can change.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    When you finish and you sure with changes click on button
-                    <x id="START_TAG_FA-ICON_2" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>,
-                    or if you don&apos;t want to edit click on
-                    <x id="START_TAG_FA-ICON_3" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    If you are logged in with your provider (Google)
-                    you can return your photo clicking on
-                    <x id="START_TAG_FA-ICON_4" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>,
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            </source>
+        <source><x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4 class=&quot;text-center p-1&quot;>"/>Your Profile<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4>"/><x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5 class=&quot;text-center p-1&quot;>"/>User Profile<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> Here you can see your profile picture, username and email. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> If you haven't picture or username you can set by clicking on <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faUserEdit&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>"/>, or if you have you can change. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5 class=&quot;text-center p-1&quot;>"/>Edit Profile<x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> On Choose file (Browse) field you can select pictures from your device. On button <x id="START_TAG_FA_ICON_1" ctype="x-fa_icon_1" equiv-text="&lt;fa-icon class=&quot;normal profile-x&quot; [icon]=&quot;faTimes&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>"/> near the picture you can delete picture. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> On field username you can set your <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;profile-username&quot;>"/>username<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>, or if was setted you can change. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> When you finish and you sure with changes click on button <x id="START_TAG_FA_ICON_2" ctype="x-fa_icon_2" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faCheck&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>"/>, or if you don't want to edit click on <x id="START_TAG_FA_ICON_3" ctype="x-fa_icon_3" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faTimes&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>"/>. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> If you are logged in with your provider (Google) you can return your photo clicking on <x id="START_TAG_FA_ICON_4" ctype="x-fa_icon_4" equiv-text="&lt;fa-icon class=&quot;normal profile-camera&quot; [icon]=&quot;faUndoAlt&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>"/>, <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">366</context>
+          <context context-type="linenumber">369,401</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-fp" datatype="html">
-        <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>If you forgot password<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    Enter your email and click on <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Reset Password<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    Then check your email inbox and click on link.
-                    This will take you to a page where you can enter a
-                    new password.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            </source>
+        <source><x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4 class=&quot;text-center p-1&quot;>"/>If you forgot password<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> Enter your email and click on <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;fp-btn&quot;>"/>Reset Password<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> Then check your email inbox and click on link. This will take you to a page where you can enter a new password. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">409</context>
+          <context context-type="linenumber">412,420</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-ve" datatype="html">
-        <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Verify your email<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    This help me to know that this email exist and
-                    that you are owner of this email.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            </source>
+        <source><x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4 class=&quot;text-center p-1&quot;>"/>Verify your email<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> This help me to know that this email exist and that you are owner of this email. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">428</context>
+          <context context-type="linenumber">431,435</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modal_info-error" datatype="html">
-        <source>
-                <x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4&gt;"/>Error<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4&gt;"/>
-                <x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6&gt;"/>
-                    The page you were looking for is currently down or does not exist,
-                    so please return to home page.
-                <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6&gt;"/>
-            </source>
+        <source><x id="START_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;h4 class=&quot;text-center p-1&quot;>"/>Error<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4" equiv-text="&lt;/h4>"/><x id="START_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;h6 class=&quot;text-left modal-info-text-indent&quot;>
+                    "/> The page you were looking for is currently down or does not exist, so please return to home page. <x id="CLOSE_HEADING_LEVEL6" ctype="x-h6" equiv-text="&lt;/h6>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modals/modals.component.html</context>
-          <context context-type="linenumber">443</context>
+          <context context-type="linenumber">446,450</context>
         </context-group>
       </trans-unit>
       <trans-unit id="app-title" datatype="html">
@@ -442,13 +226,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/applications.component.html</context>
           <context context-type="linenumber">4</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="app_angular-icon-title" datatype="html">
-        <source>App made in Angular.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/applications.component.html</context>
-          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="app_react-icon-title" datatype="html">
@@ -466,13 +243,18 @@
         </context-group>
       </trans-unit>
       <trans-unit id="app-subtitle" datatype="html">
-        <source>You can see whole code of these applications on my GitHub
-                <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>
-                    <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
-            </source>
+        <source>You can see whole code of these applications on my GitHub <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;app-github&quot; target=&quot;_blank&quot; href=&quot;https://github.com/stedjor/Stefan-Djordjevic-portfolio&quot;>
+                    "/><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faGithub&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/applications.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">34,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="app_angular-icon-title" datatype="html">
+        <source>App made in Angular.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/applications.component.html</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact-title" datatype="html">
@@ -483,29 +265,17 @@
         </context-group>
       </trans-unit>
       <trans-unit id="contact-text-1" datatype="html">
-        <source>You can contact me via Email, Facebook or LinkedIn.
-                        Or you can register and use the contact form to send messages,
-                        and a screen where you can see all the messages,
-                        ie. whole conversation we had.
-                        Clicking on that cat takes you to my GitHub profile where you can see whole
-                        code for this presentation, as well as other projects that I will post.
-                    </source>
+        <source>You can contact me via Email, Facebook or LinkedIn. Or you can register and use the contact form to send messages, and a screen where you can see all the messages, ie. whole conversation we had. Clicking on that cat takes you to my GitHub profile where you can see whole code for this presentation, as well as other projects that I will post. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.component.html</context>
-          <context context-type="linenumber">7</context>
+          <context context-type="linenumber">7,13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact-text-2" datatype="html">
-        <source>You can contact me via Email, Facebook or LinkedIn.
-                        Or you can use the contact form to send messages.
-                        And here is a screen where you can see all the messages,
-                        ie. whole conversation we had.
-                        Clicking on that cat takes you to my GitHub profile where you can see whole
-                        code for this presentation, as well as other projects that I will post.
-                    </source>
+        <source>You can contact me via Email, Facebook or LinkedIn. Or you can use the contact form to send messages. And here is a screen where you can see all the messages, ie. whole conversation we had. Clicking on that cat takes you to my GitHub profile where you can see whole code for this presentation, as well as other projects that I will post. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.component.html</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">16,22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact-cancel" datatype="html">
@@ -513,13 +283,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.component.html</context>
           <context context-type="linenumber">70</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="contact-nomessage" datatype="html">
-        <source>There is no message</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/contact/contact.component.html</context>
-          <context context-type="linenumber">108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="b5d7a9fd9d0a341decdc8b1a89d4f551d09cf2f6" datatype="html">
@@ -537,6 +300,13 @@
           <context context-type="linenumber">120</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="contact-nomessage" datatype="html">
+        <source>There is no message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="about-title" datatype="html">
         <source>Information about me</source>
         <context-group purpose="location">
@@ -545,63 +315,51 @@
         </context-group>
       </trans-unit>
       <trans-unit id="about-text" datatype="html">
-        <source>
-                <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>I graduated from the Technical College of Applied Studies in Kragujevac,
-                    the course of Informatics, gaining the qualification
-                    Bachelor of Science in Informatics (Appl.).<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>When I passed the last exam, I applied for practice at SAGA D.O.O company
-                    in
-                    Belgrade, lasting four months.
-                <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Shortly after completing the practice, i was employed at Quantox Technology
-                    company in Kragujevac office. I was employed for five months.
-                <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>After that I was worked on some different projects and then I graduated.
-                <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Because I can&apos;t speak about projects that I worked, I decide to made this
-                    presentation.
-                <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>By clicking on 
-                    <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Sr <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 
-                    you can download my CV in Serbian, and by clicking on 
-                    <x id="START_LINK_1" ctype="x-a" equiv-text="&lt;a&gt;"/>En <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 
-                    you can download CV in English.
-                <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-            </source>
+        <source><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>I graduated from the Technical College of Applied Studies in Kragujevac, the course of Informatics, gaining the qualification Bachelor of Science in Informatics (Appl.).<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>When I passed the last exam, I applied for practice at SAGA D.O.O company in Belgrade, lasting four months. <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Shortly after completing the practice, i was employed at Quantox Technology company in Kragujevac office. I was employed for five months. <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>After that I was worked on some different projects and then I graduated. <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Because I can't speak about projects that I worked, I decide to made this presentation. <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>By clicking on <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;./assets/cv-files/CV-Stefan Djordjevic-Sr.pdf&quot; download>"/>Sr <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot;
+                            [icon]=&quot;faDownload&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>
+                    "/> you can download my CV in Serbian, and by clicking on <x id="START_LINK_1" equiv-text="&lt;a href=&quot;./assets/cv-files/CV-Stefan Djordjevic-En.pdf&quot; download>"/>En <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot;
+                            [icon]=&quot;faDownload&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>
+                    "/> you can download CV in English. <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">6,28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about-subtitle" datatype="html">
         <source>Knowledge I possess</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.component.html</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about-skils" datatype="html">
         <source>Skils:
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Html5,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Css3 (Scss, Less),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Bootstrap,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>JavaScript (ES6, TypeScript, JQuery, Ajax, Angular, React),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Firebase<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Git (GitHub, GitLab, Bitbucket)<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                    </source>
+        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Html5,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Css3 (Scss, Less),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Bootstrap,<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>JavaScript (ES6, TypeScript, JQuery, Ajax, Angular, React),<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Firebase<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Git (GitHub, GitLab, Bitbucket)<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.component.html</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">44,49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about-languages" datatype="html">
         <source>Languages:
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Serbian<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>English<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/>
-                    </source>
+        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Serbian<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+        <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>English<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.component.html</context>
-          <context context-type="linenumber">50</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fs-denied-location" datatype="html">
+        <source><x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3 class=&quot;text-center&quot;>"/>FourSquare app<x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3>"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br>
+        "/><x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5>
+          "/> If you have accessed the aplication on your computer and when you are asked to allow the application to find your location by clicking on the block, you will not be able to acces the application. So please go to your browser settings and allow. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br>
+        "/> The path is: <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>settings/privacy and security/site settings/location.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br>
+        "/><x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5>
+          "/> If you have accessed the application from your phone or tablet you need to turn on your location and you can continue to use it. <x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/four-square/four-square.component.html</context>
+          <context context-type="linenumber">47,57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fs-venue-distance" datatype="html">
@@ -609,25 +367,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/four-square/venue/venue.component.html</context>
           <context context-type="linenumber">5</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="fs-denied-location" datatype="html">
-        <source>
-        <x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/>FourSquare app<x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
-        <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>
-          If you have accessed the aplication on your computer and when you are asked
-          to allow the application to find your location by clicking on the block,
-          you will not be able to acces the application. So please go to your browser settings and allow. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
-          The path is: <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>settings/privacy and security/site settings/location.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
-        <x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
-        <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/>
-          If you have accessed the application from your phone or tablet you need to turn on your
-          location and you can continue to use it.
-        <x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/>
-      </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/four-square/four-square.component.html</context>
-          <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="home-title" datatype="html">
@@ -638,610 +377,117 @@
         </context-group>
       </trans-unit>
       <trans-unit id="home-text-1" datatype="html">
-        <source>My name is Stefan Đorđević and I am
-                    Front end web developer.
-                    This project was made as presentation
-                    of knowledge that I own and as a project
-                    for my CV.
-                </source>
+        <source>My name is Stefan Đorđević and I am Front end web developer. This project was made as presentation of knowledge that I own and as a project for my CV. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">6,11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="home-text-2" datatype="html">
-        <source>Here You can find out more information
-                    about me on channel <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>About<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>,
-                    use some applications that I made on channel
-                    <x id="START_LINK_1" ctype="x-a" equiv-text="&lt;a&gt;"/>Applications<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
-                    and You can contact me via
-                    form, social networks or email on
-                    channel <x id="START_LINK_2" ctype="x-a" equiv-text="&lt;a&gt;"/>Contact<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
-                    Some applications need
-                    login, so if you want to try them out,
-                    register and enjoy. Registration is free.
-                </source>
+        <source>Here You can find out more information about me on channel <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/about']&quot; class=&quot;home-app-span&quot;>"/>About<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>, use some applications that I made on channel <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/applications']&quot; class=&quot;home-app-span&quot;>"/>Applications<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/> and You can contact me via form, social networks or email on channel <x id="START_LINK_2" equiv-text="&lt;a [routerLink]=&quot;['/contact']&quot; class=&quot;home-app-span&quot;>"/>Contact<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>. Some applications need login, so if you want to try them out, register and enjoy. Registration is free. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">12,22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="home-text-3" datatype="html">
-        <source>On this presentation u can see two buttons
-                    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> and
-                    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>menu<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> on
-                    bottom of the screen. By clicking on button
-                    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> you can read
-                    information about channel you are on,
-                    by clicking on button
-                    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>menu<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> you can change language
-                    and see list of all channels and you can navigate
-                    to them. Also You can go to next or previous
-                    channel by clicking on arrows on bottom.
-                </source>
+        <source>On this presentation u can see two buttons <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;home-btn-span&quot;>"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span> "/> and <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;home-btn-span&quot;>"/>menu<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span> "/> on bottom of the screen. By clicking on button <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;home-btn-span&quot;>"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span> "/> you can read information about channel you are on, by clicking on button <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;home-btn-span&quot;>"/>menu<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span> "/> you can change language and see list of all channels and you can navigate to them. Also You can go to next or previous channel by clicking on arrows on bottom. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">23,34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="home-text-4" datatype="html">
-        <source>More information about this project
-                    you can read when you click on
-                    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> button. You can see whole
-                    code when you click on this cat <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>
-                        <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
-                    <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
-                </source>
+        <source>More information about this project you can read when you click on <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;home-btn-span&quot;>"/>info<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span> "/> button. You can see whole code when you click on this cat <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;home-github&quot; target=&quot;_blank&quot;
+                        href=&quot;https://github.com/stedjor/Stefan-Djordjevic-portfolio&quot;>
+                        "/><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faGithub&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">38</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="profile-title-1" datatype="html">
-        <source>User Profile</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="profile-edit-profile" datatype="html">
-        <source>Edit Profile</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
-          <context context-type="linenumber">13</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="profile-email-p" datatype="html">
-        <source>Email: <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{userData.email}}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
-          <context context-type="linenumber">86</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="profile-title-2" datatype="html">
-        <source>Edit Profile</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
-          <context context-type="linenumber">38</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="profile-edit-cancel" datatype="html">
-        <source>Cancel</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
-          <context context-type="linenumber">43</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="profile-edit-save" datatype="html">
-        <source>Save</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
-          <context context-type="linenumber">47</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="profile-return_photo" datatype="html">
-        <source>Return photo from provider (google, facebook)</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
-          <context context-type="linenumber">60</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="profile-delete_photo" datatype="html">
-        <source>Delete Photo</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
-          <context context-type="linenumber">68</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="profile-file" datatype="html">
-        <source>Choose
-                  file</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
-          <context context-type="linenumber">75</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="profile-username-placeh" datatype="html">
-        <source>username</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
-          <context context-type="linenumber">84</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="login-title" datatype="html">
-        <source>Log In</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
-          <context context-type="linenumber">5</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="login-e_mail-title" datatype="html">
-        <source>Enter your email address</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
-          <context context-type="linenumber">11</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="login-e_mail-placeh" datatype="html">
-        <source>Email Address</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
-          <context context-type="linenumber">13</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="login-pass-title" datatype="html">
-        <source>Enter password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="login-pass-placeh" datatype="html">
-        <source>Password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="login-btn" datatype="html">
-        <source>Log In</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
-          <context context-type="linenumber">24</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="login-text-1" datatype="html">
-        <source>Or Login with: </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
-          <context context-type="linenumber">28</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="login-fa_google" datatype="html">
-        <source>Login with your google account</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
-          <context context-type="linenumber">33</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="login-link-1" datatype="html">
-        <source>Forgot Password?</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
-          <context context-type="linenumber">45</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="login-text-2" datatype="html">
-        <source>Don&apos;t have an account? <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Register<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
-          <context context-type="linenumber">49</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="register-title" datatype="html">
-        <source>Register</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
-          <context context-type="linenumber">5</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="register-e_mail-title" datatype="html">
-        <source>Enter your email</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
-          <context context-type="linenumber">11</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="register-e_mail-placeh" datatype="html">
-        <source>Email</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="register-pass-title" datatype="html">
-        <source>Enter password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="register-pass-placeh" datatype="html">
-        <source>Password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="register-cnf_pass-title" datatype="html">
-        <source>Type the same password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="register-cnf_pass-placeh" datatype="html">
-        <source>Confirm Password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="register-not_same_pass" datatype="html">
-        <source>
-              Password is not same
-            </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
-          <context context-type="linenumber">37</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="register-btn" datatype="html">
-        <source>Sign Up
-            </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
-          <context context-type="linenumber">44</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="register-text-1" datatype="html">
-        <source>Or Log In with: </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
-          <context context-type="linenumber">50</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="register-fa_google" datatype="html">
-        <source>Login with your google account</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
-          <context context-type="linenumber">55</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="register-text-2" datatype="html">
-        <source>Already have an account? <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Log In<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
-          <context context-type="linenumber">67</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="fp-title" datatype="html">
-        <source>Reset Password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/forgot-password/forgot-password.component.html</context>
-          <context context-type="linenumber">5</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="fp-text-1" datatype="html">
-        <source>Please enter your email address to request a password reset.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/forgot-password/forgot-password.component.html</context>
-          <context context-type="linenumber">9</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="fp-e_mail-title" datatype="html">
-        <source>Enter your email</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/forgot-password/forgot-password.component.html</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="fp-e_mail-placeh" datatype="html">
-        <source>Email Address</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/forgot-password/forgot-password.component.html</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="fp-btn" datatype="html">
-        <source>
-            Reset Password
-          </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/forgot-password/forgot-password.component.html</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="fp-text-2" datatype="html">
-        <source>Go back to ? <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Log In<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/forgot-password/forgot-password.component.html</context>
-          <context context-type="linenumber">28</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ve-title" datatype="html">
-        <source>Thank You for Registering</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/verify-email/verify-email.component.html</context>
-          <context context-type="linenumber">5</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ve-text-1" datatype="html">
-        <source>I am sent a confirmation email to <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{user.email}}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> .</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/verify-email/verify-email.component.html</context>
-          <context context-type="linenumber">9</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ve-text-2" datatype="html">
-        <source>Please check your email inbox and click on the link to verfiy your email address.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/verify-email/verify-email.component.html</context>
-          <context context-type="linenumber">10</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ve-btn" datatype="html">
-        <source>
-            Resend Verification Email
-          </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/verify-email/verify-email.component.html</context>
-          <context context-type="linenumber">14</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ve-text-3" datatype="html">
-        <source>Go back to?<x id="START_TAG_BUTTON" ctype="x-button" equiv-text="&lt;button&gt;"/>Log In<x id="CLOSE_TAG_BUTTON" ctype="x-button" equiv-text="&lt;/button&gt;"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/user/verify-email/verify-email.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">37,44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-clearfilters" datatype="html">
-        <source>
-                    Clear Filters
-                </source>
+        <source> Clear Filters </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-car_ads-sortby" datatype="html">
-        <source>Sort By...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">23,24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-sort-title" datatype="html">
         <source>Sort by...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="uc-car_ads-yourads" datatype="html">
-        <source>
-                            Your Ads
-                            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="INTERPOLATION" equiv-text="{{ usedYourCars.length }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
-                        </source>
+      <trans-unit id="uc-car_ads-sortby" datatype="html">
+        <source>Sort By...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">45</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-car_ads-your-created" datatype="html">
-        <source>Created: </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">63</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-no-ads-your" datatype="html">
-        <source>You have not created any ads.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">76</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-car_ads-your-more" datatype="html">
-        <source>Show More</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">80</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-car_ads-your-less" datatype="html">
-        <source>Show Less</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">81</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-car_ads-allads" datatype="html">
-        <source>
-                            All Ads
-                            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="INTERPOLATION" equiv-text="{{ usedAllCars.length }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
-                        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">91</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-car_ads-all-created" datatype="html">
-        <source>Created: </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">109</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-no-ads-all" datatype="html">
-        <source>No ads were created.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">122</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-car_ads-all-more" datatype="html">
-        <source>Show More</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">126</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-car_ads-all-less" datatype="html">
-        <source>Show Less</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">127</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-car_ads-filteredads" datatype="html">
-        <source>
-                            Filtered Ads
-                            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="INTERPOLATION" equiv-text="{{ filteredCars.length }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
-                        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">138</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-car_ads-filtered-created" datatype="html">
-        <source>Created:
-                                                </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">157</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-car_ads-filtered-more" datatype="html">
-        <source>Show More</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">171</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-car_ads-filtered-less" datatype="html">
-        <source>Show Less</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">172</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-no-ads-filtered" datatype="html">
-        <source>No ads with these criteria were found.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">176</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-car_ads-nodetails-text" datatype="html">
-        <source>
-                            <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
-                            Pick the car to see details
-                        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">189</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-carinfo" datatype="html">
-        <source>Car Info</source>
+        <source> Car Info </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">217</context>
+          <context context-type="linenumber">347,348</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-brand" datatype="html">
-        <source>Brand</source>
+        <source> Brand </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">223</context>
+          <context context-type="linenumber">355,356</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-brand-1" datatype="html">
-        <source>Brand...
-                                                        </source>
+        <source> Brand... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">229</context>
+          <context context-type="linenumber">369,370</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-filter-custom-brand-btn_title" datatype="html">
         <source>If the brand or model of your car is not on the list.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">251</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-filter-brand" datatype="html">
-        <source>Brand</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">263</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-filter-custom-brand_title" datatype="html">
-        <source>Enter Brand</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">267</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-filter-custom-model_title" datatype="html">
-        <source>Enter Model</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">275</context>
+          <context context-type="linenumber">407</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-age" datatype="html">
         <source>Age</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">284</context>
+          <context context-type="linenumber">449</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-from" datatype="html">
-        <source>From...
-                                                        </source>
+        <source> From... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">291</context>
+          <context context-type="linenumber">459,460</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-to" datatype="html">
-        <source>...To</source>
+        <source> ...To </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">304</context>
+          <context context-type="linenumber">479,480</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-Price" datatype="html">
         <source>Price</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">316</context>
+          <context context-type="linenumber">495</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1d71b3fd8d6923ff0fe406d25784b01a0b369f57" datatype="html">
         <source>From...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">321</context>
+          <context context-type="linenumber">502</context>
         </context-group>
         <note priority="1" from="description">From placeholder</note>
       </trans-unit>
@@ -1249,7 +495,7 @@
         <source>...To</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">328</context>
+          <context context-type="linenumber">513</context>
         </context-group>
         <note priority="1" from="description">To placeholder</note>
       </trans-unit>
@@ -1257,74 +503,205 @@
         <source>Fuel</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">339</context>
+          <context context-type="linenumber">525</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-fuel-1" datatype="html">
-        <source>Fuel...</source>
+        <source> Fuel... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">343</context>
+          <context context-type="linenumber">532,533</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-transmission" datatype="html">
-        <source>Transmission</source>
+        <source> Transmission </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">351</context>
+          <context context-type="linenumber">547,548</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">355</context>
+          <context context-type="linenumber">559,560</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-color" datatype="html">
         <source>Color</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">364</context>
+          <context context-type="linenumber">573</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">368</context>
+          <context context-type="linenumber">580,581</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-sallerinfo" datatype="html">
-        <source>Saller Info</source>
+        <source> Saller Info </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">380</context>
+          <context context-type="linenumber">601,602</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-country" datatype="html">
-        <source>Country...
-                                                </source>
+        <source> Country... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">387</context>
+          <context context-type="linenumber">613,614</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-town" datatype="html">
         <source>Town</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">397</context>
+          <context context-type="linenumber">626</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-reset" datatype="html">
-        <source>Reset</source>
+        <source> Reset </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">410</context>
+          <context context-type="linenumber">646,647</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_ads-save" datatype="html">
-        <source>
-                        <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/> Save
-                    </source>
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faSave&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon> "/> Save </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
-          <context context-type="linenumber">412</context>
+          <context context-type="linenumber">654,655</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-yourads" datatype="html">
+        <source> Your Ads <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;uc-list-badge&quot;>"/><x id="INTERPOLATION" equiv-text="{{ usedYourCars.length }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-your-created" datatype="html">
+        <source>Created: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-no-ads-your" datatype="html">
+        <source>You have not created any ads.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-your-more" datatype="html">
+        <source>Show More</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-your-less" datatype="html">
+        <source>Show Less</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-allads" datatype="html">
+        <source> All Ads <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;uc-list-badge&quot;>"/><x id="INTERPOLATION" equiv-text="{{ usedAllCars.length }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">147,148</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-all-created" datatype="html">
+        <source>Created: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">179</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-no-ads-all" datatype="html">
+        <source>No ads were created.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">195</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-all-more" datatype="html">
+        <source>Show More</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">203</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-all-less" datatype="html">
+        <source>Show Less</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">204</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-filteredads" datatype="html">
+        <source> Filtered Ads <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;uc-list-badge&quot;>"/><x id="INTERPOLATION" equiv-text="{{ filteredCars.length }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">225,226</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-filtered-created" datatype="html">
+        <source>Created: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">261</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-filtered-more" datatype="html">
+        <source>Show More</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">281</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-filtered-less" datatype="html">
+        <source>Show Less</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">284</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-no-ads-filtered" datatype="html">
+        <source> No ads with these criteria were found. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">290,291</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_ads-nodetails-text" datatype="html">
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faArrowDetails&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>
+              "/> Pick the car to see details </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">305,307</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-filter-brand" datatype="html">
+        <source>Brand</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">420</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-filter-custom-brand_title" datatype="html">
+        <source>Enter Brand</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">427</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-filter-custom-model_title" datatype="html">
+        <source>Enter Model</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-ads.component.html</context>
+          <context context-type="linenumber">439</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-title" datatype="html">
@@ -1342,12 +719,10 @@
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-file-1" datatype="html">
-        <source>Choose
-                                            file <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
-                                        </source>
+        <source>Choose file <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal create-ad-fa-images&quot; [icon]=&quot;faImages&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">32,33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-subtitle-2" datatype="html">
@@ -1358,11 +733,10 @@
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-brand" datatype="html">
-        <source>Brand...
-                                                            </source>
+        <source>Brand... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
-          <context context-type="linenumber">65</context>
+          <context context-type="linenumber">65,66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-custom-brand-btn_title" datatype="html">
@@ -1373,15 +747,18 @@
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-model" datatype="html">
-        <source>Model...
-                                                            </source>
+        <source>Model... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
-          <context context-type="linenumber">92</context>
+          <context context-type="linenumber">92,93</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-mark_placeh" datatype="html">
         <source>Mark</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
           <context context-type="linenumber">115</context>
@@ -1394,50 +771,9 @@
           <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
           <context context-type="linenumber">116</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="uc-create_ad-custom-brand_placeh" datatype="html">
-        <source>Brand</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
-          <context context-type="linenumber">127</context>
-        </context-group>
-        <note priority="1" from="description">Brand placeholder</note>
-      </trans-unit>
-      <trans-unit id="uc-create_ad-custom-brand_title" datatype="html">
-        <source>Enter Brand</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
-          <context context-type="linenumber">131</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-create_ad-custom-model_placeh" datatype="html">
-        <source>Model</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
-          <context context-type="linenumber">148</context>
-        </context-group>
-        <note priority="1" from="description">Model placeholder</note>
-      </trans-unit>
-      <trans-unit id="uc-create_ad-custom-model_title" datatype="html">
-        <source>Enter Model</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
-          <context context-type="linenumber">149</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-create_ad-custom-mark_placeh" datatype="html">
-        <source>Mark</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
-          <context context-type="linenumber">166</context>
-        </context-group>
-        <note priority="1" from="description">Mark placeholder</note>
-      </trans-unit>
-      <trans-unit id="uc-create_ad-custom-mark_title" datatype="html">
-        <source>Enter Mark</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
-          <context context-type="linenumber">167</context>
+          <context context-type="linenumber">116</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-age" datatype="html">
@@ -1463,11 +799,10 @@
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-color" datatype="html">
-        <source>Color...
-                                                            </source>
+        <source>Color... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
-          <context context-type="linenumber">221</context>
+          <context context-type="linenumber">221,222</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-mileage_placeh" datatype="html">
@@ -1486,11 +821,10 @@
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-doors" datatype="html">
-        <source>Doors...
-                                                            </source>
+        <source>Doors... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
-          <context context-type="linenumber">260</context>
+          <context context-type="linenumber">260,261</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-Engine_placeh" datatype="html">
@@ -1509,20 +843,17 @@
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-transmission" datatype="html">
-        <source>
-                                                                Transmission...
-                                                            </source>
+        <source> Transmission... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
-          <context context-type="linenumber">289</context>
+          <context context-type="linenumber">290,291</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-seats" datatype="html">
-        <source>Seats...
-                                                            </source>
+        <source>Seats... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
-          <context context-type="linenumber">309</context>
+          <context context-type="linenumber">309,310</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-subtitle-3" datatype="html">
@@ -1600,13 +931,64 @@
         </context-group>
       </trans-unit>
       <trans-unit id="uc-create_ad-createad-btn" datatype="html">
-        <source>
-                                    <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
-                                    Create Ad
-                                </source>
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faTools&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>
+                                    "/> Create Ad </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
-          <context context-type="linenumber">386</context>
+          <context context-type="linenumber">387,389</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-create_ad-custom-brand_placeh" datatype="html">
+        <source>Brand</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+        <note priority="1" from="description">Brand placeholder</note>
+      </trans-unit>
+      <trans-unit id="uc-create_ad-custom-brand_title" datatype="html">
+        <source>Enter Brand</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-create_ad-custom-model_placeh" datatype="html">
+        <source>Model</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
+          <context context-type="linenumber">148</context>
+        </context-group>
+        <note priority="1" from="description">Model placeholder</note>
+      </trans-unit>
+      <trans-unit id="uc-create_ad-custom-model_title" datatype="html">
+        <source>Enter Model</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
+          <context context-type="linenumber">149</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-create_ad-custom-mark_placeh" datatype="html">
+        <source>Mark</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+        <note priority="1" from="description">Mark placeholder</note>
+      </trans-unit>
+      <trans-unit id="uc-create_ad-custom-mark_title" datatype="html">
+        <source>Enter Mark</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
+          <context context-type="linenumber">167</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/create-ad/create-ad.component.html</context>
+          <context context-type="linenumber">167</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-title" datatype="html">
@@ -1624,12 +1006,10 @@
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-file" datatype="html">
-        <source>Choose
-                                            file <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
-                                        </source>
+        <source>Choose file <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal edit-ad-fa-images&quot; [icon]=&quot;faImages&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">32,33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-subtitle-2" datatype="html">
@@ -1640,11 +1020,10 @@
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-brand" datatype="html">
-        <source>Brand...
-                                                            </source>
+        <source>Brand... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">67</context>
+          <context context-type="linenumber">67,68</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-custom-brand-btn_title" datatype="html">
@@ -1660,6 +1039,10 @@
           <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
           <context context-type="linenumber">117</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
         <note priority="1" from="description">Mark placeholder</note>
       </trans-unit>
       <trans-unit id="uc-edit_ad-mark_title" datatype="html">
@@ -1668,58 +1051,16 @@
           <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
           <context context-type="linenumber">118</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="uc-edit_ad-custom-brand_placeh" datatype="html">
-        <source>Brand</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">129</context>
-        </context-group>
-        <note priority="1" from="description">Brand placeholder</note>
-      </trans-unit>
-      <trans-unit id="uc-edit_ad-custom-brand_title" datatype="html">
-        <source>Enter Brand</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">133</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-edit_ad-custom-model_placeh" datatype="html">
-        <source>Model</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">149</context>
-        </context-group>
-        <note priority="1" from="description">Model placeholder</note>
-      </trans-unit>
-      <trans-unit id="uc-edit_ad-custom-model_title" datatype="html">
-        <source>Enter Model</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">150</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="uc-edit_ad-custom-mark_placeh" datatype="html">
-        <source>Mark</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">168</context>
-        </context-group>
-        <note priority="1" from="description">Mark placeholder</note>
-      </trans-unit>
-      <trans-unit id="uc-edit_ad-custom-mark_title" datatype="html">
-        <source>Enter Mark</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">169</context>
+          <context context-type="linenumber">118</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-age" datatype="html">
-        <source>Age...
-                                                            </source>
+        <source>Age... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">178</context>
+          <context context-type="linenumber">178,179</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-price_placeh" datatype="html">
@@ -1731,19 +1072,17 @@
         <note priority="1" from="description">Price placeholder</note>
       </trans-unit>
       <trans-unit id="uc-edit_ad-fuel" datatype="html">
-        <source>Fuel...
-                                                            </source>
+        <source>Fuel... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">199</context>
+          <context context-type="linenumber">199,200</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-color" datatype="html">
-        <source>Color...
-                                                            </source>
+        <source>Color... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">214</context>
+          <context context-type="linenumber">214,215</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-mileage_placeh" datatype="html">
@@ -1762,11 +1101,10 @@
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-doors" datatype="html">
-        <source>Doors...
-                                                            </source>
+        <source>Doors... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">246</context>
+          <context context-type="linenumber">246,247</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-Engine_placeh" datatype="html">
@@ -1785,20 +1123,17 @@
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-transmission" datatype="html">
-        <source>
-                                                                Transmission...
-                                                            </source>
+        <source> Transmission... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">268</context>
+          <context context-type="linenumber">269,270</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-seats" datatype="html">
-        <source>Seats...
-                                                            </source>
+        <source>Seats... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">285</context>
+          <context context-type="linenumber">285,286</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-subtitle-3" datatype="html">
@@ -1809,11 +1144,10 @@
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-country" datatype="html">
-        <source>Country...
-                                                    </source>
+        <source>Country... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">305</context>
+          <context context-type="linenumber">305,306</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-town_placeh" datatype="html">
@@ -1884,106 +1218,147 @@
         </context-group>
       </trans-unit>
       <trans-unit id="uc-edit_ad-save" datatype="html">
-        <source>
-                                            <x id="START_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;fa-icon&gt;"/><x id="CLOSE_TAG_FA-ICON" ctype="x-fa-icon" equiv-text="&lt;/fa-icon&gt;"/>
-                                            Save
-                                        </source>
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon class=&quot;normal&quot; [icon]=&quot;faSave&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon>
+                                            "/> Save </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
-          <context context-type="linenumber">358</context>
+          <context context-type="linenumber">359,361</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="uc-car_details-edit" datatype="html">
-        <source>Edit</source>
+      <trans-unit id="uc-edit_ad-custom-brand_placeh" datatype="html">
+        <source>Brand</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-details/car-details.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+        <note priority="1" from="description">Brand placeholder</note>
+      </trans-unit>
+      <trans-unit id="uc-edit_ad-custom-brand_title" datatype="html">
+        <source>Enter Brand</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
+          <context context-type="linenumber">133</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="uc-car_details-delete" datatype="html">
-        <source>Delete</source>
+      <trans-unit id="uc-edit_ad-custom-model_placeh" datatype="html">
+        <source>Model</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-details/car-details.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
+          <context context-type="linenumber">149</context>
+        </context-group>
+        <note priority="1" from="description">Model placeholder</note>
+      </trans-unit>
+      <trans-unit id="uc-edit_ad-custom-model_title" datatype="html">
+        <source>Enter Model</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
+          <context context-type="linenumber">150</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-edit_ad-custom-mark_placeh" datatype="html">
+        <source>Mark</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+        <note priority="1" from="description">Mark placeholder</note>
+      </trans-unit>
+      <trans-unit id="uc-edit_ad-custom-mark_title" datatype="html">
+        <source>Enter Mark</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
+          <context context-type="linenumber">169</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/edit-ad/edit-ad.component.html</context>
+          <context context-type="linenumber">169</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_details-created" datatype="html">
         <source>Created: </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-details/car-details.component.html</context>
-          <context context-type="linenumber">62</context>
+          <context context-type="linenumber">116</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_details-carinfo" datatype="html">
-        <source>Car Info</source>
+        <source> Car Info </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-details/car-details.component.html</context>
-          <context context-type="linenumber">73</context>
+          <context context-type="linenumber">129,130</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_details-carinfo-infos" datatype="html">
-        <source>
-                    <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div&gt;"/>
-                        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Date: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ detailsOfCar.car.age }}"/> year<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-                        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Engine: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="INTERPOLATION_1" equiv-text="{{ detailsOfCar.car.engine | number }}"/>cm³<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-                        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Transmission: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="INTERPOLATION_2" equiv-text="{{ detailsOfCar.car.transmission }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-                    <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
-                    <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div&gt;"/>
-                        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Kw/Ks:
-                            <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="INTERPOLATION_3" equiv-text="{{ detailsOfCar.car.kwKs }}"/>/(<x id="INTERPOLATION_4" equiv-text="{{ detailsOfCar.car.kwKs * ks | number: &apos;0.0-0&apos;}}"/>)<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-                        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Mieleage: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="INTERPOLATION_5" equiv-text="{{ detailsOfCar.car.mileage | number }}"/>km<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-                        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Fuel: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="INTERPOLATION_6" equiv-text="{{ detailsOfCar.car.fuels }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-                    <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
-                    <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div&gt;"/>
-                        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Seats: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="INTERPOLATION_7" equiv-text="{{ detailsOfCar.car.seats }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-                        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Doors: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="INTERPOLATION_8" equiv-text="{{ detailsOfCar.car.doors }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-                        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Color: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="INTERPOLATION_9" equiv-text="{{ detailsOfCar.car.colors }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-                    <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
-                </source>
+        <source><x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div class=&quot;col-md-4&quot;>
+            "/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Date: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="INTERPOLATION" equiv-text="{{ detailsOfCar.car.age }}"/> year<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Engine: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="INTERPOLATION_1" equiv-text="{{ detailsOfCar.car.engine | number }}"/>cm³ <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Transmission: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="INTERPOLATION_2" equiv-text="{{ detailsOfCar.car.transmission }}"/> <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/><x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div>"/><x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div class=&quot;col-md-4&quot;>
+            "/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Kw/Ks: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="INTERPOLATION_3" equiv-text="{{ detailsOfCar.car.kwKs }}"/>/(<x id="INTERPOLATION_4" equiv-text="{{
+                detailsOfCar.car.kwKs * ks | number: &quot;0.0-0&quot;
+              }}"/>) <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Mieleage: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="INTERPOLATION_5" equiv-text="{{ detailsOfCar.car.mileage | number }}"/>km <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Fuel: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="INTERPOLATION_6" equiv-text="{{ detailsOfCar.car.fuels }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/><x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div>"/><x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div class=&quot;col-md-4&quot;>
+            "/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Seats: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="INTERPOLATION_7" equiv-text="{{ detailsOfCar.car.seats }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Doors: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="INTERPOLATION_8" equiv-text="{{ detailsOfCar.car.doors }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Color: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="INTERPOLATION_9" equiv-text="{{ detailsOfCar.car.colors }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/><x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-details/car-details.component.html</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">132,158</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_details-sallerinfo" datatype="html">
-        <source>Saller Info</source>
+        <source> Saller Info </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-details/car-details.component.html</context>
-          <context context-type="linenumber">93</context>
+          <context context-type="linenumber">162,163</context>
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_details-sallerinfo-infos" datatype="html">
-        <source>
-                    <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div&gt;"/>
-                        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Country: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ detailsOfCar.saller.countries }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-                    <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
-                    <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div&gt;"/>
-                        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Town: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="INTERPOLATION_1" equiv-text="{{ detailsOfCar.saller.town }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-                    <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
-                    <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div&gt;"/>
-                        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Adress: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="INTERPOLATION_2" equiv-text="{{ detailsOfCar.saller.adress }}"/>
-                            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="INTERPOLATION_3" equiv-text="{{ detailsOfCar.saller.adressNumber }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
-                    <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
-                </source>
+        <source><x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div class=&quot;col-md-4&quot;>
+            "/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>
+              "/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Country: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="INTERPOLATION" equiv-text="{{ detailsOfCar.saller.countries }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/><x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div>"/><x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div class=&quot;col-md-4&quot;>
+            "/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>
+              "/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Town: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="INTERPOLATION_1" equiv-text="{{ detailsOfCar.saller.town }}"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/><x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div>"/><x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div class=&quot;col-md-4&quot;>
+            "/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>
+              "/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Adress: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="INTERPOLATION_2" equiv-text="{{ detailsOfCar.saller.adress }}"/> <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_3" equiv-text="{{ detailsOfCar.saller.adressNumber }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/><x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-details/car-details.component.html</context>
-          <context context-type="linenumber">94</context>
+          <context context-type="linenumber">165,176</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="uc-car_details-nocomments" datatype="html">
-        <source>There is no comments</source>
+      <trans-unit id="uc-car_details-edit" datatype="html">
+        <source>Edit</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-details/car-details.component.html</context>
-          <context context-type="linenumber">162</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_details-delete" datatype="html">
+        <source>Delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-details/car-details.component.html</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ed6bba7bcef02df179ade63b5e0530a8442a1911" datatype="html">
         <source>Write a comment...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-details/car-details.component.html</context>
-          <context context-type="linenumber">171</context>
+          <context context-type="linenumber">276</context>
         </context-group>
         <note priority="1" from="description">write a comment placeholder</note>
+      </trans-unit>
+      <trans-unit id="uc-car_details-nocomments" datatype="html">
+        <source> There is no comments </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-details/car-details.component.html</context>
+          <context context-type="linenumber">265,266</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_details-notLogedin" datatype="html">
+        <source> You have to <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/login']&quot;>"/>login<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a> "/> to be able to read the comments. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/car-ads/car-details/car-details.component.html</context>
+          <context context-type="linenumber">300,301</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="uc-car_header-title" datatype="html">
         <source>UsedCars</source>
@@ -2000,23 +1375,335 @@
         </context-group>
       </trans-unit>
       <trans-unit id="uc-car_header-li-2" datatype="html">
-        <source>
-                    Create Ad</source>
+        <source> Create Ad</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/applications/used-cars/cars-header/cars-header.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="uc-car_header-li-3" datatype="html">
+        <source> Login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/applications/used-cars/cars-header/cars-header.component.html</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="error-content" datatype="html">
-        <source>
-            <x id="START_HEADING_LEVEL1" ctype="x-h1" equiv-text="&lt;h1&gt;"/>404<x id="CLOSE_HEADING_LEVEL1" ctype="x-h1" equiv-text="&lt;/h1&gt;"/> 
-            <x id="START_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;h2&gt;"/>Page not found<x id="CLOSE_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;/h2&gt;"/>           
-            <x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/>You might want to go to the
-                 <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>home<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> page<x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/>
-        </source>
+        <source><x id="START_HEADING_LEVEL1" ctype="x-h1" equiv-text="&lt;h1>"/>404<x id="CLOSE_HEADING_LEVEL1" ctype="x-h1" equiv-text="&lt;/h1>"/><x id="START_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;h2>"/>Page not found<x id="CLOSE_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;/h2>"/><x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3>"/>You might want to go to the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/home']&quot; routerLinkActive=&quot;router-link-active&quot;>"/>home<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a> "/> page<x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/error/error.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="linenumber">4,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile-title-1" datatype="html">
+        <source>User Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile-edit-profile" datatype="html">
+        <source>Edit Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile-email-p" datatype="html">
+        <source>Email: <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/><x id="INTERPOLATION" equiv-text="{{userData.email}}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile-title-2" datatype="html">
+        <source>Edit Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile-edit-cancel" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile-edit-save" datatype="html">
+        <source>Save</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile-return_photo" datatype="html">
+        <source>Return photo from provider (google, facebook)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile-file" datatype="html">
+        <source>Choose file</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile-username-placeh" datatype="html">
+        <source>username</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile-delete_photo" datatype="html">
+        <source>Delete Photo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/profile/profile.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-title" datatype="html">
+        <source>Log In</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-e_mail-title" datatype="html">
+        <source>Enter your email address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-e_mail-placeh" datatype="html">
+        <source>Email Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-pass-title" datatype="html">
+        <source>Enter password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-pass-placeh" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-btn" datatype="html">
+        <source>Log In</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-text-1" datatype="html">
+        <source>Or Login with: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-fa_google" datatype="html">
+        <source>Login with your google account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-link-1" datatype="html">
+        <source>Forgot Password?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-text-2" datatype="html">
+        <source>Don't have an account? <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;redirect login-link-btn&quot;
+              routerLink=&quot;/register&quot;>"/>Register<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/login/login.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-title" datatype="html">
+        <source>Register</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-e_mail-title" datatype="html">
+        <source>Enter your email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-e_mail-placeh" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-pass-title" datatype="html">
+        <source>Enter password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-pass-placeh" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-cnf_pass-title" datatype="html">
+        <source>Type the same password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-cnf_pass-placeh" datatype="html">
+        <source>Confirm Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-not_same_pass" datatype="html">
+        <source> Password is not same </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-btn" datatype="html">
+        <source>Sign Up </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-text-1" datatype="html">
+        <source>Or Log In with: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-fa_google" datatype="html">
+        <source>Login with your google account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-text-2" datatype="html">
+        <source>Already have an account? <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;redirect register-link-btn&quot;
+              routerLink=&quot;/login&quot;>"/>Log In<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fp-title" datatype="html">
+        <source>Reset Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fp-text-1" datatype="html">
+        <source>Please enter your email address to request a password reset.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fp-e_mail-title" datatype="html">
+        <source>Enter your email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fp-e_mail-placeh" datatype="html">
+        <source>Email Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fp-btn" datatype="html">
+        <source> Reset Password </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fp-text-2" datatype="html">
+        <source>Go back to ? <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;redirect fp-link-btn&quot; routerLink=&quot;/login&quot;>"/>Log In<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ve-title" datatype="html">
+        <source>Thank You for Registering</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/verify-email/verify-email.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ve-btn" datatype="html">
+        <source> Resend Verification Email </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/verify-email/verify-email.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ve-text-3" datatype="html">
+        <source>Go back to?<x id="START_TAG_BUTTON" ctype="x-button" equiv-text="&lt;button class=&quot;btn ve-link-btn&quot; [routerLink]=&quot;['/login']&quot;>"/>Log In<x id="CLOSE_TAG_BUTTON" ctype="x-button" equiv-text="&lt;/button>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/verify-email/verify-email.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ve-text-1" datatype="html">
+        <source>I am sent a confirmation email to <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;ve-link-btn&quot;>"/><x id="INTERPOLATION" equiv-text="{{user.email}}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong> "/> .</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/verify-email/verify-email.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ve-text-2" datatype="html">
+        <source>Please check your email inbox and click on the link to verfiy your email address.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/verify-email/verify-email.component.html</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
     </body>

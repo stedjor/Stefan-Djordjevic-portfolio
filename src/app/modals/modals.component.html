@@ -90,14 +90,11 @@
             <div i18n="@@modal_info-home" class="modal-body modal-info-body">
                 <h4 class="text-center p-2">Information about project</h4>
                 <h6 class="text-left modal-info-text-indent">
-                    Whole project was written in Angular Framework version 8 with some extra
+                    Whole project was written in Angular Framework with some extra
                     tools. I tried to use many different possibilities that Angular provides.</h6>
                 <h6 class="text-left modal-info-text-indent">
                     For the layout I used Bootstrap framework and Less preprocessor and for the
-                    animations I used JQuery framework. You are probably wondering why I didn't
-                    use Angular Material and Angular Animations, I was guided by fact that "the
-                    fastest / shortest way is the one you know", namely I don't have much experience but I
-                    will do my best to perfect it.</h6>
+                    animations I used JQuery framework.</h6>
                 <h6 class="text-left modal-info-text-indent">
                     Since I don't know the backend programming languages so well, I decided to use
                     the Firebase database and connect it to Angular.
@@ -203,8 +200,10 @@
                     This application was made only for presentation,
                     all information is fabricated. If you want to try it feel free
                     to use arbitrary information. It is an advertising application for
-                    used car sales. You can preview and create ads in it, you can only
-                    modify or delete your ads. You can also leave a comment on each ad.
+                    used car sales.
+                    You can preview all ads, but you must login to create ads. 
+                    When you login you can edit and delete your ads if you wish, 
+                    and you can also leave a comment on your own or another ad.
                 </h6>
                 <h6 class="text-left">
                     In this app we have two pages: Car Ads and Create Ad.
@@ -338,21 +337,15 @@
             <button type="button" class="btn close-info" (click)="closeInfo()">
                 <fa-icon class="normal" [icon]="faTimes"></fa-icon>
             </button>
-            <div i18n="@@modal_info-tegister" class="modal-body modal-info-body">
+            <div i18n="@@modal_info-register" class="modal-body modal-info-body">
                 <h4 class="text-center p-1">How to register?</h4>
                 <!-- <h5 class="text-center p-1">If you have account</h5> -->
                 <h6 class="text-left modal-info-text-indent">
-                    Just enter email and password to theirs fields and click on
-                    Log In button or you can log in with your google account by
-                    clicking on G button.
+                    Enter your email and password and confirm your password in their fields, then click Register or you can log in with your Google Account.
                 </h6>
+                <h5 class="text-center p-1">If you have account</h5>
                 <h6 class="text-left modal-info-text-indent">
-                    If you forgot password click on Forgot Password and follow the
-                    instructions.
-                </h6>
-                <h5 class="text-center p-1">If you haven't account</h5>
-                <h6 class="text-left modal-info-text-indent">
-                    Just click on Register and follow instructions.
+                    Just click on Login and follow instructions.
                 </h6>
             </div>
         </div>

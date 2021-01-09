@@ -1,7 +1,12 @@
 import { AngularFireStorage } from '@angular/fire/storage';
 import { AuthService } from './../../../../_services/auth/auth.service';
 import { AdsService } from './../../../../_services/cars/ads.service';
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  FormControl,
+} from '@angular/forms';
 import { Cars } from './../../../../_services/cars/cars';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -10,7 +15,7 @@ import {
   faEdit,
   faTrashAlt,
   faComments,
-  faTimes
+  faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 import { faTelegramPlane } from '@fortawesome/free-brands-svg-icons';
 
@@ -19,14 +24,15 @@ declare var $: any;
 @Component({
   selector: 'app-car-details',
   templateUrl: './car-details.component.html',
-  styleUrls: ['./car-details.component.less']
+  styleUrls: ['./car-details.component.less'],
 })
 export class CarDetailsComponent implements OnInit {
   detailsOfCar: Cars;
+  user = null;
   defaultPhoto = './assets/deafult-profile-icon.png';
-  currentUser: any;
+  currentUser?: any;
   index = 0;
-  currentUserId: string;
+  currentUserId?: string;
   currentAutor: string;
   currentAutorEmail: string;
   urlId: string;
@@ -50,45 +56,51 @@ export class CarDetailsComponent implements OnInit {
     private adsService: AdsService,
     private authService: AuthService,
     private afStorage: AngularFireStorage,
-    private fb: FormBuilder,
+    private fb: FormBuilder
   ) {
-    this.route.url.subscribe(val => this.getCars(val[0].path));
+    this.route.url.subscribe((val) => this.getCars(val[0].path));
   }
 
   ngOnInit() {
-    const user = JSON.parse(localStorage.getItem('user'));
-    this.getUser(user?.uid);
+    this.user = JSON.parse(localStorage.getItem('user'));
+    this.getUser(this.user?.uid);
     this.commentForm = this.fb.group({
       autor: '',
       autorEmail: '',
       createdDate: Date,
       message: ['', Validators.required],
-      photoURL: ''
+      photoURL: '',
     });
-    this.commentDate = formatDate(new Date(), 'MMM dd, yyyy, hh:mm:ss a', 'en-US');
+    this.commentDate = formatDate(
+      new Date(),
+      'MMM dd, yyyy, hh:mm:ss a',
+      'en-US'
+    );
   }
 
   getCars(id: string) {
-    this.adsService.getCarData(id).subscribe(car => {
+    this.adsService.getCarData(id).subscribe((car) => {
       this.detailsOfCar = car;
 
       this.sendImagesUrl = this.detailsOfCar.images;
       if (this.detailsOfCar.comments !== null) {
         this.comments = this.detailsOfCar.comments;
       }
-      this.detailsOfCar.images.length !== 0 ?
-        this.imageURL = this.detailsOfCar.images[this.index] :
-        this.imageURL = './assets/no-car.png';
+      this.detailsOfCar.images.length !== 0
+        ? (this.imageURL = this.detailsOfCar.images[this.index])
+        : (this.imageURL = './assets/no-car.png');
       this.carDate = this.detailsOfCar.date;
     });
     this.urlId = id;
   }
 
   deleteCar() {
-    const confirmDelete = window.confirm('Do you realy want to delete this ads?');
+    const confirmDelete = window.confirm(
+      'Do you realy want to delete this ads?'
+    );
     if (confirmDelete) {
       this.adsService.deleteCars(this.urlId);
-      this.detailsOfCar.images.map(img => this.deleteImage(img));
+      this.detailsOfCar.images.map((img) => this.deleteImage(img));
     }
   }
 
@@ -125,16 +137,20 @@ export class CarDetailsComponent implements OnInit {
   }
 
   getUser(id: string) {
-    this.authService.getUserData(id).subscribe(user => {
-      this.currentUser = user;
-      this.currentUserId = this.currentUser.uid;
-      this.currentAutor = this.currentUser.displayName;
-      this.currentAutorEmail = this.currentUser.email;
+    this.authService.getUserData(id).subscribe((user?) => {
+      if (user) {
+        this.currentUser = user;
+        this.currentUserId = this.currentUser.uid;
+        this.currentAutor = this.currentUser.displayName;
+        this.currentAutorEmail = this.currentUser.email;
+      }
     });
   }
 
   deleteComment(index: number) {
-    const confirmDelete = window.confirm('Do you realy want to delete this message?');
+    const confirmDelete = window.confirm(
+      'Do you realy want to delete this message?'
+    );
     if (confirmDelete) {
       this.comments.splice(index, 1);
       this.adsService.updateComments(this.urlId, this.comments);
@@ -142,10 +158,22 @@ export class CarDetailsComponent implements OnInit {
   }
 
   addComment() {
-    this.commentForm.setControl('autor', new FormControl(this.currentUser.displayName));
-    this.commentForm.setControl('autorEmail', new FormControl(this.currentUser.email));
-    this.commentForm.setControl('createdDate', new FormControl(this.commentDate));
-    this.commentForm.setControl('photoURL', new FormControl(this.currentUser.photoURL));
+    this.commentForm.setControl(
+      'autor',
+      new FormControl(this.currentUser.displayName)
+    );
+    this.commentForm.setControl(
+      'autorEmail',
+      new FormControl(this.currentUser.email)
+    );
+    this.commentForm.setControl(
+      'createdDate',
+      new FormControl(this.commentDate)
+    );
+    this.commentForm.setControl(
+      'photoURL',
+      new FormControl(this.currentUser.photoURL)
+    );
     this.comments.push(this.commentForm.value);
     this.adsService.updateComments(this.urlId, this.comments);
     this.commentForm.reset();

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
-import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 // Components
 import { AppComponent } from './app.component';
@@ -76,7 +76,6 @@ import { ErrorComponent } from './error/error.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FormBuilder,
     ReactiveFormsModule,
     CommonModule,
     HttpClientModule,

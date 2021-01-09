@@ -1,429 +1,679 @@
 <div class="container mt-2">
-    <div class="row">
-        <div class="col-md-4 pl-2 pr-1">
-            <div class="d-flex justify-content-between flex-wrap mb-2 filter-box">
-                <!-- Filter -->
-                <button type="button" class="btn btn-sm filter-btn mb-1" data-toggle="modal" data-target="#filterModal"
-                    (click)="openFilterModal()">
-                    Filter
-                </button>
-                <!-- Clear filters -->
-                <button i18n="@@uc-car_ads-clearfilters" type="button" class="btn btn-sm filter-clear-btn mb-1"
-                    (click)="clearFilters()" [hidden]="filters.length == 0">
-                    Clear Filters
-                </button>
-                <!-- Sort -->
-                <div class="input-group input-group-sm w-auto sort-input-group mb-1">
-                    <select i18n-title="@@uc-car_ads-sort-title" title="Sort by..."
-                        class="custom-select h-auto sort-select" id="inputGroupSelect02" [(ngModel)]="selectedOpt"
-                        (change)="chooseSort($event.target.value)">
-                        <option i18n="@@uc-car_ads-sortby" disabled>Sort By...</option>
-                        <option>price</option>
-                        <option>age</option>
-                    </select>
-                    <div class="input-group-append sort-append" (click)="sortCars()">
-                        <label class="input-group-text" for="inputGroupSelect02">
-                            <fa-icon class="normal" [icon]="faArrow"></fa-icon>
-                        </label>
-                    </div>
-                </div>
-            </div>
+  <div class="row">
+    <div class="col-md-4 pl-2 pr-1">
+      <div class="d-flex justify-content-between flex-wrap mb-2 filter-box">
+        <!-- Filter -->
+        <button
+          type="button"
+          class="btn btn-sm filter-btn mb-1"
+          data-toggle="modal"
+          data-target="#filterModal"
+          (click)="openFilterModal()"
+        >
+          Filter
+        </button>
+        <!-- Clear filters -->
+        <button
+          i18n="@@uc-car_ads-clearfilters"
+          type="button"
+          class="btn btn-sm filter-clear-btn mb-1"
+          (click)="clearFilters()"
+          [hidden]="filters.length == 0"
+        >
+          Clear Filters
+        </button>
+        <!-- Sort -->
+        <div class="input-group input-group-sm w-auto sort-input-group mb-1">
+          <select
+            i18n-title="@@uc-car_ads-sort-title"
+            title="Sort by..."
+            class="custom-select h-auto sort-select"
+            id="inputGroupSelect02"
+            [(ngModel)]="selectedOpt"
+            (change)="chooseSort($event.target.value)"
+          >
+            <option i18n="@@uc-car_ads-sortby" disabled>Sort By...</option>
+            <option>price</option>
+            <option>age</option>
+          </select>
+          <div class="input-group-append sort-append" (click)="sortCars()">
+            <label class="input-group-text" for="inputGroupSelect02">
+              <fa-icon class="normal" [icon]="faArrow"></fa-icon>
+            </label>
+          </div>
+        </div>
+      </div>
 
-            <div class="d-flex justify-content-between flex-wrap mb-2">
-                <div class="filter-item mb-1" *ngFor="let filter of filters; let i = index">
-                    <p class="">{{filter}}</p>
-                    <div class="filter-delete" (click)="deleteFilter(i)">
-                        <fa-icon class="normal" [icon]="faTimes"></fa-icon>
-                    </div>
-                </div>
-            </div>
-            <!-- Your Ads -->
-            <div class="accordion mb-2" *ngIf="filters.length === 0">
-                <div class="card uc-list-card">
-                    <div class="card-header p-0">
-                        <a i18n="@@uc-car_ads-yourads" class="uc-list-button" type="button" data-toggle="collapse"
-                            [attr.aria-expanded]="!isCollapsedYourAds" (click)="colapseList('YourAds')">
-                            Your Ads
-                            <span class="uc-list-badge">{{ usedYourCars.length }}</span>
-                        </a>
-                    </div>
-                    <div id="collapseYourAds" class="collapse show">
-                        <div class="list-scrollbar-your scrollbar scrollbar-primary" *ngIf="usedYourCars.length > 0; else noUsedYourCars">
-                            <div class="list-group" *ngFor="let car of usedYourCars">
-                                <a class="list-group-item list-group-item-action uc-list-item p-0"
-                                    (click)="onClick(car.id)" routerLink="{{car.id}}" routerLinkActive="routerActive">
-                                    <div class="w-100 d-flex justify-content-between">
-                                        <div class="uc-li-content">
-                                            <img class="uc-list-img" src="{{ car.images.length !== 0 ? 
-                                                car.images[0]: defaultPhoto }}" alt="First image of car">
-                                        </div>
-                                        <div class="uc-li-content">
-                                            <strong class="uc-list-brand">{{ car.car.brand }},
-                                                {{ car.car.model }} {{ car.car.carMark }}</strong>
-                                            <p class="uc-list-date"><i i18n="@@uc-car_ads-your-created">Created: </i>
-                                                {{ car.date.toDate() | date:'MMM dd, yyy'}} </p>
-                                        </div>
-                                        <div class="uc-li-content">
-                                            <strong class="uc-list-brand">{{car.car.price | number}}&euro;</strong>
-                                            <p class="uc-list-date">{{car.car.age}}</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <ng-template #noUsedYourCars>
-                            <div class="uc-no-ads uc-no-ads-your">
-                                <p i18n="@@uc-no-ads-your">You have not created any ads.</p>
-                            </div>
-                        </ng-template>
-                        <div class="uc-show-more-less" (click)="showMoreLess('your')" *ngIf="usedYourCars.length >= 7">
-                            <a *ngIf="!moreLessYour" i18n="@@uc-car_ads-your-more">Show More</a>
-                            <a *ngIf="moreLessYour" i18n="@@uc-car_ads-your-less">Show Less</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- All Ads -->
-            <div class="accordion mb-2" *ngIf="filters.length === 0">
-                <div class="card uc-list-card">
-                    <div class="card-header p-0">
-                        <a i18n="@@uc-car_ads-allads" class="uc-list-button" type="button"
-                            [attr.aria-expanded]="!isCollapsedAllAds" (click)="colapseList('AllAds')">
-                            All Ads
-                            <span class="uc-list-badge">{{ usedAllCars.length }}</span>
-                        </a>
-                    </div>
-                    <div id="collapseAllAds" class="collapse show">
-                        <div class="list-scrollbar-all scrollbar scrollbar-primary" *ngIf="usedAllCars.length > 0; else noUsedAllCars">
-                            <div class="list-group" *ngFor="let car of usedAllCars">
-                                <a class="list-group-item list-group-item-action uc-list-item p-0"
-                                    (click)="onClick(car.id)" routerLink="{{car.id}}" routerLinkActive="routerActive">
-                                    <div class="w-100 d-flex justify-content-between">
-                                        <div class="uc-li-content">
-                                            <img class="uc-list-img" src="{{ car.images[0] }}" alt="First image of car"
-                                                height="50px">
-                                        </div>
-                                        <div class="uc-li-content">
-                                            <strong class="uc-list-brand">{{ car.car.brand }},
-                                                {{ car.car.model }} {{ car.car.carMark }}</strong>
-                                            <p class="uc-list-date"><i i18n="@@uc-car_ads-all-created">Created: </i>
-                                                {{ car.date.toDate() | date:'MMM dd, yyy'}} </p>
-                                        </div>
-                                        <div class="uc-li-content">
-                                            <strong class="uc-list-brand">{{car.car.price | number}}&euro;</strong>
-                                            <p class="uc-list-date">{{car.car.age}}</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <ng-template #noUsedAllCars>
-                            <div class="uc-no-ads uc-no-ads-all">
-                                <p i18n="@@uc-no-ads-all">No ads were created.</p>
-                            </div>
-                        </ng-template>
-                        <div class="uc-show-more-less" (click)="showMoreLess('all')" *ngIf="usedAllCars.length >= 7">
-                            <a *ngIf="!moreLessAll" i18n="@@uc-car_ads-all-more">Show More</a>
-                            <a *ngIf="moreLessAll" i18n="@@uc-car_ads-all-less">Show Less</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Filtered Ads -->
-            <div class="accordion " id="accordionFilteredAds" *ngIf="filters.length !== 0">
-                <div class="card uc-list-card">
-                    <div class="card-header p-0" id="headingFilteredAds">
-                        <a i18n="@@uc-car_ads-filteredads" class="uc-list-button" type="button" data-toggle="collapse"
-                            [attr.aria-expanded]="!isCollapsedYourAds"
-                            (click)="isCollapsedFilteredAds = !isCollapsedFilteredAds">
-                            Filtered Ads
-                            <span class="uc-list-badge">{{ filteredCars.length }}</span>
-                        </a>
-                    </div>
-                    <div id="collapseFilteredAds" class="collapse" aria-labelledby="headingFilteredAds"
-                        data-parent="#accordionFilteredAds" [ngClass]="{'show': !isCollapsedFilteredAds}">
-                        <div class="list-scrollbar-filtered scrollbar scrollbar-primary"
-                            *ngIf="filteredCars.length !== 0; else noFilteredAds">
-                            <div class="list-group" *ngFor="let car of filteredCars">
-                                <a class="list-group-item list-group-item-action uc-list-item p-0"
-                                    (click)="onClick(car.id)" routerLink="{{car.id}}" routerLinkActive="routerActive">
-                                    <div class="w-100 d-flex justify-content-between">
-                                        <div class="uc-li-content">
-                                            <img class="uc-list-img" src="{{ car.images[0] }}" alt="First image of car">
-                                        </div>
-                                        <div class="uc-li-content">
-                                            <strong class="uc-list-brand">{{ car.car.brand }},
-                                                {{ car.car.model }} {{ car.car.carMark }}</strong>
-                                            <p class="uc-list-date"><i i18n="@@uc-car_ads-filtered-created">Created:
-                                                </i>
-                                                {{ car.date.toDate() | date:'MMM, yyy'}}
-                                            </p>
-                                        </div>
-                                        <div class="uc-li-content">
-                                            <strong class="uc-list-brand">{{car.car.price | number}}&euro;</strong>
-                                            <p class="uc-list-date">{{car.car.age}}</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="uc-show-more-less" (click)="showMoreLess('filtered')" *ngIf="filteredCars.length >= 7">
-                            <a *ngIf="!moreLessFilter" i18n="@@uc-car_ads-filtered-more">Show More</a>
-                            <a *ngIf="moreLessFilter" i18n="@@uc-car_ads-filtered-less">Show Less</a>
-                        </div>
-                        <ng-template #noFilteredAds>
-                            <div class="uc-no-ads uc-no-ads-filtered">
-                                <p i18n="@@uc-no-ads-filtered">No ads with these criteria were found.</p>
-                            </div>
-                        </ng-template>
-                    </div>
-                </div>
-            </div>
+      <div class="d-flex justify-content-between flex-wrap mb-2">
+        <div
+          class="filter-item mb-1"
+          *ngFor="let filter of filters; let i = index"
+        >
+          <p class="">{{ filter }}</p>
+          <div class="filter-delete" (click)="deleteFilter(i)">
+            <fa-icon class="normal" [icon]="faTimes"></fa-icon>
+          </div>
         </div>
-        <div class="col-md-8 pl-1 pr-2 uc-details">
-            <router-outlet *ngIf="showDetails; else noDetails"></router-outlet>
-            <ng-template #noDetails>
-                <div class="d-flex justify-content-center uc-no-details">
-                    <div class="align-self-center  uc-no-details-item">
-                        <fa-icon class="normal uc-car-img" [icon]="faCar"></fa-icon>
-                        <h3 i18n="@@uc-car_ads-nodetails-text">
-                            <fa-icon class="normal" [icon]="faArrowDetails"></fa-icon>
-                            Pick the car to see details
-                        </h3>
+      </div>
+      <!-- Your Ads -->
+      <div class="accordion mb-2" *ngIf="filters.length === 0 && user !== null">
+        <div class="card uc-list-card">
+          <div class="card-header p-0">
+            <a
+              i18n="@@uc-car_ads-yourads"
+              class="uc-list-button"
+              type="button"
+              data-toggle="collapse"
+              [attr.aria-expanded]="!isCollapsedYourAds"
+              (click)="colapseList('YourAds')"
+            >
+              Your Ads
+              <span class="uc-list-badge">{{ usedYourCars.length }}</span>
+            </a>
+          </div>
+          <div id="collapseYourAds" class="collapse show">
+            <div
+              class="list-scrollbar-your scrollbar scrollbar-primary"
+              *ngIf="usedYourCars.length > 0; else noUsedYourCars"
+            >
+              <div class="list-group" *ngFor="let car of usedYourCars">
+                <a
+                  class="list-group-item list-group-item-action uc-list-item p-0"
+                  (click)="onClick(car.id)"
+                  routerLink="{{ car.id }}"
+                  routerLinkActive="routerActive"
+                >
+                  <div class="w-100 d-flex justify-content-between">
+                    <div class="uc-li-content">
+                      <img
+                        class="uc-list-img"
+                        src="{{
+                          car.images.length !== 0 ? car.images[0] : defaultPhoto
+                        }}"
+                        alt="First image of car"
+                      />
                     </div>
-                </div>
+                    <div class="uc-li-content">
+                      <strong class="uc-list-brand"
+                        >{{ car.car.brand }}, {{ car.car.model }}
+                        {{ car.car.carMark }}</strong
+                      >
+                      <p class="uc-list-date">
+                        <i i18n="@@uc-car_ads-your-created">Created: </i>
+                        {{ car.date.toDate() | date: "MMM dd, yyy" }}
+                      </p>
+                    </div>
+                    <div class="uc-li-content">
+                      <strong class="uc-list-brand"
+                        >{{ car.car.price | number }}&euro;</strong
+                      >
+                      <p class="uc-list-date">{{ car.car.age }}</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <ng-template #noUsedYourCars>
+              <div class="uc-no-ads uc-no-ads-your">
+                <p i18n="@@uc-no-ads-your">You have not created any ads.</p>
+              </div>
             </ng-template>
+            <div
+              class="uc-show-more-less"
+              (click)="showMoreLess('your')"
+              *ngIf="usedYourCars.length >= 7"
+            >
+              <a *ngIf="!moreLessYour" i18n="@@uc-car_ads-your-more"
+                >Show More</a
+              >
+              <a *ngIf="moreLessYour" i18n="@@uc-car_ads-your-less"
+                >Show Less</a
+              >
+            </div>
+          </div>
         </div>
+      </div>
+      <!-- All Ads -->
+      <div class="accordion mb-2" *ngIf="filters.length === 0">
+        <div class="card uc-list-card">
+          <div class="card-header p-0">
+            <a
+              i18n="@@uc-car_ads-allads"
+              class="uc-list-button"
+              type="button"
+              [attr.aria-expanded]="!isCollapsedAllAds"
+              (click)="colapseList('AllAds')"
+            >
+              All Ads
+              <span class="uc-list-badge">{{ usedAllCars.length }}</span>
+            </a>
+          </div>
+          <div id="collapseAllAds" class="collapse show">
+            <div
+              class="list-scrollbar-all scrollbar scrollbar-primary"
+              *ngIf="usedAllCars.length > 0; else noUsedAllCars"
+              [ngStyle]="{ 'max-height': user !== null ? '135px' : '280px' }"
+            >
+              <div class="list-group" *ngFor="let car of usedAllCars">
+                <a
+                  class="list-group-item list-group-item-action uc-list-item p-0"
+                  (click)="onClick(car.id)"
+                  routerLink="{{ car.id }}"
+                  routerLinkActive="routerActive"
+                >
+                  <div class="w-100 d-flex justify-content-between">
+                    <div class="uc-li-content">
+                      <img
+                        class="uc-list-img"
+                        src="{{ car.images[0] }}"
+                        alt="First image of car"
+                        height="50px"
+                      />
+                    </div>
+                    <div class="uc-li-content">
+                      <strong class="uc-list-brand"
+                        >{{ car.car.brand }}, {{ car.car.model }}
+                        {{ car.car.carMark }}</strong
+                      >
+                      <p class="uc-list-date">
+                        <i i18n="@@uc-car_ads-all-created">Created: </i>
+                        {{ car.date.toDate() | date: "MMM dd, yyy" }}
+                      </p>
+                    </div>
+                    <div class="uc-li-content">
+                      <strong class="uc-list-brand"
+                        >{{ car.car.price | number }}&euro;</strong
+                      >
+                      <p class="uc-list-date">{{ car.car.age }}</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <ng-template #noUsedAllCars>
+              <div class="uc-no-ads uc-no-ads-all">
+                <p i18n="@@uc-no-ads-all">No ads were created.</p>
+              </div>
+            </ng-template>
+            <div
+              class="uc-show-more-less"
+              (click)="showMoreLess('all')"
+              *ngIf="usedAllCars.length >= 7"
+            >
+              <a *ngIf="!moreLessAll" i18n="@@uc-car_ads-all-more">Show More</a>
+              <a *ngIf="moreLessAll" i18n="@@uc-car_ads-all-less">Show Less</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Filtered Ads -->
+      <div
+        class="accordion"
+        id="accordionFilteredAds"
+        *ngIf="filters.length !== 0"
+      >
+        <div class="card uc-list-card">
+          <div class="card-header p-0" id="headingFilteredAds">
+            <a
+              i18n="@@uc-car_ads-filteredads"
+              class="uc-list-button"
+              type="button"
+              data-toggle="collapse"
+              [attr.aria-expanded]="!isCollapsedYourAds"
+              (click)="isCollapsedFilteredAds = !isCollapsedFilteredAds"
+            >
+              Filtered Ads
+              <span class="uc-list-badge">{{ filteredCars.length }}</span>
+            </a>
+          </div>
+          <div
+            id="collapseFilteredAds"
+            class="collapse"
+            aria-labelledby="headingFilteredAds"
+            data-parent="#accordionFilteredAds"
+            [ngClass]="{ show: !isCollapsedFilteredAds }"
+          >
+            <div
+              class="list-scrollbar-filtered scrollbar scrollbar-primary"
+              *ngIf="filteredCars.length !== 0; else noFilteredAds"
+            >
+              <div class="list-group" *ngFor="let car of filteredCars">
+                <a
+                  class="list-group-item list-group-item-action uc-list-item p-0"
+                  (click)="onClick(car.id)"
+                  routerLink="{{ car.id }}"
+                  routerLinkActive="routerActive"
+                >
+                  <div class="w-100 d-flex justify-content-between">
+                    <div class="uc-li-content">
+                      <img
+                        class="uc-list-img"
+                        src="{{ car.images[0] }}"
+                        alt="First image of car"
+                      />
+                    </div>
+                    <div class="uc-li-content">
+                      <strong class="uc-list-brand"
+                        >{{ car.car.brand }}, {{ car.car.model }}
+                        {{ car.car.carMark }}</strong
+                      >
+                      <p class="uc-list-date">
+                        <i i18n="@@uc-car_ads-filtered-created">Created: </i>
+                        {{ car.date.toDate() | date: "MMM, yyy" }}
+                      </p>
+                    </div>
+                    <div class="uc-li-content">
+                      <strong class="uc-list-brand"
+                        >{{ car.car.price | number }}&euro;</strong
+                      >
+                      <p class="uc-list-date">{{ car.car.age }}</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              class="uc-show-more-less"
+              (click)="showMoreLess('filtered')"
+              *ngIf="filteredCars.length >= 7"
+            >
+              <a *ngIf="!moreLessFilter" i18n="@@uc-car_ads-filtered-more"
+                >Show More</a
+              >
+              <a *ngIf="moreLessFilter" i18n="@@uc-car_ads-filtered-less"
+                >Show Less</a
+              >
+            </div>
+            <ng-template #noFilteredAds>
+              <div class="uc-no-ads uc-no-ads-filtered">
+                <p i18n="@@uc-no-ads-filtered">
+                  No ads with these criteria were found.
+                </p>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="col-md-8 pl-1 pr-2 uc-details">
+      <router-outlet *ngIf="showDetails; else noDetails"></router-outlet>
+      <ng-template #noDetails>
+        <div class="d-flex justify-content-center uc-no-details">
+          <div class="align-self-center uc-no-details-item">
+            <fa-icon class="normal uc-car-img" [icon]="faCar"></fa-icon>
+            <h3 i18n="@@uc-car_ads-nodetails-text">
+              <fa-icon class="normal" [icon]="faArrowDetails"></fa-icon>
+              Pick the car to see details
+            </h3>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
 </div>
 
 <!-- Filter modal -->
-<div class="modal fade" id="filter-modal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered filter-modal-dialog" role="document">
-        <div class="filter-scrollbar scrollbar scrollbar-primary">
-            <div class="modal-content filter-modal-content">
-                <div class="modal-header filter-modal-header">
-                    <h5 class="modal-title" id="filterModalLabel">Filter</h5>
-                    <a type="button" class="filter-close" data-dismiss="modal" aria-label="Close"
-                        (click)="closeFilterModal()">
-                        <fa-icon class="normal arrow-down" [icon]="faTimes"></fa-icon>
-                    </a>
-                </div>
-                <div class="modal-body filter-modal-body">
-                    <form [formGroup]="filterForm">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h5 i18n="@@uc-car_ads-carinfo" class="filter-subtitle">Car Info</h5>
-                                <div class="row">
-                                    <!-- Brand/Model -->
-                                    <div class="col-md-6">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <p i18n="@@uc-car_ads-brand" class="filter-lbl">Brand</p>
-                                                <div class="input-group-sm mb-1 filter-select-group">
-                                                    <select class="custom-select filter-input filter-input-select"
-                                                        (change)="searchModel($event.target.value)"
-                                                        [attr.disabled]="customBrand? '' : null"
-                                                        formControlName="brand">
-                                                        <option i18n="@@uc-car_ads-brand-1" selected disabled>Brand...
-                                                        </option>
-                                                        <option *ngFor="let brand of carsInfo.brands">{{ brand.name }}
-                                                        </option>
-                                                    </select>
-                                                    <fa-icon class="normal arrow-down" [icon]="faCaretDown"></fa-icon>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p class="filter-lbl">Model</p>
-                                                <div class="input-group-sm mb-1 filter-select-group">
-                                                    <select class="custom-select filter-input filter-input-select"
-                                                        formControlName="model"
-                                                        [attr.disabled]="selectedModel == undefined || customBrand? '': null">
-                                                        <option selected hidden>Model...</option>
-                                                        <option *ngFor="let model of selectedModel">{{ model }}</option>
-                                                    </select>
-                                                    <fa-icon class="normal arrow-down" [icon]="faCaretDown"></fa-icon>
-                                                </div>
-                                                <div class="filter-custom-brand">
-                                                    <button (click)="showCustomBrand()"
-                                                        i18n-title="@@uc-filter-custom-brand-btn_title"
-                                                        title="If the brand or model of your car is not on the list.">
-                                                        <fa-icon class="normal" [icon]="faArrowCircle">
-                                                        </fa-icon>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Custom Brand/Model -->
-                                    <div class="col-md-6" *ngIf="customBrand">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <p i18n="@@uc-filter-brand" class="filter-lbl">Brand</p>
-                                                <div class="input-group-sm filter-select-group  mb-1">
-                                                    <input class="form-control filter-input"
-                                                        i18n-title="@@uc-filter-custom-brand_title" type="text"
-                                                        formControlName="brand" title="Enter Brand">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p class="filter-lbl">Model</p>
-                                                <div class="input-group-sm filter-select-group  mb-1">
-                                                    <input class="form-control filter-input"
-                                                        i18n-title="@@uc-filter-custom-model_title" type="text"
-                                                        formControlName="model" title="Enter Model">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <!-- Age From/To -->
-                                    <div class="col-md-6">
-                                        <p i18n="@@uc-car_ads-age" class="filter-lbl">Age</p>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="input-group-sm mb-1 filter-select-group">
-                                                    <select class="custom-select filter-input filter-input-select"
-                                                        formControlName="fromAge"
-                                                        (change)="chooseAge($event.target.value)">
-                                                        <option i18n="@@uc-car_ads-from" selected hidden>From...
-                                                        </option>
-                                                        <option *ngFor="let year of carsInfo.years">{{ year }}
-                                                        </option>
-                                                    </select>
-                                                    <fa-icon class="normal arrow-down" [icon]="faCaretDown"></fa-icon>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="input-group-sm mb-1 filter-select-group">
-                                                    <select class="custom-select filter-input filter-input-select"
-                                                        formControlName="toAge"
-                                                        [attr.disabled]="newYears == undefined? '': null">
-                                                        <option i18n="@@uc-car_ads-to" selected hidden>...To</option>
-                                                        <option *ngFor="let year of newYears">{{ year }}
-                                                        </option>
-                                                    </select>
-                                                    <fa-icon class="normal arrow-down" [icon]="faCaretDown"></fa-icon>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!-- Price From/To -->
-                                    <div class="col-md-6">
-                                        <p i18n="@@uc-car_ads-Price" class="filter-lbl">Price</p>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="input-group-sm mb-1">
-                                                    <input i18n-placeholder="From placeholder"
-                                                        class="form-control filter-input" placeholder="From..."
-                                                        type="number" formControlName="fromPrice">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="input-group-sm mb-1">
-                                                    <input i18n-placeholder="To placeholder"
-                                                        class="form-control filter-input" placeholder="...To"
-                                                        type="number" formControlName="toPrice">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <!-- Fuel -->
-                                    <div class="col-md-3">
-                                        <p i18n="@@uc-car_ads-fuel" class="filter-lbl">Fuel</p>
-                                        <div class="input-group-sm mb-1 filter-select-group">
-                                            <select class="custom-select filter-input filter-input-select"
-                                                formControlName="fuels">
-                                                <option i18n="@@uc-car_ads-fuel-1" selected disabled>Fuel...</option>
-                                                <option *ngFor="let fuel of carsInfo.fuels">{{ fuel }}</option>
-                                            </select>
-                                            <fa-icon class="normal arrow-down" [icon]="faCaretDown"></fa-icon>
-                                        </div>
-                                    </div>
-                                    <!-- Transmission -->
-                                    <div class="col-md-3">
-                                        <p i18n="@@uc-car_ads-transmission" class="filter-lbl">Transmission</p>
-                                        <div class="input-group-sm mb-1 filter-select-group">
-                                            <select class="custom-select filter-input filter-input-select"
-                                                formControlName="transmission">
-                                                <option i18n="@@uc-car_ads-transmission" selected disabled>
-                                                    Transmission...</option>
-                                                <option *ngFor="let trans of carsInfo.transmission">{{ trans }}</option>
-                                            </select>
-                                            <fa-icon class="normal arrow-down" [icon]="faCaretDown"></fa-icon>
-                                        </div>
-                                    </div>
-                                    <!-- Color -->
-                                    <div class="col-md-3">
-                                        <p i18n="@@uc-car_ads-color" class="filter-lbl">Color</p>
-                                        <div class="input-group-sm mb-1 filter-select-group">
-                                            <select class="custom-select filter-input filter-input-select"
-                                                formControlName="colors">
-                                                <option i18n="@@uc-car_ads-color" selected disabled>Color...</option>
-                                                <option *ngFor="let color of carsInfo.colors" [ngStyle]="{'color': color.color}">{{ color.txt }}</option>
-                                            </select>
-                                            <fa-icon class="normal arrow-down" [icon]="faCaretDown"></fa-icon>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h5 i18n="@@uc-car_ads-sallerinfo" class="filter-subtitle mt-2">Saller Info</h5>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <p class="filter-lbl">Country</p>
-                                        <div class="input-group-sm mb-1 filter-select-group">
-                                            <select class="custom-select filter-input filter-input-select"
-                                                (change)="searchModel($event.target.value)" formControlName="countries">
-                                                <option i18n="@@uc-car_ads-country" selected disabled>Country...
-                                                </option>
-                                                <option *ngFor="let country of carsInfo.countries">
-                                                    {{ country.name }} {{ country.flag }}
-                                                </option>
-                                            </select>
-                                            <fa-icon class="normal arrow-down" [icon]="faCaretDown"></fa-icon>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <p i18n="@@uc-car_ads-town" class="filter-lbl">Town</p>
-                                        <div class="input-group-sm mb-1">
-                                            <input class="form-control filter-input" type="text" formControlName="town">
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer filter-modal-footer">
-                    <button i18n="@@uc-car_ads-reset" class="btn btn-sm btn-link cancel-filter-btn"
-                        (click)="resetFilters()">Reset</button>
-                    <button i18n="@@uc-car_ads-save" type="button" class="btn btn-sm filter-btn"
-                        (click)="submitFilters()">
-                        <fa-icon class="normal" [icon]="faSave"></fa-icon> Save
-                    </button>
-                </div>
-            </div>
+<div
+  class="modal fade"
+  id="filter-modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="filterModalLabel"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-dialog-centered filter-modal-dialog"
+    role="document"
+  >
+    <div class="filter-scrollbar scrollbar scrollbar-primary">
+      <div class="modal-content filter-modal-content">
+        <div class="modal-header filter-modal-header">
+          <h5 class="modal-title" id="filterModalLabel">Filter</h5>
+          <a
+            type="button"
+            class="filter-close"
+            data-dismiss="modal"
+            aria-label="Close"
+            (click)="closeFilterModal()"
+          >
+            <fa-icon class="normal arrow-down" [icon]="faTimes"></fa-icon>
+          </a>
         </div>
+        <div class="modal-body filter-modal-body">
+          <form [formGroup]="filterForm">
+            <div class="row">
+              <div class="col-md-12">
+                <h5 i18n="@@uc-car_ads-carinfo" class="filter-subtitle">
+                  Car Info
+                </h5>
+                <div class="row">
+                  <!-- Brand/Model -->
+                  <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p i18n="@@uc-car_ads-brand" class="filter-lbl">
+                          Brand
+                        </p>
+                        <div class="input-group-sm mb-1 filter-select-group">
+                          <select
+                            class="custom-select filter-input filter-input-select"
+                            (change)="searchModel($event.target.value)"
+                            [attr.disabled]="customBrand ? '' : null"
+                            formControlName="brand"
+                          >
+                            <option
+                              i18n="@@uc-car_ads-brand-1"
+                              selected
+                              disabled
+                            >
+                              Brand...
+                            </option>
+                            <option *ngFor="let brand of carsInfo.brands">
+                              {{ brand.name }}
+                            </option>
+                          </select>
+                          <fa-icon
+                            class="normal arrow-down"
+                            [icon]="faCaretDown"
+                          ></fa-icon>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <p class="filter-lbl">Model</p>
+                        <div class="input-group-sm mb-1 filter-select-group">
+                          <select
+                            class="custom-select filter-input filter-input-select"
+                            formControlName="model"
+                            [attr.disabled]="
+                              selectedModel == undefined || customBrand
+                                ? ''
+                                : null
+                            "
+                          >
+                            <option selected hidden>Model...</option>
+                            <option *ngFor="let model of selectedModel">
+                              {{ model }}
+                            </option>
+                          </select>
+                          <fa-icon
+                            class="normal arrow-down"
+                            [icon]="faCaretDown"
+                          ></fa-icon>
+                        </div>
+                        <div class="filter-custom-brand">
+                          <button
+                            (click)="showCustomBrand()"
+                            i18n-title="@@uc-filter-custom-brand-btn_title"
+                            title="If the brand or model of your car is not on the list."
+                          >
+                            <fa-icon class="normal" [icon]="faArrowCircle">
+                            </fa-icon>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Custom Brand/Model -->
+                  <div class="col-md-6" *ngIf="customBrand">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p i18n="@@uc-filter-brand" class="filter-lbl">Brand</p>
+                        <div class="input-group-sm filter-select-group mb-1">
+                          <input
+                            class="form-control filter-input"
+                            i18n-title="@@uc-filter-custom-brand_title"
+                            type="text"
+                            formControlName="brand"
+                            title="Enter Brand"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <p class="filter-lbl">Model</p>
+                        <div class="input-group-sm filter-select-group mb-1">
+                          <input
+                            class="form-control filter-input"
+                            i18n-title="@@uc-filter-custom-model_title"
+                            type="text"
+                            formControlName="model"
+                            title="Enter Model"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <!-- Age From/To -->
+                  <div class="col-md-6">
+                    <p i18n="@@uc-car_ads-age" class="filter-lbl">Age</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="input-group-sm mb-1 filter-select-group">
+                          <select
+                            class="custom-select filter-input filter-input-select"
+                            formControlName="fromAge"
+                            (change)="chooseAge($event.target.value)"
+                          >
+                            <option i18n="@@uc-car_ads-from" selected hidden>
+                              From...
+                            </option>
+                            <option *ngFor="let year of carsInfo.years">
+                              {{ year }}
+                            </option>
+                          </select>
+                          <fa-icon
+                            class="normal arrow-down"
+                            [icon]="faCaretDown"
+                          ></fa-icon>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="input-group-sm mb-1 filter-select-group">
+                          <select
+                            class="custom-select filter-input filter-input-select"
+                            formControlName="toAge"
+                            [attr.disabled]="newYears == undefined ? '' : null"
+                          >
+                            <option i18n="@@uc-car_ads-to" selected hidden>
+                              ...To
+                            </option>
+                            <option *ngFor="let year of newYears">
+                              {{ year }}
+                            </option>
+                          </select>
+                          <fa-icon
+                            class="normal arrow-down"
+                            [icon]="faCaretDown"
+                          ></fa-icon>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Price From/To -->
+                  <div class="col-md-6">
+                    <p i18n="@@uc-car_ads-Price" class="filter-lbl">Price</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="input-group-sm mb-1">
+                          <input
+                            i18n-placeholder="From placeholder"
+                            class="form-control filter-input"
+                            placeholder="From..."
+                            type="number"
+                            formControlName="fromPrice"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="input-group-sm mb-1">
+                          <input
+                            i18n-placeholder="To placeholder"
+                            class="form-control filter-input"
+                            placeholder="...To"
+                            type="number"
+                            formControlName="toPrice"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <!-- Fuel -->
+                  <div class="col-md-3">
+                    <p i18n="@@uc-car_ads-fuel" class="filter-lbl">Fuel</p>
+                    <div class="input-group-sm mb-1 filter-select-group">
+                      <select
+                        class="custom-select filter-input filter-input-select"
+                        formControlName="fuels"
+                      >
+                        <option i18n="@@uc-car_ads-fuel-1" selected disabled>
+                          Fuel...
+                        </option>
+                        <option *ngFor="let fuel of carsInfo.fuels">
+                          {{ fuel }}
+                        </option>
+                      </select>
+                      <fa-icon
+                        class="normal arrow-down"
+                        [icon]="faCaretDown"
+                      ></fa-icon>
+                    </div>
+                  </div>
+                  <!-- Transmission -->
+                  <div class="col-md-3">
+                    <p i18n="@@uc-car_ads-transmission" class="filter-lbl">
+                      Transmission
+                    </p>
+                    <div class="input-group-sm mb-1 filter-select-group">
+                      <select
+                        class="custom-select filter-input filter-input-select"
+                        formControlName="transmission"
+                      >
+                        <option
+                          i18n="@@uc-car_ads-transmission"
+                          selected
+                          disabled
+                        >
+                          Transmission...
+                        </option>
+                        <option *ngFor="let trans of carsInfo.transmission">
+                          {{ trans }}
+                        </option>
+                      </select>
+                      <fa-icon
+                        class="normal arrow-down"
+                        [icon]="faCaretDown"
+                      ></fa-icon>
+                    </div>
+                  </div>
+                  <!-- Color -->
+                  <div class="col-md-3">
+                    <p i18n="@@uc-car_ads-color" class="filter-lbl">Color</p>
+                    <div class="input-group-sm mb-1 filter-select-group">
+                      <select
+                        class="custom-select filter-input filter-input-select"
+                        formControlName="colors"
+                      >
+                        <option i18n="@@uc-car_ads-color" selected disabled>
+                          Color...
+                        </option>
+                        <option
+                          *ngFor="let color of carsInfo.colors"
+                          [ngStyle]="{ color: color.color }"
+                        >
+                          {{ color.txt }}
+                        </option>
+                      </select>
+                      <fa-icon
+                        class="normal arrow-down"
+                        [icon]="faCaretDown"
+                      ></fa-icon>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h5 i18n="@@uc-car_ads-sallerinfo" class="filter-subtitle mt-2">
+                  Saller Info
+                </h5>
+                <div class="row">
+                  <div class="col-md-3">
+                    <p class="filter-lbl">Country</p>
+                    <div class="input-group-sm mb-1 filter-select-group">
+                      <select
+                        class="custom-select filter-input filter-input-select"
+                        (change)="searchModel($event.target.value)"
+                        formControlName="countries"
+                      >
+                        <option i18n="@@uc-car_ads-country" selected disabled>
+                          Country...
+                        </option>
+                        <option *ngFor="let country of carsInfo.countries">
+                          {{ country.name }} {{ country.flag }}
+                        </option>
+                      </select>
+                      <fa-icon
+                        class="normal arrow-down"
+                        [icon]="faCaretDown"
+                      ></fa-icon>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <p i18n="@@uc-car_ads-town" class="filter-lbl">Town</p>
+                    <div class="input-group-sm mb-1">
+                      <input
+                        class="form-control filter-input"
+                        type="text"
+                        formControlName="town"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer filter-modal-footer">
+          <button
+            i18n="@@uc-car_ads-reset"
+            class="btn btn-sm btn-link cancel-filter-btn"
+            (click)="resetFilters()"
+          >
+            Reset
+          </button>
+          <button
+            i18n="@@uc-car_ads-save"
+            type="button"
+            class="btn btn-sm filter-btn"
+            (click)="submitFilters()"
+          >
+            <fa-icon class="normal" [icon]="faSave"></fa-icon> Save
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="modal-backdrop" (click)="clickOnBackdrop()"></div>
+  </div>
+  <div class="modal-backdrop" (click)="clickOnBackdrop()"></div>
 </div>
 
 <!-- Images modal -->
-<div class="modal fade" id="images-modal" tabindex="-1" role="dialog" aria-labelledby="imagesModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered filter-modal-dialog" role="document">
-        image
-    </div>
-    <div class="modal-backdrop" (click)="clickOnBackdrop()"></div>
+<div
+  class="modal fade"
+  id="images-modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="imagesModalLabel"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-dialog-centered filter-modal-dialog"
+    role="document"
+  >
+    image
+  </div>
+  <div class="modal-backdrop" (click)="clickOnBackdrop()"></div>
 </div>

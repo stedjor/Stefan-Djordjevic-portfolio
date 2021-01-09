@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { FourSquareComponent } from './four-square.component';
 
@@ -7,7 +7,7 @@ describe('FourSquareComponent', () => {
   let component: FourSquareComponent;
   let fixture: ComponentFixture<FourSquareComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [FourSquareComponent],
       imports: [HttpClientModule],

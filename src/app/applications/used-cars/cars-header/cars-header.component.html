@@ -18,6 +18,11 @@
                     routerLinkActive="router-link-active" *ngIf="authService.isLoggedIn">
                     Create Ad</a>
             </li>
+            <li class="nav-item">
+                <a i18n="@@uc-car_header-li-3" class="nav-link" [routerLink]="['/login']"
+                    routerLinkActive="router-link-active" *ngIf="!authService.isLoggedIn">
+                    Login</a>
+            </li>
         </ul>
     </div>
 </nav>

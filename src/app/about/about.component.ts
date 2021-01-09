@@ -30,9 +30,9 @@ export class AboutComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
-    this.showAnimation = false;
-    this.aboutAnimation();
-
+    // this.showAnimation = false;
+    // this.aboutAnimation();
+    this.endAboutAnimations();
   }
 
   ngOnChanges(changes: SimpleChanges) {

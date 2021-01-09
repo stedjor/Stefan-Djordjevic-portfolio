@@ -31,6 +31,7 @@ declare var $: any;
   styleUrls: ['./car-ads.component.less'],
 })
 export class CarAdsComponent implements OnInit {
+  user = null;
   defaultPhoto = './assets/no-car.png';
   usedCars: Observable<Cars[]>;
   usedCarsList = [];
@@ -85,9 +86,9 @@ export class CarAdsComponent implements OnInit {
     this.filterForm = this.adsService.createFilteredForm();
     this.showCars();
     this.width425();
-    const user = JSON.parse(localStorage.getItem('user'));
-    if (user !== null) {
-      this.autorId = user.uid;
+    this.user = JSON.parse(localStorage.getItem('user'));
+    if (this.user !== null) {
+      this.autorId = this.user.uid;
     }
     this.sortArrow = false;
   }
@@ -363,7 +364,7 @@ export class CarAdsComponent implements OnInit {
         this.usedAllCars,
         this.moreLessAll,
         '500px',
-        '135px',
+        this.user !== null ? '135px' : '280px',
         '400px'
       );
     } else if (el === 'filtered') {

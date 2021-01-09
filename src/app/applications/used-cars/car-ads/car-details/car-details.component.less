@@ -7,7 +7,7 @@
 
 & .details-card {
     background: @uc-color-dark;
-    animation    : colorize 1.75s;
+    animation : colorize 1.75s;
 
     @keyframes colorize {
         from {
@@ -80,9 +80,9 @@
 
                 @media only screen and (max-width: 425px) {
                     & {
-                       & h4{
-                        font-size: 15px;
-                       } 
+                        & h4 {
+                            font-size: 15px;
+                        }
                     }
                 }
             }
@@ -95,9 +95,10 @@
                 min-height      : 350px;
                 display         : table;
                 width           : 100%;
+
                 @media only screen and (max-width: 425px) {
                     & {
-                        min-height      : auto;
+                        min-height: auto;
                     }
                 }
 
@@ -109,7 +110,7 @@
                         width          : 100%;
                         object-fit     : contain;
                         object-position: center;
-                        max-height: 350px;
+                        max-height     : 350px;
                     }
                 }
 
@@ -313,6 +314,15 @@
 
                 & h6 {
                     margin: 4px 0;
+
+                    & a {
+                        color          : @uc-color-text;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: @uc-color-gold;
+                        }
+                    }
                 }
             }
 
@@ -482,8 +492,9 @@
 
 @media only screen and (max-width: 425px) {
     .image-box {
-        min-height      : auto;
+        min-height: auto;
     }
+
     & .comment-card-body {
         padding: 10px;
 
