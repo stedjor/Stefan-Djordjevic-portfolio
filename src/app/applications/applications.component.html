@@ -1,42 +1,81 @@
 <div class="container app-container">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h1 i18n="@@app-title" class="app-title">Applications</h1>
-        </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1 i18n="@@app-title" class="app-title">Applications</h1>
     </div>
-    <div class="row d-flex justify-content-center align-items-center">
-        <div class="col col-lg-3 col-md-4" *ngFor="let item of appCards">
-            <div class="card text-center app-card" [routerLink]="[item.routerLink]">
-                <div class="card-body app-card-body" [ngClass]="{'uc-card-body': item.name === 'UsedCars'}">
-                    <img class="app-img" src="{{ item.imagePath }}" alt="Application {{item.name}}">
-                </div>
-                <div class="card-footer app-card-footer">
-                    <fa-icon i18n-title="@@app_angular-icon-title" class="normal icon-framework icon-angular" [icon]="faAngular"  title="App made in Angular."></fa-icon>
-                    <p>{{ item.name }}</p>
-                </div>
-            </div>
+  </div>
+  <div class="row d-flex justify-content-center align-items-center app-content">
+    <div class="col col-lg-3 col-md-4 mb-3" *ngFor="let item of appCards">
+      <div class="card app-card" [routerLink]="[item.routerLink]">
+        <img
+          class="app-img card-img-top"
+          src="{{ item.imagePath }}"
+          alt="Application {{ item.name }}"
+          [ngClass]="item.name === 'UsedCars' ? 'uc-card-img' : 'fs-card-img '"
+        />
+        <div class="card-body text-center app-card-body">
+          <div class="fw-icon fw-angular">
+            <fa-icon
+              i18n-title="@@app_angular-icon-title"
+              class="normal icon-framework icon-angular"
+              [icon]="faAngular"
+              title="App made in Angular."
+            ></fa-icon>
+          </div>
+          <h5 class="card-title">
+            {{ item.name }}
+          </h5>
         </div>
-        <div class="col col-lg-3 col-md-4">
-            <div class="card text-center app-card" (click)="openNewTab('https://records-of-ideas.web.app/list-ideas')">
-                <div class="card-body app-card-body roi-card-body">
-                    <img class="app-img" src="./assets/app-images/roi-icon.png" alt="Application Records Of Idea">
-                </div>
-                <div class="card-footer app-card-footer">
-                    <fa-icon i18n-title="@@app_react-icon-title" class="normal icon-framework icon-react" [icon]="faReact" title="App made in React."></fa-icon>
-                    <p>ROI</p>
-                    <fa-icon i18n-title="@@app_new-tab-icon-title" class="normal icon-new-tab" [icon]="faExternalLinkAlt" title="Open app in new tab."></fa-icon>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    <div class="row">
-        <div class="col text-center m-auto">
-            <h4 i18n="@@app-subtitle" class="app-subtitle">You can see whole code of these applications on my GitHub
-                <a class="app-github" target="_blank" href="https://github.com/stedjor/Stefan-Djordjevic-portfolio">
-                    <fa-icon class="normal" [icon]="faGithub"></fa-icon></a>.
-            </h4>
+
+    <div class="col col-lg-3 col-md-4 mb-3">
+      <div
+        class="card app-card"
+        (click)="openNewTab('https://records-of-ideas.web.app/list-ideas')"
+      >
+        <img
+          class="app-img card-img-top roi-card-img"
+          src="./assets/app-images/roi-icon.png"
+          alt="Application Records Of Idea"
+        />
+        <div class="card-body text-center app-card-body">
+          <div class="fw-icon fw-react">
+            <fa-icon
+              i18n-title="@@app_react-icon-title"
+              class="normal icon-framework icon-react"
+              [icon]="faReact"
+              title="App made in React."
+            ></fa-icon>
+          </div>
+          <h5 class="card-title">ROI</h5>
+          <div class="new-tab-icon">
+            <fa-icon
+              i18n-title="@@app_new-tab-icon-title"
+              class="normal icon-new-tab"
+              [icon]="faExternalLinkAlt"
+              title="Open app in new tab."
+            ></fa-icon>
+          </div>
         </div>
+      </div>
     </div>
+
+  </div>
+  <div class="row">
+    <div class="col text-center m-auto">
+      <h4 i18n="@@app-subtitle" class="app-subtitle">
+        You can see whole code of these applications on my GitHub
+        <a
+          class="app-github"
+          target="_blank"
+          href="https://github.com/stedjor/Stefan-Djordjevic-portfolio"
+        >
+          <fa-icon class="normal" [icon]="faGithub"></fa-icon></a
+        >.
+      </h4>
+    </div>
+  </div>
 </div>
 
 <router-outlet></router-outlet>

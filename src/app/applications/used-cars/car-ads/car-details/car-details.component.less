@@ -7,19 +7,6 @@
 
 & .details-card {
     background: @uc-color-dark;
-    animation : colorize 1.75s;
-
-    @keyframes colorize {
-        from {
-            filter        : grayscale(100%) blur(2px);
-            -webkit-filter: grayscale(100%) blur(2px);
-        }
-
-        to {
-            filter        : grayscale(0%) blur(0px);
-            -webkit-filter: grayscale(0%) blur(0px);
-        }
-    }
 
     & .details-header {
         padding      : 0 15px;

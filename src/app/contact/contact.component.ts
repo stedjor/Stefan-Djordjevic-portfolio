@@ -2,17 +2,22 @@ import { Observable } from 'rxjs';
 import { MessagesService } from './../_services/messages/messages.service';
 import { AuthService } from './../_services/auth/auth.service';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder,
+} from '@angular/forms';
 import { formatDate } from '@angular/common';
 import {
   faEnvelope,
   faPlay,
-  faTrashAlt
+  faTrashAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
   faLinkedin,
-  faGithub
+  faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 import { Messages } from '../_services/messages/messages';
 
@@ -21,7 +26,7 @@ declare var $: any;
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.less']
+  styleUrls: ['./contact.component.less'],
 })
 export class ContactComponent implements OnInit {
   messagesForm: FormGroup;
@@ -67,9 +72,12 @@ export class ContactComponent implements OnInit {
       }
     }, 100);
     this.createMessageForm();
-    this.messagesDate = formatDate(new Date(), 'MMM dd, yyyy, hh:mm:ss a', 'en-US');
+    this.messagesDate = formatDate(
+      new Date(),
+      'MMM dd, yyyy, hh:mm:ss a',
+      'en-US'
+    );
   }
-
 
   showMessages(id: string) {
     this.compareUserId = id;
@@ -85,16 +93,16 @@ export class ContactComponent implements OnInit {
   }
 
   createMessageForm() {
-    return this.messagesForm = this.fb.group({
+    return (this.messagesForm = this.fb.group({
       autor: '',
       photoURL: '',
       createdDate: Date,
-      message: ['', Validators.required]
-    });
+      message: ['', Validators.required],
+    }));
   }
 
   getUser(id: string) {
-    this.authService.getUserData(id).subscribe(user => {
+    this.authService.getUserData(id).subscribe((user) => {
       this.userData = user;
       this.photoUrl = user.photoURL;
       if (user.status === 'admin') {
@@ -104,14 +112,15 @@ export class ContactComponent implements OnInit {
   }
 
   showSenders() {
-    this.mS.getSenders().subscribe(data => {
-      data.map(sender => {
-        if (sender.messages.length !== undefined &&
+    this.mS.getSenders().subscribe((data) => {
+      data.map((sender) => {
+        if (
+          sender.messages.length !== undefined &&
           sender.messages.length !== 0 &&
-          sender.id !== this.userId) {
-            this.sendersList.push(sender);
-            console.log(this.sendersList);
-          }
+          sender.id !== this.userId
+        ) {
+          this.sendersList.push(sender);
+        }
       });
     });
   }
@@ -119,19 +128,21 @@ export class ContactComponent implements OnInit {
   getAllMessages(id: string) {
     this.detailsOfMessages = undefined;
     this.userId = id;
-    this.mS.getMessages(id).subscribe(mess => {
+    this.mS.getMessages(id).subscribe((mess) => {
       this.detailsOfMessages = mess;
       if (this.detailsOfMessages !== undefined) {
         this.detailsOfMessages.messages.length !== 0 ||
-          this.detailsOfMessages.messages !== undefined ?
-          this.messages = this.detailsOfMessages.messages :
-          this.messages = [];
+        this.detailsOfMessages.messages !== undefined
+          ? (this.messages = this.detailsOfMessages.messages)
+          : (this.messages = []);
       }
     });
   }
 
   deleteMessage(index: number) {
-    const confirmDelete = window.confirm('Do you realy want to delete this message?');
+    const confirmDelete = window.confirm(
+      'Do you realy want to delete this message?'
+    );
     if (confirmDelete) {
       this.messages.splice(index, 1);
       this.mS.updateMessages(this.userId, this.messages);
@@ -140,7 +151,10 @@ export class ContactComponent implements OnInit {
 
   createMessage() {
     this.messagesForm.setControl('autor', new FormControl(this.userData.email));
-    this.messagesForm.setControl('createdDate', new FormControl(this.messagesDate));
+    this.messagesForm.setControl(
+      'createdDate',
+      new FormControl(this.messagesDate)
+    );
     this.messagesForm.setControl('photoURL', new FormControl(this.photoUrl));
     this.messages.push(this.messagesForm.value);
     if (this.detailsOfMessages !== undefined) {

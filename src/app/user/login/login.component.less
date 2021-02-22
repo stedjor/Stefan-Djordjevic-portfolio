@@ -7,19 +7,6 @@
     border-radius: 10px;
     min-height   : 100%;
     padding      : 30px 20px 10px;
-    animation    : colorize 1.75s;
-
-    @keyframes colorize {
-        from {
-            filter        : grayscale(100%) blur(2px);
-            -webkit-filter: grayscale(100%) blur(2px);
-        }
-
-        to {
-            filter        : grayscale(0%) blur(0px);
-            -webkit-filter: grayscale(0%) blur(0px);
-        }
-    }
 
     & .login-card {
         background: @login-color-dark;
@@ -42,6 +29,15 @@
                 border    : 2px solid @login-color;
                 box-shadow: 0 0 10px 2px @login-color;
             }
+
+            &.invalidInput {
+                border    : 2px solid orange;
+                box-shadow: 0 0 10px 2px orange;
+            }
+        }
+
+        & .errorMessage {
+            color: orange;
         }
 
         & .login-btn {
@@ -51,6 +47,12 @@
 
             &:hover {
                 background: @login-color;
+            }
+
+            &:disabled,
+            &[disabled] {
+                background-color: @login-color;
+                cursor: not-allowed;
             }
         }
 

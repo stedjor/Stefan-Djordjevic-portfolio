@@ -8,25 +8,11 @@
 
 
 .contact-container {
-    // background   : linear-gradient(to right, @contact-color-dark, rgb(53, 0, 53), @contact-color-dark);
     background   : radial-gradient(@contact-color, @contact-color-dark);
     border-radius: 10px;
     min-height   : 100%;
     padding-top  : 10px;
     border-radius: 10px;
-    animation    : colorize 1.75s;
-
-    @keyframes colorize {
-        from {
-            filter        : grayscale(100%) blur(2px);
-            -webkit-filter: grayscale(100%) blur(2px);
-        }
-
-        to {
-            filter        : grayscale(0%) blur(0px);
-            -webkit-filter: grayscale(0%) blur(0px);
-        }
-    }
 
     & .contact-content-text {
         padding: 30px 20px;

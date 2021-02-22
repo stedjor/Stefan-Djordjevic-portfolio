@@ -1,66 +1,74 @@
 <div class="container about-container">
-    <div class="row">
+  <div class="row">
+    <div class="col-md-7">
+      <h1 i18n="@@about-title" id="about-title">Information about me</h1>
+      <ul i18n="@@about-text" id="about-text">
+        <li>
+          I graduated from the Technical College of Applied Studies in
+          Kragujevac, the course of Informatics, gaining the qualification
+          Bachelor of Science in Informatics (Appl.).
+        </li>
+        <li>
+          When I passed the last exam, I applied for practice at SAGA D.O.O
+          company in Belgrade, lasting four months.
+        </li>
+        <li>
+          Shortly after completing the practice, i was employed at Quantox
+          Technology company in Kragujevac office. I was employed for five
+          months.
+        </li>
+        <li>
+          After that I was worked on some different projects and then I
+          graduated.
+        </li>
+        <li>
+          Because I can't speak about projects that I worked, I decide to made
+          this presentation.
+        </li>
+        <li>
+          By clicking on
+          <a href="./assets/cv-files/CV-Stefan Djordjevic-Sr.pdf" download
+            >Sr <fa-icon class="normal" [icon]="faDownload"></fa-icon
+          ></a>
+          you can download my CV in Serbian, and by clicking on
+          <a href="./assets/cv-files/CV-Stefan Djordjevic-En.pdf" download
+            >En <fa-icon class="normal" [icon]="faDownload"></fa-icon
+          ></a>
+          you can download CV in English.
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-5 text-center">
+      <img id="about-photo" class="img-thumbnail" src="../../assets/photo.jpg" alt="my profile picture" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
         <div class="col-md-7">
-            <h1 i18n="@@about-title" id="about-title">Information about me</h1>
-            <ul i18n="@@about-text" id="about-text">
-                <li>I graduated from the Technical College of Applied Studies in Kragujevac,
-                    the course of Informatics, gaining the qualification
-                    Bachelor of Science in Informatics (Appl.).</li>
-                <li>When I passed the last exam, I applied for practice at SAGA D.O.O company
-                    in
-                    Belgrade, lasting four months.
-                </li>
-                <li>Shortly after completing the practice, i was employed at Quantox Technology
-                    company in Kragujevac office. I was employed for five months.
-                </li>
-                <li>After that I was worked on some different projects and then I graduated.
-                </li>
-                <li>Because I can't speak about projects that I worked, I decide to made this
-                    presentation.
-                </li>
-                <li>By clicking on
-                    <a href="./assets/cv-files/CV-Stefan Djordjevic-Sr.pdf" download>Sr <fa-icon class="normal"
-                            [icon]="faDownload"></fa-icon></a>
-                    you can download my CV in Serbian, and by clicking on
-                    <a href="./assets/cv-files/CV-Stefan Djordjevic-En.pdf" download>En <fa-icon class="normal"
-                            [icon]="faDownload"></fa-icon></a>
-                    you can download CV in English.
-                </li>
-            </ul>
+          <h5 i18n="@@about-subtitle" id="about-subtitle">
+            Knowledge I possess
+          </h5>
         </div>
-        <div class="col-md-5 text-center mt-2 mb-2">
-            <div id="about-photo"></div>
+        <div class="col-md-7">
+          <ul i18n="@@about-skils" id="about-skills">
+            Skils:
+            <li>Html5,</li>
+            <li>Css3 (Scss, Less),</li>
+            <li>Bootstrap,</li>
+            <li>JavaScript (ES6, TypeScript, JQuery, Ajax, Angular, React),</li>
+            <li>Firebase</li>
+            <li>Git (GitHub, GitLab, Bitbucket)</li>
+          </ul>
         </div>
+        <div class="col-md-5">
+          <ul i18n="@@about-languages" id="about-languages">
+            Languages:
+            <li>Serbian</li>
+            <li>English</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-7">
-                    <h5 i18n="@@about-subtitle" id="about-subtitle">Knowledge I possess</h5>
-                </div>
-                <div class="col-md-7">
-                    <ul i18n="@@about-skils" id="about-skills">
-                        Skils:
-                        <li>Html5,</li>
-                        <li>Css3 (Scss, Less),</li>
-                        <li>Bootstrap,</li>
-                        <li>JavaScript (ES6, TypeScript, JQuery, Ajax, Angular, React),</li>
-                        <li>Firebase</li>
-                        <li>Git (GitHub, GitLab, Bitbucket)</li>
-                    </ul>
-                </div>
-                <div class="col-md-5">
-                    <ul i18n="@@about-languages" id="about-languages">
-                        Languages:
-                        <li>Serbian</li>
-                        <li>English</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <button class="btn btn-link btn-about-skip" (click)="endAboutAnimations()" title="Skip Animation"
-        *ngIf="showAnimation">
-        <fa-icon class="normal" [icon]="faStepForward"></fa-icon>
-    </button>
+  </div>
 </div>

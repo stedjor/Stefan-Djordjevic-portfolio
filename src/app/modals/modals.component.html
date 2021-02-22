@@ -6,7 +6,7 @@
                 <li class="nav-item menu-item">
                     <div class="text-center">
                         <img [routerLink]="['/profile']" (click)="closeMenu()" src="{{ profilePhoto }}" class="card-img-top moda-menu-img" width="30%" alt="User photo">
-                        <a class="menu-lng-btn menu-lng-sr" href="/sr/"
+                        <a class="menu-lng-btn menu-lng-sr" href="/sr"
                             [ngClass]="{'menu-lng-btn-active': urlLocation.includes('sr')}">
                             <img src="./assets/flags/serbia-flag-round.png" alt="Serbian flag">
                         </a>
@@ -56,7 +56,7 @@
                     </a>
                 </li>
                 <li class="nav-item menu-item" routerLinkActive="active">
-                    <a i18n="@@modal_menu-profile" class="nav-link" [routerLink]="['/profile']"
+                    <a i18n="@@modal_menu-profile" class="nav-link" [routerLink]="['/user/profile']"
                         *ngIf="authService.isLoggedIn" (click)="closeMenu()">
                         <fa-icon class="normal" [icon]="faUser"></fa-icon> Profile
                     </a>
@@ -68,7 +68,7 @@
                 </li>
                 <ng-template #login>
                     <li class="nav-item menu-item mt-auto">
-                        <a i18n="@@modal_menu-login" class="nav-link" [routerLink]="['/login']" (click)="closeMenu()">
+                        <a i18n="@@modal_menu-login" class="nav-link" [routerLink]="['/user/login']" (click)="closeMenu()">
                             <fa-icon class="normal" [icon]="faSignInAlt"></fa-icon> Login
                         </a>
                     </li>
@@ -307,7 +307,7 @@
 
     <!-- User Modals -->
     <!-- Modal Log In -->
-    <div class="modal-content modal-info-content  modal-info-content-login" *ngIf="modalInfoUrl === '/login'">
+    <div class="modal-content modal-info-content  modal-info-content-login" *ngIf="modalInfoUrl === '/user/login'">
         <div class="scrollbar scrollbar-primary">
             <button type="button" class="btn close-info" (click)="closeInfo()">
                 <fa-icon class="normal" [icon]="faTimes"></fa-icon>
@@ -332,7 +332,7 @@
         </div>
     </div>
     <!-- Modal Register -->
-    <div class="modal-content modal-info-content  modal-info-content-register" *ngIf="modalInfoUrl === '/register'">
+    <div class="modal-content modal-info-content  modal-info-content-register" *ngIf="modalInfoUrl === '/user/register'">
         <div class="scrollbar scrollbar-primary">
             <button type="button" class="btn close-info" (click)="closeInfo()">
                 <fa-icon class="normal" [icon]="faTimes"></fa-icon>
@@ -351,7 +351,7 @@
         </div>
     </div>
     <!-- Modal Profile -->
-    <div class="modal-content modal-info-content  modal-info-content-profile" *ngIf="modalInfoUrl === '/profile'">
+    <div class="modal-content modal-info-content  modal-info-content-profile" *ngIf="modalInfoUrl === '/user/profile'">
         <div class="scrollbar scrollbar-primary">
             <button type="button" class="btn close-info" (click)="closeInfo()">
                 <fa-icon class="normal" [icon]="faTimes"></fa-icon>
@@ -394,7 +394,7 @@
         </div>
     </div>
     <!-- Modal Forgot Password -->
-    <div class="modal-content modal-info-content  modal-info-content-fp" *ngIf="modalInfoUrl === '/forgot-password'">
+    <div class="modal-content modal-info-content  modal-info-content-fp" *ngIf="modalInfoUrl === '/user/forgot-password'">
         <div class="scrollbar scrollbar-primary">
             <button type="button" class="btn close-info" (click)="closeInfo()">
                 <fa-icon class="normal" [icon]="faTimes"></fa-icon>

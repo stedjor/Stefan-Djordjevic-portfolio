@@ -4,7 +4,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
 import { Meta } from '@angular/platform-browser';
 
 declare const $: any;
@@ -34,9 +34,9 @@ export class AppComponent implements OnInit {
   routLink = [
     { text: 'Home', rLink: '/home' },
     { text: 'About', rLink: '/about' },
-    { text: 'Aplications', rLink: '/applications' },
-    { text: 'FourSquare', rLink: '/applications/four-square' },
+    { text: 'Applications', rLink: '/applications' },
     { text: 'UsedCars', rLink: '/applications/used-cars/car-ads' },
+    { text: 'FourSquare', rLink: '/applications/four-square' },
     { text: 'Contact', rLink: '/contact' },
   ];
 
@@ -49,7 +49,11 @@ export class AppComponent implements OnInit {
     { name: 'description', content: 'Web presentation by Stefan Djordjevic' },
   ];
 
-  constructor(public router: Router, private metaTag: Meta) {}
+  constructor(
+    public router: Router,
+    public aRoute: ActivatedRoute,
+    private metaTag: Meta
+  ) {}
 
   ngOnInit() {
     this.metaTag.addTags(this.metaTags);
@@ -257,7 +261,7 @@ export class AppComponent implements OnInit {
   }
 
   signatureResponsive() {
-    if ($(window).width() <= 425) {
+    if ($(window).width() <= 640) {
       this.signature = 'SĐ';
     }
   }

@@ -1,60 +1,35 @@
-@about-color      : rgb(0, 0, 53);
+@about-color      : rgb(0, 0, 70);
 @about-color-light: rgb(0, 0, 225);
 @about-color-dark : rgb(0, 0, 20);
 
 & .about-container {
-    // background   : linear-gradient(to right, @about-color-dark, @about-color, @about-color-dark);
+   
     background   : radial-gradient(@about-color, @about-color-dark);
     border-radius: 10px;
     min-height   : 100%;
     color        : #ffffff;
     text-shadow  : 0 2px 10px @about-color-light;
     padding      : 30px 50px 0;
-    animation    : colorize 1.75s;
-
-    @keyframes colorize {
-        from {
-            filter        : grayscale(100%) blur(2px);
-            -webkit-filter: grayscale(100%) blur(2px);
-        }
-
-        to {
-            filter        : grayscale(0%) blur(0px);
-            -webkit-filter: grayscale(0%) blur(0px);
-        }
-    }
 
     & #about-title {
         text-align: center;
-        font-size : 0;
+        font-size : 32px;
     }
 
     & #about-subtitle {
         text-align: center;
-        font-size : 0;
+        font-size : 18px;
     }
 
     & #about-photo {
-        background-image   : url(../../assets/photo.jpg);
-        background-position: center;
-        background-size    : cover;
-        background-repeat  : no-repeat;
-        border             : 5px solid white;
-        height             : 100%;
-        width              : 100%;
-        max-height         : 0;
-        min-height         : 0;
-        max-width          : 0;
-        min-width          : 0;
-        border-radius      : 5px;
-        box-shadow         : 0 0 10px 0px @about-color-light;
-        margin             : 15px auto;
-        opacity            : 0;
+        border-radius: 5px;
+        box-shadow   : 0 0 10px 0px #0000e1;
+        margin       : 50px auto;
     }
 
     & h6#about-skills-title,
     h6#about-languages-title {
-        font-size   : 0;
+        font-size   : 18px;
         padding-left: 40px;
         font-style  : italic;
     }
@@ -64,7 +39,6 @@
 
         & li {
             list-style-type: circle;
-            display        : none;
         }
     }
 
@@ -90,8 +64,8 @@
     & .about-container {
         padding-top: 20px;
 
-        & h2 {
-            font-size: 25px;
+        & #about-title {
+            font-size: 28px;
         }
 
         & h5 {
@@ -123,8 +97,8 @@
     & .about-container {
         padding: 10px 15px 0;
 
-        & h2 {
-            font-size: 22px;
+        & #about-title {
+            font-size: 25px;
         }
 
         & h5 {
@@ -141,11 +115,7 @@
     & .about-container {
         padding: 10px 15px 0;
 
-        & h1 {
-            font-size: 20px;
-        }
-
-        & h2 {
+        & #about-title {
             font-size: 20px;
         }
 
@@ -161,6 +131,25 @@
             right : 0px;
             bottom: 0px;
         }
+
+        & #about-photo {
+            margin: 10px auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    & .about-container {
+        padding: 5px 15px 0;
+
+        & #about-title {
+            font-size: 18px;
+        }
+
+        & h5 {
+            font-size: 13px;
+        }
+
     }
 }
 
@@ -168,12 +157,12 @@
     & .about-container {
         padding: 5px 15px 0;
 
-        & h2 {
-            font-size: 18px;
+        & #about-title {
+            font-size: 17px;
         }
 
         & h5 {
-            font-size: 13px;
+            font-size: 12px;
         }
 
     }

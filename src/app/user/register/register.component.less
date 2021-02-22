@@ -7,19 +7,6 @@
     border-radius: 10px;
     min-height   : 100%;
     padding      : 30px 20px 0;
-    animation    : colorize 1.75s;
-
-    @keyframes colorize {
-        from {
-            filter        : grayscale(100%) blur(2px);
-            -webkit-filter: grayscale(100%) blur(2px);
-        }
-
-        to {
-            filter        : grayscale(0%) blur(0px);
-            -webkit-filter: grayscale(0%) blur(0px);
-        }
-    }
 
     & .register-card {
         background      : @register-color-dark;
@@ -47,10 +34,14 @@
                 box-shadow: 0 0 10px 2px @register-color;
             }
 
-            &.input-error{
+            &.invalidInput{
                 border    : 2px solid orange;
                 box-shadow: 0 0 10px 2px orange;
             }
+        }
+
+        & .errorMessage {
+            color: orange;
         }
 
         & .register-confirm-pass{

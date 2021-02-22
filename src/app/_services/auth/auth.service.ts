@@ -3,12 +3,16 @@ import { map } from 'rxjs/operators';
 import { Injectable, NgZone } from '@angular/core';
 import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from '@angular/fire/firestore';
+import {
+  AngularFirestore,
+  AngularFirestoreDocument,
+  AngularFirestoreCollection,
+} from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { User } from './user';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   usersCollection: AngularFirestoreCollection<User>;
@@ -24,7 +28,7 @@ export class AuthService {
     public router: Router,
     public ngZone: NgZone
   ) {
-    this.afAuth.authState.subscribe(user => {
+    this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
@@ -40,41 +44,47 @@ export class AuthService {
 
   // Register user with email and password
   async register(registerObj) {
-    return await this.afAuth.auth.createUserWithEmailAndPassword(registerObj.email, registerObj.password)
+    return await this.afAuth.auth
+      .createUserWithEmailAndPassword(registerObj.email, registerObj.password)
       .then((result) => {
         this.sendVerificationMail();
-      }).catch((error) => {
+      })
+      .catch((error) => {
         window.alert(error.message);
       });
   }
 
   // Login with email and password
   async login(email: string, password: string) {
-    return await this.afAuth.auth.signInWithEmailAndPassword(email, password)
+    return await this.afAuth.auth
+      .signInWithEmailAndPassword(email, password)
       .then((result) => {
         if (result.user.emailVerified !== true) {
           this.sendVerificationMail();
         } else {
           this.ngZone.run(() => {
-            this.router.navigate(['profile']);
+            this.router.navigate(['/user/profile']);
           });
           this.userEmailVerify = result.user.emailVerified;
           this.getSetUser(result.user);
         }
-      }).catch((error) => {
+      })
+      .catch((error) => {
         window.alert(error.message);
       });
   }
 
   // Login with provider: google, facebook
   async providerLogin(provider) {
-    return await this.afAuth.auth.signInWithPopup(provider)
+    return await this.afAuth.auth
+      .signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['profile']);
+          this.router.navigate(['/user/profile']);
         });
         this.getSetUser(result.user);
-      }).catch((error) => {
+      })
+      .catch((error) => {
         console.log(error);
       });
   }
@@ -99,7 +109,10 @@ export class AuthService {
 
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user'));
-    return (user !== null && (user.emailVerified !== false || this.userEmailVerify !== false)) ? true : false;
+    return user !== null &&
+      (user.emailVerified !== false || this.userEmailVerify !== false)
+      ? true
+      : false;
   }
 
   // get isLoggedInAsAdmin(): boolean {
@@ -111,27 +124,30 @@ export class AuthService {
   // }
 
   setUserData(user) {
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(
+      `users/${user.uid}`
+    );
     const userData: User = {
       uid: user.uid,
       email: user.email,
       displayName: user.displayName,
       photoURL: user.photoURL,
       emailVerified: user.emailVerified,
-      status: 'user'
+      status: 'user',
     };
     return userRef.set(userData, {
-      merge: true
+      merge: true,
     });
   }
 
   // Get user, if not exist set user data
   getSetUser(user) {
-    this.afs.collection(`users`, ref => ref.where('uid', '==', user.uid))
-      .snapshotChanges().subscribe(res => {
+    this.afs
+      .collection(`users`, (ref) => ref.where('uid', '==', user.uid))
+      .snapshotChanges()
+      .subscribe((res) => {
         if (res.length <= 0) {
           this.setUserData(user);
-          console.log('do not found');
         }
       });
   }
@@ -141,13 +157,15 @@ export class AuthService {
   }
 
   getUsers() {
-    return this.usersCollection.snapshotChanges().pipe(map(action => {
-      return action.map(res => {
-        const data = res.payload.doc.data() as User;
-        const id = res.payload.doc.id;
-        return { id, ...data };
-      });
-    }));
+    return this.usersCollection.snapshotChanges().pipe(
+      map((action) => {
+        return action.map((res) => {
+          const data = res.payload.doc.data() as User;
+          const id = res.payload.doc.id;
+          return { id, ...data };
+        });
+      })
+    );
   }
 
   getUserData(id: string) {
@@ -156,30 +174,35 @@ export class AuthService {
   }
 
   updateUserData(user) {
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(
+      `users/${user.uid}`
+    );
     const userData: User = {
       uid: user.uid,
       email: user.email,
       displayName: user.displayName,
       photoURL: user.photoURL,
       emailVerified: user.emailVerified,
-      status: user.status
+      status: user.status,
     };
     return userRef.update(userData);
   }
 
   async sendVerificationMail() {
-    return await this.afAuth.auth.currentUser.sendEmailVerification()
+    return await this.afAuth.auth.currentUser
+      .sendEmailVerification()
       .then(() => {
-        this.router.navigate(['verify-email']);
+        this.router.navigate(['/user/verify-email']);
       });
   }
 
   async forgotPassword(passwordResetEmail) {
-    return await this.afAuth.auth.sendPasswordResetEmail(passwordResetEmail)
+    return await this.afAuth.auth
+      .sendPasswordResetEmail(passwordResetEmail)
       .then(() => {
         window.alert('Password reset email sent, check your inbox.');
-      }).catch((error) => {
+      })
+      .catch((error) => {
         window.alert(error);
       });
   }
@@ -189,10 +212,9 @@ export class AuthService {
   }
 
   async logOut() {
-    return await this.afAuth.auth.signOut()
-      .then(() => {
-        localStorage.removeItem('user');
-        this.router.navigate(['/login']);
-      });
+    return await this.afAuth.auth.signOut().then(() => {
+      localStorage.removeItem('user');
+      this.router.navigate(['/user/login']);
+    });
   }
 }

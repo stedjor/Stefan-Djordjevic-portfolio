@@ -27,8 +27,8 @@ export class ApplicationsComponent implements OnInit {
   faExternalLinkAlt = faExternalLinkAlt;
 
   appCards: AppCard[] = [
-    new AppCard('FourSquare', 'four-square', './assets/app-images/fs-here-img.png'),
-    new AppCard('UsedCars', 'used-cars', './assets/app-images/UsedCars-brand.png')
+    new AppCard('UsedCars', 'used-cars', './assets/app-images/UsedCars-brand.png'),
+    new AppCard('FourSquare', 'four-square', './assets/app-images/fs-here-img.png')
   ];
 
   constructor() { }
@@ -36,7 +36,7 @@ export class ApplicationsComponent implements OnInit {
   ngOnInit() {
   }
 
-  openNewTab(path) {
+  openNewTab(path: any) {
     window.open(path, '_blank');
   }
 }
