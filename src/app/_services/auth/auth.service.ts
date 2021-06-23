@@ -1,18 +1,19 @@
-import { AngularFireStorage } from '@angular/fire/storage';
-import { map } from 'rxjs/operators';
-import { Injectable, NgZone } from '@angular/core';
-import { auth } from 'firebase/app';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireStorage } from "@angular/fire/storage";
+import { map } from "rxjs/operators";
+import { Injectable, NgZone } from "@angular/core";
+import { auth } from "firebase/app";
+import { AngularFireAuth } from "@angular/fire/auth";
 import {
   AngularFirestore,
   AngularFirestoreDocument,
   AngularFirestoreCollection,
-} from '@angular/fire/firestore';
-import { Router } from '@angular/router';
-import { User } from './user';
+} from "@angular/fire/firestore";
+import { Router } from "@angular/router";
+import { User } from "./user";
+import { Console } from "console";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class AuthService {
   usersCollection: AngularFirestoreCollection<User>;
@@ -31,15 +32,15 @@ export class AuthService {
     this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
-        localStorage.setItem('user', JSON.stringify(this.userData));
-        JSON.parse(localStorage.getItem('user'));
+        localStorage.setItem("user", JSON.stringify(this.userData));
+        JSON.parse(localStorage.getItem("user"));
         this.userEmailVerify = user.emailVerified;
       } else {
-        localStorage.setItem('user', null);
-        JSON.parse(localStorage.getItem('user'));
+        localStorage.setItem("user", null);
+        JSON.parse(localStorage.getItem("user"));
       }
     });
-    this.usersCollection = this.afs.collection('users');
+    this.usersCollection = this.afs.collection("users");
   }
 
   // Register user with email and password
@@ -63,7 +64,7 @@ export class AuthService {
           this.sendVerificationMail();
         } else {
           this.ngZone.run(() => {
-            this.router.navigate(['/user/profile']);
+            this.router.navigate(["/user/profile"]);
           });
           this.userEmailVerify = result.user.emailVerified;
           this.getSetUser(result.user);
@@ -80,7 +81,7 @@ export class AuthService {
       .signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['/user/profile']);
+          this.router.navigate(["/user/profile"]);
         });
         this.getSetUser(result.user);
       })
@@ -108,7 +109,7 @@ export class AuthService {
   }
 
   get isLoggedIn(): boolean {
-    const user = JSON.parse(localStorage.getItem('user'));
+    const user = JSON.parse(localStorage.getItem("user"));
     return user !== null &&
       (user.emailVerified !== false || this.userEmailVerify !== false)
       ? true
@@ -133,7 +134,7 @@ export class AuthService {
       displayName: user.displayName,
       photoURL: user.photoURL,
       emailVerified: user.emailVerified,
-      status: 'user',
+      status: "user",
     };
     return userRef.set(userData, {
       merge: true,
@@ -143,7 +144,7 @@ export class AuthService {
   // Get user, if not exist set user data
   getSetUser(user) {
     this.afs
-      .collection(`users`, (ref) => ref.where('uid', '==', user.uid))
+      .collection(`users`, (ref) => ref.where("uid", "==", user.uid))
       .snapshotChanges()
       .subscribe((res) => {
         if (res.length <= 0) {
@@ -192,7 +193,10 @@ export class AuthService {
     return await this.afAuth.auth.currentUser
       .sendEmailVerification()
       .then(() => {
-        this.router.navigate(['/user/verify-email']);
+        this.router.navigate(["/user/verify-email"]);
+      })
+      .catch((error) => {
+        window.alert(error);
       });
   }
 
@@ -200,7 +204,7 @@ export class AuthService {
     return await this.afAuth.auth
       .sendPasswordResetEmail(passwordResetEmail)
       .then(() => {
-        window.alert('Password reset email sent, check your inbox.');
+        window.alert("Password reset email sent, check your inbox.");
       })
       .catch((error) => {
         window.alert(error);
@@ -212,9 +216,14 @@ export class AuthService {
   }
 
   async logOut() {
-    return await this.afAuth.auth.signOut().then(() => {
-      localStorage.removeItem('user');
-      this.router.navigate(['/user/login']);
-    });
+    return await this.afAuth.auth
+      .signOut()
+      .then(() => {
+        localStorage.removeItem("user");
+        this.router.navigate(["/user/login"]);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 }

@@ -1,29 +1,29 @@
-import { Router, NavigationEnd, Event } from '@angular/router';
-import { AngularFireStorage } from '@angular/fire/storage';
-import { CarsInfoService } from './../../../_services/cars/cars-info.service';
-import { AuthService } from './../../../_services/auth/auth.service';
-import { AdsService } from './../../../_services/cars/ads.service';
-import { FormGroup, FormControl } from '@angular/forms';
-import { Cars } from './../../../_services/cars/cars';
-import { Observable } from 'rxjs';
-import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd, Event } from "@angular/router";
+import { AngularFireStorage } from "@angular/fire/storage";
+import { CarsInfoService } from "./../../../_services/cars/cars-info.service";
+import { AuthService } from "./../../../_services/auth/auth.service";
+import { AdsService } from "./../../../_services/cars/ads.service";
+import { FormGroup, FormControl } from "@angular/forms";
+import { Cars } from "./../../../_services/cars/cars";
+import { Observable } from "rxjs";
+import { Component, OnInit } from "@angular/core";
 import {
   faCaretDown,
   faTools,
   faTimes,
   faArrowAltCircleLeft,
-  faArrowAltCircleUp
-} from '@fortawesome/free-solid-svg-icons';
+  faArrowAltCircleUp,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faArrowAltCircleRight,
   faArrowAltCircleDown,
-  faImages
-} from '@fortawesome/free-regular-svg-icons';
+  faImages,
+} from "@fortawesome/free-regular-svg-icons";
 
 @Component({
-  selector: 'app-create-ad',
-  templateUrl: './create-ad.component.html',
-  styleUrls: ['./create-ad.component.less']
+  selector: "app-create-ad",
+  templateUrl: "./create-ad.component.html",
+  styleUrls: ["./create-ad.component.less"],
 })
 export class CreateAdComponent implements OnInit {
   usedCars: Observable<Cars[]>;
@@ -39,7 +39,7 @@ export class CreateAdComponent implements OnInit {
   selectedModel: string[];
   carMark = false;
   customBrand = false;
-  carMarkTitle = 'Show mark field';
+  carMarkTitle = "Show mark field";
   // Font Awesome
   faCaretDown = faCaretDown;
   faTools = faTools;
@@ -48,7 +48,7 @@ export class CreateAdComponent implements OnInit {
   faArrowAltCircleDown = faArrowAltCircleDown;
   faArrowAltCircleUp = faArrowAltCircleUp;
   faImages = faImages;
-  colorred = 'red';
+  colorred = "red";
 
   constructor(
     private adsSevice: AdsService,
@@ -56,7 +56,7 @@ export class CreateAdComponent implements OnInit {
     private ci: CarsInfoService,
     private afStorage: AngularFireStorage,
     private router: Router
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.createCarForm();
@@ -72,9 +72,12 @@ export class CreateAdComponent implements OnInit {
 
   createCar() {
     this.isSaving = true;
-    this.carsForm.setControl('images', new FormControl(this.imagesArr));
-    this.carsForm.setControl('autor', new FormControl(this.as.userData.displyName || this.as.userData.email));
-    this.carsForm.setControl('autorId', new FormControl(this.as.currentUserId));
+    this.carsForm.setControl("images", new FormControl(this.imagesArr));
+    this.carsForm.setControl(
+      "autor",
+      new FormControl(this.as.userData.displyName || this.as.userData.email)
+    );
+    this.carsForm.setControl("autorId", new FormControl(this.as.currentUserId));
     this.adsSevice.createCars(this.carsForm.value);
     this.router.navigate([`applications/used-cars/car-ads`]);
   }
@@ -84,53 +87,62 @@ export class CreateAdComponent implements OnInit {
   }
 
   uploadImage(event: any) {
-    const user = JSON.parse(localStorage.getItem('user'));
+    const user = JSON.parse(localStorage.getItem("user"));
     const file = event.target.files[0];
-    let imgAfsId = this.carsForm.get('imgAfsId').value; // Folder Id in firebase storage
+    let imgAfsId = this.carsForm.get("imgAfsId").value; // Folder Id in firebase storage
     let fileName: string;
     if (file !== undefined) {
       fileName = file.name;
     }
 
-    if (this.carsForm.get('imgAfsId').value === null) {
-      imgAfsId = Math.random().toString(36).substring(2) +
+    if (this.carsForm.get("imgAfsId").value === null) {
+      imgAfsId =
+        Math.random().toString(36).substring(2) +
         Math.random().toString(36).substring(2);
-      this.carsForm.setControl('imgAfsId', new FormControl(imgAfsId));
+      this.carsForm.setControl("imgAfsId", new FormControl(imgAfsId));
     }
 
     this.imagePath = `cars/${user.email}/${imgAfsId}/${fileName}`;
 
-    if (file !== undefined && file.type.split('/')[0] !== 'image') {
-      return alert('Only image files allowed!');
+    if (file !== undefined && file.type.split("/")[0] !== "image") {
+      return alert("Only image files allowed!");
     } else {
       const ref = this.afStorage.ref(this.imagePath);
       if (ref.getDownloadURL.length <= 0) {
         const task = this.afStorage.upload(this.imagePath, file);
-        this.downloadURL = task.then(() => {
-          return ref.getDownloadURL().subscribe(url => {
-            if (this.imagesArr.length < 6) {
-              this.imageURL = url;
-              this.imagesArr.push(this.imageURL);
-              this.isAddImages = true;
-            } else {
-              alert('You can add only 6 images!');
-            }
+        this.downloadURL = task
+          .then(() => {
+            return ref.getDownloadURL().subscribe((url) => {
+              if (this.imagesArr.length < 6) {
+                this.imageURL = url;
+                this.imagesArr.push(this.imageURL);
+                this.isAddImages = true;
+              } else {
+                alert("You can add only 6 images!");
+              }
+            });
+          })
+          .catch((error) => {
+            console.log(error);
           });
-        });
       } else {
         this.afStorage.ref(this.imagePath).delete();
         const task = this.afStorage.upload(this.imagePath, file);
-        this.downloadURL = task.then(() => {
-          return ref.getDownloadURL().subscribe(url => {
-            if (this.imagesArr.length < 6) {
-              this.imageURL = url;
-              this.imagesArr.push(this.imageURL);
-              this.isAddImages = true;
-            } else {
-              alert('You can add only 6 images!');
-            }
+        this.downloadURL = task
+          .then(() => {
+            return ref.getDownloadURL().subscribe((url) => {
+              if (this.imagesArr.length < 6) {
+                this.imageURL = url;
+                this.imagesArr.push(this.imageURL);
+                this.isAddImages = true;
+              } else {
+                alert("You can add only 6 images!");
+              }
+            });
+          })
+          .catch((error) => {
+            console.log(error);
           });
-        });
       }
     }
   }
@@ -144,18 +156,18 @@ export class CreateAdComponent implements OnInit {
     if (window.innerWidth <= 425) {
       if (this.faArrowCircle === faArrowAltCircleDown) {
         this.faArrowCircle = faArrowAltCircleUp;
-        this.carMarkTitle = 'Cancel mark field';
+        this.carMarkTitle = "Cancel mark field";
       } else {
         this.faArrowCircle = faArrowAltCircleDown;
-        this.carMarkTitle = 'Show mark field';
+        this.carMarkTitle = "Show mark field";
       }
     } else {
       if (this.faArrowCircle === faArrowAltCircleRight) {
         this.faArrowCircle = faArrowAltCircleLeft;
-        this.carMarkTitle = 'Cancel mark field';
+        this.carMarkTitle = "Cancel mark field";
       } else {
         this.faArrowCircle = faArrowAltCircleRight;
-        this.carMarkTitle = 'Show mark field';
+        this.carMarkTitle = "Show mark field";
       }
     }
   }
@@ -165,17 +177,22 @@ export class CreateAdComponent implements OnInit {
   }
 
   async deleteImage(url: string, index: number) {
-    const confirmLeaving = window.confirm('Do you realy want to delete this picture?');
+    const confirmLeaving = window.confirm(
+      "Do you realy want to delete this picture?"
+    );
     if (confirmLeaving) {
-      return this.afStorage.storage.refFromURL(url).delete() && this.imagesArr.splice(index, 1);
+      return (
+        this.afStorage.storage.refFromURL(url).delete() &&
+        this.imagesArr.splice(index, 1)
+      );
     }
   }
 
   searchModel(key: string) {
-    this.selectedBrand = this.carsInfo.brands.filter(f => {
+    this.selectedBrand = this.carsInfo.brands.filter((f) => {
       return f.name === key;
     });
-    this.selectedBrand.map(m => this.selectedModel = m.models);
+    this.selectedBrand.map((m) => (this.selectedModel = m.models));
   }
 
   cancelCreating() {
@@ -184,7 +201,9 @@ export class CreateAdComponent implements OnInit {
 
   canDeactivate(): Observable<boolean> | boolean {
     if (!this.isSaving && (this.carsForm.dirty || this.isAddImages)) {
-      const confirmLeaving = window.confirm('Do you realy want to leave without saving?');
+      const confirmLeaving = window.confirm(
+        "Do you realy want to leave without saving?"
+      );
       if (confirmLeaving) {
         this.imagesArr.map((url, index) => {
           this.afStorage.storage.refFromURL(url).delete();

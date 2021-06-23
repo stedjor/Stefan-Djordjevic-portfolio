@@ -1,25 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularFireStorage } from '@angular/fire/storage';
-import { User } from './../../_services/auth/user';
-import { AuthService } from './../../_services/auth/auth.service';
+import { Component, OnInit } from "@angular/core";
+import { AngularFireStorage } from "@angular/fire/storage";
+import { User } from "./../../_services/auth/user";
+import { AuthService } from "./../../_services/auth/auth.service";
 import {
   faUserEdit,
   faTimes,
   faCheck,
   faCamera,
-  faUndoAlt
-} from '@fortawesome/free-solid-svg-icons';
+  faUndoAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.less']
+  selector: "app-profile",
+  templateUrl: "./profile.component.html",
+  styleUrls: ["./profile.component.less"],
 })
 export class ProfileComponent implements OnInit {
   user: any;
   userData: User;
   updatedUser: any;
-  defaultProfileIcon = './assets/deafult-profile-icon.png';
+  defaultProfileIcon = "./assets/deafult-profile-icon.png";
   editProfile = false;
   changePhoto = false;
   imagePath: string;
@@ -36,12 +36,12 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     public authService: AuthService,
-    private afStorage: AngularFireStorage,
-  ) { }
+    private afStorage: AngularFireStorage
+  ) {}
 
   ngOnInit() {
     setTimeout(() => {
-      this.user = JSON.parse(localStorage.getItem('user'));
+      this.user = JSON.parse(localStorage.getItem("user"));
       if (this.user !== null) {
         this.getUser(this.user.uid);
       }
@@ -49,20 +49,22 @@ export class ProfileComponent implements OnInit {
   }
 
   getUser(id: string) {
-    this.authService.getUserData(id)
-      .subscribe(dataUser => {
-        this.userData = dataUser;
-        if (this.userData.displayName !== undefined && this.userData.displayName !== null) {
-          this.username = this.userData.displayName;
-        } else {
-          this.username = 'User';
-        }
-        if (this.userData.photoURL !== null) {
-          this.imageURL = this.userData.photoURL;
-        } else if (this.userData.photoURL === null) {
-          this.imageURL = this.defaultProfileIcon;
-        }
-      });
+    this.authService.getUserData(id).subscribe((dataUser) => {
+      this.userData = dataUser;
+      if (
+        this.userData.displayName !== undefined &&
+        this.userData.displayName !== null
+      ) {
+        this.username = this.userData.displayName;
+      } else {
+        this.username = "User";
+      }
+      if (this.userData.photoURL !== null) {
+        this.imageURL = this.userData.photoURL;
+      } else if (this.userData.photoURL === null) {
+        this.imageURL = this.defaultProfileIcon;
+      }
+    });
   }
 
   editMode() {
@@ -79,38 +81,48 @@ export class ProfileComponent implements OnInit {
   }
 
   uploadImage(event: any) {
-    const user = JSON.parse(localStorage.getItem('user'));
+    const user = JSON.parse(localStorage.getItem("user"));
     const file = event.target.files[0];
     const fileName = file.name;
     this.imagePath = `users/${user.email}/${fileName}`;
 
-    if (file.type.split('/')[0] !== 'image') {
-      return alert('Only image files allowed');
+    if (file.type.split("/")[0] !== "image") {
+      return alert("Only image files allowed");
     } else {
       const ref = this.afStorage.ref(this.imagePath);
       if (ref.getDownloadURL.length <= 0) {
         const task = this.afStorage.upload(this.imagePath, file);
-        this.downloadURL = task.then(() => {
-          return ref.getDownloadURL().subscribe(url => {
-            this.imageURL = url;
-            this.changePhoto = true;
+        this.downloadURL = task
+          .then(() => {
+            return ref.getDownloadURL().subscribe((url) => {
+              this.imageURL = url;
+              this.changePhoto = true;
+            });
+          })
+          .catch((error) => {
+            console.log(error);
           });
-        });
       } else {
         this.afStorage.ref(this.imagePath).delete();
         const task = this.afStorage.upload(this.imagePath, file);
-        this.downloadURL = task.then(() => {
-          return ref.getDownloadURL().subscribe(url => {
-            this.imageURL = url;
-            this.changePhoto = true;
+        this.downloadURL = task
+          .then(() => {
+            return ref.getDownloadURL().subscribe((url) => {
+              this.imageURL = url;
+              this.changePhoto = true;
+            });
+          })
+          .catch((error) => {
+            console.log(error);
           });
-        });
       }
     }
   }
 
   deletePhoto() {
-    const confirmDelete = window.confirm('Do you realy want to delete this photo?');
+    const confirmDelete = window.confirm(
+      "Do you realy want to delete this photo?"
+    );
     if (confirmDelete) {
       this.imageURL = this.defaultProfileIcon;
       this.userData.photoURL = null;
@@ -119,7 +131,9 @@ export class ProfileComponent implements OnInit {
   }
 
   returnProviderPhoto() {
-    const confirmDelete = window.confirm('Do you realy want to return photo from provider?');
+    const confirmDelete = window.confirm(
+      "Do you realy want to return photo from provider?"
+    );
     if (confirmDelete) {
       this.userData.photoURL = this.user.photoURL;
       this.imageURL = this.userData.photoURL;

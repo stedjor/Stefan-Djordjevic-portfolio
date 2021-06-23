@@ -1,21 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { NavigationEnd } from "@angular/router";
+import { Component, OnInit } from "@angular/core";
 import {
   faPowerOff,
   faChevronLeft,
   faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
-import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
-import { Meta } from '@angular/platform-browser';
+} from "@fortawesome/free-solid-svg-icons";
+import { ActivatedRoute, Router } from "@angular/router";
+import { Meta } from "@angular/platform-browser";
+import { filter } from "rxjs/operators";
+import { environment } from '../environments/environment';
 
 declare const $: any;
+declare const gtag: any;
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less'],
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.less"],
 })
 export class AppComponent implements OnInit {
-  title = 'Stefan Đorđević';
-  featureSelect = 'blank';
+  title = "Stefan Đorđević";
+  featureSelect = "blank";
   turnOnOff = false;
   selectModal: string;
   modalMenuOpened = false;
@@ -24,7 +29,7 @@ export class AppComponent implements OnInit {
   showHideMenu = false;
   urlLocation: string;
   tooltipValue: string;
-  signature = 'Stefan Đorđević';
+  signature = "Stefan Đorđević";
   counterScreen = 5;
   // font awesome icons
   faPowerOff = faPowerOff;
@@ -32,46 +37,56 @@ export class AppComponent implements OnInit {
   faChevronRight = faChevronRight;
 
   routLink = [
-    { text: 'Home', rLink: '/home' },
-    { text: 'About', rLink: '/about' },
-    { text: 'Applications', rLink: '/applications' },
-    { text: 'UsedCars', rLink: '/applications/used-cars/car-ads' },
-    { text: 'FourSquare', rLink: '/applications/four-square' },
-    { text: 'Contact', rLink: '/contact' },
+    { text: "Home", rLink: "/home" },
+    { text: "About", rLink: "/about" },
+    { text: "Applications", rLink: "/applications" },
+    { text: "UsedCars", rLink: "/applications/used-cars/car-ads" },
+    { text: "FourSquare", rLink: "/applications/four-square" },
+    { text: "Contact", rLink: "/contact" },
   ];
 
   metaTags = [
     {
-      name: 'keywords',
+      name: "keywords",
       content: `Angular, Firebase, Firestore, FourSquare, HERE WeGo, UsedCar, web,
       presentation, Frontend, Front-end, developer, programer, prezentacija, projekat, Stefan, Djordjevic, Đorđević`,
     },
-    { name: 'description', content: 'Web presentation by Stefan Djordjevic' },
+    { name: "description", content: "Web presentation by Stefan Djordjevic" },
   ];
 
   constructor(
     public router: Router,
     public aRoute: ActivatedRoute,
     private metaTag: Meta
-  ) {}
+  ) {
+    // Google Analytics
+    const navEndEvents = router.events.pipe(
+      filter((event) => event instanceof NavigationEnd)
+    );
+    navEndEvents.subscribe((event: NavigationEnd) => {
+      gtag("config", environment.gtag, {
+        'page_path': event.urlAfterRedirects
+      });
+    });
+  }
 
   ngOnInit() {
     this.metaTag.addTags(this.metaTags);
     this.urlLocation = location.toString();
     this.signatureResponsive();
     setTimeout(() => {
-      this.tooltipValue = $('.turn-on-tooltip').text();
+      this.tooltipValue = $(".turn-on-tooltip").text();
     }, 100);
     this.noScreenAnimation();
   }
 
   noScreenAnimation() {
-    if (this.featureSelect === 'blank') {
+    if (this.featureSelect === "blank") {
       setInterval(() => {
         if (this.counterScreen > 0) {
           this.counterScreen--;
           if (this.counterScreen === 0) {
-            this.buttonTurnOn('show');
+            this.buttonTurnOn("show");
           }
         }
       }, 1000);
@@ -79,16 +94,16 @@ export class AppComponent implements OnInit {
   }
 
   buttonTurn(feature: string) {
-    if ($('#btn-turn').hasClass('btn-red') && !this.turnOnOff) {
+    if ($("#btn-turn").hasClass("btn-red") && !this.turnOnOff) {
       this.buttonTurnOn(feature);
     } else {
-      this.buttonTurnOff('blank');
+      this.buttonTurnOff("blank");
     }
   }
 
   buttonTurnOn(feature: string) {
-    $('#btn-turn').removeClass('btn-red');
-    $('#btn-turn').addClass('btn-green');
+    $("#btn-turn").removeClass("btn-red");
+    $("#btn-turn").addClass("btn-green");
     this.turnOnEffect();
     setTimeout(() => {
       this.featureSelect = feature;
@@ -96,30 +111,30 @@ export class AppComponent implements OnInit {
   }
 
   buttonTurnOff(feature: string) {
-    $('#btn-turn').removeClass('btn-green');
-    $('#btn-turn').addClass('btn-red');
+    $("#btn-turn").removeClass("btn-green");
+    $("#btn-turn").addClass("btn-red");
     this.turnOffEffect();
     this.featureSelect = feature;
     this.counterScreen = 5;
   }
 
   turnOnEffect() {
-    $('#screen')
+    $("#screen")
       .animate(
         {
-          width: '100%',
-          left: '0',
-          right: '0',
+          width: "100%",
+          left: "0",
+          right: "0",
         },
-        'fast'
+        "fast"
       )
       .animate(
         {
-          height: '100%',
-          top: '0',
-          bottom: '0',
+          height: "100%",
+          top: "0",
+          bottom: "0",
         },
-        'fast'
+        "fast"
       );
 
     this.turnOnOff = true;
@@ -127,23 +142,23 @@ export class AppComponent implements OnInit {
   }
 
   turnOffEffect() {
-    $('#screen')
+    $("#screen")
       .animate(
         {
-          height: '2px',
-          top: '50%',
-          bottom: '50%',
-          'z-index': '1000',
+          height: "2px",
+          top: "50%",
+          bottom: "50%",
+          "z-index": "1000",
         },
-        'fast'
+        "fast"
       )
       .animate(
         {
-          width: '0',
-          left: '50%',
-          right: '50%',
+          width: "0",
+          left: "50%",
+          right: "50%",
         },
-        'fast'
+        "fast"
       );
 
     this.turnOnOff = false;
@@ -181,7 +196,7 @@ export class AppComponent implements OnInit {
   }
 
   showMenu() {
-    this.selectModal = 'modal-menu';
+    this.selectModal = "modal-menu";
     this.modalMenuOpened = !this.modalMenuOpened;
     setTimeout(() => {
       if (this.modalMenuOpened) {
@@ -198,7 +213,7 @@ export class AppComponent implements OnInit {
   }
 
   showInfo() {
-    this.selectModal = 'modal-info';
+    this.selectModal = "modal-info";
     this.checkInfoIfCar();
     setTimeout(() => {
       if (!this.modalInfoOpened) {
@@ -218,12 +233,12 @@ export class AppComponent implements OnInit {
 
   checkInfoIfCar() {
     this.infoModalUrl = this.router.url;
-    if (this.infoModalUrl.includes('car-ads')) {
-      this.infoModalUrl = 'car-ads';
-    } else if (this.infoModalUrl.includes('create-ad')) {
-      this.infoModalUrl = 'create-ad';
-    } else if (this.infoModalUrl.includes('edit-ad')) {
-      this.infoModalUrl = 'edit-ad';
+    if (this.infoModalUrl.includes("car-ads")) {
+      this.infoModalUrl = "car-ads";
+    } else if (this.infoModalUrl.includes("create-ad")) {
+      this.infoModalUrl = "create-ad";
+    } else if (this.infoModalUrl.includes("edit-ad")) {
+      this.infoModalUrl = "edit-ad";
     }
   }
 
@@ -252,17 +267,17 @@ export class AppComponent implements OnInit {
   }
 
   modalAnimate() {
-    $('.modal').animate(
+    $(".modal").animate(
       {
         opacity: 1,
       },
-      'slow'
+      "slow"
     );
   }
 
   signatureResponsive() {
     if ($(window).width() <= 640) {
-      this.signature = 'SĐ';
+      this.signature = "SĐ";
     }
   }
 }

@@ -1,4 +1,4 @@
-export class Messages {
+export interface Messages {
     id?: string;
     autor: string;
     photoURl: string;
